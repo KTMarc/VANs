@@ -10,9 +10,23 @@
 
 @implementation EQLAppDelegate
 
+- (void)customiseAppeareance
+{
+    UIColor *colorEquus = [UIColor colorWithRed:1.0
+                                           green:0.4
+                                            blue:0.29
+                                           alpha:1.0];
+    
+    [[UISegmentedControl appearance] setTintColor:colorEquus];
+    [[UIButton appearance] setTintColor:colorEquus];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self customiseAppeareance];
+    
+    
     return YES;
 }
 							

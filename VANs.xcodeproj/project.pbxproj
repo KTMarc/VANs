@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498212381987BD0500022486 /* ejemploFichaA5.jpg */; };
+		4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4982123B1987C5B300022486 /* EQLTabBarController.m */; };
+		49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49907CB3198BA6D9005CF560 /* EQLGarageModel.m */; };
+		49A428F21987EBD500C02F53 /* EQLBigSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428F11987EBD500C02F53 /* EQLBigSheetViewController.m */; };
+		49A428F41987ED7700C02F53 /* ejemploFichaA4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A428F31987ED7700C02F53 /* ejemploFichaA4.jpg */; };
+		49A428F71987EE2800C02F53 /* EQLSmallSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428F61987EE2800C02F53 /* EQLSmallSheetViewController.m */; };
+		49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428F91987F97C00C02F53 /* EQLNavigationController.m */; };
+		49A428FE1987FF3500C02F53 /* EQLCarResultsTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableTableViewController.m */; };
 		49A871AC198158F6008BB3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A871AB198158F6008BB3B3 /* Foundation.framework */; };
 		49A871AE198158F6008BB3B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A871AD198158F6008BB3B3 /* CoreGraphics.framework */; };
 		49A871B0198158F6008BB3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A871AF198158F6008BB3B3 /* UIKit.framework */; };
@@ -23,6 +31,18 @@
 		49A871D8198158F6008BB3B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A871D6198158F6008BB3B3 /* InfoPlist.strings */; };
 		49A871DA198158F6008BB3B3 /* VANsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871D9198158F6008BB3B3 /* VANsTests.m */; };
 		49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871E419815912008BB3B3 /* EQLmodeloVan.m */; };
+		49B1FC1B19825EBE008E0ABD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FBFA19825EBE008E0ABD /* Icon-Small-50.png */; };
+		49B1FC1E19825EBE008E0ABD /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FBFD19825EBE008E0ABD /* Icon-Small@2x.png */; };
+		49B1FC2319825EBE008E0ABD /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0319825EBE008E0ABD /* Icon-40.png */; };
+		49B1FC2419825EBE008E0ABD /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0419825EBE008E0ABD /* Icon-40@2x.png */; };
+		49B1FC2519825EBE008E0ABD /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0519825EBE008E0ABD /* Icon-60.png */; };
+		49B1FC2619825EBE008E0ABD /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0619825EBE008E0ABD /* Icon-60@2x.png */; };
+		49B1FC2819825EBE008E0ABD /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0819825EBE008E0ABD /* Icon-72@2x.png */; };
+		49B1FC2919825EBE008E0ABD /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0919825EBE008E0ABD /* Icon-76.png */; };
+		49B1FC2A19825EBE008E0ABD /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0A19825EBE008E0ABD /* Icon-76@2x.png */; };
+		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
+		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
+		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		498212381987BD0500022486 /* ejemploFichaA5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA5.jpg; sourceTree = "<group>"; };
+		4982123A1987C5B300022486 /* EQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTabBarController.h; sourceTree = "<group>"; };
+		4982123B1987C5B300022486 /* EQLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTabBarController.m; sourceTree = "<group>"; };
+		49907CB2198BA6D9005CF560 /* EQLGarageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLGarageModel.h; path = VANs/EQLGarageModel.h; sourceTree = "<group>"; };
+		49907CB3198BA6D9005CF560 /* EQLGarageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EQLGarageModel.m; path = VANs/EQLGarageModel.m; sourceTree = "<group>"; };
+		49A428F01987EBD500C02F53 /* EQLBigSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLBigSheetViewController.h; sourceTree = "<group>"; };
+		49A428F11987EBD500C02F53 /* EQLBigSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLBigSheetViewController.m; sourceTree = "<group>"; };
+		49A428F31987ED7700C02F53 /* ejemploFichaA4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA4.jpg; sourceTree = "<group>"; };
+		49A428F51987EE2800C02F53 /* EQLSmallSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLSmallSheetViewController.h; path = ../EQLSmallSheetViewController.h; sourceTree = "<group>"; };
+		49A428F61987EE2800C02F53 /* EQLSmallSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EQLSmallSheetViewController.m; path = ../EQLSmallSheetViewController.m; sourceTree = "<group>"; };
+		49A428F81987F97C00C02F53 /* EQLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLNavigationController.h; sourceTree = "<group>"; };
+		49A428F91987F97C00C02F53 /* EQLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLNavigationController.m; sourceTree = "<group>"; };
+		49A428FC1987FF3500C02F53 /* EQLCarResultsTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCarResultsTableTableViewController.h; sourceTree = "<group>"; };
+		49A428FD1987FF3500C02F53 /* EQLCarResultsTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCarResultsTableTableViewController.m; sourceTree = "<group>"; };
 		49A871A8198158F6008BB3B3 /* VANs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VANs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A871AB198158F6008BB3B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49A871AD198158F6008BB3B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +92,32 @@
 		49A871D9198158F6008BB3B3 /* VANsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VANsTests.m; sourceTree = "<group>"; };
 		49A871E319815912008BB3B3 /* EQLmodeloVan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmodeloVan.h; sourceTree = "<group>"; };
 		49A871E419815912008BB3B3 /* EQLmodeloVan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmodeloVan.m; sourceTree = "<group>"; };
+		49B1FBF819825EBE008E0ABD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		49B1FBF919825EBE008E0ABD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		49B1FBFA19825EBE008E0ABD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		49B1FBFB19825EBE008E0ABD /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		49B1FBFC19825EBE008E0ABD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		49B1FBFD19825EBE008E0ABD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		49B1FBFE19825EBE008E0ABD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		49B1FBFF19825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		49B1FC0019825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		49B1FC0119825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		49B1FC0319825EBE008E0ABD /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		49B1FC0419825EBE008E0ABD /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		49B1FC0519825EBE008E0ABD /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		49B1FC0619825EBE008E0ABD /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		49B1FC0719825EBE008E0ABD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		49B1FC0819825EBE008E0ABD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		49B1FC0919825EBE008E0ABD /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		49B1FC0A19825EBE008E0ABD /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		49B1FC0B19825EBE008E0ABD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		49B1FC0D19825EBE008E0ABD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		49B1FC0E19825EBE008E0ABD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		49B1FC0F19825EBE008E0ABD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		49B1FC1019825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +144,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		498212371987BBDF00022486 /* Fotos */ = {
+			isa = PBXGroup;
+			children = (
+				49A428F31987ED7700C02F53 /* ejemploFichaA4.jpg */,
+				498212381987BD0500022486 /* ejemploFichaA5.jpg */,
+			);
+			name = Fotos;
+			sourceTree = "<group>";
+		};
+		49A428FB1987FB8600C02F53 /* Fichas tecnicas */ = {
+			isa = PBXGroup;
+			children = (
+				4982123A1987C5B300022486 /* EQLTabBarController.h */,
+				4982123B1987C5B300022486 /* EQLTabBarController.m */,
+				49A428F51987EE2800C02F53 /* EQLSmallSheetViewController.h */,
+				49A428F61987EE2800C02F53 /* EQLSmallSheetViewController.m */,
+				49A428F01987EBD500C02F53 /* EQLBigSheetViewController.h */,
+				49A428F11987EBD500C02F53 /* EQLBigSheetViewController.m */,
+			);
+			name = "Fichas tecnicas";
+			sourceTree = "<group>";
+		};
 		49A8719F198158F5008BB3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +214,8 @@
 		49A871B2198158F6008BB3B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				498212371987BBDF00022486 /* Fotos */,
+				49B1FBEA19825EBE008E0ABD /* icon */,
 				49A871B3198158F6008BB3B3 /* VANs-Info.plist */,
 				49A871B4198158F6008BB3B3 /* InfoPlist.strings */,
 				49A871B7198158F6008BB3B3 /* main.m */,
@@ -163,6 +247,8 @@
 			children = (
 				49A871E319815912008BB3B3 /* EQLmodeloVan.h */,
 				49A871E419815912008BB3B3 /* EQLmodeloVan.m */,
+				49907CB2198BA6D9005CF560 /* EQLGarageModel.h */,
+				49907CB3198BA6D9005CF560 /* EQLGarageModel.m */,
 			);
 			name = Modelo;
 			path = ..;
@@ -171,10 +257,64 @@
 		49A871E719815922008BB3B3 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				49A428F81987F97C00C02F53 /* EQLNavigationController.h */,
+				49A428F91987F97C00C02F53 /* EQLNavigationController.m */,
 				49A871C3198158F6008BB3B3 /* EQLViewController.h */,
 				49A871C4198158F6008BB3B3 /* EQLViewController.m */,
+				49A428FB1987FB8600C02F53 /* Fichas tecnicas */,
+				49A428FC1987FF3500C02F53 /* EQLCarResultsTableTableViewController.h */,
+				49A428FD1987FF3500C02F53 /* EQLCarResultsTableTableViewController.m */,
 			);
 			name = Controladores;
+			sourceTree = "<group>";
+		};
+		49B1FBEA19825EBE008E0ABD /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				49B1FBF719825EBE008E0ABD /* ios */,
+				49B1FC0219825EBE008E0ABD /* ios7 */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		49B1FBF719825EBE008E0ABD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				49B1FBF819825EBE008E0ABD /* Icon-72.png */,
+				49B1FBF919825EBE008E0ABD /* Icon-72@2x.png */,
+				49B1FBFA19825EBE008E0ABD /* Icon-Small-50.png */,
+				49B1FBFB19825EBE008E0ABD /* Icon-Small-50@2x.png */,
+				49B1FBFC19825EBE008E0ABD /* Icon-Small.png */,
+				49B1FBFD19825EBE008E0ABD /* Icon-Small@2x.png */,
+				49B1FBFE19825EBE008E0ABD /* Icon.png */,
+				49B1FBFF19825EBE008E0ABD /* Icon@2x.png */,
+				49B1FC0019825EBE008E0ABD /* iTunesArtwork.png */,
+				49B1FC0119825EBE008E0ABD /* iTunesArtwork@2x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		49B1FC0219825EBE008E0ABD /* ios7 */ = {
+			isa = PBXGroup;
+			children = (
+				49B1FC0319825EBE008E0ABD /* Icon-40.png */,
+				49B1FC0419825EBE008E0ABD /* Icon-40@2x.png */,
+				49B1FC0519825EBE008E0ABD /* Icon-60.png */,
+				49B1FC0619825EBE008E0ABD /* Icon-60@2x.png */,
+				49B1FC0719825EBE008E0ABD /* Icon-72.png */,
+				49B1FC0819825EBE008E0ABD /* Icon-72@2x.png */,
+				49B1FC0919825EBE008E0ABD /* Icon-76.png */,
+				49B1FC0A19825EBE008E0ABD /* Icon-76@2x.png */,
+				49B1FC0B19825EBE008E0ABD /* Icon-Small-50.png */,
+				49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */,
+				49B1FC0D19825EBE008E0ABD /* Icon-Small.png */,
+				49B1FC0E19825EBE008E0ABD /* Icon-Small@2x.png */,
+				49B1FC0F19825EBE008E0ABD /* Icon.png */,
+				49B1FC1019825EBE008E0ABD /* Icon@2x.png */,
+				49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */,
+				49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */,
+			);
+			path = ios7;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +396,22 @@
 			files = (
 				49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */,
 				49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */,
+				49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */,
+				49A428F41987ED7700C02F53 /* ejemploFichaA4.jpg in Resources */,
 				49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */,
+				49B1FC2819825EBE008E0ABD /* Icon-72@2x.png in Resources */,
+				498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */,
+				49B1FC2519825EBE008E0ABD /* Icon-60.png in Resources */,
 				49A871B6198158F6008BB3B3 /* InfoPlist.strings in Resources */,
+				49B1FC2919825EBE008E0ABD /* Icon-76.png in Resources */,
+				49B1FC2A19825EBE008E0ABD /* Icon-76@2x.png in Resources */,
+				49B1FC1B19825EBE008E0ABD /* Icon-Small-50.png in Resources */,
+				49B1FC2419825EBE008E0ABD /* Icon-40@2x.png in Resources */,
+				49B1FC2319825EBE008E0ABD /* Icon-40.png in Resources */,
+				49B1FC1E19825EBE008E0ABD /* Icon-Small@2x.png in Resources */,
+				49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */,
+				49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */,
+				49B1FC2619825EBE008E0ABD /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +430,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A428F21987EBD500C02F53 /* EQLBigSheetViewController.m in Sources */,
+				49A428F71987EE2800C02F53 /* EQLSmallSheetViewController.m in Sources */,
+				49A428FE1987FF3500C02F53 /* EQLCarResultsTableTableViewController.m in Sources */,
+				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLViewController.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
+				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
+				4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */,
 				49A871BC198158F6008BB3B3 /* EQLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +654,7 @@
 				49A871DF198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A871E0198158F6008BB3B3 /* Build configuration list for PBXNativeTarget "VANsTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +663,7 @@
 				49A871E2198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
