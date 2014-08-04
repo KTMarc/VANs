@@ -66,65 +66,89 @@
     
     EQLmodeloVan *gt1 = [[EQLmodeloVan alloc]
                          initWithName:@"GT1"
-                         photoURL: [NSURL URLWithString: @"gt1.jpeg"]
+                         photo: [UIImage imageNamed: @"gt1.jpg"]
                          webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gt1-black"]
                          specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                          horsesNum:1
                          price:@"3.633€"
                          ptacs:ptacsOne1Horse
-                         weight:600];
+                         weight:600
+                         maxPtacForClientsCar:0
+                         ];
+
+    EQLmodeloVan *gold_one = [[EQLmodeloVan alloc]
+                         initWithName:@"Gold One"
+                         photo: [UIImage imageNamed: @"Gold_one.jpg"]
+                         webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gt1-black"]
+                         specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
+                         horsesNum:1
+                         price:@"3.633€"
+                         ptacs:ptacsOne1Horse
+                         weight:600
+                         maxPtacForClientsCar:0
+                              ];
     
     EQLmodeloVan *gt2 = [[EQLmodeloVan alloc]
                          initWithName:@"GT2"
-                         photoURL: [NSURL URLWithString: @"gt2.jpeg"]
+                         photo: [UIImage imageNamed: @"GT2.jpg"]
                          webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gt2-black"]
                          specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                          horsesNum:2
                          price:@"3.931€"
                          ptacs:ptacsOne2Horse
-                         weight:720];
+                         weight:720
+                         maxPtacForClientsCar:0
+                         ];
     
     EQLmodeloVan *gold2 = [[EQLmodeloVan alloc]
                            initWithName:@"Gold 2"
-                           photoURL: [NSURL URLWithString: @"gold2.jpeg"]
+                           photo: [UIImage imageNamed: @"Gold_Grand_Confort.jpg"]
                            webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gold-2-guadarnes"]
                            specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                            horsesNum:2
                            price:@"5.736€"
                            ptacs:ptacsOne2Horse
-                           weight:850];
+                           weight:850
+                           maxPtacForClientsCar:0
+                           ];
     
     EQLmodeloVan *goldxl = [[EQLmodeloVan alloc]
                             initWithName:@"Gold XL"
-                            photoURL: [NSURL URLWithString: @"gold2.jpeg"]
+                            photo: [UIImage imageNamed: @"Gold_XL_Western.jpg"]
                             webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gold-2-guadarnes"]
                             specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                             horsesNum:2
                             price:@"8.150€"
                             ptacs:ptacsOne2HorseBig
-                            weight:900];
+                            weight:900
+                            maxPtacForClientsCar:0
+                            ];
     
     EQLmodeloVan *minimax = [[EQLmodeloVan alloc]
                              initWithName:@"Minimax"
-                             photoURL: [NSURL URLWithString: @"minimax.jpeg"]
+                             photo: [UIImage imageNamed: @"minimax.jpg"]
                              webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gold-2-guadarnes"]
                              specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                              horsesNum:3
                              price:@"10.000€"
                              ptacs:ptacsOne3Horse
-                             weight:1250];
+                             weight:1250
+                             maxPtacForClientsCar:0
+                             ];
     
     EQLmodeloVan *optimax = [[EQLmodeloVan alloc]
                              initWithName:@"Optimax"
-                             photoURL: [NSURL URLWithString: @"optimax.jpeg"]
+                             photo: [UIImage imageNamed: @"Optimax_Pont_avant.jpg"]
                              webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gold-2-guadarnes"]
                              specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
                              horsesNum:4
                              price:@"11.900€"
                              ptacs:ptacsOne4Horse
-                             weight:1450];
+                             weight:1450
+                             maxPtacForClientsCar:0
+                             ];
     
-        NSArray *allVans = @[gt1,gt2,gold2,goldxl,minimax,optimax];
+        NSArray *allVans = @[gt1,gold_one,gt2,gold2,goldxl,minimax,optimax];
     return allVans;
 }
 

@@ -1,26 +1,24 @@
 //
-//  EQLCarResultsTableTableViewController.m
-//  VANs
+//  EQLMenuTableTableViewController.m
+//  VAN Selector
 //
-//  Created by Marc Humet on 29/07/14.
+//  Created by Marc Humet on 04/08/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLCarResultsTableTableViewController.h"
+#import "EQLMenuTableTableViewController.h"
 
-
-@interface EQLCarResultsTableTableViewController ()
+@interface EQLMenuTableTableViewController ()
 
 @end
 
-@implementation EQLCarResultsTableTableViewController
+@implementation EQLMenuTableTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-
     }
     return self;
 }
@@ -34,25 +32,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
-
-/*
-// BACCUS
-- (void)loadModel
-{
-
-    
-    self.model = [[EQLGarageModel alloc] init];
-    self.tableView.tableHeaderView = nil;
-    [self.tableView reloadData];
-    
-    // Avisar al delegado
-    //[self.delegate wineryTableViewController:self didSelectWine:[self lastSelectedWine]];
-}
-
-// FIN BACCUS
-*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,55 +44,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 4;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-
-    NSInteger count = 0;
-    
-    if (section == ONE_HORSE_SECTION) {
-        count = [self.resultsArray[0] count];
-    }
-    else if (section == TWO_HORSE_SECTION) {
-        count = [self.resultsArray[1] count];    }
-    else if (section == THREE_HORSE_SECTION) {
-        count = [self.resultsArray[2] count];
-    }
-    else {
-        count = [self.resultsArray[3] count];
-    }
-    
-    return count;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSArray *aux;
-    NSString *cadena;
-    //NSArray *aux2;
-    int maxWeightClient=0;
-
-        aux=[_resultsArray objectAtIndex:indexPath.section];
-        cell.textLabel.text = [aux[indexPath.row] Name];
-        //aux2 = [aux[indexPath.row] maxPtacForClientsCar];
-        maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
-        cadena = @"MMA:";
-        cell.detailTextLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt:maxWeightClient] stringValue]];
-        cell.imageView.image = [aux[indexPath.row] photo];
     
     return cell;
 }
-
 
 
 /*
@@ -153,30 +105,7 @@
 }
 */
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    
-    switch (section)
-    {
-        case 0:
-            sectionName = @"1 Caballo";
-            break;
-        case 1:
-            sectionName = @"2 Caballos";
-            break;
-        case 2:
-            sectionName = @"3 Caballos";
-            break;
-        case 3:
-            sectionName = @"4 Caballos";
-            break;
-        default:
-            break;
-    }
-    return sectionName;
-}
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -185,6 +114,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

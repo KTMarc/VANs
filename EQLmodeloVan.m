@@ -10,50 +10,56 @@
 
 @implementation EQLmodeloVan
 
+
 // Constructor (class method)
 +(id) vanWithName: (NSString *) aName
-         photoURL: (NSURL *)aPhotoURL
+         photo: (UIImage *)aPhoto
            webURL: (NSURL *) awebURL
             specs: (NSString *) aSpecs
         horsesNum: (int) ahorsesNum
             price: (NSString *) aPrice
             ptacs: (NSArray *) ptacs
-           weight: (int) aweight;
+           weight: (int) aweight
+           maxPtacForClientsCar: (int) amaxPtacForClientsCar;
 
 
 {
     
     return [[self alloc]initWithName:(NSString *) aName
-                            photoURL: (NSURL *)aPhotoURL
+                               photo: (UIImage *)aPhoto
                               webURL: (NSURL *) awebURL
                                specs: (NSString *) aSpecs
                            horsesNum: (int) ahorsesNum
                                price: (NSString *) aPrice
                                ptacs: (NSArray *) ptacs
                               weight: (int) aweight
+                       maxPtacForClientsCar: (int) amaxPtacForClientsCar
             ];
 }
 
 // Initializer
 -(id) initWithName: (NSString *) aName
-          photoURL: (NSURL *)aPhotoURL
+             photo: (UIImage *)aPhoto
             webURL: (NSURL *) awebURL
              specs: (NSString *) aSpecs
          horsesNum: (int) ahorsesNum
              price: (NSString *) aPrice
              ptacs: (NSArray *) ptacs
-            weight: (int) aweight;{
+            weight: (int) aweight
+           maxPtacForClientsCar: (int) amaxPtacForClientsCar;
+{
     
     
     if (self = [super init]) {
         _Name = aName;
-        _photoURL = aPhotoURL;
+        _photo = aPhoto;
         _webURL = awebURL;
         _specs = aSpecs;
         _horsesNum = ahorsesNum;
         _price = aPrice;
         _ptacs = ptacs;
         _weight = aweight;
+        _maxPtacForClientsCar = amaxPtacForClientsCar;
     }
     return self;
 }

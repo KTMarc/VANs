@@ -79,11 +79,14 @@
     int pesoDisponible= 0;
     int aux = -1;
     BOOL logs = false;
+    NSString *lastName =@"";
     
     
     self.resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
+    NSMutableArray *auxArray = [[NSMutableArray alloc]init];
     
     //    NSLog (@"Licencia: %@", licences[0]);
+    
     
     switch (self.licenceSegmentedControl.selectedSegmentIndex){
         case 0:
@@ -100,18 +103,20 @@
             
     }
 
-    
     for (NSNumber *each in licences){ //Iteramos en numeros enteros
         //Accedemos a objetos
         maximumPTAC = each.intValue - _ptacCarTextField.text.intValue;
-                if (each.intValue == aux){ //Solo haremos todo en el carne que tengamos seleccionado
-                    if (logs) {NSLog(@"Entramos en el carne de %i Kg" ,aux);}
+        if (each.intValue == aux){ //Solo haremos todo en el carne que tengamos seleccionado
+            if (logs) {NSLog(@"Entramos en el carne de %i Kg" ,aux);}
             
             
             if (logs) {NSLog(@"Peso Maximo: %@ - %i = %i",each, _ptacCarTextField.text.intValue, maximumPTAC);NSLog(@"-----------------CARNE %@---------------",each);}
             
             
             for (id van in _vansArray){ //Iteramos en objetos
+                if (logs) {NSLog(@"Estamos en el indice del array: %i", [van horsesNum]);}
+                //Aquesta merda comença amb index 1, no 0 .
+
                 if (logs) { NSLog(@"--------------VAN %@------------",[van Name]);}
                 
                 for (NSNumber *ptacAct in [van ptacs]){ //Aqui ja estem en el punt on volem, no cal dir [[_vansArray objectAtIndex: van] ptacs]. Iteramos en numeros enteros
@@ -119,7 +124,7 @@
                     }
                     
                     if (maximumPTAC > [ptacAct integerValue]) {
-                        pesoTotalCaballos = pesoCaballo * [van horsesNum];
+                        pesoTotalCaballos = pesoCaballo * ([van horsesNum]-1);
                         pesoDisponible = ptacAct.intValue - [van weight];
                         
                         if ( pesoTotalCaballos <= pesoDisponible) {
@@ -129,29 +134,26 @@
                             
                             //Añadimos van al array que toque segun en el numero de caballos que estemos
                             
-                            switch ([van horsesNum]){
-                                case 1:
-                                    [self.resultsArray[0] addObject:van];
-                                    break;
-                                case 2:
-                                    [self.resultsArray[1] addObject:van];
-                                    break;
-                                case 3:
-                                    [self.resultsArray[2] addObject:van];
-                                    break;
-                                case 4:
-                                    [self.resultsArray[3] addObject:van];
-                                    break;
-                                default:
-                                    break;
+                            if ([van Name] != lastName.description) { //Si esta van no lo habiamos añadido ya, lo añadimos ahora
+                                if (logs) {NSLog(@"Añadimos un van nuevo %@ y el ultimo van guardado es: %@",[van Name],lastName);}
+                                    [self.resultsArray[[van horsesNum]-1] addObject:van];
+
                             }
+                            //Sobreescribimos el peso maximo
+                            [[self.resultsArray[[van horsesNum]-1] lastObject] setMaxPtacForClientsCar:[ptacAct integerValue]];
+                            
+                            //auxArray[0] = [self.resultsArray[[van horsesNum]] lastObject];
+                            //[auxArray[0] setMaxPtacForClientsCar:[ptacAct integerValue]];
+                            lastName = [van Name];
                             
                         }
                         
                     }else{
                         if (logs) {
-                            //NSLog(@"No puedes llevar %i caballo(s) de %i Kg con el carné de %@ en el van %@",[van horsesNum],pesoCaballo,each,[van Name]);
-                            //NSLog(@"El peso total de los caballos es %i y el peso disponible para carga es solo %i", pesoTotalCaballos,pesoDisponible);
+                           /*
+                            if (logs) {NSLog(@"No puedes llevar %i caballo(s) de %i Kg con el carné de %@ en el van %@",[van horsesNum],pesoCaballo,each,[van Name]);
+                                NSLog(@"El peso total de los caballos es %i y el peso disponible para carga es solo %i", pesoTotalCaballos,pesoDisponible);}
+                            */
                         }
                     }
                 }

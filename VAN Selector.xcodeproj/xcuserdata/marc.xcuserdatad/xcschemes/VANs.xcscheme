@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49A871A7198158F5008BB3B3"
-               BuildableName = "VANs.app"
-               BlueprintName = "VANs"
-               ReferencedContainer = "container:VANs.xcodeproj">
+               BuildableName = "VAN Selector.app"
+               BlueprintName = "VAN Selector"
+               ReferencedContainer = "container:VAN Selector.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49A871CB198158F6008BB3B3"
-               BuildableName = "VANsTests.xctest"
-               BlueprintName = "VANsTests"
-               ReferencedContainer = "container:VANs.xcodeproj">
+               BuildableName = "VAN SelectorTests.xctest"
+               BlueprintName = "VAN SelectorTests"
+               ReferencedContainer = "container:VAN Selector.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49A871A7198158F5008BB3B3"
-            BuildableName = "VANs.app"
-            BlueprintName = "VANs"
-            ReferencedContainer = "container:VANs.xcodeproj">
+            BuildableName = "VAN Selector.app"
+            BlueprintName = "VAN Selector"
+            ReferencedContainer = "container:VAN Selector.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49A871A7198158F5008BB3B3"
-            BuildableName = "VANs.app"
-            BlueprintName = "VANs"
-            ReferencedContainer = "container:VANs.xcodeproj">
+            BuildableName = "VAN Selector.app"
+            BlueprintName = "VAN Selector"
+            ReferencedContainer = "container:VAN Selector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49A871A7198158F5008BB3B3"
-            BuildableName = "VANs.app"
-            BlueprintName = "VANs"
-            ReferencedContainer = "container:VANs.xcodeproj">
+            BuildableName = "VAN Selector.app"
+            BlueprintName = "VAN Selector"
+            ReferencedContainer = "container:VAN Selector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
