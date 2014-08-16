@@ -1,18 +1,18 @@
 //
-//  EQLHorseWeightTableViewController.m
-//  VANs
+//  EQLMenuTableViewController.m
+//  VAN Selector
 //
-//  Created by Marc Humet on 01/08/14.
+//  Created by Marc Humet on 04/08/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLHorseWeightTableViewController.h"
+#import "EQLMenuTableViewController.h"
 
-@interface EQLHorseWeightTableViewController ()
+@interface EQLMenuTableViewController ()
 
 @end
 
-@implementation EQLHorseWeightTableViewController
+@implementation EQLMenuTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +27,25 @@
 {
     [super viewDidLoad];
     
+    /*Apariencia del navigation controller */
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0]; //Fondo rojo equus
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
+    
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:.92 green:0.92 blue:0.92 alpha:0.8]];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    //Lo primero es generar nuestro array de vans con una clase constructora de ayuda
+    // self.vansArray = [EQLGarageModel allVans];
+    
+    self.garage = [[EQLGarageModel alloc]init];
+    //self.vansArray = _garage.allVans;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,26 +58,41 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    
     // Return the number of rows in the section.
-    return 0;
+    return 3;
 }
 
 /*
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weightCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+ 
+    switch (indexPath.row){
+        case 0:
+            cell.textLabel.text = @"Catalogo de Remolques";
+            cell.detailTextLabel.text = @"Explore todos los modelos de Cheval Liberte";
+            break;
+        case 1:
+            cell.textLabel.text = @"¿Qué VAN puedo llevar con mi carné?";
+            cell.detailTextLabel.text = @"Aclarese con los carnés";
+            break;
+        default:
+            break;
+            
+    }
+    //cadena = @"MMA:";
+    //cell.imageView.image = ;
+ 
     return cell;
 }
 */
@@ -106,7 +135,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -114,7 +143,22 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([sender isKindOfClass:[UITableViewCell class]]){
+        
+        if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
+            EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
+            nextViewController.vansArray = [self.garage allVans];
+            //We pass the fulfiled array with all the vans inside.
+        } else if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
+            EQLCatalogTableViewController *nextViewController = segue.destinationViewController;
+            nextViewController.model = self.garage;
+            //We pass the fulfiled array with all the vans inside.
+        }
+        
+    }
+    
 }
-*/
+
+
 
 @end

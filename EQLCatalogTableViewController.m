@@ -1,18 +1,18 @@
 //
-//  EQLMenuTableTableViewController.m
+//  EQLCatalogTableViewController.m
 //  VAN Selector
 //
 //  Created by Marc Humet on 04/08/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLMenuTableTableViewController.h"
+#import "EQLCatalogTableViewController.h"
 
-@interface EQLMenuTableTableViewController ()
+@interface EQLCatalogTableViewController ()
 
 @end
 
-@implementation EQLMenuTableTableViewController
+@implementation EQLCatalogTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -44,26 +44,122 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    NSUInteger temp = -1;
+    
+    switch (section) {
+        case 0:
+            temp = self.model.oneHorseCount;
+           // NSLog(@"Entramos a contar los remolques de un caballo que tenemos y nos da %lu", (unsigned long)temp);
+            break;
+    
+        case 1:
+            temp = self.model.twoHorseCount;
+            break;
+        case 2:
+            temp = self.model.threeHorseCount;
+            break;
+    
+        case 3:
+            temp = self.model.fourHorseCount;
+            break;
+            
+        default:
+            temp = 0;
+            break;
+    }
+    return temp;
+    
 }
+
+- (EQLmodeloVan *)wineForIndexPath:(NSIndexPath *)indexPath
+{
+    // Averiguamos de qué vino se trata
+    EQLmodeloVan *van = nil;
+    
+    if (indexPath.section == 0) {
+        van = [self.model oneHorseAtIndex:indexPath.row];
+    }
+    else if (indexPath.section == 1) {
+        van = [self.model twoHorseAtIndex:indexPath.row];
+    }
+    else if (indexPath.section == 2){
+        van = [self.model threeHorseAtIndex:indexPath.row];
+    }
+    else {
+        van = [self.model fourHorseAtIndex:indexPath.row];
+    }
+    
+    return van;
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"catalogCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    EQLmodeloVan *van;
+    NSString *cadena;
     
+    //van = [_model.allVans objectAtIndex:indexPath.row];
+
+    switch (indexPath.section) {
+        case 0:
+            van = [_model oneHorseAtIndex:indexPath.row];
+            break;
+        case 1:
+            van = [_model twoHorseAtIndex:indexPath.row];
+            break;
+        case 2:
+            van = [_model threeHorseAtIndex:indexPath.row];
+            break;
+        case 3:
+            van = [_model fourHorseAtIndex:indexPath.row];
+            break;
+            
+        default:
+            break;
+    }
+
+    cell.textLabel.text = [van Name];
+    cadena = @"Detalles:";
+    cell.detailTextLabel.text = cadena;
+//  cell.detailTextLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithI:maxWeightClient] stringValue]];
+    cell.imageView.image = [van photo];
+
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    
+    switch (section)
+    {
+        case 0:
+            sectionName = @"1 Caballo";
+            break;
+        case 1:
+            sectionName = @"2 Caballos";
+            break;
+        case 2:
+            sectionName = @"3 Caballos";
+            break;
+        case 3:
+            sectionName = @"4 Caballos";
+            break;
+        default:
+            break;
+    }
+    return sectionName;
 }
 
 
@@ -115,5 +211,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "EQLmodeloVan.h"
 #import "EQLGarageModel.h"
-#import "EQLCarResultsTableTableViewController.h"
+#import "EQLCarResultsTableViewController.h"
 
 
-@interface EQLViewController : UIViewController
+@interface EQLLicenceFormViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic) int licence;
 @property (nonatomic, strong) NSArray *availableWeights;
 @property (nonatomic, strong) NSArray *vansArray;
-@property (nonatomic, strong) EQLGarageModel *allVans;
+//@property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *resultsArray;
 //UI elements
 @property (weak, nonatomic) IBOutlet UISegmentedControl *licenceSegmentedControl;

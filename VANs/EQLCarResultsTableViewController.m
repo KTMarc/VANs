@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLCarResultsTableTableViewController.h"
+#import "EQLCarResultsTableViewController.h"
 
 
-@interface EQLCarResultsTableTableViewController ()
+@interface EQLCarResultsTableViewController ()
 
 @end
 
-@implementation EQLCarResultsTableTableViewController
+@implementation EQLCarResultsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

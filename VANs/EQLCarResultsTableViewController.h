@@ -19,9 +19,9 @@
 #define ROW_KEY @"row"
 
 
-@interface EQLCarResultsTableTableViewController : UITableViewController
+@interface EQLCarResultsTableViewController : UITableViewController
 
-@property (strong, nonatomic) EQLGarageModel *model;
+//@property (strong, nonatomic) EQLGarageModel *model;
 @property (nonatomic, strong) NSArray *resultsArray;
 
 

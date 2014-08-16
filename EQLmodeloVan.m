@@ -12,18 +12,15 @@
 
 
 // Constructor (class method)
-+(id) vanWithName: (NSString *) aName
-         photo: (UIImage *)aPhoto
-           webURL: (NSURL *) awebURL
-            specs: (NSString *) aSpecs
-        horsesNum: (int) ahorsesNum
-            price: (NSString *) aPrice
-            ptacs: (NSArray *) ptacs
-           weight: (int) aweight
-           maxPtacForClientsCar: (int) amaxPtacForClientsCar;
-
-
-{
++(id) modeloVanWithName: (NSString *) aName
+                  photo: (UIImage *)aPhoto
+                 webURL: (NSURL *) awebURL
+                  specs: (NSString *) aSpecs
+              horsesNum: (int) ahorsesNum
+                  price: (NSString *) aPrice
+                  ptacs: (NSArray *) ptacs
+                 weight: (int) aweight
+   maxPtacForClientsCar: (int) amaxPtacForClientsCar {
     
     return [[self alloc]initWithName:(NSString *) aName
                                photo: (UIImage *)aPhoto
@@ -33,7 +30,7 @@
                                price: (NSString *) aPrice
                                ptacs: (NSArray *) ptacs
                               weight: (int) aweight
-                       maxPtacForClientsCar: (int) amaxPtacForClientsCar
+                maxPtacForClientsCar: (int) amaxPtacForClientsCar
             ];
 }
 
@@ -46,9 +43,7 @@
              price: (NSString *) aPrice
              ptacs: (NSArray *) ptacs
             weight: (int) aweight
-           maxPtacForClientsCar: (int) amaxPtacForClientsCar;
-{
-    
+maxPtacForClientsCar: (int) amaxPtacForClientsCar {
     
     if (self = [super init]) {
         _Name = aName;

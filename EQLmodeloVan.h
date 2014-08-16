@@ -22,7 +22,7 @@
 
 
 // Constructor (class method)
-+(id) vanWithName: (NSString *) aName
++(id) modeloVanWithName: (NSString *) aName
             photo: (UIImage *)aPhoto
            webURL: (NSURL *) awebURL
             specs: (NSString *) aSpecs
@@ -33,7 +33,7 @@
            maxPtacForClientsCar: (int) maxPtacForClientsCar;
 
 
-// Initializer
+// Designated Initializer
 -(id) initWithName: (NSString *) aName
              photo: (UIImage *)aPhoto
            webURL: (NSURL *) awebURL
