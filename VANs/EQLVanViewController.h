@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EQLmodeloVan.h"
 
 @interface EQLVanViewController : UIViewController
+
+@property (strong, nonatomic) EQLmodeloVan *van;
+@property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (strong, nonatomic) IBOutlet UILabel *NameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numHorsesLabel;
+@property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
+@property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
+- (IBAction)callButton:(id)sender;
 
 @end

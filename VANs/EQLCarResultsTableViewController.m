@@ -153,6 +153,23 @@
 }
 */
 
+/*
+ 
+- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //Guardamos la celda que hemos seleccionado
+
+    self.van=[_resultsArray objectAtIndex:indexPath.section];
+    NSLog(@"%@", [self.van Name]);
+    //Mirar donde apunta el puntero _van
+    
+//    NSLog(@"%@",[self.van[indexPath.row] Name])
+ 
+    
+}
+
+  */
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *sectionName;
@@ -184,6 +201,18 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([sender isKindOfClass:[UITableViewCell class]]){
+        if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            EQLVanViewController *nextViewController = segue.destinationViewController;
+            NSArray *aux;
+            aux=[_resultsArray objectAtIndex:indexPath.section];
+            self.van = aux[indexPath.row];
+            nextViewController.van = self.van;
+            
+        }
+    }
+
 }
 
 
