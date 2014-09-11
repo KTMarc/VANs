@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EQLGarageModel.h"
 
-@interface EQLCatalogTableViewController : UITableViewController
+@interface EQLCatalogTableViewController : PFQueryTableViewController
 
 @property (strong, nonatomic) EQLGarageModel *model;
 //@property (nonatomic, strong) NSArray *vansArray;
-
+@property (nonatomic, strong) NSMutableArray *vansArray;
 
 @end

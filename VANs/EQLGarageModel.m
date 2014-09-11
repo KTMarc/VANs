@@ -49,7 +49,6 @@
         NSArray *ptacsOne2HorseBig = @[@1100,@1200,@1300,@1400,@1500,@1600,@1700,@1800,@1900,@2000,@2100,@2200,@2300,@2400,@2500,@2600];
         NSArray *ptacsOne3Horse = @[@1700,@1800,@1900,@2000,@2100,@2200,@2300,@2400,@2500,@2600,@2700,@2800,@2900,@3000];
         NSArray *ptacsOne4Horse = @[@2800,@2900,@3000,@3100,@3200,@3300,@3400,@3500];
-
         
         //Llenamos el modelo
         
@@ -138,15 +137,54 @@
                                  ];
         
         _allVans = @[gt1,gold_one,gt2,gold2,goldxl,minimax,optimax];
-        
+
         _oneHorseVans = [[NSMutableArray alloc]init];
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
         
+        
+        /*
+        PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+        queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        
+        PFObject *parseVan;
+        int indexPFObject;
+        
+        [queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error){
+                NSLog(@"Successfully retrieved %d vans.", objects.count);
+                _allVans = [objects mutableCopy];
+            } else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+
+        */
+        
+       // NSLog(@"Numero de objetos en %u", [_allVans count]);
         //Put each object where it belongs by horses number
         for (id van in _allVans){
+/*
+            NSLog(@"Entra al for");
+
+            parseVan = van;
+            indexPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
+            EQLmodeloVan *aux = [EQLmodeloVan
+                                 modeloVanWithName:@"Optimax"
+                                 photo: [UIImage imageNamed: @"Optimax_Pont_avant.jpg"]
+                                 webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gold-2-guadarnes"]
+                                 specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
+                                 horsesNum:4
+                                 price:@"11.900€"
+                                 ptacs:ptacsOne4Horse
+                                 weight:1450
+                                 maxPtacForClientsCar:0
+                                 ];
+            NSLog(@"Hemos leido el numero de caballos:%i",indexPFObject);
+ */
             switch ([van horsesNum]) {
+//             switch (indexPFObject) {
                 case 1:
                     [_oneHorseVans addObject:van];
                     break;

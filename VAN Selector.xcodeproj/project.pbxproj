@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04705A1206024A408ED26ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6F93922AF54A898E0D6690 /* libPods.a */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
+		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
 		498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498212381987BD0500022486 /* ejemploFichaA5.jpg */; };
 		4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4982123B1987C5B300022486 /* EQLTabBarController.m */; };
 		49904A2B198FA5CE00A4A79E /* TabBar_A4Icon-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		498212381987BD0500022486 /* ejemploFichaA5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA5.jpg; sourceTree = "<group>"; };
 		4982123A1987C5B300022486 /* EQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTabBarController.h; sourceTree = "<group>"; };
 		4982123B1987C5B300022486 /* EQLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTabBarController.m; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		498212371987BBDF00022486 /* Fotos */ = {
 			isa = PBXGroup;
 			children = (
+				4972AA5619C20434004896A1 /* placeholder.jpg */,
 				49907CBB198CCF96005CF560 /* Gold_Grand_Confort.jpg */,
 				49907CBC198CCF96005CF560 /* Gold_one.jpg */,
 				49907CC9198CD91E005CF560 /* gt1.jpg */,
@@ -474,6 +477,7 @@
 				49B1FC2319825EBE008E0ABD /* Icon-40.png in Resources */,
 				49B1FC1E19825EBE008E0ABD /* Icon-Small@2x.png in Resources */,
 				49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */,
+				4972AA5719C20434004896A1 /* placeholder.jpg in Resources */,
 				49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */,
 				49B1FC2619825EBE008E0ABD /* Icon-60@2x.png in Resources */,
 			);

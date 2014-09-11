@@ -16,5 +16,4 @@
 @property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *vansArray;
 
-
 @end

@@ -28,6 +28,8 @@
 
 @property (nonatomic, readonly, strong) NSArray *allVans;
 
+
+
 //+ (NSArray *) allVans;
 
 - (EQLmodeloVan *)oneHorseAtIndex:(NSUInteger)index;

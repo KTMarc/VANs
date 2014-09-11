@@ -14,19 +14,39 @@
 
 @implementation EQLCatalogTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithCoder:(NSCoder *)aCoder
 {
-    self = [super initWithStyle:style];
+    self = [super initWithCoder:aCoder];
     if (self) {
-        // Custom initialization
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName = @"modeloVan";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"Name";
+        
+        // The title for this table in the Navigation Controller.
+        self.title = @"Catalogo";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 5;
     }
     return self;
 }
 
+#pragma mark - View lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -34,183 +54,184 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 - (void)didReceiveMemoryWarning
 {
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Parse
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 4;
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    // This method is called every time objects are loaded from Parse via the PFQuery
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    NSUInteger temp = -1;
+- (void)objectsWillLoad {
+    [super objectsWillLoad];
     
-    switch (section) {
-        case 0:
-            temp = self.model.oneHorseCount;
-           // NSLog(@"Entramos a contar los remolques de un caballo que tenemos y nos da %lu", (unsigned long)temp);
-            break;
-    
-        case 1:
-            temp = self.model.twoHorseCount;
-            break;
-        case 2:
-            temp = self.model.threeHorseCount;
-            break;
-    
-        case 3:
-            temp = self.model.fourHorseCount;
-            break;
-            
-        default:
-            temp = 0;
-            break;
-    }
-    return temp;
-    
+    // This method is called before a PFQuery is fired to get more objects
 }
 
-- (EQLmodeloVan *)wineForIndexPath:(NSIndexPath *)indexPath
-{
-    // Averiguamos de qué vino se trata
-    EQLmodeloVan *van = nil;
+
+// Override to customize what kind of query to perform on the class. The default is to query for
+// all objects ordered by createdAt descending.
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
-    if (indexPath.section == 0) {
-        van = [self.model oneHorseAtIndex:indexPath.row];
-    }
-    else if (indexPath.section == 1) {
-        van = [self.model twoHorseAtIndex:indexPath.row];
-    }
-    else if (indexPath.section == 2){
-        van = [self.model threeHorseAtIndex:indexPath.row];
-    }
-    else {
-        van = [self.model fourHorseAtIndex:indexPath.row];
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    return van;
+    [query orderByAscending:@"Priority"];
+    
+    return query;
 }
 
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"catalogCell" forIndexPath:indexPath];
+// Override to customize the look of a cell representing an object. The default is to display
+// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"catalogCell";
     
-    // Configure the cell...
-    EQLmodeloVan *van;
-    NSString *cadena;
-    
-    //van = [_model.allVans objectAtIndex:indexPath.row];
-
-    switch (indexPath.section) {
-        case 0:
-            van = [_model oneHorseAtIndex:indexPath.row];
-            break;
-        case 1:
-            van = [_model twoHorseAtIndex:indexPath.row];
-            break;
-        case 2:
-            van = [_model threeHorseAtIndex:indexPath.row];
-            break;
-        case 3:
-            van = [_model fourHorseAtIndex:indexPath.row];
-            break;
-            
-        default:
-            break;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-
-    cell.textLabel.text = [van Name];
-    cadena = @"Detalles:";
-    cell.detailTextLabel.text = cadena;
-//  cell.detailTextLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithI:maxWeightClient] stringValue]];
-    cell.imageView.image = [van photo];
-
+    
+    // Configure the cell
+  //  cell.textLabel.text = [object objectForKey:@"Name"];
+  //  cell.detailTextLabel.text = [NSString stringWithFormat:@"Precio: %@", [object objectForKey:@"price"]];
+    
+    // Configure the cell
+    PFFile *thumbnail = [object objectForKey:@"photo"];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
+    
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = [object objectForKey:@"Name"];
+    
+    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
+    prepTimeLabel.text = [object objectForKey:@"price"];
+    
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    
-    switch (section)
-    {
-        case 0:
-            sectionName = @"1 Caballo";
-            break;
-        case 1:
-            sectionName = @"2 Caballos";
-            break;
-        case 2:
-            sectionName = @"3 Caballos";
-            break;
-        case 3:
-            sectionName = @"4 Caballos";
-            break;
-        default:
-            break;
-    }
-    return sectionName;
-}
-
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override if you need to change the ordering of objects in the table.
+ - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
+ return [objects objectAtIndex:indexPath.row];
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to customize the look of the cell that allows the user to load the next page of objects.
+ // The default implementation is a UITableViewCellStyleDefault cell with simple labels.
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
+ static NSString *CellIdentifier = @"NextPage";
+ 
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ 
+ if (cell == nil) {
+ cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ }
+ 
+ cell.selectionStyle = UITableViewCellSelectionStyleNone;
+ cell.textLabel.text = @"Load more...";
+ 
+ return cell;
+ }
+ */
+
+#pragma mark - Table view data source
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-*/
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
 
 
 @end

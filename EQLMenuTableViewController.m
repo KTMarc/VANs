@@ -34,6 +34,7 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:.92 green:0.92 blue:0.92 alpha:0.8]];
     
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,6 +43,8 @@
     
     //Lo primero es generar nuestro array de vans con una clase constructora de ayuda
     // self.vansArray = [EQLGarageModel allVans];
+    
+    
     
     self.garage = [[EQLGarageModel alloc]init];
     //self.vansArray = _garage.allVans;
