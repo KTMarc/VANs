@@ -58,6 +58,8 @@
     return noResults;
 }
 
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -77,6 +79,30 @@
     }
     
     return count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    
+    switch (section)
+    {
+        case 0:
+            if ([self.resultsArray[0] count] > 0){ sectionName = @"1 Caballo";}
+            break;
+        case 1:
+            if ([self.resultsArray[1] count] > 0){ sectionName = @"2 Caballos";}
+            break;
+        case 2:
+            if ([self.resultsArray[2] count] > 0){ sectionName = @"3 Caballos";}
+            break;
+        case 3:
+            if ([self.resultsArray[3] count] > 0){ sectionName = @"4 Caballos";}
+            break;
+        default:
+            break;
+    }
+    return sectionName;
 }
 
 
@@ -174,29 +200,7 @@
 
   */
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    
-    switch (section)
-    {
-        case 0:
-            if ([self.resultsArray[0] count] > 0){ sectionName = @"1 Caballo";}
-            break;
-        case 1:
-            if ([self.resultsArray[1] count] > 0){ sectionName = @"2 Caballos";}
-            break;
-        case 2:
-            if ([self.resultsArray[2] count] > 0){ sectionName = @"3 Caballos";}
-            break;
-        case 3:
-            if ([self.resultsArray[3] count] > 0){ sectionName = @"4 Caballos";}
-            break;
-        default:
-            break;
-    }
-    return sectionName;
-}
+
 
 #pragma mark - Navigation
 

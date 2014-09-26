@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) EQLGarageModel *model;
 @property (strong, nonatomic) PFObject *parseVanOrigen;
+@property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
+@property (nonatomic) BOOL executionFlag;
 
 //@property (nonatomic, strong) NSArray *vansArray;
 //@property (nonatomic, strong) NSMutableArray *vansArray;

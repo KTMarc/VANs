@@ -11,6 +11,9 @@
 
 @interface EQLCatalogTableViewController ()
 
+
+
+
 @end
 
 @implementation EQLCatalogTableViewController
@@ -37,7 +40,7 @@
         self.paginationEnabled = YES;
         
         // The number of objects to show per page
-        self.objectsPerPage = 5;
+        self.objectsPerPage = 15;
     }
     return self;
 }
@@ -101,18 +104,58 @@
 - (void)objectsDidLoad:(NSError *)error {
     [super objectsDidLoad:error];
         // This method is called every time objects are loaded from Parse via the PFQuery
+
+   
+//    NSLog(@"%lu", (unsigned long)[self.objects count]);
+    
+   // Only to know the number of rows in each section
+    if (!self.executionFlag){
+        
+    for (id van in self.objects){
+        // NSLog(@"Entra al for");
+        int numHorsesInPFObject = [van[@"horsesNum"] intValue];
+        switch (numHorsesInPFObject) {
+            case 1:
+                _oneHorseCount++;
+                break;
+            case 2:
+                _twoHorseCount++;
+                break;
+            case 3:
+                _threeHorseCount++;
+                break;
+            case 4:
+                _fourHorseCount++;
+                break;
+            default:
+                break;
+        }
+    }
+        self.executionFlag = YES;
+
+    }
+    NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
+    NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
+    NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
+    NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
     
 }
 
 - (void)objectsWillLoad {
     [super objectsWillLoad];
-    
     // This method is called before a PFQuery is fired to get more objects
+    
+    self.executionFlag = NO;
+    _oneHorseCount = 0;
+    _twoHorseCount = 0;
+    _threeHorseCount = 0;
+    _fourHorseCount = 0;
 }
 
 
 // Override to customize what kind of query to perform on the class. The default is to query for
 // all objects ordered by createdAt descending.
+
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
@@ -120,14 +163,44 @@
     // and then subsequently do a query against the network.
     if ([self.objects count] == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+//       query.cachePolicy = kPFCachePolicyCacheOnly;
     }
-    
+
     [query orderByAscending:@"Priority"];
-    
     return query;
 }
 
+
 /*
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 4;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    
+    NSUInteger count = 0;
+    
+    if (section == ONE_HORSE_SECTION) {
+        count = _oneHorseCount;
+    
+    }else if (section == TWO_HORSE_SECTION) {
+        count = _twoHorseCount;
+    }else if (section == THREE_HORSE_SECTION) {
+        count = _threeHorseCount;
+    }
+    else {
+        count = _fourHorseCount;
+    }
+    
+    return count;
+}
+
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *sectionName;
@@ -151,8 +224,8 @@
     }
     return sectionName;
 }
-
 */
+
 
 
 // Override to customize the look of a cell representing an object. The default is to display
@@ -166,10 +239,7 @@
     }
     
     // Configure the cell
-  //  cell.textLabel.text = [object objectForKey:@"Name"];
-  //  cell.detailTextLabel.text = [NSString stringWithFormat:@"Precio: %@", [object objectForKey:@"price"]];
     
-    // Configure the cell
     PFFile *thumbnail = [object objectForKey:@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
