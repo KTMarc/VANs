@@ -26,8 +26,9 @@
 @property (strong, nonatomic) NSMutableArray *threeHorseVans;
 @property (strong, nonatomic) NSMutableArray *fourHorseVans;
 
-@property (nonatomic, readonly, strong) NSArray *allVans;
-
+//@property (nonatomic, readonly, strong) NSArray *allVans;
+@property (nonatomic, strong) NSArray *allVans;
+@property (nonatomic) BOOL executionFlag;
 
 
 //+ (NSArray *) allVans;

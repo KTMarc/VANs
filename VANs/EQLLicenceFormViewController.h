@@ -16,7 +16,7 @@
 
 @property (nonatomic) int licence;
 @property (nonatomic, strong) NSArray *availableWeights;
-@property (nonatomic, strong) NSArray *vansArray;
+@property (nonatomic, strong) NSArray *allVans;
 //@property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *resultsArray;
 //UI elements

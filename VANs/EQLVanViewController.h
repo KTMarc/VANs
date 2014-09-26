@@ -12,11 +12,17 @@
 @interface EQLVanViewController : UIViewController
 
 @property (strong, nonatomic) EQLmodeloVan *van;
+@property (strong, nonatomic) PFObject *parseVan;
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *NameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numHorsesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
 @property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+
+
 - (IBAction)callButton:(id)sender;
+
+
 
 @end

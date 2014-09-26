@@ -34,25 +34,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _noResultsLabel.hidden = YES;
+    
     
 }
-
-/*
-// BACCUS
-- (void)loadModel
-{
-
-    
-    self.model = [[EQLGarageModel alloc] init];
-    self.tableView.tableHeaderView = nil;
-    [self.tableView reloadData];
-    
-    // Avisar al delegado
-    //[self.delegate wineryTableViewController:self didSelectWine:[self lastSelectedWine]];
-}
-
-// FIN BACCUS
-*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -65,7 +50,12 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 4;
+    
+    NSUInteger noResults = [self.resultsArray[0] count] + [self.resultsArray[1] count] + [self.resultsArray[2] count] + [self.resultsArray[3] count];
+    
+    if (noResults == 0){ _noResultsLabel.hidden = NO;}
+    
+    return noResults;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -97,18 +87,35 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSArray *aux;
-    NSString *cadena;
-    //NSArray *aux2;
-    int maxWeightClient=0;
+    NSArray *aux; //Guardamos el array con el numero de caballos en el que vamos a trabajar.
 
-        aux=[_resultsArray objectAtIndex:indexPath.section];
-        cell.textLabel.text = [aux[indexPath.row] Name];
-        //aux2 = [aux[indexPath.row] maxPtacForClientsCar];
-        maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
-        cadena = @"MMA:";
-        cell.detailTextLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt:maxWeightClient] stringValue]];
-        cell.imageView.image = [aux[indexPath.row] photo];
+    int maxWeightClient=0;
+    PFObject *PFvan;
+    aux=[_resultsArray objectAtIndex:indexPath.section];
+    PFvan = aux[indexPath.row];
+
+    PFFile *thumbnail = PFvan[@"photo"];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
+    //cell.imageView.image = thumbnailImageView.image;
+
+    
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = [PFvan objectForKey:@"Name"];
+    
+    UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
+    priceLabel.text = [PFvan objectForKey:@"price"];
+
+    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
+    NSString *cadena = @"MMA:";
+    
+    UILabel *maxPtacLabel = (UILabel*) [cell viewWithTag:103];
+    maxPtacLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt: maxWeightClient] stringValue]];
+
+   
+    
     
     return cell;
 }

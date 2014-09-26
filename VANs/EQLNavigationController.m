@@ -31,7 +31,8 @@
 
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0];
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = YES;    
+    
     /* Esto aqui no chuta */
     //    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 //    self.navigationController.navigationBar.tintColor = [UIColor clearColor];

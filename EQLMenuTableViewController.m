@@ -34,6 +34,7 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:.92 green:0.92 blue:0.92 alpha:0.8]];
     
+   
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -45,8 +46,10 @@
     // self.vansArray = [EQLGarageModel allVans];
     
     
-    
+   // NSLog(@"ejecutamos el constructor");
     self.garage = [[EQLGarageModel alloc]init];
+    
+    
     //self.vansArray = _garage.allVans;
     
 }
@@ -150,7 +153,7 @@
         
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
-            nextViewController.vansArray = [self.garage allVans];
+            nextViewController.allVans = [self.garage allVans];
             //We pass the fulfiled array with all the vans inside.
         } else if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
             EQLCatalogTableViewController *nextViewController = segue.destinationViewController;

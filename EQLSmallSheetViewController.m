@@ -28,6 +28,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
      
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
     /* Clase 126 curso 14 apps */
     self.imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ejemploFichaA5.jpg"]];
     self.scrollView.contentSize = self.imageView.frame.size;
@@ -37,7 +45,8 @@
     /* Clase 128 */
     self.scrollView.delegate = self;
     self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.5;}
+    self.scrollView.minimumZoomScale = 0.5;
+}
 
 
 - (void)didReceiveMemoryWarning

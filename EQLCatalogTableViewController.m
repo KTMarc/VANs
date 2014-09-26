@@ -7,6 +7,7 @@
 //
 
 #import "EQLCatalogTableViewController.h"
+#import "EQLVanViewController.h"
 
 @interface EQLCatalogTableViewController ()
 
@@ -27,7 +28,7 @@
         self.textKey = @"Name";
         
         // The title for this table in the Navigation Controller.
-        self.title = @"Catalogo";
+        self.title = @"Catálogo";
         
         // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
@@ -99,8 +100,8 @@
 
 - (void)objectsDidLoad:(NSError *)error {
     [super objectsDidLoad:error];
+        // This method is called every time objects are loaded from Parse via the PFQuery
     
-    // This method is called every time objects are loaded from Parse via the PFQuery
 }
 
 - (void)objectsWillLoad {
@@ -126,6 +127,32 @@
     return query;
 }
 
+/*
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    
+    switch (section)
+    {
+        case 0:
+            sectionName = @"1 Caballo";
+            break;
+        case 1:
+            sectionName = @"2 Caballos";
+            break;
+        case 2:
+            sectionName = @"3 Caballos";
+            break;
+        case 3:
+            sectionName = @"4 Caballos";
+            break;
+        default:
+            break;
+    }
+    return sectionName;
+}
+
+*/
 
 
 // Override to customize the look of a cell representing an object. The default is to display
@@ -231,7 +258,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    self.parseVanOrigen = [self.objects objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"comingFromCatalog" sender:self.parseVanOrigen];
+   // NSLog(@"%@", self.parseVanOrigen[@"Name"]);
+    
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
+            EQLVanViewController *nextViewController = segue.destinationViewController;
+            nextViewController.parseVan = sender;
+        }
+}
 
 @end

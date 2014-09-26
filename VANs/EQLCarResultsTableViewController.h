@@ -25,6 +25,8 @@
 //@property (strong, nonatomic) EQLGarageModel *model;
 @property (nonatomic, strong) NSArray *resultsArray;
 @property (nonatomic, strong) EQLmodeloVan *van;
+@property (strong, nonatomic) PFObject *parseVanOrigen;
+@property (strong, nonatomic) IBOutlet UILabel *noResultsLabel;
 
 
 @end

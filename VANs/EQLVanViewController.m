@@ -30,7 +30,7 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
-    
+    /*
     NSArray *ptacsOne1Horse = @[@900,@1000,@1100,@1200,@1300,@1400];
     
     EQLmodeloVan *gt1 = [EQLmodeloVan
@@ -52,7 +52,31 @@
     //  self.numHorsesLabel.text = self.van.horsesNum;
     self.detailsTextView.text = self.van.specs;
     //  self.ptacsLabel.text = self.van.ptacs;
-
+*/
+    
+    //self.photoImageView.image = _parseVan[@"] self.van.photo;
+    self.NameLabel.text = _parseVan[@"Name"];
+    
+    //  self.numHorsesLabel.text = self.van.horsesNum;
+    //self.detailsTextView.text = self.van.specs;
+    //  self.ptacsLabel.text = self.van.ptacs;
+    
+    /*
+    PFFile *thumbnail = [object objectForKey:@"photo"];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
+                                   
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = [object objectForKey:@"Name"];
+                                          
+    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
+    prepTimeLabel.text = [object objectForKey:@"price"];
+    */
+                                          
+                                          
+                                          
 }
 
 - (void)didReceiveMemoryWarning
