@@ -113,9 +113,6 @@
     
     UILabel *maxPtacLabel = (UILabel*) [cell viewWithTag:103];
     maxPtacLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt: maxWeightClient] stringValue]];
-
-   
-    
     
     return cell;
 }
@@ -184,16 +181,16 @@
     switch (section)
     {
         case 0:
-            sectionName = @"1 Caballo";
+            if ([self.resultsArray[0] count] > 0){ sectionName = @"1 Caballo";}
             break;
         case 1:
-            sectionName = @"2 Caballos";
+            if ([self.resultsArray[1] count] > 0){ sectionName = @"2 Caballos";}
             break;
         case 2:
-            sectionName = @"3 Caballos";
+            if ([self.resultsArray[2] count] > 0){ sectionName = @"3 Caballos";}
             break;
         case 3:
-            sectionName = @"4 Caballos";
+            if ([self.resultsArray[3] count] > 0){ sectionName = @"4 Caballos";}
             break;
         default:
             break;
@@ -214,9 +211,8 @@
             EQLVanViewController *nextViewController = segue.destinationViewController;
             NSArray *aux;
             aux=[_resultsArray objectAtIndex:indexPath.section];
-            self.van = aux[indexPath.row];
-            nextViewController.van = self.van;
-            
+            _parseVanOrigen = aux[indexPath.row];
+            nextViewController.parseVan = _parseVanOrigen;
         }
     }
 

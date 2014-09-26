@@ -30,53 +30,26 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
-    /*
-    NSArray *ptacsOne1Horse = @[@900,@1000,@1100,@1200,@1300,@1400];
+
+    UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
+    nameLabel.text = _parseVan[@"Name"];
     
-    EQLmodeloVan *gt1 = [EQLmodeloVan
-                         modeloVanWithName:@"GT1"
-                         photo: [UIImage imageNamed: @"gt1.jpg"]
-                         webURL:[NSURL URLWithString:@"http://www.equus-life.com/remolques/van-gt1-black"]
-                         specs:@"Equipamiento basico:Barras traseras ajustables en dos posiciones 2 ventanas frontales con reja de protección Goma en la rampa y en el interior del VAN.Equipamiento opcional incluido:Cojines laterales"
-                         horsesNum:1
-                         price:@"3.633€"
-                         ptacs:ptacsOne1Horse
-                         weight:600
-                         maxPtacForClientsCar:0
-                         ];
-    
-    self.van = gt1;
-    
-    self.photoImageView.image = self.van.photo;
-    self.NameLabel.text = self.van.Name;
-    //  self.numHorsesLabel.text = self.van.horsesNum;
-    self.detailsTextView.text = self.van.specs;
-    //  self.ptacsLabel.text = self.van.ptacs;
-*/
-    
-    //self.photoImageView.image = _parseVan[@"] self.van.photo;
-    self.NameLabel.text = _parseVan[@"Name"];
-    
-    //  self.numHorsesLabel.text = self.van.horsesNum;
-    //self.detailsTextView.text = self.van.specs;
-    //  self.ptacsLabel.text = self.van.ptacs;
-    
-    /*
-    PFFile *thumbnail = [object objectForKey:@"photo"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    PFFile *thumbnail = _parseVan[@"photo"];
+    PFImageView *thumbnailImageView = (PFImageView*)[self.view viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
-                                   
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
-    nameLabel.text = [object objectForKey:@"Name"];
-                                          
-    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
-    prepTimeLabel.text = [object objectForKey:@"price"];
-    */
-                                          
-                                          
-                                          
+    //cell.imageView.image = thumbnailImageView.image;
+    
+    UILabel *priceLabel = (UILabel*) [self.view viewWithTag:102];
+    priceLabel.text = _parseVan[@"price"];
+    
+    UILabel *horsesLabel = (UILabel*) [self.view viewWithTag:103];
+    horsesLabel.text = [_parseVan[@"horsesNum"] stringValue];
+    
+    UILabel *specsLabel = (UILabel*) [self.view viewWithTag:104];
+    specsLabel.text = _parseVan[@"specs"];
+ 
 }
 
 - (void)didReceiveMemoryWarning

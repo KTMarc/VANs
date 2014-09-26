@@ -20,6 +20,7 @@
 //@property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *resultsArray;
 //UI elements
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *licenceSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *ptacCarTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mmrCarTextField;

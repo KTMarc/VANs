@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) EQLmodeloVan *van;
 @property (strong, nonatomic) PFObject *parseVan;
+
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *NameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numHorsesLabel;
