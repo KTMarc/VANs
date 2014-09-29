@@ -147,7 +147,10 @@
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
         
+        
         PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+        [queryVans orderByAscending:@"Priority"];
+        
         if (!self.executionFlag){
 
             queryVans.cachePolicy =            kPFCachePolicyCacheThenNetwork;

@@ -272,7 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008" y="232"/>
+            <point key="canvasLocation" x="2073" y="234"/>
         </scene>
         <!--Van View Controller-->
         <scene sceneID="CXi-K5-eeB">
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75U-T4-uhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479" y="232"/>
+            <point key="canvasLocation" x="2507" y="234"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="28o-vR-PPQ">
@@ -590,7 +590,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZS-ZT-AOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="-579"/>
+            <point key="canvasLocation" x="1960" y="-539"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j4y-4y-pRY">
@@ -622,9 +622,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="qEQ-MI-DAb"/>
         <segue reference="ArC-37-6qH"/>
         <segue reference="TrJ-Ad-Ng0"/>
-        <segue reference="qEQ-MI-DAb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

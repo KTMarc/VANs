@@ -434,6 +434,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "EQUUS-LIFE";
 				TargetAttributes = {
+					49A871A7198158F5008BB3B3 = {
+						DevelopmentTeam = GM2F4EG66J;
+					};
 					49A871CB198158F6008BB3B3 = {
 						TestTargetID = 49A871A7198158F5008BB3B3;
 					};

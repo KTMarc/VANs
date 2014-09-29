@@ -19,8 +19,9 @@
 @property (nonatomic, strong) NSArray *allVans;
 //@property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *resultsArray;
-//UI elements
+@property (nonatomic, strong) NSDictionary *resultsPtacsAndTexts;
 
+//UI elements
 @property (weak, nonatomic) IBOutlet UISegmentedControl *licenceSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *ptacCarTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mmrCarTextField;

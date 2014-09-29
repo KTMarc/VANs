@@ -69,14 +69,18 @@
     NSArray *licences = @[@3500, @4250, @7000];
     
     int maximumPTAC = 0;
-    int pesoCaballo = self.horseWeight.text.intValue;
+//    int pesoCaballo = self.horseWeight.text.intValue;
+    int pesoCaballo = 450;
     int pesoTotalCaballos = 0;
     int pesoDisponible= 0;
     int aux = -1;
     BOOL logs = false;
-    NSString *lastName =@"";
+    NSString *lastObjectId =@"";
+    PFObject *lastAdded;
+    NSNumber *numberAux = [[NSNumber alloc]init];
     
     self.resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
+    
     //NSMutableArray *auxArray = [[NSMutableArray alloc]init];
     //NSLog (@"Licencia: %@", licences[0]);
     
@@ -103,53 +107,52 @@
             if (logs) {NSLog(@"Peso Maximo: %@ - %i = %i",each, _ptacCarTextField.text.intValue, maximumPTAC);NSLog(@"-----------------CARNE %@---------------",each);}
             
             for (id van in _allVans){ //Iteramos en objetos
-                if (logs) {NSLog(@"Estamos en el indice del array: %@", van[@"horsesNum"]);}
+                if (logs) {NSLog(@"Estamos en la posición del array: %lu", (unsigned long)[_allVans indexOfObject:van]);}
                 //Aquesta merda comença amb index 1, no 0 .
                 if (logs) { NSLog(@"--------------VAN %@------------",van[@"Name"]);}
                 
                 for (NSNumber *ptacAct in van[@"ptacs"]){ //Aqui ja estem en el punt on volem, no cal dir [[_vansArray objectAtIndex: van] ptacs]. Iteramos en numeros enteros
-                    if (logs) { //NSLog(@"------------MMA %@----------",ptacAct);
+                    if (logs) { NSLog(@"------------MMA %@----------",ptacAct);
                     }
                     
                     if (maximumPTAC > [ptacAct integerValue]) {
-                        pesoTotalCaballos = pesoCaballo * ([van[@"horsesNum"] intValue]-1);
+                        pesoTotalCaballos = pesoCaballo * [van[@"horsesNum"] intValue];
                         pesoDisponible = ptacAct.intValue - [van[@"weight"]intValue];
-                        
+
                         if ( pesoTotalCaballos <= pesoDisponible) {
                             
-                            if (logs) {NSLog(@"Con el carné de %@ puedes llevar el van %@ con la MMA %@",each,[van Name],ptacAct);
+                            if (logs) {NSLog(@"Con el carné de %@ puedes llevar el van %@ con la MMA %@",each,van[@"Name"],ptacAct);
                                        NSLog(@"El peso total de los caballos si cada uno pesa %i es %i y el peso disponible es: %i", pesoCaballo,pesoTotalCaballos,pesoDisponible);}
                                         //Añadimos van al array que toque segun en el numero de caballos que estemos
                             
-                            if (van[@"Name"] != lastName.description) { //Si esta van no lo habiamos añadido ya, lo añadimos ahora
-                                if (logs) {NSLog(@"Añadimos un van nuevo %@ y el ultimo van guardado es: %@",[van Name],lastName);}
+                            if ([van objectId] != lastObjectId) { //Si esta van no lo habiamos añadido ya, lo añadimos ahora
+                                if (logs) {NSLog(@"Añadimos un van nuevo %@ y el ultimo van guardado es: %@",van[@"Name"],lastAdded[@"Name"]);}
                                 [self.resultsArray[[van[@"horsesNum"] intValue]-1] addObject:van];
-                                
                             }
-                            //Sobreescribimos el peso maximo
-                       //     [[self.resultsArray[[van[@"horsesNum"] intValue]-1] lastObject] setMaxPtacForClientsCar:[ptacAct intValue]];
-                         //   van[@"maxPtacForClientsCar"] = number;
-                            
-                            
+                            //Sobreescribimos el peso maximo (Posicion 0 del array --> 1 caballo, posicion 1 -> 2 caballos, pos 2--> 3 cab., pos3 -->4 cab)
+                            lastAdded = [self.resultsArray[[van[@"horsesNum"] intValue]-1] lastObject];
+                            numberAux = [[NSNumber alloc] initWithInteger:ptacAct.integerValue];
+                            //NSLog(@"valor de numberAux es:%@", numberAux);
+                            //numberAux = @42;
+                            van[@"maxPtacForClientsCar"] =numberAux;
+                            //[NSNumber numberWithLong:ptacAct.integerValue];
                             //auxArray[0] = [self.resultsArray[[van horsesNum]] lastObject];
                             //[auxArray[0] setMaxPtacForClientsCar:[ptacAct integerValue]];
-                            lastName = van[@"Name"];
+                            lastObjectId = [van objectId];
                             
                         }
                         
                     }else{
                         if (logs) {
-                            /*
-                             if (logs) {NSLog(@"No puedes llevar %i caballo(s) de %i Kg con el carné de %@ en el van %@",[van horsesNum],pesoCaballo,each,[van Name]);
-                             NSLog(@"El peso total de los caballos es %i y el peso disponible para carga es solo %i", pesoTotalCaballos,pesoDisponible);}
-                             */
+                             NSLog(@"No puedes llevar %@ caballo(s) de %i Kg con el carné de %@ en el van %@",van[@"horsesNum"],pesoCaballo,each,van[@"Name"]);
+                             NSLog(@"El peso total de los caballos es %i y el peso disponible para carga es solo %i", pesoTotalCaballos,pesoDisponible);
+                            
                         }
                     }
-                }
-                
-            }
-        }
-    }
+                } //Fin for PTACS
+            } //Fin for Array todos los VANs
+        } //Carné en el que estamos
+    } //Fin for licences
 
 }
 
