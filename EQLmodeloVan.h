@@ -10,39 +10,20 @@
 
 @interface EQLmodeloVan : NSObject
 
-@property (copy, nonatomic) NSString *Name;
-@property (strong, nonatomic, readonly) UIImage *photo;
-@property (strong, nonatomic) NSURL *webURL;
-@property (copy, nonatomic) NSString *specs;
-@property (nonatomic) int horsesNum;
-@property (copy, nonatomic) NSString *price;
-@property (copy, nonatomic) NSArray *ptacs;
-@property (nonatomic) int weight;
+@property (strong, nonatomic) PFObject *PFVan;
+@property (strong, nonatomic) NSString *calculationText;
 @property (nonatomic) int maxPtacForClientsCar;
 
-
 // Constructor (class method)
-+(id) modeloVanWithName: (NSString *) aName
-            photo: (UIImage *)aPhoto
-           webURL: (NSURL *) awebURL
-            specs: (NSString *) aSpecs
-        horsesNum: (int) ahorsesNum
-            price: (NSString *) aPrice
-            ptacs: (NSArray *) ptacs
-           weight: (int) aweight
-           maxPtacForClientsCar: (int) maxPtacForClientsCar;
++(id) modeloVanWithPFVan: (PFObject *)aPFVan
+         calculationText: (NSString *)aCalculationText
+    maxPtacForClientsCar: (int) amaxPtacForClientsCar;
 
 
 // Designated Initializer
--(id) initWithName: (NSString *) aName
-             photo: (UIImage *)aPhoto
-           webURL: (NSURL *) awebURL
-            specs: (NSString *) aSpecs
-        horsesNum: (int) ahorsesNum
-             price: (NSString *) aPrice
-             ptacs: (NSArray *) ptacs
-            weight: (int) aweight
-           maxPtacForClientsCar: (int) maxPtacForClientsCar;
+-(id) initWithPFVan: (PFObject *)aPFVan
+    calculationText: (NSString *)aCalculationText
+maxPtacForClientsCar: (int) amaxPtacForClientsCar;
 
 
 @end

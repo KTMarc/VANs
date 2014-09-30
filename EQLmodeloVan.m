@@ -11,53 +11,33 @@
 @implementation EQLmodeloVan
 
 
+
 // Constructor (class method)
-+(id) modeloVanWithName: (NSString *) aName
-                  photo: (UIImage *)aPhoto
-                 webURL: (NSURL *) awebURL
-                  specs: (NSString *) aSpecs
-              horsesNum: (int) ahorsesNum
-                  price: (NSString *) aPrice
-                  ptacs: (NSArray *) ptacs
-                 weight: (int) aweight
-   maxPtacForClientsCar: (int) amaxPtacForClientsCar {
++(id) modeloVanWithPFVan: (PFObject *)aPFVan
+         calculationText: (NSString *)aCalculationText
+    maxPtacForClientsCar: (int) amaxPtacForClientsCar {
     
-    return [[self alloc]initWithName:(NSString *) aName
-                               photo: (UIImage *)aPhoto
-                              webURL: (NSURL *) awebURL
-                               specs: (NSString *) aSpecs
-                           horsesNum: (int) ahorsesNum
-                               price: (NSString *) aPrice
-                               ptacs: (NSArray *) ptacs
-                              weight: (int) aweight
-                maxPtacForClientsCar: (int) amaxPtacForClientsCar
+    
+    return [[self alloc]initWithPFVan:(PFObject *)aPFVan
+                      calculationText:(NSString *)aCalculationText
+                 maxPtacForClientsCar: (int) amaxPtacForClientsCar
             ];
 }
 
 // Initializer
--(id) initWithName: (NSString *) aName
-             photo: (UIImage *)aPhoto
-            webURL: (NSURL *) awebURL
-             specs: (NSString *) aSpecs
-         horsesNum: (int) ahorsesNum
-             price: (NSString *) aPrice
-             ptacs: (NSArray *) ptacs
-            weight: (int) aweight
+-(id) initWithPFVan: (PFObject *)aPFVan
+    calculationText: (NSString *)aCalculationText
 maxPtacForClientsCar: (int) amaxPtacForClientsCar {
     
     if (self = [super init]) {
-        _Name = aName;
-        _photo = aPhoto;
-        _webURL = awebURL;
-        _specs = aSpecs;
-        _horsesNum = ahorsesNum;
-        _price = aPrice;
-        _ptacs = ptacs;
-        _weight = aweight;
-        _maxPtacForClientsCar = amaxPtacForClientsCar;
+    _PFVan = aPFVan;
+    _calculationText = aCalculationText;
+    _maxPtacForClientsCar = amaxPtacForClientsCar;
     }
     return self;
 }
+
+
 
 
 @end

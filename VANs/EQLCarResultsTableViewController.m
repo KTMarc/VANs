@@ -114,12 +114,16 @@
     
     // Configure the cell...
     NSArray *aux; //Guardamos el array con el numero de caballos en el que vamos a trabajar.
-
     int maxWeightClient=0;
-    PFObject *PFvan;
-    aux=[_resultsArray objectAtIndex:indexPath.section];
-    PFvan = aux[indexPath.row];
 
+    PFObject *PFvan;
+    //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
+    aux=[_resultsArray objectAtIndex:indexPath.section];
+    PFvan = [aux[indexPath.row] PFVan];
+    maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
+    //NSLog(@"Peso maximo guardado es: %i",maxWeightClient);
+    
+    
     PFFile *thumbnail = PFvan[@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
@@ -134,11 +138,21 @@
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
     priceLabel.text = [PFvan objectForKey:@"price"];
 
-    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
+//    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
+//    NSString *cadena = @"MMA:";
+    
     NSString *cadena = @"MMA:";
     
-    UILabel *maxPtacLabel = (UILabel*) [cell viewWithTag:103];
-    maxPtacLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt: maxWeightClient] stringValue]];
+//    UILabel *maxPtacLabel = (UILabel*) [cell viewWithTag:103];
+//    maxPtacLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt: maxWeightClient] stringValue]];
+//    
+    if (maxWeightClient != 0){
+        UILabel *maxPtacLabel = (UILabel*) [cell viewWithTag:103];
+        maxPtacLabel.text = [cadena stringByAppendingString:[[[NSNumber alloc] initWithInt: maxWeightClient] stringValue]];
+    }
+    
+    UILabel *explanationLabel = (UILabel*) [cell viewWithTag:104];
+    explanationLabel.text = [aux[indexPath.row] calculationText];;
     
     return cell;
 }
