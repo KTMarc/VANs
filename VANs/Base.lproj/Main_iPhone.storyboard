@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4ye-rQ-MZa">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -22,12 +23,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-Bw-qAF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3500" borderStyle="roundedRect" placeholder="2.000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-Bw-qAF">
                                 <rect key="frame" x="162" y="171" width="81" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1800" borderStyle="roundedRect" placeholder="1.500" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-Dt-JYh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3500" borderStyle="roundedRect" placeholder="1.500" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-Dt-JYh">
                                 <rect key="frame" x="162" y="210" width="81" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -405,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYu-6q-qsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="1081"/>
+            <point key="canvasLocation" x="952" y="1085"/>
         </scene>
         <!--Ficha A4 (Nuevas)-->
         <scene sceneID="6wd-UJ-QzP">
@@ -596,7 +597,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZS-ZT-AOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="-539"/>
+            <point key="canvasLocation" x="1812" y="-509"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j4y-4y-pRY">
@@ -628,9 +629,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uug-5D-po9"/>
-        <segue reference="qEQ-MI-DAb"/>
         <segue reference="zdW-e7-0S5"/>
+        <segue reference="ArC-37-6qH"/>
+        <segue reference="qEQ-MI-DAb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

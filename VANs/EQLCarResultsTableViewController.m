@@ -50,12 +50,17 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+
+    NSUInteger numResults = 0;
+//    for (id index in _resultsArray){
+//        if ([index count]>0){ numResults++;}
+//    }
+//    
+//    if (numResults == 0){ _noResultsLabel.hidden = NO;}
     
-    NSUInteger noResults = [self.resultsArray[0] count] + [self.resultsArray[1] count] + [self.resultsArray[2] count] + [self.resultsArray[3] count];
+    numResults = 4;
     
-    if (noResults == 0){ _noResultsLabel.hidden = NO;}
-    
-    return noResults;
+    return numResults;
 }
 
 
@@ -118,6 +123,7 @@
 
     PFObject *PFvan;
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
+    NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
     aux=[_resultsArray objectAtIndex:indexPath.section];
     PFvan = [aux[indexPath.row] PFVan];
     maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
