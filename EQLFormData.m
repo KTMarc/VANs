@@ -1,78 +1,59 @@
 //
-//  EQLViewController.m
-//  VANs
+//  EQLFormData.m
+//  VAN Selector
 //
-//  Created by Marc Humet on 24/07/14.
+//  Created by Marc Humet on 3/10/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLLicenceFormViewController.h"
-
-
-@interface EQLLicenceFormViewController ()
-
-@end
+#import "EQLFormData.h"
 
 #define CARNE_B     3500;
 #define CARNE_B96   4250;
 #define CARNE_ByE   7000;
 
-@implementation EQLLicenceFormViewController 
+@implementation EQLFormData
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    //Esto es para que desaparezca el teclado numerico cada vez que piquemos fuera de él
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    [tapRecognizer setDelegate:self];
-    [tapRecognizer setNumberOfTapsRequired:1];
-    [self.view addGestureRecognizer:tapRecognizer];
-    [self.view endEditing:YES];
-    // _result.hidden = false;
+@synthesize mmaCar;
+@synthesize mmrCar;
+@synthesize licence;
+@synthesize pesoCaballo;
 
+#pragma mark Singleton Methods
+
++(id) sharedForm{
+    static EQLFormData *sharedFormData = nil;
+    @synchronized(self) {
+        if (sharedFormData == nil)
+            sharedFormData = [[self alloc] init];
+    }
+    return sharedFormData;
 }
 
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
-{
-    [self.view endEditing:YES];
+- (id)init {
+    if (self = [super init]) {
+        mmaCar = 0;
+        mmrCar = 0;
+        licence = 0;
+        pesoCaballo = 0;
+    }
+    return self;
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc {
+    // Should never be called, but just here for clarity really.
 }
 
+#pragma mark Utilities
 
-- (IBAction)technicalSheetButton:(UIButton *)sender {
-
-}
-
-
-- (IBAction)calculateWeight:(UIButton *)sender {
-
-    //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
+- (NSArray *) calculateThingsWithModel:(EQLGarageModel *) model {
+    //NSLog(@"Te habla en singleton");
+    NSArray *resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
+    NSArray *licences = @[@3500, @4250, @7000];
     
-    sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
-    sharedForm.mmrCar =_mmrCarTextField.text.intValue;
-    sharedForm.pesoCaballo = _horseWeight.text.intValue;
-    sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
-    
-    self.resultsArray = [sharedForm calculateThingsWithModel:_model];
 
-    /*
-    //self.resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
-     NSArray *licences = @[@3500, @4250, @7000];
-    
-    int mmaCar = _ptacCarTextField.text.intValue;
-    int mmrCar = _mmrCarTextField.text.intValue;
-    int pesoCaballo = _horseWeight.text.intValue;
-    
     int maximumPTAC = 0;
-//   int pesoCaballo = 450;
+    //   int _pesoCaballo = 450;
     int pesoTotalCaballos = 0;
     int pesoDisponible= 0;
     int aux = -1;
@@ -86,7 +67,7 @@
     //NSMutableArray *auxArray = [[NSMutableArray alloc]init];
     //NSLog (@"Licencia: %@", licences[0]);
     
-    switch (self.licenceSegmentedControl.selectedSegmentIndex){
+    switch (licence){
         case 0:
             aux=CARNE_B;
             break;
@@ -108,8 +89,8 @@
             if (logs) {NSLog(@"Entramos en el carne de %i Kg" ,aux);}
             if (logs) {NSLog(@"Peso Maximo: %@ - %i = %i",each, mmaCar, maximumPTAC);NSLog(@"-----------------CARNE %@---------------",each);}
             
-            for (id van in _model.allVans){ //Iteramos en objetos tipo PFObject en el array donde estan todos los vans
-                if (logs) {NSLog(@"Estamos en la posición del array: %lu", (unsigned long)[_model.allVans indexOfObject:van]);}
+            for (id van in model.allVans){ //Iteramos en objetos tipo PFObject en el array donde estan todos los vans
+                if (logs) {NSLog(@"Estamos en la posición del array: %lu", (unsigned long)[model.allVans indexOfObject:van]);}
                 //Aquesta merda comença amb index 1, no 0 .
                 if (logs) { NSLog(@"\n\n--------------------------------------VAN %@---------------------------------------",van[@"Name"]);}
                 
@@ -139,10 +120,10 @@
                                     //Creamos un EQLmodeloVan donde guardamos el PFObject y la informacion relativa al PTAC maximo y la explicación en texto.
                                     modeloVan = [EQLmodeloVan modeloVanWithPFVan:van calculationText:textoExplicativo maxPtacForClientsCar:mmaVanActual];
                                     //Añadimos el objecto modeloVan que encapsula el PFObject que viene de Parse sin tocar con la info de PTAC maximo y la explicación de los calculos
-                                    [self.resultsArray[[van[@"horsesNum"] intValue]-1] addObject:modeloVan];
+                                    [resultsArray[[van[@"horsesNum"] intValue]-1] addObject:modeloVan];
                                 }
                                 //Sobreescribimos el peso maximo (Posicion 0 del array --> 1 caballo, posicion 1 -> 2 caballos, pos 2--> 3 cab., pos3 -->4 cab)
-                                modeloVan = [self.resultsArray[[van[@"horsesNum"] intValue]-1] lastObject];
+                                modeloVan = [resultsArray[[van[@"horsesNum"] intValue]-1] lastObject];
                                 modeloVan.maxPtacForClientsCar =ptacAct.intValue;
                                 modeloVan.calculationText = textoExplicativo;
                                 
@@ -160,7 +141,7 @@
                                 } else if ((pesoTotalCaballos > (mmaVanActual - [van[@"weight"]intValue]))){
                                     NSLog(@"El peso total de los caballos es %i y el peso disponible para carga es solo %i", pesoTotalCaballos,mmaVanActual - [van[@"weight"]intValue]);
                                 }
-                               
+                                
                             }
                         }
                     } else {
@@ -173,23 +154,10 @@
             } //Fin for Array todos los VANs
         } //Carné en el que estamos
     } //Fin for licences
-     */
-
-}
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
-        if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
-            EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
-            nextViewController.resultsArray = self.resultsArray;
-        }
-    }
     
+    return  resultsArray;
 }
+
 
 
 

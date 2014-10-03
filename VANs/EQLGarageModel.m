@@ -38,18 +38,28 @@
     return [self.fourHorseVans count];
 }
 
+/*
+- (void) calculateWithmma: (int) mma
+                      mmr: (NSInteger *) mmr
+                  licence: (NSInteger *) licence
+              horseWeight: (NSInteger *) horseWeight{
+    NSLog(@"mma vale: %i", mma);
+    
+}*/
+
 
 #pragma mark - Init
 -(id)init{
     
     if (self = [super init]) {
       
-        self.executionFlag = NO;
+        self.executionFlag = NO; //En realidad tendriamos que hacer un singleton
         _oneHorseVans = [[NSMutableArray alloc]init];
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
-        
+       // _form = [[EQLFormData alloc]init];
+
         
         PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
         [queryVans orderByAscending:@"Priority"];

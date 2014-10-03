@@ -123,7 +123,7 @@
 
     PFObject *PFvan;
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
-    NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
+    //NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
     aux=[_resultsArray objectAtIndex:indexPath.section];
     PFvan = [aux[indexPath.row] PFVan];
     maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];

@@ -16,6 +16,7 @@
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
 		498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498212381987BD0500022486 /* ejemploFichaA5.jpg */; };
 		4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4982123B1987C5B300022486 /* EQLTabBarController.m */; };
+		4987ADF519DE8F740065173D /* EQLFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4987ADF419DE8F740065173D /* EQLFormData.m */; };
 		49904A2B198FA5CE00A4A79E /* TabBar_A4Icon-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */; };
 		49904A2C198FA5CE00A4A79E /* TabBar_A4Icon-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 49904A2A198FA5CE00A4A79E /* TabBar_A4Icon-01.png */; };
 		49904A2F198FAAAB00A4A79E /* EQLMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49904A2E198FAAAB00A4A79E /* EQLMenuTableViewController.m */; };
@@ -84,6 +85,8 @@
 		498212381987BD0500022486 /* ejemploFichaA5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA5.jpg; sourceTree = "<group>"; };
 		4982123A1987C5B300022486 /* EQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTabBarController.h; sourceTree = "<group>"; };
 		4982123B1987C5B300022486 /* EQLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTabBarController.m; sourceTree = "<group>"; };
+		4987ADF319DE8F740065173D /* EQLFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFormData.h; sourceTree = "<group>"; };
+		4987ADF419DE8F740065173D /* EQLFormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormData.m; sourceTree = "<group>"; };
 		49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-02.png"; sourceTree = "<group>"; };
 		49904A2A198FA5CE00A4A79E /* TabBar_A4Icon-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-01.png"; sourceTree = "<group>"; };
 		49904A2D198FAAAB00A4A79E /* EQLMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLMenuTableViewController.h; path = ../EQLMenuTableViewController.h; sourceTree = "<group>"; };
@@ -188,6 +191,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492E297419DF057300EF2198 /* Categorias */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categorias;
+			sourceTree = "<group>";
+		};
+		492E297819DF1C4100EF2198 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				4987ADF319DE8F740065173D /* EQLFormData.h */,
+				4987ADF419DE8F740065173D /* EQLFormData.m */,
+			);
+			name = Singleton;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		498212371987BBDF00022486 /* Fotos */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +276,7 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
+				492E297819DF1C4100EF2198 /* Singleton */,
 				49A871E719815922008BB3B3 /* Controladores */,
 				49A871E619815918008BB3B3 /* Modelo */,
 				49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */,
@@ -318,10 +339,11 @@
 				49A428F91987F97C00C02F53 /* EQLNavigationController.m */,
 				49904A2D198FAAAB00A4A79E /* EQLMenuTableViewController.h */,
 				49904A2E198FAAAB00A4A79E /* EQLMenuTableViewController.m */,
-				49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */,
-				49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */,
 				49904A30198FE63800A4A79E /* EQLCatalogTableViewController.h */,
 				49904A31198FE63800A4A79E /* EQLCatalogTableViewController.m */,
+				49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */,
+				49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */,
+				492E297419DF057300EF2198 /* Categorias */,
 				49A428FC1987FF3500C02F53 /* EQLCarResultsTableViewController.h */,
 				49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */,
 				49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */,
@@ -557,6 +579,7 @@
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
+				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
 				4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */,
 				49A871BC198158F6008BB3B3 /* EQLAppDelegate.m in Sources */,

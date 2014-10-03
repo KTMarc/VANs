@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
+
+// Recibe [self.garage allVans] de MenuTableViewController
+
 #import "EQLMenuTableViewController.h"
 
 @interface EQLMenuTableViewController ()
@@ -153,7 +156,7 @@
         
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
-            nextViewController.allVans = [self.garage allVans];
+            nextViewController.model = self.garage;
             //We pass the fulfiled array with all the vans inside.
         } else if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
             EQLCatalogTableViewController *nextViewController = segue.destinationViewController;
