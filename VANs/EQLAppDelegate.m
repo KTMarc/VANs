@@ -16,9 +16,7 @@
 
 - (void)customiseAppeareance
 {
-    UIColor *colorEquus = [UIColor colorWithRed:1.0
-                                           green:0.4
-                                            blue:0.29
+    UIColor *colorEquus = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0
                                            alpha:1.0];
     
     [[UISegmentedControl appearance] setTintColor:colorEquus];

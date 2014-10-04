@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     /*Apariencia del navigation controller */
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0]; //Fondo rojo equus
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
     
@@ -75,7 +75,7 @@
 {
     
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 /*

@@ -29,15 +29,19 @@
     // Do any additional setup after loading the view.
     
 
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.29 alpha:1.0];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0];
     self.navigationController.navigationBar.translucent = YES;    
+    
+    
     
     /* Esto aqui no chuta */
     //    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 //    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
 //    self.navigationController.navigationBar.translucent = YES;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
