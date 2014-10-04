@@ -158,7 +158,15 @@
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.garage;
             //We pass the fulfiled array with all the vans inside.
-        } else if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
+        }
+        
+        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
+            EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
+            nextViewController.model = self.garage;
+            //We pass the fulfiled array with all the vans inside.
+        }
+        
+        if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
             EQLCatalogTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.garage;
             //We pass the fulfiled array with all the vans inside.

@@ -14,6 +14,9 @@
 
 
 @property (strong, nonatomic) IBOutlet UITextField *easyFormMmaTextField;
+@property (nonatomic, strong) EQLGarageModel *model;
+
+
 - (IBAction)toForm2Button:(UIButton *)sender;
 
 @end

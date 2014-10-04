@@ -11,6 +11,8 @@
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
 		49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49249C7219C8A20600AE4BC5 /* MapKit.framework */; };
+		494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */; };
+		494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -82,6 +84,10 @@
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
 		49249C7019C885A700AE4BC5 /* EQLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapViewController.m; sourceTree = "<group>"; };
 		49249C7219C8A20600AE4BC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm3ViewController.h; sourceTree = "<group>"; };
+		494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm3ViewController.m; sourceTree = "<group>"; };
+		494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm4ViewController.h; sourceTree = "<group>"; };
+		494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm4ViewController.m; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm1ViewController.h; sourceTree = "<group>"; };
@@ -211,9 +217,13 @@
 			isa = PBXGroup;
 			children = (
 				497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */,
+				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
 				497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */,
 				497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */,
-				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
+				494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */,
+				494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */,
+				494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */,
+				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
 			);
 			name = "Formulario paso a paso";
 			sourceTree = "<group>";
@@ -581,6 +591,8 @@
 				496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */,
 				49904A32198FE63800A4A79E /* EQLCatalogTableViewController.m in Sources */,
 				49A428F21987EBD500C02F53 /* EQLBigSheetViewController.m in Sources */,
+				494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */,
+				494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */,
 				497F444519DFD4B80065BD07 /* EQLLicenceForm1ViewController.m in Sources */,
 				49A428F71987EE2800C02F53 /* EQLSmallSheetViewController.m in Sources */,
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
@@ -735,7 +747,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -753,7 +765,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

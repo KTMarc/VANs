@@ -1,19 +1,18 @@
 //
-//  EQLLicenceForm1ViewController.m
+//  EQLLicenceForm3ViewController.m
 //  
 //
 //  Created by Marc Humet on 4/10/14.
 //
 //
 
-#import "EQLLicenceForm1ViewController.h"
+#import "EQLLicenceForm3ViewController.h"
 
-
-@interface EQLLicenceForm1ViewController ()
+@interface EQLLicenceForm3ViewController ()
 
 @end
 
-@implementation EQLLicenceForm1ViewController
+@implementation EQLLicenceForm3ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,29 +36,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([sender isKindOfClass:[UIButton class]]){
-        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
-            EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
-           nextViewController.model = self.model;
+        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm4ViewController class]]){
+            EQLLicenceForm4ViewController *nextViewController = segue.destinationViewController;
+            nextViewController.model = self.model;
         }
     }
 }
 
-
-- (IBAction)toForm2Button:(UIButton *)sender {
-
+- (IBAction)toForm4Button:(UIButton *)sender {
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
     
-    sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
-
+    sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;
 }
 @end

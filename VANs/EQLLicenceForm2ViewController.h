@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "EQLFormData.h"
+#import "EQLLicenceForm3ViewController.h"
 
 @interface EQLLicenceForm2ViewController : UIViewController <UIGestureRecognizerDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UITextField *mmrFormTextView;
+@property (nonatomic, strong) EQLGarageModel *model;
+
+
 - (IBAction)toForm3Button:(UIButton *)sender;
 
 

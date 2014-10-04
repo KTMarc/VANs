@@ -1,19 +1,18 @@
 //
-//  EQLLicenceForm1ViewController.m
-//  
+//  EQLLicenceForm4ViewController.m
+//  VAN Selector
 //
 //  Created by Marc Humet on 4/10/14.
+//  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
-//
 
-#import "EQLLicenceForm1ViewController.h"
+#import "EQLLicenceForm4ViewController.h"
 
-
-@interface EQLLicenceForm1ViewController ()
+@interface EQLLicenceForm4ViewController ()
 
 @end
 
-@implementation EQLLicenceForm1ViewController
+@implementation EQLLicenceForm4ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,28 +37,30 @@
 }
 
 
+
+- (IBAction)toCarResultsButton:(UIButton *)sender {
+    
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
+    sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
+    self.resultsArray = [sharedForm calculateThingsWithModel:_model];
+    
+    
+    
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([sender isKindOfClass:[UIButton class]]){
-        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
-            EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
-           nextViewController.model = self.model;
+        if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
+            EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
+            nextViewController.resultsArray = self.resultsArray;
         }
     }
-}
-
-
-- (IBAction)toForm2Button:(UIButton *)sender {
-
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
     
-    sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
-
 }
 @end
