@@ -200,7 +200,7 @@
         <!--Resultados-->
         <scene sceneID="oum-ae-qeG">
             <objects>
-                <tableViewController id="8Fj-oa-p5U" customClass="EQLCarResultsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="carResults" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Fj-oa-p5U" customClass="EQLCarResultsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="vzv-la-0ZH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7H-MO-sZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="520"/>
+            <point key="canvasLocation" x="2659" y="734"/>
         </scene>
         <!--VAN selector-->
         <scene sceneID="Whv-ng-Pse">
@@ -624,7 +624,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cN4-ew-ikY"/>
                                     <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="8il-TH-tKo"/>
                                     <segue destination="SuK-4y-5IO" kind="push" id="5ri-wS-jcL"/>
                                 </connections>
@@ -682,8 +681,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kj0-Uw-2Mr"/>
-                                    <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="124-xY-F7K"/>
                                     <action selector="toForm3Button:" destination="SuK-4y-5IO" eventType="touchUpInside" id="bpC-Iz-lsp"/>
                                     <segue destination="Q1r-lD-utm" kind="push" id="8Hx-ij-8NW"/>
                                 </connections>
@@ -748,9 +745,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pNQ-Sp-hBh"/>
-                                    <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="7br-8e-87x"/>
-                                    <action selector="toForm3Button:" destination="SuK-4y-5IO" eventType="touchUpInside" id="Bcf-SQ-NP4"/>
                                     <action selector="toForm4Button:" destination="Q1r-lD-utm" eventType="touchUpInside" id="HRR-rk-DZN"/>
                                     <segue destination="sRs-8w-7nS" kind="push" id="Djd-Sk-C5f"/>
                                 </connections>
@@ -829,11 +823,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cGk-X5-u8v"/>
                                     <action selector="toCarResultsButton:" destination="sRs-8w-7nS" eventType="touchUpInside" id="X6l-0c-zgq"/>
-                                    <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="SjF-Le-an5"/>
-                                    <action selector="toForm3Button:" destination="SuK-4y-5IO" eventType="touchUpInside" id="2Wb-uT-O47"/>
-                                    <segue destination="8Fj-oa-p5U" kind="push" id="dJD-tJ-Are"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -929,9 +919,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oh1-t8-hmF"/>
         <segue reference="qEQ-MI-DAb"/>
-        <segue reference="TrJ-Ad-Ng0"/>
+        <segue reference="zdW-e7-0S5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
