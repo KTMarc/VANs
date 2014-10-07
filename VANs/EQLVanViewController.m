@@ -31,6 +31,7 @@
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
 
+    _parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
     nameLabel.text = _parseVan[@"Name"];
     

@@ -366,10 +366,10 @@
 				497F444919DFF3640065BD07 /* Formulario paso a paso */,
 				49A428FC1987FF3500C02F53 /* EQLCarResultsTableViewController.h */,
 				49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */,
-				49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */,
-				49249C7019C885A700AE4BC5 /* EQLMapViewController.m */,
 				49907CB8198CC736005CF560 /* EQLVanViewController.h */,
 				49907CB9198CC736005CF560 /* EQLVanViewController.m */,
+				49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */,
+				49249C7019C885A700AE4BC5 /* EQLMapViewController.m */,
 				49A428FB1987FB8600C02F53 /* Fichas tecnicas */,
 			);
 			name = Controladores;

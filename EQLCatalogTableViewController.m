@@ -134,10 +134,12 @@
         self.executionFlag = YES;
 
     }
+    /*
     NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
     NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
     NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
     NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
+     */
     
 }
 

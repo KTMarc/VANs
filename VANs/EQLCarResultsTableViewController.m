@@ -235,8 +235,7 @@
             EQLVanViewController *nextViewController = segue.destinationViewController;
             NSArray *aux;
             aux=[_resultsArray objectAtIndex:indexPath.section];
-            _parseVanOrigen = aux[indexPath.row];
-            nextViewController.parseVan = _parseVanOrigen;
+            nextViewController.van = aux[indexPath.row];
         }
     }
 
