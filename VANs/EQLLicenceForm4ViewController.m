@@ -37,17 +37,23 @@
 }
 
 - (IBAction)toCarResultsButton:(UIButton *)sender {
-    
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
-    //NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
-    self.resultsArray = [sharedForm calculateThingsWithModel:_model];
 
-    /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
-    EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
-    nextViewController.resultsArray = self.resultsArray;
-    [self.navigationController pushViewController:nextViewController animated:YES];
+    UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidao!" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
+   // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
+    if ([_easyFormLicenceSegmentedControl selectedSegmentIndex] == -1){
+        [alerta show];
+    } else {
+        EQLFormData *sharedForm = [EQLFormData sharedForm];
+        /* -------------------------------------------------------*/
+        sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
+        //NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
+        self.resultsArray = [sharedForm calculateThingsWithModel:_model];
+        
+        /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
+        EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
+        nextViewController.resultsArray = self.resultsArray;
+        [self.navigationController pushViewController:nextViewController animated:YES];
+    }
 }
 
 /*

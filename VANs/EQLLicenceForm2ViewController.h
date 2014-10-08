@@ -18,6 +18,7 @@
 
 
 - (IBAction)toForm3Button:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *toHelp;
 
 
 
