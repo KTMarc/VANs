@@ -121,6 +121,9 @@
     NSArray *aux; //Guardamos el array con el numero de caballos en el que vamos a trabajar.
     int maxWeightClient=0;
 
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    
+    
     PFObject *PFvan;
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
     //NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
@@ -129,7 +132,6 @@
     maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
     //NSLog(@"Peso maximo guardado es: %i",maxWeightClient);
     
-    
     PFFile *thumbnail = PFvan[@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
@@ -137,13 +139,17 @@
     [thumbnailImageView loadInBackground];
     //cell.imageView.image = thumbnailImageView.image;
 
-    
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [PFvan objectForKey:@"Name"];
     
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
-    priceLabel.text = [PFvan objectForKey:@"price"];
+//  priceLabel.text = [PFvan objectForKey:@"price"];
 
+    int auxInt = [sharedForm mmrCar];
+    
+    priceLabel.text = [NSString stringWithFormat: @"%i", auxInt];
+    
+    
 //    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
 //    NSString *cadena = @"MMA:";
     
