@@ -236,15 +236,14 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([sender isKindOfClass:[UITableViewCell class]]){
-        if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
+        if ([segue.destinationViewController isKindOfClass:[EQLCalculationsViewController class]]){
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            EQLVanViewController *nextViewController = segue.destinationViewController;
+            EQLCalculationsViewController *nextViewController = segue.destinationViewController;
             NSArray *aux;
             aux=[_resultsArray objectAtIndex:indexPath.section];
             nextViewController.van = aux[indexPath.row];
         }
     }
-
 }
 
 

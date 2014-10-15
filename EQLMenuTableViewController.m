@@ -154,12 +154,13 @@
     // Pass the selected object to the new view controller.
     if ([sender isKindOfClass:[UITableViewCell class]]){
         
+        //Opcion avanzada
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.garage;
             //We pass the fulfiled array with all the vans inside.
         }
-        
+        //Opcion paso a paso
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
             EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.garage;

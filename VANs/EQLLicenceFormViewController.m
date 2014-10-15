@@ -28,6 +28,8 @@
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapRecognizer];
     [self.view endEditing:YES];
+    
+    self.navigationController.navigationBarHidden = false;
     // _result.hidden = false;
 
 }
