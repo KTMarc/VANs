@@ -70,12 +70,15 @@
     switch (licence){
         case 0:
             licenceWeight=CARNE_B;
+            _licenceString = [NSString stringWithFormat: @"3.500Kg."];
             break;
         case 1:
             licenceWeight=CARNE_B96;
+            _licenceString = [NSString stringWithFormat: @"4.250Kg."];
             break;
         case 2:
             licenceWeight=CARNE_ByE;
+            _licenceString = [NSString stringWithFormat: @"7.000Kg."];
             break;
         default:
             break;

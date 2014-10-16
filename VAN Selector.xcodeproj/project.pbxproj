@@ -23,6 +23,7 @@
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
 		497F444519DFD4B80065BD07 /* EQLLicenceForm1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */; };
 		497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */; };
+		4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980023A19F0356C003F68AF /* EQLCalculationsCondition1.m */; };
 		498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498212381987BD0500022486 /* ejemploFichaA5.jpg */; };
 		4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4982123B1987C5B300022486 /* EQLTabBarController.m */; };
 		4987ADF519DE8F740065173D /* EQLFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4987ADF419DE8F740065173D /* EQLFormData.m */; };
@@ -71,6 +72,7 @@
 		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
+		49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm1ViewController.m; sourceTree = "<group>"; };
 		497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm2ViewController.h; sourceTree = "<group>"; };
 		497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm2ViewController.m; sourceTree = "<group>"; };
+		4980023919F0356C003F68AF /* EQLCalculationsCondition1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsCondition1.h; sourceTree = "<group>"; };
+		4980023A19F0356C003F68AF /* EQLCalculationsCondition1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsCondition1.m; sourceTree = "<group>"; };
 		498212381987BD0500022486 /* ejemploFichaA5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA5.jpg; sourceTree = "<group>"; };
 		4982123A1987C5B300022486 /* EQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTabBarController.h; sourceTree = "<group>"; };
 		4982123B1987C5B300022486 /* EQLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTabBarController.m; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 		49B1FC1019825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		49E4E14419EEB255009EC47D /* EQLMapsButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapsButtonView.h; sourceTree = "<group>"; };
+		49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapsButtonView.m; sourceTree = "<group>"; };
 		950C6FA2C70B4C2B8CD94CB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +241,8 @@
 				4956E3F219EC842900966A8E /* EQLcatalogButtonView.m */,
 				4946205319EE9A9600B43F41 /* EQLLicenceButtonView.h */,
 				4946205419EE9A9600B43F41 /* EQLLicenceButtonView.m */,
+				49E4E14419EEB255009EC47D /* EQLMapsButtonView.h */,
+				49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */,
 			);
 			name = "UI Menu";
 			sourceTree = "<group>";
@@ -252,6 +260,15 @@
 				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
 			);
 			name = "Formulario paso a paso";
+			sourceTree = "<group>";
+		};
+		4980023819F02103003F68AF /* UI Calculations */ = {
+			isa = PBXGroup;
+			children = (
+				4980023919F0356C003F68AF /* EQLCalculationsCondition1.h */,
+				4980023A19F0356C003F68AF /* EQLCalculationsCondition1.m */,
+			);
+			name = "UI Calculations";
 			sourceTree = "<group>";
 		};
 		498212371987BBDF00022486 /* Fotos */ = {
@@ -322,6 +339,7 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
+				4980023819F02103003F68AF /* UI Calculations */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
 				4956E3F419EC844A00966A8E /* UI Menu */,
@@ -634,6 +652,8 @@
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
 				49904A2F198FAAAB00A4A79E /* EQLMenuTableViewController.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
+				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
+				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
 				4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */,
 				49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */,
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
@@ -785,7 +805,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -803,7 +823,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

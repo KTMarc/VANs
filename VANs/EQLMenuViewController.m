@@ -22,9 +22,9 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    //self.view.backgroundColor = [UIColor lightGrayColor];
 
-    
+    self.navigationController.navigationBarHidden = false;
     self.garage = [[EQLGarageModel alloc]init];
 }
 
@@ -36,6 +36,14 @@
 //- (void)viewDidAppear:(BOOL)animated{
 //        self.navigationController.navigationBarHidden = true;
 //}
+
+
+//ESTO NO VA
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+    [VanStyleKit drawMenuBackgroundWithFrame:self.view.bounds];
+    
+}
 
 
 - (IBAction)botonApretado:(id)sender {

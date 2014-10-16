@@ -16,4 +16,5 @@
     #import <Parse/Parse.h>
     #import <FontasticIcons.h>
     #import "VanStyleKit.h"
+    # import "EQLFormData.h"
 #endif

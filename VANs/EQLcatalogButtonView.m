@@ -15,8 +15,10 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawLogoChevalWithFrame:self.bounds];
 
+    [VanStyleKit drawLogoChevalWithFrame:self.bounds];
+    
+    
 }
 
 

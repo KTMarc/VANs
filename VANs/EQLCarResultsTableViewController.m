@@ -242,6 +242,16 @@
             NSArray *aux;
             aux=[_resultsArray objectAtIndex:indexPath.section];
             nextViewController.van = aux[indexPath.row];
+
+            EQLmodeloVan *aux2 = aux[indexPath.row];
+            PFObject *PFvan = aux2.PFVan;
+            
+            EQLFormData *sharedForm = [EQLFormData sharedForm];
+            sharedForm.mmaVanString = [NSString stringWithFormat: @"%iKg.", [aux2 maxPtacForClientsCar]];
+            
+            sharedForm.numHorsesString = [NSString stringWithFormat: @"%i", [PFvan[@"horsesNum"] intValue]];
+            
+            
         }
     }
 }

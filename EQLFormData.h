@@ -18,6 +18,12 @@
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
 
+//Todo esto es solo para tenerlo disponible en EQLCalculationsCondition
+@property (nonatomic, strong) NSString* mmaVanString;
+@property (nonatomic, strong) NSString* licenceString;
+@property (nonatomic, strong) NSString* numHorsesString;
+
+
 + (id) sharedForm;
 
 - (NSArray *) calculateThingsWithModel: (EQLGarageModel *) model;
