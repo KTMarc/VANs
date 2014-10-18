@@ -31,8 +31,27 @@
     
     self.navigationController.navigationBarHidden = false;
     // _result.hidden = false;
+    
+    /*-----"DONE" AND "CANCEL" BUTTONS IN NUMERIC PAD ---*/
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone
+                                      target:self action:@selector(doneClicked:)];
+    doneBarButton.tintColor = [VanStyleKit vermellEquus];
+    
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.ptacCarTextField.inputAccessoryView = keyboardToolbar;
 
 }
+
+- (void)doneClicked:(id)sender
+{
+    [self.ptacCarTextField endEditing:YES];
+}
+    /*-----ENF OF "DONE" AND "CANCEL" BUTTONS IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {

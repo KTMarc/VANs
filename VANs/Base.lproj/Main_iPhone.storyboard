@@ -599,19 +599,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqv-tF-BJa" customClass="EQLLicenceButtonView">
-                                <rect key="frame" x="31" y="184" width="263" height="174"/>
-                                <state key="normal" title="Ayuda con los carnes">
-                                    <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botonApretado:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="Qea-7a-rfb"/>
-                                    <segue destination="U3g-si-Nee" kind="push" id="OXN-ZB-Evp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPk-yI-vvT" customClass="EQLMapsButtonView">
-                                <rect key="frame" x="112" y="360" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPk-yI-vvT" customClass="EQLMapsButtonView">
+                                <rect key="frame" x="112" y="415" width="100" height="100"/>
                                 <state key="normal" title="Distribuidores">
                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -633,7 +622,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Miw-NY-N2o">
-                                <rect key="frame" x="193" y="340" width="111" height="30"/>
+                                <rect key="frame" x="193" y="355" width="111" height="30"/>
                                 <state key="normal" title="Modo avanzado">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -641,11 +630,29 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="MFV-c6-2zB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqv-tF-BJa" customClass="EQLLicenceButtonView">
+                                <rect key="frame" x="21" y="199" width="277" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bUX-q5-Vkn"/>
+                                </constraints>
+                                <state key="normal" title="Ayuda con los carnes">
+                                    <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botonApretado:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="Qea-7a-rfb"/>
+                                    <segue destination="U3g-si-Nee" kind="push" id="OXN-ZB-Evp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Miw-NY-N2o" firstAttribute="trailing" secondItem="iNO-L0-MNL" secondAttribute="trailingMargin" id="vVe-PR-kQP"/>
-                            <constraint firstItem="nSA-oP-WeH" firstAttribute="top" secondItem="Miw-NY-N2o" secondAttribute="bottom" constant="198" id="vkI-pq-HPk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tqv-tF-BJa" secondAttribute="trailing" constant="6" id="9BD-y8-Gdh"/>
+                            <constraint firstAttribute="bottom" secondItem="Miw-NY-N2o" secondAttribute="bottom" constant="183" id="EWo-6P-WFE"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="top" secondItem="Miw-NY-N2o" secondAttribute="bottom" constant="30" id="VHa-7Q-3Ol"/>
+                            <constraint firstItem="tqv-tF-BJa" firstAttribute="leading" secondItem="iNO-L0-MNL" secondAttribute="leadingMargin" constant="5" id="hiM-0k-Rcg"/>
+                            <constraint firstItem="Miw-NY-N2o" firstAttribute="trailing" secondItem="iNO-L0-MNL" secondAttribute="trailingMargin" id="v83-qr-iMS"/>
+                            <constraint firstItem="Miw-NY-N2o" firstAttribute="top" secondItem="tqv-tF-BJa" secondAttribute="bottom" constant="6" id="wSR-oe-Thj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w50-xX-V9s"/>
@@ -902,7 +909,13 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KbA-MG-W77">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="MMA" id="3Eg-QC-LWo"/>
+                        <view key="titleView" contentMode="scaleToFill" id="iEj-H1-6tV" customClass="EQLcarIconView">
+                            <rect key="frame" x="136" y="8" width="48" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormMmaTextField" destination="BRA-CJ-Bd4" id="mHI-hf-hid"/>
@@ -1021,7 +1034,13 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CSz-Sx-bGL">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="MMR" id="ZHZ-BN-yy2"/>
+                        <view key="titleView" contentMode="scaleToFill" id="0kW-OH-oBZ" customClass="EQLtrailerMaxPtacView">
+                            <rect key="frame" x="136" y="8" width="48" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="mmrFormTextView" destination="I4e-92-cDO" id="qGc-dK-DMB"/>
@@ -1044,8 +1063,8 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso animal(es)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-Cm-k6W">
-                                <rect key="frame" x="54" y="84" width="213" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso por Caballo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-Cm-k6W">
+                                <rect key="frame" x="44" y="84" width="234" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1093,13 +1112,13 @@ Percheron: 850-950Kg</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos de caballo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-Tn-rX2">
-                                <rect key="frame" x="54" y="196" width="160" height="21"/>
+                                <rect key="frame" x="44" y="196" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos de pony:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="938-1I-HcY">
-                                <rect key="frame" x="54" y="298" width="143" height="21"/>
+                                <rect key="frame" x="44" y="298" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1133,12 +1152,19 @@ Asturcon: 350-400Kg</string>
                             <constraint firstItem="938-1I-HcY" firstAttribute="leading" secondItem="wtK-Tn-rX2" secondAttribute="leading" id="ety-q6-j8e"/>
                             <constraint firstItem="hJ1-hP-blk" firstAttribute="top" secondItem="938-1I-HcY" secondAttribute="bottom" constant="5" id="k5d-vO-BIP"/>
                             <constraint firstAttribute="centerX" secondItem="ZWQ-gd-JK8" secondAttribute="centerX" constant="10.5" id="k7a-Jr-YFI"/>
+                            <constraint firstAttribute="centerX" secondItem="hJ1-hP-blk" secondAttribute="centerX" constant="-10" id="rd3-TC-4ZO"/>
                             <constraint firstItem="wtK-Tn-rX2" firstAttribute="top" secondItem="ZWQ-gd-JK8" secondAttribute="bottom" constant="13" id="tuC-UD-3Rj"/>
                             <constraint firstAttribute="centerX" secondItem="e3X-ng-h3O" secondAttribute="centerX" id="xAK-Zy-jdG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HtG-BK-d5Y">
-                        <barButtonItem key="backBarButtonItem" title="Animales" id="M1W-mA-5Db"/>
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="Caballos" id="M1W-mA-5Db"/>
+                        <view key="titleView" contentMode="scaleToFill" id="arr-80-AJF" customClass="EQLequusHorseNavBarView">
+                            <rect key="frame" x="136" y="8" width="48" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormHorseWeightTextField" destination="ZWQ-gd-JK8" id="fEc-s4-T8F"/>
@@ -1234,7 +1260,13 @@ Asturcon: 350-400Kg</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uHF-gY-j2r">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Carnés" id="gaA-5L-nXc"/>
+                        <view key="titleView" contentMode="scaleToFill" id="yf4-Tw-Tzm" customClass="EQLlicenceIconView">
+                            <rect key="frame" x="136" y="8" width="48" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormLicenceSegmentedControl" destination="gXQ-j3-JZw" id="qsD-US-SX6"/>
@@ -1324,12 +1356,12 @@ Asturcon: 350-400Kg</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="357-NI-xMD"/>
+        <segue reference="cg4-UR-wgl"/>
+        <segue reference="OXN-ZB-Evp"/>
         <segue reference="MFV-c6-2zB"/>
         <segue reference="cIy-yk-Z9Q"/>
         <segue reference="dXD-Lv-kcF"/>
-        <segue reference="OXN-ZB-Evp"/>
-        <segue reference="qEQ-MI-DAb"/>
+        <segue reference="357-NI-xMD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

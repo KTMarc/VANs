@@ -10,8 +10,6 @@
 //#import <GoogleMaps/GoogleMaps.h>
 
 
-
-
 @implementation EQLAppDelegate
 
 - (void)customiseAppeareance

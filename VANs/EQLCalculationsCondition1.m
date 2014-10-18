@@ -17,11 +17,7 @@
     // Drawing code
     EQLFormData *sharedForm = [EQLFormData sharedForm];
 
-//    [NSString stringWithFormat: @"%i Kg.", [sharedForm mmaCar]];
-    
-    
     [VanStyleKit drawCalculationResults1WithMmaVan: [sharedForm mmaVanString] mmaCar: [NSString stringWithFormat: @"%liKg.",(long)[sharedForm mmaCar]] numHorses:[sharedForm numHorsesString] licence:[sharedForm licenceString]];
-    
     
 }
 

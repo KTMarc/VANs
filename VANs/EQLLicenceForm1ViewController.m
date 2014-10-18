@@ -24,7 +24,7 @@
     [self.view addGestureRecognizer:tapRecognizer];
     [self.view endEditing:YES];
     // _result.hidden = false;
-    
+
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer

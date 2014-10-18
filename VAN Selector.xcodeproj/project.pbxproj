@@ -13,6 +13,10 @@
 		49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49249C7219C8A20600AE4BC5 /* MapKit.framework */; };
 		4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205119EE93F300B43F41 /* EQLCalculationsViewController.m */; };
 		4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205419EE9A9600B43F41 /* EQLLicenceButtonView.m */; };
+		494B685919F280A600F453AC /* EQLcarIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685819F280A600F453AC /* EQLcarIconView.m */; };
+		494B685D19F2898F00F453AC /* EQLtrailerMaxPtacView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685C19F2898F00F453AC /* EQLtrailerMaxPtacView.m */; };
+		494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685F19F28A1900F453AC /* EQLequusHorseNavBarView.m */; };
+		494B686319F28A9200F453AC /* EQLlicenceIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B686219F28A9200F453AC /* EQLlicenceIconView.m */; };
 		494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */; };
 		494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */; };
 		4956E3F019EC814E00966A8E /* EQLMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E3EF19EC814E00966A8E /* EQLMenuViewController.m */; };
@@ -95,6 +99,14 @@
 		4946205119EE93F300B43F41 /* EQLCalculationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsViewController.m; sourceTree = "<group>"; };
 		4946205319EE9A9600B43F41 /* EQLLicenceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceButtonView.h; sourceTree = "<group>"; };
 		4946205419EE9A9600B43F41 /* EQLLicenceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceButtonView.m; sourceTree = "<group>"; };
+		494B685719F280A600F453AC /* EQLcarIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLcarIconView.h; sourceTree = "<group>"; };
+		494B685819F280A600F453AC /* EQLcarIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLcarIconView.m; sourceTree = "<group>"; };
+		494B685B19F2898F00F453AC /* EQLtrailerMaxPtacView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLtrailerMaxPtacView.h; sourceTree = "<group>"; };
+		494B685C19F2898F00F453AC /* EQLtrailerMaxPtacView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLtrailerMaxPtacView.m; sourceTree = "<group>"; };
+		494B685E19F28A1900F453AC /* EQLequusHorseNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLequusHorseNavBarView.h; sourceTree = "<group>"; };
+		494B685F19F28A1900F453AC /* EQLequusHorseNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLequusHorseNavBarView.m; sourceTree = "<group>"; };
+		494B686119F28A9200F453AC /* EQLlicenceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLlicenceIconView.h; sourceTree = "<group>"; };
+		494B686219F28A9200F453AC /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
 		494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm3ViewController.h; sourceTree = "<group>"; };
 		494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm3ViewController.m; sourceTree = "<group>"; };
 		494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm4ViewController.h; sourceTree = "<group>"; };
@@ -234,6 +246,21 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		494B685A19F280B000F453AC /* UI Long Form */ = {
+			isa = PBXGroup;
+			children = (
+				494B685719F280A600F453AC /* EQLcarIconView.h */,
+				494B685819F280A600F453AC /* EQLcarIconView.m */,
+				494B686119F28A9200F453AC /* EQLlicenceIconView.h */,
+				494B686219F28A9200F453AC /* EQLlicenceIconView.m */,
+				494B685B19F2898F00F453AC /* EQLtrailerMaxPtacView.h */,
+				494B685C19F2898F00F453AC /* EQLtrailerMaxPtacView.m */,
+				494B685E19F28A1900F453AC /* EQLequusHorseNavBarView.h */,
+				494B685F19F28A1900F453AC /* EQLequusHorseNavBarView.m */,
+			);
+			name = "UI Long Form";
+			sourceTree = "<group>";
+		};
 		4956E3F419EC844A00966A8E /* UI Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +366,7 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
+				494B685A19F280B000F453AC /* UI Long Form */,
 				4980023819F02103003F68AF /* UI Calculations */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
@@ -639,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494B685D19F2898F00F453AC /* EQLtrailerMaxPtacView.m in Sources */,
 				496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */,
 				49904A32198FE63800A4A79E /* EQLCatalogTableViewController.m in Sources */,
 				4956E3F019EC814E00966A8E /* EQLMenuViewController.m in Sources */,
@@ -659,9 +688,12 @@
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
+				494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */,
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
+				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
+				494B686319F28A9200F453AC /* EQLlicenceIconView.m in Sources */,
 				4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */,
 				4956E3FA19EC865B00966A8E /* VanStyleKit.m in Sources */,
 				49A871BC198158F6008BB3B3 /* EQLAppDelegate.m in Sources */,

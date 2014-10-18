@@ -1,22 +1,22 @@
 //
-//  EQLLicenceButtonView.m
+//  EQLlicenceIconView.m
 //  VAN Selector
 //
-//  Created by Marc Humet on 15/10/14.
+//  Created by Marc Humet on 18/10/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLLicenceButtonView.h"
+#import "EQLlicenceIconView.h"
 
-@implementation EQLLicenceButtonView
+@implementation EQLlicenceIconView
 
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    [VanStyleKit drawLicenceNavIcon];
     
-    [VanStyleKit drawLicenceMenuIconWithFrame:self.bounds];
 }
 
 
