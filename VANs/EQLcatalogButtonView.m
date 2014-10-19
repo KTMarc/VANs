@@ -16,7 +16,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 
-    [VanStyleKit drawLogoChevalWithFrame:self.bounds];
+    [VanStyleKit drawCatalogMenuButton];
     
     
 }

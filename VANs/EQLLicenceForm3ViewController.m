@@ -24,7 +24,26 @@
     [self.view endEditing:YES];
     // _result.hidden = false;
     
+    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone
+                                                                     target:self action:@selector(doneClicked:)];
+    doneBarButton.tintColor = [VanStyleKit vermellEquus];
+    
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.easyFormHorseWeightTextField.inputAccessoryView = keyboardToolbar;
+    
 }
+
+- (void)doneClicked:(id)sender
+{
+    [self.easyFormHorseWeightTextField endEditing:YES];
+}
+/*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {

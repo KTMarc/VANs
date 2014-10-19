@@ -32,7 +32,7 @@
     self.navigationController.navigationBarHidden = false;
     // _result.hidden = false;
     
-    /*-----"DONE" AND "CANCEL" BUTTONS IN NUMERIC PAD ---*/
+    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
     [keyboardToolbar sizeToFit];
     UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
@@ -51,7 +51,7 @@
 {
     [self.ptacCarTextField endEditing:YES];
 }
-    /*-----ENF OF "DONE" AND "CANCEL" BUTTONS IN NUMERIC PAD ---*/
+    /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {

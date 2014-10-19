@@ -22,10 +22,11 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-    //self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor blackColor];
 
-    self.navigationController.navigationBarHidden = false;
+//    self.navigationController.navigationBarHidden = true;
     self.garage = [[EQLGarageModel alloc]init];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,9 +34,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)viewDidAppear:(BOOL)animated{
-//        self.navigationController.navigationBarHidden = true;
+
+//-(UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
 //}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+        self.navigationController.navigationBarHidden = true;
+}
+
+
+- (void)viewWillDisAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = false;
+}
 
 
 //ESTO NO VA

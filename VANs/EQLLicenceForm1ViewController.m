@@ -24,8 +24,29 @@
     [self.view addGestureRecognizer:tapRecognizer];
     [self.view endEditing:YES];
     // _result.hidden = false;
-
+    self.navigationController.navigationBarHidden = false;
+    
+    
+    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone
+                                                                     target:self action:@selector(doneClicked:)];
+    doneBarButton.tintColor = [VanStyleKit vermellEquus];
+    
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.easyFormMmaTextField.inputAccessoryView = keyboardToolbar;
+    
 }
+
+- (void)doneClicked:(id)sender
+{
+    [self.easyFormMmaTextField endEditing:YES];
+}
+/*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {

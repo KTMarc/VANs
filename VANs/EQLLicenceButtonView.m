@@ -16,7 +16,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
-    [VanStyleKit drawLicenceMenuIconWithFrame:self.bounds];
+    [VanStyleKit drawLicenceMenuButton];
 }
 
 

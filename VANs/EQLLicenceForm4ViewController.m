@@ -38,7 +38,7 @@
 
 - (IBAction)toCarResultsButton:(UIButton *)sender {
 
-    UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidao!" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
+    UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
    // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
     if ([_easyFormLicenceSegmentedControl selectedSegmentIndex] == -1){
         [alerta show];

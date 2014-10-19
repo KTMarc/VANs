@@ -15,7 +15,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawMap];
+    [VanStyleKit drawMApMenuButton];
 }
 
 
