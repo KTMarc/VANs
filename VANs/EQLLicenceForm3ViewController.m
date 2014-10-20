@@ -24,6 +24,13 @@
     [self.view endEditing:YES];
     // _result.hidden = false;
     
+    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    if ([sharedForm pesoCaballo] != 0){ //En caso contrario no queremos cargar un 0
+        //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
+        _easyFormHorseWeightTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm pesoCaballo]];}
+    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
     [keyboardToolbar sizeToFit];

@@ -23,7 +23,13 @@
     [self.view addGestureRecognizer:tapRecognizer];
     [self.view endEditing:YES];
     // _result.hidden = false;
-    
+
+    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    if ([sharedForm licence] != -1){ //En caso contrario no queremos cargar un 0
+        //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
+        _easyFormLicenceSegmentedControl.selectedSegmentIndex= [sharedForm licence];}
+    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer

@@ -18,7 +18,7 @@
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
 
-//Todo esto es solo para tenerlo disponible en EQLCalculationsCondition
+//Todo esto se genera al calcular la tableview de resultados de vans y solo se hace para tenerlo disponible en EQLCalculationsCondition
 @property (nonatomic, strong) NSString* mmaVanString;
 @property (nonatomic, strong) NSString* licenceString;
 @property (nonatomic, strong) NSString* numHorsesString;

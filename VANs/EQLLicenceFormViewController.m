@@ -32,6 +32,19 @@
     self.navigationController.navigationBarHidden = false;
     // _result.hidden = false;
     
+    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    if ([sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
+        //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
+        _ptacCarTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm mmaCar]];
+        _mmrCarTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm mmrCar]];
+        _horseWeight.text = [NSString stringWithFormat: @"%li",(long)[sharedForm pesoCaballo]];
+        _licenceSegmentedControl.selectedSegmentIndex = [sharedForm licence];
+    
+    }
+    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    
+    
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
     [keyboardToolbar sizeToFit];

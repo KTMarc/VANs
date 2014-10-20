@@ -19,9 +19,6 @@
     // Do any additional setup after loading the view.
    
     
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    
-    
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
     // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;

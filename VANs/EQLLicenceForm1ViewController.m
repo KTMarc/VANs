@@ -26,6 +26,12 @@
     // _result.hidden = false;
     self.navigationController.navigationBarHidden = false;
     
+    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    if ([sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
+        //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
+        _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm mmaCar]];}
+    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
     
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
@@ -36,10 +42,8 @@
     UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone
                                                                      target:self action:@selector(doneClicked:)];
     doneBarButton.tintColor = [VanStyleKit vermellEquus];
-    
     keyboardToolbar.items = @[flexBarButton, doneBarButton];
     self.easyFormMmaTextField.inputAccessoryView = keyboardToolbar;
-    
 }
 
 - (void)doneClicked:(id)sender
@@ -81,6 +85,7 @@
     /* -------------------------------------------------------*/
     
     sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
+    
 
 }
 @end

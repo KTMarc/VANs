@@ -32,6 +32,31 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    //Instanciamos el singleton para poder guardar alli lo que tengamos en NSUserdefaults
+    
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // comprobamos si no hay nada porque es la primera vez que abrimos la app.
+    if (![defaults objectForKey:@"mmaCar"]) {
+        
+        NSLog(@"NSUserdefaults esta vacio");
+         
+    } else {
+        NSLog(@"NSUserdefaults esta LLENO");
+        //Copiamos lo que tenemos guardado en nuestro singleton.
+        sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
+        sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
+        sharedForm.licence = [defaults integerForKey:@"licence"];
+        sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+    }
+    
+    // A partir de aquí siempre que se acceda a la clave
+    // dirección, sabremos que al menos hay el valor por
+    // defecto
+    
+    
     return YES;
 }
 							
@@ -45,6 +70,15 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    //Guardar en NSUserdefaults antes de salir
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
+    [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
+    [defaults setInteger: sharedForm.licence forKey:@"licence"];
+    [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
+    [defaults synchronize];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -60,6 +94,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    //Guardar en NSUserdefaults antes de salir
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
+    [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
+    [defaults setInteger: sharedForm.licence forKey:@"licence"];
+    [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
+    [defaults synchronize];
+
 }
 
 @end
