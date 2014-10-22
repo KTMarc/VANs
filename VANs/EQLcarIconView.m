@@ -15,7 +15,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawCarWithFrame:self.bounds];
+    [VanStyleKit drawCarNavIconWithFrame:self.bounds];
 }
 
 

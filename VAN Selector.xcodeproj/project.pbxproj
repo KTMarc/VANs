@@ -11,6 +11,7 @@
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
 		49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49249C7219C8A20600AE4BC5 /* MapKit.framework */; };
+		4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */; };
 		4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205119EE93F300B43F41 /* EQLCalculationsViewController.m */; };
 		4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205419EE9A9600B43F41 /* EQLLicenceButtonView.m */; };
 		494B685919F280A600F453AC /* EQLcarIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685819F280A600F453AC /* EQLcarIconView.m */; };
@@ -95,6 +96,8 @@
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
 		49249C7019C885A700AE4BC5 /* EQLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapViewController.m; sourceTree = "<group>"; };
 		49249C7219C8A20600AE4BC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4939BA4219F8144900D11BC9 /* EQLCalculationsCondition2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsCondition2.h; sourceTree = "<group>"; };
+		4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsCondition2.m; sourceTree = "<group>"; };
 		4946205019EE93F300B43F41 /* EQLCalculationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsViewController.h; sourceTree = "<group>"; };
 		4946205119EE93F300B43F41 /* EQLCalculationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsViewController.m; sourceTree = "<group>"; };
 		4946205319EE9A9600B43F41 /* EQLLicenceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceButtonView.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 			children = (
 				4980023919F0356C003F68AF /* EQLCalculationsCondition1.h */,
 				4980023A19F0356C003F68AF /* EQLCalculationsCondition1.m */,
+				4939BA4219F8144900D11BC9 /* EQLCalculationsCondition2.h */,
+				4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */,
 			);
 			name = "UI Calculations";
 			sourceTree = "<group>";
@@ -682,6 +687,7 @@
 				49904A2F198FAAAB00A4A79E /* EQLMenuTableViewController.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
+				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
 				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
 				4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */,
 				49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */,

@@ -16,8 +16,13 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     EQLFormData *sharedForm = [EQLFormData sharedForm];
-
-    [VanStyleKit drawCalculationResults1WithMmaVan: [sharedForm mmaVanString] mmaCar: [NSString stringWithFormat: @"%liKg.",(long)[sharedForm mmaCar]] numHorses:[sharedForm numHorsesString] licence:[sharedForm licenceString]];
+    
+    [VanStyleKit  drawCalculationResults1WithMmaVan: [sharedForm mmaVanString]
+                                             mmaCar: [NSString stringWithFormat: @"%liKg.",(long)[sharedForm mmaCar]]
+                                          numHorses:[sharedForm numHorsesString]
+                                            licence:[sharedForm licenceString]
+                                           sumaMMAs:[NSString stringWithFormat: @"%liKg.",(long)([sharedForm mmaCar]+[sharedForm mmaVan])]
+                                                     ];
     
 }
 

@@ -248,8 +248,10 @@
             
             EQLFormData *sharedForm = [EQLFormData sharedForm];
             sharedForm.mmaVanString = [NSString stringWithFormat: @"%iKg.", [aux2 maxPtacForClientsCar]];
-            
+            sharedForm.mmaVan = [aux2 maxPtacForClientsCar];
             sharedForm.numHorsesString = [NSString stringWithFormat: @"%i", [PFvan[@"horsesNum"] intValue]];
+            sharedForm.numHorses = [PFvan[@"horsesNum"] intValue];
+            sharedForm.trailerWeight = [PFvan[@"weight"] intValue];
             
             
         }

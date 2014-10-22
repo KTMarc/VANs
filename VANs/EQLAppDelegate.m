@@ -41,10 +41,10 @@
     // comprobamos si no hay nada porque es la primera vez que abrimos la app.
     if (![defaults objectForKey:@"mmaCar"]) {
         
-        NSLog(@"NSUserdefaults esta vacio");
+        //NSLog(@"NSUserdefaults esta vacio");
          
     } else {
-        NSLog(@"NSUserdefaults esta LLENO");
+        //NSLog(@"NSUserdefaults esta LLENO");
         //Copiamos lo que tenemos guardado en nuestro singleton.
         sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
         sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];

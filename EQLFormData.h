@@ -17,6 +17,9 @@
 @property (nonatomic, readwrite) NSInteger mmrCar;
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
+@property (nonatomic, readwrite) NSInteger trailerWeight;
+@property (nonatomic, readwrite) NSInteger numHorses;
+@property (nonatomic, readwrite) NSInteger mmaVan;
 
 //Todo esto se genera al calcular la tableview de resultados de vans y solo se hace para tenerlo disponible en EQLCalculationsCondition
 @property (nonatomic, strong) NSString* mmaVanString;
