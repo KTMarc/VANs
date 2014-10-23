@@ -227,12 +227,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ficha A5 (Viejas)" image="TabBar_A4Icon-01.png" id="pOv-Y2-Rlk"/>
+                    <tabBarItem key="tabBarItem" title="Ficha A5 (Viejas)" id="pOv-Y2-Rlk"/>
                     <connections>
                         <outlet property="scrollView" destination="Bda-Cj-Ufg" id="UwP-mV-AeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oM-rt-SUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="RB3-zW-sFo" customClass="VanStyleKit">
+                    <connections>
+                        <outletCollection property="fichaB5Targets" destination="pOv-Y2-Rlk" id="RlS-6H-yZc"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2111" y="-85"/>
         </scene>
@@ -591,12 +596,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ficha A4 (Nuevas)" image="TabBar_A4Icon-02.png" id="1hr-4f-7DH"/>
+                    <tabBarItem key="tabBarItem" title="Ficha A4 (Nuevas)" id="1hr-4f-7DH"/>
                     <connections>
                         <outlet property="scrollView" destination="Ryn-Xz-yxP" id="Y9O-ua-e9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7H-MO-sZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3qU-Ec-Qb9" customClass="VanStyleKit">
+                    <connections>
+                        <outletCollection property="fichaA4Targets" destination="1hr-4f-7DH" id="JV5-BO-4tX"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2111" y="545"/>
         </scene>
@@ -685,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZS-PJ-LSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-625"/>
+            <point key="canvasLocation" x="525" y="-560"/>
         </scene>
         <!--VAN selector-->
         <scene sceneID="Whv-ng-Pse">
@@ -850,7 +860,7 @@
                                 </state>
                                 <connections>
                                     <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="8il-TH-tKo"/>
-                                    <segue destination="SuK-4y-5IO" kind="push" id="5ri-wS-jcL"/>
+                                    <segue destination="SuK-4y-5IO" kind="push" identifier="toMaxPtacSegue" id="5ri-wS-jcL"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-Ss-RDZ">
@@ -914,6 +924,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="08G-Gr-9If"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="trailing" constant="8" symbolic="YES" id="248-LN-29w"/>
@@ -1001,7 +1012,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 </state>
                                 <connections>
                                     <action selector="toForm3Button:" destination="SuK-4y-5IO" eventType="touchUpInside" id="bpC-Iz-lsp"/>
-                                    <segue destination="Q1r-lD-utm" kind="push" id="8Hx-ij-8NW"/>
+                                    <segue destination="Q1r-lD-utm" kind="push" identifier="toHorseWeightSegue" id="8Hx-ij-8NW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso que el coche puede arrastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smB-Er-HZP">
@@ -1113,7 +1124,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 </state>
                                 <connections>
                                     <action selector="toForm4Button:" destination="Q1r-lD-utm" eventType="touchUpInside" id="HRR-rk-DZN"/>
-                                    <segue destination="sRs-8w-7nS" kind="push" id="Djd-Sk-C5f"/>
+                                    <segue destination="sRs-8w-7nS" kind="push" identifier="toLicenceSegue" id="Djd-Sk-C5f"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-ng-h3O">
@@ -1380,24 +1391,20 @@ Asturcon: 350-400Kg</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWZ-r1-71k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="-573"/>
+            <point key="canvasLocation" x="123" y="-560"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="TabBar_A4Icon-01.png" width="48" height="32"/>
-        <image name="TabBar_A4Icon-02.png" width="48" height="32"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sPn-7T-qc6"/>
-        <segue reference="oLz-Zc-hhs"/>
-        <segue reference="SUP-Kc-g4a"/>
-        <segue reference="uug-5D-po9"/>
-        <segue reference="qEQ-MI-DAb"/>
+        <segue reference="MFV-c6-2zB"/>
+        <segue reference="dXD-Lv-kcF"/>
+        <segue reference="OXN-ZB-Evp"/>
+        <segue reference="cIy-yk-Z9Q"/>
+        <segue reference="Wiw-cc-ZWA"/>
         <segue reference="JwH-KP-EOb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>

@@ -49,8 +49,39 @@
     
     keyboardToolbar.items = @[flexBarButton, doneBarButton];
     self.mmrFormTextView.inputAccessoryView = keyboardToolbar;
+    /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
+
     
+    /* GESTURE RECOGNIZERS FOR NAVIGATION RIGHT AND LEFT*/
+    UISwipeGestureRecognizer *leftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipetoLeftDetection)];
+        leftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+        [leftGesture setCancelsTouchesInView:NO];
+        [self.view addGestureRecognizer:leftGesture];
+    
+    UISwipeGestureRecognizer *rightGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipetoRightDetection)];
+    rightGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [rightGesture setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:rightGesture];
+    /* END GESTURE RECOGNIZERS */
 }
+
+
+- (void)swipetoLeftDetection{
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
+    sharedForm.mmrCar = _mmrFormTextView.text.integerValue;
+    [self performSegueWithIdentifier: @"toHorseWeightSegue" sender: self];
+
+}
+
+- (void)swipetoRightDetection{
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
+    sharedForm.mmrCar = _mmrFormTextView.text.integerValue;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 - (void)doneClicked:(id)sender
 {

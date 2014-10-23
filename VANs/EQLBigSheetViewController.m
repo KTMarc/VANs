@@ -36,7 +36,8 @@
     /* Clase 128 */
     self.scrollView.delegate = self;
     self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.5;
+    self.scrollView.minimumZoomScale = 0.1;
+    self.scrollView.zoomScale = 0.4;
 
 }
 
