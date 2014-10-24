@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
+//Pasamos por Segue: _parseVanOrigen (en EQLCatalogTableViewController.m)
+//                   _van.PFVan (en EQLCalculationsViewController.m)
+
 #import "EQLVanViewController.h"
 
 @interface EQLVanViewController ()
@@ -31,9 +34,11 @@
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
 
-    _parseVan = _van.PFVan;
+    //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
     nameLabel.text = _parseVan[@"Name"];
+    
+//    NSLog(@"Nombre del VaN:%@",_parseVan[@"Name"]);
     
     PFFile *thumbnail = _parseVan[@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[self.view viewWithTag:100];

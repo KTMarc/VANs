@@ -63,6 +63,8 @@
     NSString *textoExplicativo=@"";
     PFObject *lastAdded;
     EQLmodeloVan *modeloVan;
+    int tara = mmaCar * 0.75;
+    
     
     //NSMutableArray *auxArray = [[NSMutableArray alloc]init];
     //NSLog (@"Licencia: %@", licences[0]);
@@ -102,7 +104,7 @@
                     }
                     
                     //Si el coche permite arrastrar este PTAC y que la ptac del van que estamos mirando no es superior a la MMA del coche
-                    if ((mmrCar >= mmaVanActual) && (mmaCar >= mmaVanActual)){
+                    if ((mmrCar >= mmaVanActual) && (tara >= mmaVanActual)){
                         //Si el peso Maximo disponible es mayor al peso actual que estamos comprovando
                         if (maximumPTAC >= mmaVanActual) {
                             pesoTotalCaballos = (int)pesoCaballo * [van[@"horsesNum"] intValue];

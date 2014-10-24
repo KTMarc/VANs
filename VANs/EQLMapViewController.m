@@ -104,7 +104,7 @@
 
     self.title = @"Distribuidores";
     [self centerLocationWithPoint:[[CLLocation alloc] initWithLatitude:40.435737 longitude: -2.180311] andDelta:12.7];
-    [self.mapView setShowsUserLocation:YES];
+    //[self.mapView setShowsUserLocation:YES];
     self.mapView.delegate = self;
     
     
