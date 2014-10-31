@@ -30,14 +30,15 @@
 {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+   // self.navigationController.navigationBar.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
-    self.navigationController.navigationBar.translucent = YES;
+    //self.navigationController.navigationBar.translucent = YES;
 
+    
     //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
     nameLabel.text = _parseVan[@"Name"];
-    
+    self.navigationController.title= nameLabel.text;
 //    NSLog(@"Nombre del VaN:%@",_parseVan[@"Name"]);
     
     PFFile *thumbnail = _parseVan[@"photo"];

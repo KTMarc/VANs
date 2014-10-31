@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 @property (strong, nonatomic) IBOutlet UIButton *toViewVanButton;
+@property (strong, nonatomic) IBOutlet UILabel *greenTextLabel;
 
 
 @end

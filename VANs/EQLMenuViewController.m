@@ -19,11 +19,18 @@
     // Do any additional setup after loading the view.
     
     /*Apariencia del navigation controller */
+//   colorWithRed:255./255.0 green:74.0/255.0 blue:74/255.0
+   
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-    self.view.backgroundColor = [UIColor blackColor];
+    
+    
+    self.view.backgroundColor = [UIColor blackColor]; //Fondo negro
 
+    
+    
 //    self.navigationController.navigationBarHidden = true;
     self.garage = [[EQLGarageModel alloc]init];
     

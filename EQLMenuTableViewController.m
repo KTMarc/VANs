@@ -31,13 +31,15 @@
     [super viewDidLoad];
     
     /*Apariencia del navigation controller */
+    
+    /*
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:.92 green:0.92 blue:0.92 alpha:0.8]];
     
-   
+   */
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
