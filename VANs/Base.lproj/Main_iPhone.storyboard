@@ -241,7 +241,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2111" y="-85"/>
+            <point key="canvasLocation" x="2124" y="-92"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="D3R-Of-cTD">
@@ -261,7 +261,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez7-IS-Qev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1674" y="58"/>
+            <point key="canvasLocation" x="1704" y="-92"/>
         </scene>
         <!--Resultados-->
         <scene sceneID="oum-ae-qeG">
@@ -347,7 +347,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2527" y="58"/>
+            <point key="canvasLocation" x="2534" y="-48"/>
         </scene>
         <!--Van View Controller-->
         <scene sceneID="CXi-K5-eeB">
@@ -361,8 +361,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-xS-FB8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-xS-FB8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-gS-IpI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
@@ -388,11 +388,10 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMAs disponibles:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-g3-v9m">
-                                                <rect key="frame" x="10" y="237" width="147" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Características" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-g3-v9m">
+                                                <rect key="frame" x="10" y="237" width="115" height="21"/>
                                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num. Caballos:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O9-Tp-FRb">
@@ -498,7 +497,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75U-T4-uhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3424" y="-552"/>
+            <point key="canvasLocation" x="3392" y="-571"/>
         </scene>
         <!--Calculations View Controller-->
         <scene sceneID="iIF-OC-Jdo">
@@ -619,7 +618,7 @@ Lateral extra en acero inoxidable</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0b-32-vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Zc5-T8-OfW" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="2953" y="-507"/>
+            <point key="canvasLocation" x="2962" y="-48"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="28o-vR-PPQ">
@@ -659,7 +658,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYu-6q-qsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="160"/>
+            <point key="canvasLocation" x="471" y="165"/>
         </scene>
         <!--Ficha A4 (Nuevas)-->
         <scene sceneID="6wd-UJ-QzP">
@@ -802,13 +801,12 @@ Lateral extra en acero inoxidable</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv">
-                                <rect key="frame" x="70" y="155" width="180" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv" customClass="EQLmyButton">
+                                <rect key="frame" x="70" y="155" width="180" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="bI5-CT-2BD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Siguiente">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -864,15 +862,11 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-iC-J0t">
-                                <rect key="frame" x="272" y="377" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-iC-J0t" customClass="EQLhelpIconView">
+                                <rect key="frame" x="184" y="339" width="120" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="lyn-QQ-DaE"/>
+                                    <constraint firstAttribute="width" constant="120" id="lyn-QQ-DaE"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <segue destination="78Y-pY-z43" kind="push" id="Wiw-cc-ZWA"/>
                                 </connections>
@@ -889,16 +883,15 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="9" id="Suu-kh-iqa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NZT-iC-J0t" secondAttribute="trailing" constant="10" id="TY3-el-mQJ"/>
                             <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="6q1-Ss-RDZ" secondAttribute="bottom" constant="10" id="WiW-tA-1d2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bkd-PZ-Fr1" secondAttribute="trailing" id="X3J-RB-XrA"/>
                             <constraint firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" constant="-0.5" id="afs-xF-BTl"/>
-                            <constraint firstItem="6q1-Ss-RDZ" firstAttribute="centerY" secondItem="NZT-iC-J0t" secondAttribute="centerY" constant="-0.5" id="gfb-co-w40"/>
                             <constraint firstAttribute="centerX" secondItem="tMy-Ce-aKv" secondAttribute="centerX" id="pKM-Uu-Ohz"/>
                             <constraint firstItem="BRA-CJ-Bd4" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="pOp-ve-UNW"/>
                             <constraint firstItem="tMy-Ce-aKv" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="155" id="qf2-pZ-Efj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NZT-iC-J0t" secondAttribute="trailing" constant="10" id="sHb-I0-hmG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NZT-iC-J0t" secondAttribute="trailing" id="sHb-I0-hmG"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="100" id="xvo-ku-0Ta"/>
+                            <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="Bkd-PZ-Fr1" secondAttribute="bottom" constant="2" id="yfE-LH-vq8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KbA-MG-W77">
@@ -919,6 +912,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqC-nc-qsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="vNa-Ps-lwz" customClass="VanStyleKit"/>
             </objects>
             <point key="canvasLocation" x="1282" y="-777"/>
         </scene>
@@ -940,7 +934,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR (Masa Maxima Remolcable)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-af-7aM">
-                                <rect key="frame" x="10" y="10" width="300" height="39"/>
+                                <rect key="frame" x="12" y="10" width="297" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="5K8-qz-u7j"/>
                                 </constraints>
@@ -994,14 +988,14 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzb-cB-aoM">
-                                <rect key="frame" x="282" y="374" width="22" height="22"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-YS-SPa" customClass="EQLhelpIconView">
+                                <rect key="frame" x="179" y="344" width="120" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="7qA-6x-8b6"/>
+                                    <constraint firstAttribute="width" constant="120" id="Jcx-br-WIZ"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="78Y-pY-z43" kind="push" id="cg4-UR-wgl"/>
+                                    <segue destination="78Y-pY-z43" kind="push" id="ehW-0q-UCM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1009,7 +1003,6 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <constraints>
                             <constraint firstItem="qYx-af-7aM" firstAttribute="top" secondItem="Qix-6C-WEe" secondAttribute="bottom" constant="10" id="1GX-Fn-6bk"/>
                             <constraint firstItem="TEa-ey-XSk" firstAttribute="top" secondItem="zNA-5y-PjK" secondAttribute="bottom" constant="35" id="2bj-MN-AWu"/>
-                            <constraint firstItem="qYx-af-7aM" firstAttribute="leading" secondItem="6OK-TQ-kEJ" secondAttribute="leadingMargin" constant="-6" id="4lo-lu-vEu"/>
                             <constraint firstAttribute="centerX" secondItem="TEa-ey-XSk" secondAttribute="centerX" constant="-0.5" id="Aha-S6-6fI"/>
                             <constraint firstItem="HjU-On-B2l" firstAttribute="top" secondItem="TEa-ey-XSk" secondAttribute="bottom" constant="10" id="Eg1-bU-2H5"/>
                             <constraint firstItem="smB-Er-HZP" firstAttribute="top" secondItem="qYx-af-7aM" secondAttribute="bottom" constant="1" id="M1d-vG-G4t"/>
@@ -1017,12 +1010,12 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             <constraint firstItem="I4e-92-cDO" firstAttribute="top" secondItem="HFu-GI-4Qc" secondAttribute="top" id="RGF-ag-wH4"/>
                             <constraint firstItem="zNA-5y-PjK" firstAttribute="top" secondItem="EXd-ER-Eaj" secondAttribute="bottom" constant="11" id="VZx-lC-6hJ"/>
                             <constraint firstItem="I4e-92-cDO" firstAttribute="leading" secondItem="6OK-TQ-kEJ" secondAttribute="leadingMargin" constant="86" id="Wbm-1W-4xC"/>
-                            <constraint firstAttribute="bottom" secondItem="kzb-cB-aoM" secondAttribute="bottom" constant="20" symbolic="YES" id="XGY-KB-twL"/>
+                            <constraint firstAttribute="centerX" secondItem="qYx-af-7aM" secondAttribute="centerX" id="Wfw-lo-BO7"/>
                             <constraint firstItem="zNA-5y-PjK" firstAttribute="leading" secondItem="6OK-TQ-kEJ" secondAttribute="leadingMargin" constant="27" id="bVf-rn-if4"/>
-                            <constraint firstItem="qYx-af-7aM" firstAttribute="centerX" secondItem="smB-Er-HZP" secondAttribute="centerX" id="msC-VC-o9G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hrq-YS-SPa" secondAttribute="trailing" constant="5" id="fl5-W0-40K"/>
+                            <constraint firstItem="TEa-ey-XSk" firstAttribute="top" secondItem="hrq-YS-SPa" secondAttribute="bottom" constant="3" id="mq6-qG-FZL"/>
                             <constraint firstItem="HFu-GI-4Qc" firstAttribute="leading" secondItem="I4e-92-cDO" secondAttribute="trailing" constant="8" symbolic="YES" id="oxM-vk-4mv"/>
-                            <constraint firstItem="kzb-cB-aoM" firstAttribute="trailing" secondItem="6OK-TQ-kEJ" secondAttribute="trailingMargin" id="peB-3e-lYH"/>
-                            <constraint firstItem="smB-Er-HZP" firstAttribute="centerX" secondItem="TEa-ey-XSk" secondAttribute="centerX" id="pqb-MA-cFk"/>
+                            <constraint firstAttribute="centerX" secondItem="smB-Er-HZP" secondAttribute="centerX" constant="-0.5" id="qoY-Yk-BGr"/>
                             <constraint firstItem="EXd-ER-Eaj" firstAttribute="centerX" secondItem="zNA-5y-PjK" secondAttribute="centerX" id="wiz-LP-W8F"/>
                             <constraint firstItem="EXd-ER-Eaj" firstAttribute="leading" secondItem="6OK-TQ-kEJ" secondAttribute="leadingMargin" constant="58" id="xjB-b7-5J2"/>
                         </constraints>
@@ -1038,7 +1031,6 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                     </navigationItem>
                     <connections>
                         <outlet property="mmrFormTextView" destination="I4e-92-cDO" id="qGc-dK-DMB"/>
-                        <outlet property="toHelp" destination="kzb-cB-aoM" id="7dJ-6w-Af3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-KV-UD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1058,12 +1050,12 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso por Caballo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-Cm-k6W">
-                                <rect key="frame" x="70" y="20" width="181" height="29"/>
+                                <rect key="frame" x="70" y="10" width="181" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
-                                <rect key="frame" x="110" y="85" width="70" height="30"/>
+                                <rect key="frame" x="110" y="77" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8i0-ub-20b"/>
                                 </constraints>
@@ -1071,7 +1063,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgi-Xc-Lfi">
-                                <rect key="frame" x="70" y="145" width="180" height="45"/>
+                                <rect key="frame" x="70" y="122" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="KFy-6s-x2I"/>
@@ -1092,18 +1084,18 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-wD-4Jq">
-                                <rect key="frame" x="188" y="85" width="38" height="30"/>
+                                <rect key="frame" x="188" y="77" width="38" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El peso de media de uno de sus caballos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11a-fJ-oog">
-                                <rect key="frame" x="19" y="57" width="282" height="18"/>
+                                <rect key="frame" x="19" y="49" width="282" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF1-dQ-blk">
-                                <rect key="frame" x="59" y="202" width="221" height="93"/>
+                                <rect key="frame" x="59" y="188" width="221" height="90"/>
                                 <string key="text">
 Arabe: 380-500Kg 
 Pura Raza Español:  400-550Kg 
@@ -1115,26 +1107,22 @@ Percheron: 850-950Kg</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos caballo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-Tn-rX2">
-                                <rect key="frame" x="25" y="198" width="151" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="hT5-0a-Mbc"/>
-                                </constraints>
+                                <rect key="frame" x="95" y="184" width="130" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos pony:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="938-1I-HcY">
-                                <rect key="frame" x="30" y="295" width="122" height="21"/>
+                                <rect key="frame" x="101" y="281" width="118" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="0yG-De-O1E"/>
-                                    <constraint firstAttribute="height" constant="21" id="GET-0o-gsc"/>
+                                    <constraint firstAttribute="height" constant="21" id="4Ap-lk-Q6v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-hP-blk">
-                                <rect key="frame" x="81" y="321" width="146" height="54"/>
+                                <rect key="frame" x="87" y="307" width="146" height="54"/>
                                 <string key="text">Falabella: 35-50Kg
 Shetland: 135-180Kg
 Asturcon: 350-400Kg</string>
@@ -1145,28 +1133,28 @@ Asturcon: 350-400Kg</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZWQ-gd-JK8" firstAttribute="top" secondItem="11a-fJ-oog" secondAttribute="bottom" constant="10" id="1h8-yy-i1I"/>
+                            <constraint firstItem="wtK-Tn-rX2" firstAttribute="top" secondItem="Rgi-Xc-Lfi" secondAttribute="bottom" constant="20" id="2ig-HO-oaJ"/>
                             <constraint firstItem="5zU-nc-xh6" firstAttribute="top" secondItem="e3X-ng-h3O" secondAttribute="bottom" constant="10" id="3Zj-Bf-T2c"/>
-                            <constraint firstItem="PF1-dQ-blk" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="43" id="3r4-g9-OI7"/>
-                            <constraint firstItem="938-1I-HcY" firstAttribute="top" secondItem="wtK-Tn-rX2" secondAttribute="bottom" constant="79" id="4Yk-6v-Xqx"/>
                             <constraint firstAttribute="centerX" secondItem="Rgi-Xc-Lfi" secondAttribute="centerX" id="51X-J3-ITR"/>
                             <constraint firstItem="dwB-wD-4Jq" firstAttribute="leading" secondItem="ZWQ-gd-JK8" secondAttribute="trailing" constant="8" symbolic="YES" id="5J2-He-tuW"/>
-                            <constraint firstItem="Q1n-Cm-k6W" firstAttribute="top" secondItem="fg2-Xj-13q" secondAttribute="bottom" constant="20" id="5f2-i3-fER"/>
-                            <constraint firstItem="11a-fJ-oog" firstAttribute="top" secondItem="Q1n-Cm-k6W" secondAttribute="bottom" constant="8" symbolic="YES" id="7CQ-MZ-mWi"/>
-                            <constraint firstItem="938-1I-HcY" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="14" id="C2c-zD-HrB"/>
-                            <constraint firstItem="938-1I-HcY" firstAttribute="top" secondItem="PF1-dQ-blk" secondAttribute="bottom" id="Q0E-KU-4l5"/>
-                            <constraint firstItem="hJ1-hP-blk" firstAttribute="top" secondItem="938-1I-HcY" secondAttribute="bottom" constant="5" id="T71-no-b5o"/>
+                            <constraint firstItem="Q1n-Cm-k6W" firstAttribute="top" secondItem="fg2-Xj-13q" secondAttribute="bottom" constant="10" id="5f2-i3-fER"/>
+                            <constraint firstItem="wtK-Tn-rX2" firstAttribute="centerX" secondItem="Rgi-Xc-Lfi" secondAttribute="centerX" id="6Eg-PM-gxc"/>
+                            <constraint firstItem="11a-fJ-oog" firstAttribute="top" secondItem="Q1n-Cm-k6W" secondAttribute="bottom" constant="10" id="7CQ-MZ-mWi"/>
+                            <constraint firstItem="hJ1-hP-blk" firstAttribute="top" secondItem="938-1I-HcY" secondAttribute="bottom" constant="5" id="Ea3-1k-PqR"/>
+                            <constraint firstItem="938-1I-HcY" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="85" id="OiC-x2-bGr"/>
+                            <constraint firstItem="ZWQ-gd-JK8" firstAttribute="top" secondItem="11a-fJ-oog" secondAttribute="bottom" constant="10" id="Wg1-yc-dTP"/>
                             <constraint firstItem="dwB-wD-4Jq" firstAttribute="top" secondItem="ZWQ-gd-JK8" secondAttribute="top" id="Yc9-vG-0Yx"/>
-                            <constraint firstItem="Rgi-Xc-Lfi" firstAttribute="top" secondItem="11a-fJ-oog" secondAttribute="bottom" constant="70" id="Zi3-Z8-yvC"/>
                             <constraint firstAttribute="centerX" secondItem="Q1n-Cm-k6W" secondAttribute="centerX" constant="-0.5" id="aIU-VK-2f8"/>
+                            <constraint firstItem="hJ1-hP-blk" firstAttribute="centerX" secondItem="e3X-ng-h3O" secondAttribute="centerX" id="bUG-zO-E3Q"/>
                             <constraint firstAttribute="centerX" secondItem="ZWQ-gd-JK8" secondAttribute="centerX" constant="15.5" id="eg4-Vk-qRf"/>
-                            <constraint firstItem="PF1-dQ-blk" firstAttribute="top" secondItem="Rgi-Xc-Lfi" secondAttribute="bottom" constant="12" id="hhp-nK-kfG"/>
-                            <constraint firstItem="wtK-Tn-rX2" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="9" id="kD4-WK-tMS"/>
-                            <constraint firstItem="11a-fJ-oog" firstAttribute="centerX" secondItem="Rgi-Xc-Lfi" secondAttribute="centerX" id="pTA-dr-kO5"/>
-                            <constraint firstItem="wtK-Tn-rX2" firstAttribute="top" secondItem="Rgi-Xc-Lfi" secondAttribute="bottom" constant="8" symbolic="YES" id="qmR-hx-6U3"/>
-                            <constraint firstItem="hJ1-hP-blk" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="65" id="qyE-xV-A5D"/>
-                            <constraint firstItem="5zU-nc-xh6" firstAttribute="top" secondItem="hJ1-hP-blk" secondAttribute="bottom" constant="41" id="wJQ-A9-WgZ"/>
+                            <constraint firstAttribute="centerX" secondItem="11a-fJ-oog" secondAttribute="centerX" id="fHi-Xa-gtT"/>
+                            <constraint firstItem="PF1-dQ-blk" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="43" id="fgF-gb-JAD"/>
+                            <constraint firstItem="938-1I-HcY" firstAttribute="top" secondItem="PF1-dQ-blk" secondAttribute="bottom" constant="3" id="fxX-bS-wHF"/>
+                            <constraint firstItem="hJ1-hP-blk" firstAttribute="centerX" secondItem="938-1I-HcY" secondAttribute="centerX" id="m1m-Kx-1Jr"/>
+                            <constraint firstItem="Rgi-Xc-Lfi" firstAttribute="top" secondItem="ZWQ-gd-JK8" secondAttribute="bottom" constant="15" id="mje-D3-NzE"/>
+                            <constraint firstItem="e3X-ng-h3O" firstAttribute="top" secondItem="hJ1-hP-blk" secondAttribute="bottom" constant="8" symbolic="YES" id="ra1-w2-eNk"/>
                             <constraint firstAttribute="centerX" secondItem="e3X-ng-h3O" secondAttribute="centerX" id="xAK-Zy-jdG"/>
+                            <constraint firstItem="wtK-Tn-rX2" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="79" id="ycX-Aa-o9e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HtG-BK-d5Y">
@@ -1198,30 +1186,13 @@ Asturcon: 350-400Kg</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-uq-qt4">
-                                <rect key="frame" x="133" y="369" width="55" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
-                                <rect key="frame" x="41" y="17" width="238" height="33"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
+                                <rect key="frame" x="41" y="10" width="238" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.250 Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPN-1T-Zqg">
-                                <rect key="frame" x="119" y="98" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.000 Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-Sq-01o">
-                                <rect key="frame" x="206" y="98" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-n3-3ox">
-                                <rect key="frame" x="70" y="155" width="180" height="42"/>
+                                <rect key="frame" x="70" y="106" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="gZh-Ri-iah"/>
@@ -1235,37 +1206,39 @@ Asturcon: 350-400Kg</string>
                                     <action selector="toCarResultsButton:" destination="sRs-8w-7nS" eventType="touchUpInside" id="X6l-0c-zgq"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
-                                <rect key="frame" x="36" y="60" width="248" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
+                                <rect key="frame" x="36" y="53" width="248" height="29"/>
                                 <segments>
                                     <segment title="B"/>
                                     <segment title="B-96"/>
                                     <segment title="B+E"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.500 Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-z1-unQ">
-                                <rect key="frame" x="36" y="98" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-uq-qt4">
+                                <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="406-JS-NXa" customClass="EQLlicenceHelpView">
+                                <rect key="frame" x="16" y="178" width="290" height="180"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="7wv-lD-9Ny"/>
+                                    <constraint firstAttribute="height" constant="180" id="Chs-cw-j0h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rgT-og-Ec4" firstAttribute="top" secondItem="W4W-uq-qt4" secondAttribute="bottom" constant="10" id="10Q-Wv-dbg"/>
-                            <constraint firstItem="gXQ-j3-JZw" firstAttribute="centerX" secondItem="JO3-n3-3ox" secondAttribute="centerX" id="Bdz-vm-8S9"/>
-                            <constraint firstItem="KPN-1T-Zqg" firstAttribute="trailing" secondItem="W4W-uq-qt4" secondAttribute="trailing" id="C4k-Gw-gKJ"/>
-                            <constraint firstItem="Fbr-z1-unQ" firstAttribute="baseline" secondItem="KPN-1T-Zqg" secondAttribute="baseline" id="DXt-mo-kih"/>
-                            <constraint firstItem="djS-9T-iUW" firstAttribute="top" secondItem="bM3-lq-XES" secondAttribute="bottom" constant="17" id="FZo-dH-XU3"/>
+                            <constraint firstItem="JO3-n3-3ox" firstAttribute="top" secondItem="gXQ-j3-JZw" secondAttribute="bottom" constant="25" id="Bu4-vv-Xwb"/>
+                            <constraint firstItem="406-JS-NXa" firstAttribute="top" secondItem="JO3-n3-3ox" secondAttribute="bottom" constant="30" id="C7R-rB-vsJ"/>
+                            <constraint firstAttribute="centerX" secondItem="406-JS-NXa" secondAttribute="centerX" constant="-1" id="FNX-cD-3kg"/>
+                            <constraint firstItem="djS-9T-iUW" firstAttribute="top" secondItem="bM3-lq-XES" secondAttribute="bottom" constant="10" id="FZo-dH-XU3"/>
                             <constraint firstItem="gXQ-j3-JZw" firstAttribute="leading" secondItem="MtW-a6-rWu" secondAttribute="leadingMargin" constant="20" id="GGb-cB-mDk"/>
-                            <constraint firstItem="yIx-Sq-01o" firstAttribute="leading" secondItem="KPN-1T-Zqg" secondAttribute="trailing" constant="18" id="HpC-4Y-E7I"/>
                             <constraint firstAttribute="centerX" secondItem="W4W-uq-qt4" secondAttribute="centerX" id="KLY-bS-DkY"/>
-                            <constraint firstItem="gXQ-j3-JZw" firstAttribute="leading" secondItem="Fbr-z1-unQ" secondAttribute="leading" id="Taf-y4-o1E"/>
                             <constraint firstItem="gXQ-j3-JZw" firstAttribute="top" secondItem="djS-9T-iUW" secondAttribute="bottom" constant="10" id="U04-rY-2lV"/>
                             <constraint firstItem="djS-9T-iUW" firstAttribute="centerX" secondItem="gXQ-j3-JZw" secondAttribute="centerX" id="YE3-28-0YX"/>
-                            <constraint firstItem="Fbr-z1-unQ" firstAttribute="top" secondItem="gXQ-j3-JZw" secondAttribute="bottom" constant="10" id="bWQ-xp-xCT"/>
-                            <constraint firstItem="yIx-Sq-01o" firstAttribute="baseline" secondItem="KPN-1T-Zqg" secondAttribute="baseline" id="hFw-Sl-cqi"/>
-                            <constraint firstItem="JO3-n3-3ox" firstAttribute="top" secondItem="bM3-lq-XES" secondAttribute="bottom" constant="155" id="qw1-S0-Gcr"/>
                             <constraint firstAttribute="centerX" secondItem="JO3-n3-3ox" secondAttribute="centerX" id="ui5-hP-fBY"/>
                         </constraints>
                     </view>
@@ -1363,8 +1336,8 @@ Asturcon: 350-400Kg</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cg4-UR-wgl"/>
-        <segue reference="TrJ-Ad-Ng0"/>
+        <segue reference="357-NI-xMD"/>
+        <segue reference="ehW-0q-UCM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
