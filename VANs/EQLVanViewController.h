@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "EQLmodeloVan.h"
 
-@interface EQLVanViewController : UIViewController
+
+@interface EQLVanViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) EQLmodeloVan *van;
 @property (strong, nonatomic) PFObject *parseVan;
@@ -23,6 +25,7 @@
 
 
 - (IBAction)callButton:(id)sender;
+- (IBAction)sendEmail:(id)sender;
 
 
 @end

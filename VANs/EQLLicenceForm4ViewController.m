@@ -84,8 +84,10 @@
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
         nextViewController.resultsArray = self.resultsArray;
         [self.navigationController pushViewController:nextViewController animated:YES];
+//       [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     }
 }
+
 
 /*
 #pragma mark - Navigation
@@ -102,6 +104,6 @@
     }
     
 }
- */
+*/
 
 @end

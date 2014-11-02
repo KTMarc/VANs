@@ -68,7 +68,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-XW-iWk">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-XW-iWk">
                                 <rect key="frame" x="18" y="40" width="292" height="29"/>
                                 <segments>
                                     <segment title="B"/>
@@ -107,7 +107,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="78Y-pY-z43" kind="push" id="2Dn-gm-sQN"/>
+                                    <segue destination="78Y-pY-z43" kind="push" identifier="toTabController2" id="2Dn-gm-sQN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa Maxima Remolcable con freno" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-aY-R5K">
@@ -137,7 +137,7 @@
                                 </state>
                                 <connections>
                                     <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AUJ-af-9Ge"/>
-                                    <segue destination="8Fj-oa-p5U" kind="push" id="oh1-t8-hmF"/>
+                                    <segue destination="8Fj-oa-p5U" kind="push" identifier="toResultados" id="oh1-t8-hmF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="450" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-wi-1XU">
@@ -220,7 +220,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4wx-nn-BaY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dle-wz-XV6">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Cj-Ufg">
@@ -386,7 +386,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="shadowColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Características" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-g3-v9m">
                                                 <rect key="frame" x="10" y="237" width="115" height="21"/>
@@ -400,9 +400,13 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK">
-                                                <rect key="frame" x="198" y="703" width="114" height="30"/>
-                                                <state key="normal" title="Llámenos ahora!">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK" customClass="EQLcallButton">
+                                                <rect key="frame" x="170" y="693" width="140" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="HT9-On-wYu"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Oed-vY-bhm"/>
+                                                </constraints>
+                                                <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -443,23 +447,38 @@ Lateral extra en acero inoxidable</string>
                                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-04-vIc" customClass="EQLmailButton">
+                                                <rect key="frame" x="10" y="693" width="140" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="9w2-1o-Xbi"/>
+                                                    <constraint firstAttribute="height" constant="50" id="KeR-Z3-kb8"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendEmail:" destination="2lS-ab-yC8" eventType="touchUpInside" id="wcw-Yy-vcS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Lqc-g3-v9m" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="2Cb-Co-7jt"/>
                                             <constraint firstAttribute="width" constant="320" id="3NO-Pr-Kz3"/>
                                             <constraint firstItem="G9l-Od-ol1" firstAttribute="top" secondItem="hoK-gS-IpI" secondAttribute="top" constant="9" id="4rp-CD-Nfa"/>
+                                            <constraint firstItem="noW-Qn-VLK" firstAttribute="centerY" secondItem="DLu-04-vIc" secondAttribute="centerY" id="CZZ-p4-6cx"/>
                                             <constraint firstAttribute="height" constant="750" id="KLh-8h-4NA"/>
                                             <constraint firstAttribute="trailing" secondItem="QHp-ab-bXK" secondAttribute="trailing" constant="10" id="RVd-C9-eua"/>
                                             <constraint firstItem="FH0-wJ-ZPi" firstAttribute="top" secondItem="hoK-gS-IpI" secondAttribute="top" constant="10" id="UFk-Zp-Cqa"/>
+                                            <constraint firstItem="DLu-04-vIc" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="V27-ai-f2T"/>
                                             <constraint firstAttribute="centerX" secondItem="FH0-wJ-ZPi" secondAttribute="centerX" id="cG7-fc-rnV"/>
                                             <constraint firstItem="OyW-cC-On6" firstAttribute="leading" secondItem="0O9-Tp-FRb" secondAttribute="trailing" constant="5" id="cGl-YU-1Hy"/>
                                             <constraint firstAttribute="trailing" secondItem="G9l-Od-ol1" secondAttribute="trailing" constant="10" id="dGk-9Z-6ce"/>
                                             <constraint firstItem="OyW-cC-On6" firstAttribute="top" secondItem="FH0-wJ-ZPi" secondAttribute="bottom" constant="3" id="dfb-3N-nJ9"/>
                                             <constraint firstItem="QHp-ab-bXK" firstAttribute="top" secondItem="G9l-Od-ol1" secondAttribute="bottom" constant="8" id="iHG-Mn-XrV"/>
                                             <constraint firstAttribute="trailing" secondItem="OyW-cC-On6" secondAttribute="trailing" constant="10" id="m71-Tl-Egz"/>
-                                            <constraint firstItem="noW-Qn-VLK" firstAttribute="top" secondItem="OV7-r3-vDW" secondAttribute="bottom" constant="20" id="mCZ-RD-XSk"/>
+                                            <constraint firstItem="noW-Qn-VLK" firstAttribute="top" secondItem="OV7-r3-vDW" secondAttribute="bottom" constant="10" id="mCZ-RD-XSk"/>
                                             <constraint firstAttribute="centerX" secondItem="OV7-r3-vDW" secondAttribute="centerX" constant="6.5" id="rXl-s6-gHB"/>
-                                            <constraint firstAttribute="trailing" secondItem="noW-Qn-VLK" secondAttribute="trailing" constant="8" id="sea-mB-Vt4"/>
+                                            <constraint firstAttribute="trailing" secondItem="noW-Qn-VLK" secondAttribute="trailing" constant="10" id="sea-mB-Vt4"/>
                                             <constraint firstItem="Lqc-g3-v9m" firstAttribute="top" secondItem="FH0-wJ-ZPi" secondAttribute="bottom" constant="3" id="vMW-ca-mbF"/>
                                             <constraint firstItem="OyW-cC-On6" firstAttribute="centerY" secondItem="0O9-Tp-FRb" secondAttribute="centerY" id="yM8-YT-MmL"/>
                                             <constraint firstItem="OV7-r3-vDW" firstAttribute="top" secondItem="Lqc-g3-v9m" secondAttribute="bottom" constant="8" id="zZL-jp-bx0"/>
@@ -517,24 +536,6 @@ Lateral extra en acero inoxidable</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mO-j1-Uez">
-                                <rect key="frame" x="232" y="430" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxPtacLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwy-qF-fek">
-                                <rect key="frame" x="115" y="430" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumHorses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGM-KC-eQW">
-                                <rect key="frame" x="16" y="430" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okR-rL-vTO" customClass="EQLCalculationsCondition1">
                                 <rect key="frame" x="13" y="21" width="300" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -564,9 +565,13 @@ Lateral extra en acero inoxidable</string>
                                     <constraint firstAttribute="width" constant="300" id="hUq-q8-0Jd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xs-x5-NlG">
-                                <rect key="frame" x="235" y="392" width="74" height="30"/>
-                                <state key="normal" title="+ Info VAN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xs-x5-NlG" customClass="EQLmoreInfoButton">
+                                <rect key="frame" x="90" y="444" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="R47-GL-xfO"/>
+                                    <constraint firstAttribute="height" constant="50" id="UBB-hJ-74l"/>
+                                </constraints>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -586,32 +591,23 @@ Lateral extra en acero inoxidable</string>
                             <constraint firstItem="5Uk-oc-r42" firstAttribute="leading" secondItem="vOX-7V-F4h" secondAttribute="leadingMargin" constant="-1" id="1rL-JP-Dia"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KVQ-S4-Eyb" secondAttribute="trailing" constant="10" id="7Nk-mK-UxS"/>
                             <constraint firstItem="okR-rL-vTO" firstAttribute="leading" secondItem="RAY-M3-z4l" secondAttribute="leading" id="Dup-Zl-F9r"/>
-                            <constraint firstItem="Dwy-qF-fek" firstAttribute="leading" secondItem="vGM-KC-eQW" secondAttribute="trailing" constant="8" symbolic="YES" id="GGV-tc-u2r"/>
                             <constraint firstAttribute="centerX" secondItem="okR-rL-vTO" secondAttribute="centerX" constant="-3" id="GVf-a5-780"/>
-                            <constraint firstItem="vGM-KC-eQW" firstAttribute="trailing" secondItem="5Uk-oc-r42" secondAttribute="trailing" id="HIN-Vf-k9X"/>
+                            <constraint firstAttribute="centerX" secondItem="8Xs-x5-NlG" secondAttribute="centerX" id="Q08-kA-caj"/>
                             <constraint firstItem="KVQ-S4-Eyb" firstAttribute="top" secondItem="rgT-i4-h4t" secondAttribute="bottom" constant="10" id="Q8X-la-Wox"/>
-                            <constraint firstItem="vGM-KC-eQW" firstAttribute="baseline" secondItem="Dwy-qF-fek" secondAttribute="baseline" id="X76-j4-rI4"/>
-                            <constraint firstItem="8Xs-x5-NlG" firstAttribute="centerX" secondItem="6mO-j1-Uez" secondAttribute="centerX" id="XgM-kH-abT"/>
                             <constraint firstItem="wyd-pz-fE5" firstAttribute="centerY" secondItem="KVQ-S4-Eyb" secondAttribute="centerY" id="ZWH-fn-wtF"/>
-                            <constraint firstItem="Dwy-qF-fek" firstAttribute="top" secondItem="1Ak-Fq-GZP" secondAttribute="bottom" constant="86" id="bfH-FJ-MCP"/>
-                            <constraint firstItem="6mO-j1-Uez" firstAttribute="trailing" secondItem="1Ak-Fq-GZP" secondAttribute="trailing" id="bz5-PS-7uN"/>
                             <constraint firstItem="RAY-M3-z4l" firstAttribute="leading" secondItem="1Ak-Fq-GZP" secondAttribute="leading" id="hpy-xv-reF"/>
                             <constraint firstItem="RAY-M3-z4l" firstAttribute="top" secondItem="rgT-i4-h4t" secondAttribute="bottom" constant="43" id="ilG-Wh-VsI"/>
                             <constraint firstItem="5Uk-oc-r42" firstAttribute="top" secondItem="okR-rL-vTO" secondAttribute="bottom" constant="18" id="nJT-92-zlx"/>
                             <constraint firstItem="KVQ-S4-Eyb" firstAttribute="leading" secondItem="wyd-pz-fE5" secondAttribute="trailing" constant="10" id="tH1-7W-HnA"/>
                             <constraint firstItem="okR-rL-vTO" firstAttribute="top" secondItem="rgT-i4-h4t" secondAttribute="bottom" constant="21" id="vDm-h0-Sdt"/>
-                            <constraint firstItem="6mO-j1-Uez" firstAttribute="top" secondItem="8Xs-x5-NlG" secondAttribute="bottom" constant="8" symbolic="YES" id="w0X-QY-15W"/>
+                            <constraint firstItem="f0s-kx-6hS" firstAttribute="top" secondItem="8Xs-x5-NlG" secondAttribute="bottom" constant="10" id="w8G-Qm-lGh"/>
                             <constraint firstItem="5Uk-oc-r42" firstAttribute="top" secondItem="RAY-M3-z4l" secondAttribute="bottom" constant="83" id="y8r-jz-aqP"/>
-                            <constraint firstItem="Dwy-qF-fek" firstAttribute="baseline" secondItem="6mO-j1-Uez" secondAttribute="baseline" id="zah-W8-4oc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8jW-Js-V7t"/>
                     <connections>
                         <outlet property="NameLabel" destination="KVQ-S4-Eyb" id="b9m-pe-7VK"/>
                         <outlet property="greenTextLabel" destination="wyd-pz-fE5" id="LqO-fu-rZl"/>
-                        <outlet property="numHorsesLabel" destination="vGM-KC-eQW" id="4Hg-pt-6Hl"/>
-                        <outlet property="priceLabel" destination="6mO-j1-Uez" id="sRM-mH-A3G"/>
-                        <outlet property="ptacsLabel" destination="Dwy-qF-fek" id="ZHP-6p-t8E"/>
                         <outlet property="toViewVanButton" destination="8Xs-x5-NlG" id="AeK-5n-hXn"/>
                     </connections>
                 </viewController>
@@ -669,7 +665,7 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="k0R-HC-DTN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L0f-Gb-azg">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-Xz-yxP">
@@ -801,15 +797,16 @@ Lateral extra en acero inoxidable</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv" customClass="EQLmyButton">
-                                <rect key="frame" x="70" y="155" width="180" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv">
+                                <rect key="frame" x="70" y="155" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="bI5-CT-2BD"/>
+                                    <constraint firstAttribute="height" constant="42" id="FQ9-Pm-iRG"/>
+                                    <constraint firstAttribute="width" constant="180" id="Vid-ID-PfK"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Siguiente">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="8il-TH-tKo"/>
@@ -821,16 +818,16 @@ Lateral extra en acero inoxidable</string>
                                 <color key="pageIndicatorTintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
-                                <rect key="frame" x="120" y="81" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2000" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
+                                <rect key="frame" x="115" y="81" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="wng-x9-7zs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
-                                <rect key="frame" x="208" y="80" width="53" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
+                                <rect key="frame" x="213" y="80" width="53" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="vZq-0Y-xYH"/>
                                 </constraints>
@@ -941,16 +938,16 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
-                                <rect key="frame" x="102" y="78" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1500" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
+                                <rect key="frame" x="102" y="78" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="9XJ-EZ-bme"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-GI-4Qc">
-                                <rect key="frame" x="190" y="78" width="38" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-GI-4Qc">
+                                <rect key="frame" x="200" y="78" width="38" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1054,7 +1051,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
                                 <rect key="frame" x="110" y="77" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8i0-ub-20b"/>
@@ -1186,8 +1183,8 @@ Asturcon: 350-400Kg</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
-                                <rect key="frame" x="41" y="10" width="238" height="33"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
+                                <rect key="frame" x="42" y="10" width="238" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1206,8 +1203,11 @@ Asturcon: 350-400Kg</string>
                                     <action selector="toCarResultsButton:" destination="sRs-8w-7nS" eventType="touchUpInside" id="X6l-0c-zgq"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
-                                <rect key="frame" x="36" y="53" width="248" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
+                                <rect key="frame" x="36" y="53" width="250" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3Hl-4D-KVT"/>
+                                </constraints>
                                 <segments>
                                     <segment title="B"/>
                                     <segment title="B-96"/>
@@ -1336,8 +1336,8 @@ Asturcon: 350-400Kg</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="qEQ-MI-DAb"/>
         <segue reference="357-NI-xMD"/>
-        <segue reference="ehW-0q-UCM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

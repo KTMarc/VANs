@@ -24,6 +24,9 @@
 		4956E3F319EC842900966A8E /* EQLcatalogButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E3F219EC842900966A8E /* EQLcatalogButtonView.m */; };
 		4956E3FA19EC865B00966A8E /* VanStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E3F919EC865B00966A8E /* VanStyleKit.m */; };
 		495B59961A0516FE00D87869 /* EQLlicenceHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B59951A0516FE00D87869 /* EQLlicenceHelpView.m */; };
+		495B59981A053EBA00D87869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B59971A053EBA00D87869 /* MessageUI.framework */; };
+		495B599C1A054E3A00D87869 /* EQLcallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599B1A054E3A00D87869 /* EQLcallButton.m */; };
+		495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599E1A05519F00D87869 /* EQLmailButton.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -33,6 +36,7 @@
 		498212391987BD0500022486 /* ejemploFichaA5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498212381987BD0500022486 /* ejemploFichaA5.jpg */; };
 		4982123C1987C5B300022486 /* EQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4982123B1987C5B300022486 /* EQLTabBarController.m */; };
 		4987ADF519DE8F740065173D /* EQLFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4987ADF419DE8F740065173D /* EQLFormData.m */; };
+		49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49884FBC1A06B06B00E38F31 /* EQLmoreInfoButton.m */; };
 		49904A2B198FA5CE00A4A79E /* TabBar_A4Icon-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */; };
 		49904A2C198FA5CE00A4A79E /* TabBar_A4Icon-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 49904A2A198FA5CE00A4A79E /* TabBar_A4Icon-01.png */; };
 		49904A2F198FAAAB00A4A79E /* EQLMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49904A2E198FAAAB00A4A79E /* EQLMenuTableViewController.m */; };
@@ -125,6 +129,11 @@
 		4956E3F919EC865B00966A8E /* VanStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VanStyleKit.m; sourceTree = "<group>"; };
 		495B59941A0516FE00D87869 /* EQLlicenceHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLlicenceHelpView.h; sourceTree = "<group>"; };
 		495B59951A0516FE00D87869 /* EQLlicenceHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceHelpView.m; sourceTree = "<group>"; };
+		495B59971A053EBA00D87869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		495B599A1A054E3A00D87869 /* EQLcallButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLcallButton.h; sourceTree = "<group>"; };
+		495B599B1A054E3A00D87869 /* EQLcallButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLcallButton.m; sourceTree = "<group>"; };
+		495B599D1A05519F00D87869 /* EQLmailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmailButton.h; sourceTree = "<group>"; };
+		495B599E1A05519F00D87869 /* EQLmailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmailButton.m; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm1ViewController.h; sourceTree = "<group>"; };
@@ -138,6 +147,8 @@
 		4982123B1987C5B300022486 /* EQLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTabBarController.m; sourceTree = "<group>"; };
 		4987ADF319DE8F740065173D /* EQLFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFormData.h; sourceTree = "<group>"; };
 		4987ADF419DE8F740065173D /* EQLFormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormData.m; sourceTree = "<group>"; };
+		49884FBB1A06B06B00E38F31 /* EQLmoreInfoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmoreInfoButton.h; sourceTree = "<group>"; };
+		49884FBC1A06B06B00E38F31 /* EQLmoreInfoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmoreInfoButton.m; sourceTree = "<group>"; };
 		49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-02.png"; sourceTree = "<group>"; };
 		49904A2A198FA5CE00A4A79E /* TabBar_A4Icon-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-01.png"; sourceTree = "<group>"; };
 		49904A2D198FAAAB00A4A79E /* EQLMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLMenuTableViewController.h; path = ../EQLMenuTableViewController.h; sourceTree = "<group>"; };
@@ -226,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495B59981A053EBA00D87869 /* MessageUI.framework in Frameworks */,
 				4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */,
 				49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */,
 				49A871AE198158F6008BB3B3 /* CoreGraphics.framework in Frameworks */,
@@ -292,6 +304,17 @@
 			name = "UI Menu";
 			sourceTree = "<group>";
 		};
+		495B59991A054E1600D87869 /* UI Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				495B599A1A054E3A00D87869 /* EQLcallButton.h */,
+				495B599B1A054E3A00D87869 /* EQLcallButton.m */,
+				495B599D1A05519F00D87869 /* EQLmailButton.h */,
+				495B599E1A05519F00D87869 /* EQLmailButton.m */,
+			);
+			name = "UI Detail View";
+			sourceTree = "<group>";
+		};
 		497F444919DFF3640065BD07 /* Formulario paso a paso */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +337,8 @@
 				4980023A19F0356C003F68AF /* EQLCalculationsCondition1.m */,
 				4939BA4219F8144900D11BC9 /* EQLCalculationsCondition2.h */,
 				4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */,
+				49884FBB1A06B06B00E38F31 /* EQLmoreInfoButton.h */,
+				49884FBC1A06B06B00E38F31 /* EQLmoreInfoButton.m */,
 			);
 			name = "UI Calculations";
 			sourceTree = "<group>";
@@ -372,6 +397,7 @@
 		49A871AA198158F6008BB3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				495B59971A053EBA00D87869 /* MessageUI.framework */,
 				4923A5AC19CDD2B500585202 /* CoreLocation.framework */,
 				49249C7219C8A20600AE4BC5 /* MapKit.framework */,
 				49A871AB198158F6008BB3B3 /* Foundation.framework */,
@@ -388,6 +414,7 @@
 			children = (
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
+				495B59991A054E1600D87869 /* UI Detail View */,
 				4956E3F419EC844A00966A8E /* UI Menu */,
 				494B685A19F280B000F453AC /* UI Long Form */,
 				4980023819F02103003F68AF /* UI Calculations */,
@@ -694,11 +721,13 @@
 				49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */,
 				49A428F21987EBD500C02F53 /* EQLBigSheetViewController.m in Sources */,
 				495B59961A0516FE00D87869 /* EQLlicenceHelpView.m in Sources */,
+				495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */,
 				4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */,
 				494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */,
 				494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */,
 				497F444519DFD4B80065BD07 /* EQLLicenceForm1ViewController.m in Sources */,
 				49A428F71987EE2800C02F53 /* EQLSmallSheetViewController.m in Sources */,
+				495B599C1A054E3A00D87869 /* EQLcallButton.m in Sources */,
 				4956E3F319EC842900966A8E /* EQLcatalogButtonView.m in Sources */,
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
 				49904A2F198FAAAB00A4A79E /* EQLMenuTableViewController.m in Sources */,
@@ -715,6 +744,7 @@
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
 				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
+				49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
 				49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */,
 				494B686319F28A9200F453AC /* EQLlicenceIconView.m in Sources */,

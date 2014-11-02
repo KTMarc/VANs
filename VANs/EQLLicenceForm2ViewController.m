@@ -70,7 +70,7 @@
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
     sharedForm.mmrCar = _mmrFormTextView.text.integerValue;
-    [self performSegueWithIdentifier: @"toHorseWeightSegue" sender: self];
+    [self shouldPerformSegueWithIdentifier: @"toHorseWeightSegue" sender: self];
 
 }
 
@@ -102,6 +102,36 @@
 }
 
 #pragma mark - Navigation
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool weDoSegue=true;
+    bool flagSomethingIsMissing = false;
+    
+    if ([identifier isEqualToString: @"toHorseWeightSegue"]){
+        //We check if the user entered all he has to enter
+        
+        NSMutableString *missingEntry = [NSMutableString stringWithString: @"Faltan los siguientes datos:\n"];
+        if([_mmrFormTextView.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"MMR coche\n"];
+        }
+        
+        if (flagSomethingIsMissing){
+            weDoSegue = false;
+            UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
+            [missingDataAlert show];
+        }
+        
+        
+    } else{
+        //Estamos en los segues del tabView y podemos hacer la transición.
+        weDoSegue = true;
+    }
+    
+    return weDoSegue;
+    
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

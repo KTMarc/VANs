@@ -64,9 +64,8 @@
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
     sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
-
-    [self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
-    
+    [self shouldPerformSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
+    //[self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
 }
 
 - (void)swipetoRightDetection{
@@ -94,6 +93,36 @@
 
 
 #pragma mark - Navigation
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool weDoSegue=true;
+    bool flagSomethingIsMissing = false;
+    
+    if ([identifier isEqualToString: @"toMaxPtacSegue"]){
+        //We check if the user entered all he has to enter
+        
+        NSMutableString *missingEntry = [NSMutableString stringWithString: @"Faltan los siguientes datos:\n"];
+        if([_easyFormMmaTextField.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"MMA coche\n"];
+        }
+        
+        if (flagSomethingIsMissing){
+            weDoSegue = false;
+            UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
+            [missingDataAlert show];
+        }
+        
+        
+    } else{
+        //Estamos en los segues del tabView y podemos hacer la transición.
+        weDoSegue = true;
+    }
+    
+    return weDoSegue;
+    
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

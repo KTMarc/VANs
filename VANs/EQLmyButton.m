@@ -17,7 +17,8 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
  
-    _buttonText = @"Estamos en Form1";
+//    _buttonText = @"Estamos en Form1";
+    _buttonText = @"SIGUIENTE";
     [VanStyleKit drawBotonEquusWithButtonText:_buttonText pressed:NO];
 
 }

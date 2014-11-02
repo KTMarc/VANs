@@ -18,9 +18,11 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *NameLabel;
+/*
 @property (strong, nonatomic) IBOutlet UILabel *numHorsesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+ */
 @property (strong, nonatomic) IBOutlet UIButton *toViewVanButton;
 @property (strong, nonatomic) IBOutlet UILabel *greenTextLabel;
 

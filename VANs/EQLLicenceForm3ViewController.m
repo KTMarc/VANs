@@ -63,7 +63,7 @@
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
 sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;
-    [self performSegueWithIdentifier: @"toLicenceSegue" sender: self];
+    [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     
 }
 
@@ -87,6 +87,37 @@ sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;    [se
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool weDoSegue=true;
+    bool flagSomethingIsMissing = false;
+    
+    if ([identifier isEqualToString: @"toLicenceSegue"]){
+        //We check if the user entered all he has to enter
+        
+        NSMutableString *missingEntry = [NSMutableString stringWithString: @"Faltan los siguientes datos:\n"];
+        if([_easyFormHorseWeightTextField.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"Peso medio de sus caballos\n"];
+        }
+        
+        if (flagSomethingIsMissing){
+            weDoSegue = false;
+            UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
+            [missingDataAlert show];
+        }
+        
+        
+    } else{
+        //Estamos en los segues del tabView y podemos hacer la transición.
+        weDoSegue = true;
+    }
+    
+    return weDoSegue;
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

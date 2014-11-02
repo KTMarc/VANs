@@ -36,27 +36,26 @@
     
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    
+    BOOL debugMode= true;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // comprobamos si no hay nada porque es la primera vez que abrimos la app.
     if (![defaults objectForKey:@"mmaCar"]) {
-        
-        //NSLog(@"NSUserdefaults esta vacio");
-         
+        //EN PRODUCCION HAY QUE CONTEMPLAR TODOS LOS CASOS
+        NSLog(@"NSUserdefaults esta vacio");
     } else {
         //NSLog(@"NSUserdefaults esta LLENO");
         //Copiamos lo que tenemos guardado en nuestro singleton.
-        sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
-        sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
-        sharedForm.licence = [defaults integerForKey:@"licence"];
-        sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+        if (!debugMode){
+            NSLog(@"Cargamos los NSUserDefaults");
+            sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
+            sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
+            sharedForm.licence = [defaults integerForKey:@"licence"];
+            sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+        }
     }
-    
     // A partir de aquí siempre que se acceda a la clave
     // dirección, sabremos que al menos hay el valor por
     // defecto
-    
-    
     return YES;
 }
 							

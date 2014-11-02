@@ -86,30 +86,77 @@
 
 - (IBAction)calculateWeight:(UIButton *)sender {
 
-    //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    
-    sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
-    sharedForm.mmrCar =_mmrCarTextField.text.intValue;
-    sharedForm.pesoCaballo = _horseWeight.text.intValue;
-    sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
-    
-    self.resultsArray = [sharedForm calculateThingsWithModel:_model];
+
+        // of the field is not empty
+        //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
+        EQLFormData *sharedForm = [EQLFormData sharedForm];
+        /* -------------------------------------------------------*/
+        
+        sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
+        sharedForm.mmrCar =_mmrCarTextField.text.intValue;
+        sharedForm.pesoCaballo = _horseWeight.text.intValue;
+        sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
+        
+        self.resultsArray = [sharedForm calculateThingsWithModel:_model];
 
 }
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool weDoSegue;
+    bool flagSomethingIsMissing = false;
+
+    if ([identifier isEqualToString: @"toResultados"]){
+    //We check if the user entered all he has to enter
+        
+        NSMutableString *missingEntry = [NSMutableString stringWithString: @"Faltan los siguientes datos:\n"];
+        if([_ptacCarTextField.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"MMA coche\n"];
+        }
+        if([_mmrCarTextField.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"MMR coche\n"];
+        }
+
+        if([_horseWeight.text length] == 0){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"Peso caballo\n"];
+        }
+        
+        if(_licenceSegmentedControl.selectedSegmentIndex == -1){
+            flagSomethingIsMissing = true;
+            [missingEntry appendString:@"Su carné de conducir\n"];
+        }
+        
+        if (flagSomethingIsMissing){
+            weDoSegue = false;
+            UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
+            [missingDataAlert show];
+        }
+
+    
+    } else{
+        //Estamos en los segues del tabView y podemos hacer la transición.
+        weDoSegue = true;
+    }
+
+    return weDoSegue;
+    
+}
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
+    
+
+        if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
         }
-    }
+        }
     
 }
 
