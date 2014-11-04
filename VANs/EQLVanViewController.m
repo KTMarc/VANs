@@ -48,14 +48,17 @@
     [thumbnailImageView loadInBackground];
     //cell.imageView.image = thumbnailImageView.image;
     
-    UILabel *priceLabel = (UILabel*) [self.view viewWithTag:102];
-    priceLabel.text = _parseVan[@"price"];
     
-    UILabel *horsesLabel = (UILabel*) [self.view viewWithTag:103];
-    horsesLabel.text = [_parseVan[@"horsesNum"] stringValue];
+    EQLpriceView *priceView = (EQLpriceView *) [self.view viewWithTag:102];
+    priceView.price = _parseVan[@"price"];
+    
     
     UILabel *specsLabel = (UILabel*) [self.view viewWithTag:104];
     specsLabel.text = _parseVan[@"specs"];
+    
+    EQLnumHorsesView *numhorsesView = (EQLnumHorsesView *) [self.view viewWithTag:105];
+    numhorsesView.numHorses = [_parseVan[@"horsesNum"] stringValue];
+    
  
 }
 

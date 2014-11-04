@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+IBInspectable
+
 @interface EQLcallButton : UIButton
 
 @end

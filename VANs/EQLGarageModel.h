@@ -33,6 +33,7 @@
 @property (nonatomic, strong) NSArray *allVans;
 //@property (nonatomic, strong) EQLFormData *form;
 @property (nonatomic) BOOL executionFlag;
+@property (nonatomic) BOOL productionFlag;
 
 
 //+ (NSArray *) allVans;

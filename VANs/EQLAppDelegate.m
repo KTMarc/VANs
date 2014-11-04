@@ -41,7 +41,7 @@
     // comprobamos si no hay nada porque es la primera vez que abrimos la app.
     if (![defaults objectForKey:@"mmaCar"]) {
         //EN PRODUCCION HAY QUE CONTEMPLAR TODOS LOS CASOS
-        NSLog(@"NSUserdefaults esta vacio");
+        //NSLog(@"NSUserdefaults esta vacio");
     } else {
         //NSLog(@"NSUserdefaults esta LLENO");
         //Copiamos lo que tenemos guardado en nuestro singleton.

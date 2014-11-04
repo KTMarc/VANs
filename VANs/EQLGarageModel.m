@@ -53,13 +53,14 @@
     
     if (self = [super init]) {
       
-        self.executionFlag = NO; //En realidad tendriamos que hacer un singleton
+        self.executionFlag = false; //En realidad tendriamos que hacer un singleton
+        self.productionFlag = false;
         _oneHorseVans = [[NSMutableArray alloc]init];
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
        // _form = [[EQLFormData alloc]init];
-
+        
         
         PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
         [queryVans orderByAscending:@"Priority"];
@@ -67,10 +68,14 @@
         
         if (!self.executionFlag){
 
-            queryVans.cachePolicy =            kPFCachePolicyCacheThenNetwork;
-            /*DESCOMENTAR ESTO EN PRODUCCION
-            queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
-             */
+            if (_productionFlag){
+                queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
+                
+            }else{
+                queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
+            }
+       
+            
             [queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error){
                    // NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);

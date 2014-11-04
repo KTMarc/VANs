@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EQLGarageModel.h"
+#import "EQLpriceView.h"
+#import "EQLnumHorsesView.h"
+#import "EQLsuspensionIcon.h"
+#import "EQLplancherIcon.h"
 
 #define ONE_HORSE_SECTION       0
 #define TWO_HORSE_SECTION       1
@@ -20,6 +24,7 @@
 @property (strong, nonatomic) PFObject *parseVanOrigen;
 @property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
 @property (nonatomic) BOOL executionFlag;
+@property (nonatomic) BOOL productionFlag;
 
 //@property (nonatomic, strong) NSArray *vansArray;
 //@property (nonatomic, strong) NSMutableArray *vansArray;

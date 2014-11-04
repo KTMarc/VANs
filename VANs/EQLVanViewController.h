@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "EQLmodeloVan.h"
+#import "EQLpriceView.h"
+#import "EQLnumHorsesView.h"
 
 
 @interface EQLVanViewController : UIViewController <MFMailComposeViewControllerDelegate>
@@ -21,8 +23,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *numHorsesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
 @property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
-@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
-
 
 - (IBAction)callButton:(id)sender;
 - (IBAction)sendEmail:(id)sender;

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+IBInspectable
+
 @interface EQLmyButton : UIButton
 
 @property (nonatomic,copy) NSString *buttonText;

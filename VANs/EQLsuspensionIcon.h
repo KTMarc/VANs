@@ -1,8 +1,8 @@
 //
-//  EQLlicenceIconView.h
+//  EQLsuspensionIcon.h
 //  VAN Selector
 //
-//  Created by Marc Humet on 18/10/14.
+//  Created by Marc Humet on 4/11/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
@@ -11,6 +11,9 @@
 IB_DESIGNABLE
 IBInspectable
 
-@interface EQLlicenceIconView : UIView
+@interface EQLsuspensionIcon : UIView
+
+@property (nonatomic) BOOL suspension;
+
 
 @end
