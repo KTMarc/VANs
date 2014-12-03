@@ -11,7 +11,7 @@
 IB_DESIGNABLE
 IBInspectable
 
-@interface EQLsuspensionIcon : UIView
+@interface EQLSuspensionIcon : UIView
 
 @property (nonatomic) BOOL suspension;
 

@@ -48,12 +48,16 @@
 //}
 
 
+// TODO: AIXO HAURIA DE SER UN VIEW DIDAPPEAR, PERO LLABORS ES DEFEORMA EL MENU INICIAL. POSIBLEMENT AMB AUTOLAYOUTS ES PUGUI ARREGLAR. PERO DE MOMENT HO DEIXO AIXI
+
 - (void)viewWillAppear:(BOOL)animated{
-        self.navigationController.navigationBarHidden = true;
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = true;
 }
 
 
-- (void)viewWillDisAppear:(BOOL)animated{
+
+- (void)viewDidDisAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = false;
 }
 

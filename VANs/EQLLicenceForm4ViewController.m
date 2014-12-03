@@ -30,6 +30,7 @@
         //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
         _easyFormLicenceSegmentedControl.selectedSegmentIndex= [sharedForm licence];}
     /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    
     /* GESTURE RECOGNIZERS FOR NAVIGATION RIGHT AND LEFT*/
     UISwipeGestureRecognizer *leftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipetoLeftDetection)];
     leftGesture.direction = UISwipeGestureRecognizerDirectionLeft;

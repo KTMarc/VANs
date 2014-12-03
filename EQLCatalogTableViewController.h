@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "EQLGarageModel.h"
-#import "EQLpriceView.h"
-#import "EQLnumHorsesView.h"
-#import "EQLsuspensionIcon.h"
-#import "EQLplancherIcon.h"
+#import "EQLPriceView.h"
+#import "EQLNumHorsesView.h"
+#import "EQLSuspensionIcon.h"
+#import "EQLPlancherIcon.h"
+#import "EQLVistoView.h"
 
 #define ONE_HORSE_SECTION       0
 #define TWO_HORSE_SECTION       1

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
-IBInspectable
+
+
 
 @interface EQLcarIconView : UIView
 

@@ -13,7 +13,7 @@
 IB_DESIGNABLE
 IBInspectable
 
-@interface EQLpriceView : UIView
+@interface EQLPriceView : UIView
 
 @property (nonatomic,copy) NSString *price;
 

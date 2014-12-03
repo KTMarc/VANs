@@ -1,8 +1,8 @@
 //
-//  EQLLicenceButtonView.h
+//  EQLvistoView.h
 //  VAN Selector
 //
-//  Created by Marc Humet on 15/10/14.
+//  Created by Marc Humet on 10/11/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 IB_DESIGNABLE
 
-@interface EQLLicenceButtonView : UIButton
+@interface EQLVistoView : UIView
+
 
 @end

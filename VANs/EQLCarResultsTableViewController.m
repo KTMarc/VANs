@@ -37,6 +37,7 @@
     _noResultsLabel.hidden = YES;
     
     
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,13 +53,13 @@
     // Return the number of sections.
 
     NSUInteger numResults = 0;
-//    for (id index in _resultsArray){
-//        if ([index count]>0){ numResults++;}
-//    }
-//    
-//    if (numResults == 0){ _noResultsLabel.hidden = NO;}
+    for (id index in _resultsArray){
+        if ([index count]>0){ numResults++;}
+    }
     
-    numResults = 4;
+    if (numResults == 0){ _noResultsLabel.hidden = NO;}
+    
+//    numResults = 4;
     
     return numResults;
 }
@@ -145,7 +146,7 @@
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
 //  priceLabel.text = [PFvan objectForKey:@"price"];
 
-    int auxInt = [sharedForm mmrCar];
+    int auxInt = (int)[sharedForm mmrCar];
     
     priceLabel.text = [NSString stringWithFormat: @"%i", auxInt];
     

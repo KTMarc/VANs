@@ -47,18 +47,17 @@
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     //cell.imageView.image = thumbnailImageView.image;
+    _fotoVan = thumbnailImageView;
     
-    
-    EQLpriceView *priceView = (EQLpriceView *) [self.view viewWithTag:102];
+    EQLPriceView *priceView = (EQLPriceView *) [self.view viewWithTag:102];
     priceView.price = _parseVan[@"price"];
     
     
     UILabel *specsLabel = (UILabel*) [self.view viewWithTag:104];
     specsLabel.text = _parseVan[@"specs"];
     
-    EQLnumHorsesView *numhorsesView = (EQLnumHorsesView *) [self.view viewWithTag:105];
+    EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [self.view viewWithTag:105];
     numhorsesView.numHorses = [_parseVan[@"horsesNum"] stringValue];
-    
  
 }
 
@@ -68,16 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark Contact Buttons
 
@@ -133,5 +123,17 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.destinationViewController isKindOfClass:[EQLPictureViewController class]]){
+        EQLPictureViewController *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan =  _parseVan;
+    }
+}
+
 
 @end

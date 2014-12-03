@@ -11,7 +11,7 @@
 IB_DESIGNABLE
 IBInspectable
 
-@interface EQLplancherIcon : UIView
+@interface EQLPlancherIcon : UIView
 
 @property (nonatomic) BOOL sueloAluminio;
 

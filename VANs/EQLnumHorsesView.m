@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
 //
 
-#import "EQLnumHorsesView.h"
+#import "EQLNumHorsesView.h"
 
-@implementation EQLnumHorsesView
+@implementation EQLNumHorsesView
 
 
 // Only override drawRect: if you perform custom drawing.

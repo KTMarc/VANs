@@ -257,19 +257,32 @@
     UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
     prepTimeLabel.text = [object objectForKey:@"price"];
 
-    EQLpriceView *priceView = (EQLpriceView *) [cell viewWithTag:103];
+    EQLPriceView *priceView = (EQLPriceView *) [cell viewWithTag:103];
     priceView.price = [object objectForKey:@"price"];
     
-    EQLnumHorsesView *numhorsesView = (EQLnumHorsesView *) [cell viewWithTag:104];
+    EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [cell viewWithTag:104];
     numhorsesView.numHorses = [[object objectForKey:@"horsesNum"] stringValue];
     
-    EQLsuspensionIcon *suspensionView = (EQLsuspensionIcon *) [cell viewWithTag:105];
-    suspensionView.suspension = [[object objectForKey:@"pullman"] boolValue];
+    UILabel *suspensionLabel = (UILabel*) [cell viewWithTag:107];
+    EQLVistoView *vistoView = (EQLVistoView *) [cell viewWithTag:108];
+    vistoView.hidden = true;
+
+    if ([[object objectForKey:@"pullman"] boolValue]){
+        /*Icono massa gran per posar aqui
+        EQLsuspensionIcon *suspensionView = (EQLsuspensionIcon *) [cell viewWithTag:105];
+        suspensionView.suspension = [[object objectForKey:@"pullman"] boolValue];
+         */
+        vistoView.hidden = false;
+        suspensionLabel.text = @"Suspensión";
+        
+    } else {
+        suspensionLabel.hidden = true;
+    }
     
+    /*
     EQLplancherIcon *plancherView = (EQLplancherIcon *) [cell viewWithTag:106];
     plancherView.sueloAluminio = [[object objectForKey:@"plancherAlu"] boolValue];
-    
-    
+    */
     
     return cell;
 }

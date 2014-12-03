@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
-IBInspectable
 
 @interface EQLcatalogButtonView : UIButton
 

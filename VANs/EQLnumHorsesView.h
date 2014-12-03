@@ -11,7 +11,7 @@
 IB_DESIGNABLE
 IBInspectable
 
-@interface EQLnumHorsesView : UIView
+@interface EQLNumHorsesView : UIView
 
 @property (nonatomic, copy) NSString *numHorses;
 

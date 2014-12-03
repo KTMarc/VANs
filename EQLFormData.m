@@ -150,8 +150,8 @@
                         }
                     } else {
                         if (logs) {
-                            if (mmaCar < mmaVanActual){   NSLog(@"ERROR: La MMA que estamos mirando es superior a la MMA del coche MMA coche: %i < MMA Van actual: %i",mmaCar,mmaVanActual);}
-                            if (mmrCar < mmaVanActual){    NSLog(@"ERROR: La MMA que estamos mirando es SUPERIOR a la MMR MAXIMA del coche. MMR: %i < MMM Van actual: %i",mmrCar,mmaVanActual);}
+                            if (mmaCar < mmaVanActual){   NSLog(@"ERROR: La MMA que estamos mirando es superior a la MMA del coche MMA coche: %li < MMA Van actual: %i",(long)mmaCar,mmaVanActual);}
+                            if (mmrCar < mmaVanActual){    NSLog(@"ERROR: La MMA que estamos mirando es SUPERIOR a la MMR MAXIMA del coche. MMR: %li < MMM Van actual: %i",(long)mmrCar,mmaVanActual);}
                         }
                     }
                 } //Fin for PTACS

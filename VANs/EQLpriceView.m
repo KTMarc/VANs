@@ -7,9 +7,11 @@
 //
 
 
-#import "EQLpriceView.h"
+#import "EQLPriceView.h"
 
-@implementation EQLpriceView
+IB_DESIGNABLE
+
+@implementation EQLPriceView
 
 
 // Only override drawRect: if you perform custom drawing.
