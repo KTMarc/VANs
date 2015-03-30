@@ -17,17 +17,15 @@
     // Drawing code
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    NSString *weightHorses = [NSString stringWithFormat:@"%liKg.", [sharedForm pesoCaballo]*[sharedForm numHorses]];
-    NSString *weightTrailerAndHorses = [NSString stringWithFormat:@"%liKg.",(([sharedForm pesoCaballo]*[sharedForm numHorses])+[sharedForm trailerWeight])];
-
+    NSString *weightHorses = [NSString stringWithFormat:@"%liKg.", (long)[sharedForm pesoCaballo]*[sharedForm numHorses]];
     
+    NSString *weightTrailerAndHorses = [NSString stringWithFormat:@"%liKg.",(long)(([sharedForm pesoCaballo]*[sharedForm numHorses])+[sharedForm trailerWeight])];
     [VanStyleKit drawCalculationResults2WithMmaVan:[sharedForm mmaVanString]
                                          numHorses:[sharedForm numHorsesString]
                                        weightHorse:[NSString stringWithFormat: @"%liKg.",(long)[sharedForm pesoCaballo]]
                                       weightHorses: weightHorses
                                      weightTrailer:[NSString stringWithFormat: @"%liKg.",(long)[sharedForm trailerWeight]]
                             weightTrailerAndHorses: weightTrailerAndHorses];
-    
 }
 
 
