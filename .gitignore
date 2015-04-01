@@ -1,0 +1,9 @@
+notCode _Gitignored
+Pods/
+.idea/
+.DS_Store
+VAN Selector.xcworkspace/
+VAN Selector.xcodeproj/project.xcworkspace/
+VAN Selector.xcodeproj/xcuserdata/
+UserInterface.xcuserstate
+xcuserdata
