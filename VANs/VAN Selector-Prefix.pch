@@ -14,7 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <Parse/Parse.h>
-    #import <FontasticIcons.h>
     #import "VanStyleKit.h"
-    # import "EQLFormData.h"
+    #import "EQLFormData.h"
 #endif
