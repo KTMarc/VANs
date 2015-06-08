@@ -970,40 +970,42 @@
 		};
 		49A871E1198158F6008BB3B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADC7446A5ED2F7F3D96E5C4F /* Pods.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VANs.app/VANs";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VANs/VANs-Prefix.pch";
+				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "VANsTests/VAN SelectorTests-Info.plist";
 				PRODUCT_NAME = "VAN SelectorTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAN Selector.app/VAN Selector";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		49A871E2198158F6008BB3B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D37A08889C2854D312B24C30 /* Pods.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VANs.app/VANs";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VANs/VANs-Prefix.pch";
+				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANsTests/VAN SelectorTests-Info.plist";
 				PRODUCT_NAME = "VAN SelectorTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAN Selector.app/VAN Selector";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

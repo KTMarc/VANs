@@ -4,7 +4,7 @@
 //
 //  Created by Marc Humet on 3/10/14.
 //  Copyright (c) 2014 EQUUS-LIFE. All rights reserved.
-//
+// This singleton is used to encapsulate the form data that the user enters and is used across all view controllers.
 
 #import "EQLFormData.h"
 
