@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "EQLGarageModel.h"
 
+//No se exactament pq vaig posar aixo aqui, pero soposo que es pq despres ho passo a una funcio.
 @class EQLGarageModel;
 @interface EQLFormData : NSObject
 
@@ -17,6 +18,8 @@
 @property (nonatomic, readwrite) NSInteger mmrCar;
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
+
+//Those variables are here for convinience and to have them somewhere globally.
 @property (nonatomic, readwrite) NSInteger trailerWeight;
 @property (nonatomic, readwrite) NSInteger numHorses;
 @property (nonatomic, readwrite) NSInteger mmaVan;
@@ -29,7 +32,7 @@
 
 + (id) sharedForm;
 
-- (NSArray *) calculateThingsWithModel: (EQLGarageModel *) model;
+- (NSArray *) calculateThingsWithModel: (EQLGarageModel *) model andForm: (EQLFormData *)form;
 
 
 @end

@@ -97,7 +97,7 @@
         sharedForm.pesoCaballo = _horseWeight.text.intValue;
         sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
         
-        self.resultsArray = [sharedForm calculateThingsWithModel:_model];
+        self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
 
 }
 

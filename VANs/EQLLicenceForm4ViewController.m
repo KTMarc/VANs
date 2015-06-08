@@ -79,7 +79,7 @@
         /* -------------------------------------------------------*/
         sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
         //NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
-        self.resultsArray = [sharedForm calculateThingsWithModel:_model];
+        self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
         
         /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];

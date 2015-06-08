@@ -46,11 +46,10 @@
 
 #pragma mark Utilities
 
-- (NSArray *) calculateThingsWithModel:(EQLGarageModel *) model {
+- (NSArray *) calculateThingsWithModel:(EQLGarageModel *) model andForm:(EQLFormData *)form{
     //NSLog(@"Te habla en singleton");
     NSArray *resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
 //    NSArray *licences = @[@3500, @4250, @7000];
-    
 
     int maximumPTAC = 0;
     //   int _pesoCaballo = 450;
@@ -63,7 +62,20 @@
     NSString *textoExplicativo=@"";
     PFObject *lastAdded;
     EQLmodeloVan *modeloVan;
+    
+    //Para poder hacer testing. Si es nil es que no estamos haciendo tests
+    if (form !=nil){
+        mmaCar = form.mmaCar;
+        mmrCar = form.mmrCar;
+        licence = form.licence;
+        pesoCaballo = form.pesoCaballo;
+    }
+    
+    //No se perque feia aixo de la tara
     int tara = mmaCar * 0.75;
+    
+
+    
     
     
     //NSMutableArray *auxArray = [[NSMutableArray alloc]init];

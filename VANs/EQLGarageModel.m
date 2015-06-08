@@ -111,13 +111,14 @@
                 NSLog(@"%lu", (unsigned long)_threeHorseVans.count);
                 NSLog(@"%lu", (unsigned long)_fourHorseVans.count);
                 */
+               //     NSLog(@"Numero de objetos en %lu", (unsigned long)[_allVans count]);
+                    
             } else {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
         }];
         }
         
-        //NSLog(@"Numero de objetos en %u", [_allVans count]);
         //Put each object where it belongs by horses number
        
     }
