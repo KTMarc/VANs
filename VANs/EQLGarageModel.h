@@ -23,11 +23,14 @@
 @property (nonatomic, readonly) NSUInteger threeHorseCount;
 @property (nonatomic, readonly) NSUInteger fourHorseCount;
 
-
 @property (strong, nonatomic) NSMutableArray *oneHorseVans;
 @property (strong, nonatomic) NSMutableArray *twoHorseVans;
 @property (strong, nonatomic) NSMutableArray *threeHorseVans;
 @property (strong, nonatomic) NSMutableArray *fourHorseVans;
+
+@property (strong, nonatomic) PFQuery *queryVans;
+
+@property (nonatomic,copy)void (^testBlock)();
 
 //@property (nonatomic, readonly, strong) NSArray *allVans;
 @property (nonatomic, strong) NSArray *allVans;
@@ -38,6 +41,7 @@
 
 //+ (NSArray *) allVans;
 
+- (void)doAsyncQueryToParse;
 - (EQLmodeloVan *)oneHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)twoHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)threeHorseAtIndex:(NSUInteger)index;
