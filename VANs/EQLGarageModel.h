@@ -41,7 +41,7 @@
 
 //+ (NSArray *) allVans;
 
-- (void)doAsyncQueryToParse;
+- (void)doAsyncQueryToParse: (BOOL) testing;
 - (EQLmodeloVan *)oneHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)twoHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)threeHorseAtIndex:(NSUInteger)index;

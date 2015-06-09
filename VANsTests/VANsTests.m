@@ -21,6 +21,7 @@ EQLGarageModel *garage;
 EQLFormData *formData;
 NSArray *resultsArray;
 BOOL testing;
+BOOL testing = true;
 
 @implementation VANsTests
 
@@ -28,62 +29,23 @@ BOOL testing;
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-   
+    //Generar un EQLGarageModel a mano es la currada de la vida. He refactorizado codigo de otro sitio para poder hacer esto.
      formData = [[EQLFormData alloc] init];
-     testing = true;
     
     //https://www.bignerdranch.com/blog/asynchronous-testing-with-xcode-6/
     XCTestExpectation *expectation =
     [self expectationWithDescription:@"High Expectations"];
     
-    //Generar un EQLGarageModel a mano es la currada de la vida. He refactorizado codigo de otro sitio para poder hacer esto.
-    
     garage = [[EQLGarageModel alloc]init];
-
-   /*
-    garage.testBlock = ^void(){
-     //   XCTAssert((unsigned long)objects.count > 0);
+    
+    //Aqui he entes els bloques!! Li pasem un Array de objectes que encara no tenim pero que tindrem en el futur. I el codi de test que nomes pot estar dintre de la clase de testing.
+    garage.testBlock = ^void(NSArray *objects){
+        XCTAssert((unsigned long)objects.count > 0);
         [expectation fulfill];
     };
-    */
     
-    [garage.queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error){
-            NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
-            
-            XCTAssert((unsigned long)objects.count > 0);
-            [expectation fulfill];
-            
-            garage.allVans = [objects mutableCopy];
-            for (id van in    garage.allVans){
-                // NSLog(@"Entra al for");
-                PFObject *parseVan = van;
-                int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
-                
-                //  switch ([van horsesNum]) {
-                switch (numHorsesInPFObject) {
-                    case 1:
-                        [garage.oneHorseVans addObject:van];
-                        break;
-                    case 2:
-                        [garage.twoHorseVans addObject:van];
-                        break;
-                    case 3:
-                        [garage.threeHorseVans addObject:van];
-                        break;
-                    case 4:
-                        [garage.fourHorseVans addObject:van];
-                        break;
-                    default:
-                        garage.executionFlag = YES;
-                        break;
-                }
-            }
-             //   NSLog(@"Hay %lu Vans en el array", (unsigned long)[garage.allVans count]);
-        } else {
-           // NSLog(@"Error en la descarga de Parse: %@ %@", error, [error userInfo]);
-        }
-    }];
+    //Nomes utilitzem un flag a la funcio que cridem per saber que hem de executar mes codi a dins amb el bloc
+    [garage doAsyncQueryToParse: true];
     
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
         if (error) {
@@ -99,7 +61,7 @@ BOOL testing;
     [super tearDown];
 }
 
-- (void)testDescargaVans
+- (void)testDescargaTodosLosVans
 {
     //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
     
@@ -109,7 +71,7 @@ BOOL testing;
     
 }
 
-- (void) testCalculosResultados
+- (void) test_StdCar_StdHorse_LicB
 {
     formData.mmaCar = 2350;
     formData.mmrCar = 1900;
@@ -124,7 +86,7 @@ BOOL testing;
     
 }
 
-- (void) testCalculosResultados2
+- (void) test_StdCar_StdHorse_LicB96
 {
 
     formData.mmaCar = 2350;
@@ -134,7 +96,8 @@ BOOL testing;
     
     resultsArray = [formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData];
     
-XCTAssertEqual([resultsArray[1] count], (NSUInteger) 1, @"Debería haber 1 van de 2 caballos" );
+    XCTAssertEqual([resultsArray[1] count], (NSUInteger) 1, @"Debería haber 1 van de 2 caballos" );
+
 }
 
 @end

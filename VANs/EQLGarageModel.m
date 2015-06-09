@@ -48,13 +48,16 @@
 }*/
 
 
-- (void)doAsyncQueryToParse{
+- (void)doAsyncQueryToParse: (BOOL) testing{
     
         [_queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
                 // NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
-                
+                if (testing) {
+                    _testBlock(objects);
+                    
+                }
                 self.allVans = [objects mutableCopy];
                 for (id van in _allVans){
                     // NSLog(@"Entra al for");
@@ -62,6 +65,7 @@
                     int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
                     
                     //  switch ([van horsesNum]) {
+                    //Put each object where it belongs by horses number
                     switch (numHorsesInPFObject) {
                         case 1:
                             [_oneHorseVans addObject:van];
@@ -89,7 +93,6 @@
                 //NSLog(@"Numero de objetos en %lu", (unsigned long)[_allVans count]);
             }
         }];
-    //Put each object where it belongs by horses number
 }
 
 
