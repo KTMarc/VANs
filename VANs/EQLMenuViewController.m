@@ -34,6 +34,8 @@
 //    self.navigationController.navigationBarHidden = true;
     self.garage = [[EQLGarageModel alloc]init];
     
+    [self.garage doAsyncQueryToParse];
+    
     //Para poder hacer tests, aqui es donde llamariamos el metodo que se descarga los vans
    // [self.garage doAsyncQueryToParse];
     

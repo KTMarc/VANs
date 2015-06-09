@@ -18,8 +18,9 @@
 @end
 
 EQLGarageModel *garage;
-EQLmodeloVan *van;
 EQLFormData *formData;
+NSArray *resultsArray;
+BOOL testing;
 
 @implementation VANsTests
 
@@ -28,41 +29,28 @@ EQLFormData *formData;
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
    
+     formData = [[EQLFormData alloc] init];
+     testing = true;
+    
     //https://www.bignerdranch.com/blog/asynchronous-testing-with-xcode-6/
     XCTestExpectation *expectation =
     [self expectationWithDescription:@"High Expectations"];
-    
-    
-    formData = [[EQLFormData alloc] init];
-    formData.mmaCar = 2350;
-    formData.mmrCar = 1900;
-    formData.pesoCaballo = 450;
-    formData.licence = 0;
     
     //Generar un EQLGarageModel a mano es la currada de la vida. He refactorizado codigo de otro sitio para poder hacer esto.
     
     garage = [[EQLGarageModel alloc]init];
 
+   /*
     garage.testBlock = ^void(){
      //   XCTAssert((unsigned long)objects.count > 0);
         [expectation fulfill];
     };
+    */
     
-    
-  
-    garage.oneHorseVans = [[NSMutableArray alloc]init];
-    garage.twoHorseVans = [[NSMutableArray alloc]init];
-    garage.threeHorseVans = [[NSMutableArray alloc]init];
-    garage.fourHorseVans = [[NSMutableArray alloc]init];
-    
-    PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
-    [queryVans orderByAscending:@"Priority"];
-    [queryVans whereKey:@"enabled" equalTo:@(YES)];
-    queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    
-    [queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    [garage.queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error){
             NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
+            
             XCTAssert((unsigned long)objects.count > 0);
             [expectation fulfill];
             
@@ -91,9 +79,9 @@ EQLFormData *formData;
                         break;
                 }
             }
-                NSLog(@"Hay %lu Vans en el array", (unsigned long)[garage.allVans count]);
+             //   NSLog(@"Hay %lu Vans en el array", (unsigned long)[garage.allVans count]);
         } else {
-            NSLog(@"Error en la descarga de Parse: %@ %@", error, [error userInfo]);
+           // NSLog(@"Error en la descarga de Parse: %@ %@", error, [error userInfo]);
         }
     }];
     
@@ -117,19 +105,36 @@ EQLFormData *formData;
     
     //Aqui lo que me gustaria es poder hacer que cargue todo el modelo normal de la aplicación (EQLGarageModel) y solo variar los valores que le hemos pasado por el formulario.
     
-    
-    // NSLog(@"Hay %lu Vans en el array", (unsigned long)[garage.allVans count]);
     XCTAssertEqual([garage.allVans count], (NSUInteger) 6, @"No se han descargado 6 vans." );
-    
-   // XCTAssertNotNil([formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData]);
     
 }
 
 - (void) testCalculosResultados
 {
+    formData.mmaCar = 2350;
+    formData.mmrCar = 1900;
+    formData.pesoCaballo = 450;
+    formData.licence = 0;
+    
+    resultsArray = [formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData];
+    XCTAssertEqual([resultsArray[0] count], (NSUInteger) 2, @"Debería haber 2 vans de 1 caballo" );
+    NSLog(@"ResultsArray1 %@",resultsArray[1]);
+    XCTAssertEqual([resultsArray[1] count], (NSUInteger) 0,  @"No debería haber nada");
     
     
+}
+
+- (void) testCalculosResultados2
+{
+
+    formData.mmaCar = 2350;
+    formData.mmrCar = 1900;
+    formData.pesoCaballo = 450;
+    formData.licence = 1;
     
+    resultsArray = [formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData];
+    
+XCTAssertEqual([resultsArray[1] count], (NSUInteger) 1, @"Debería haber 1 van de 2 caballos" );
 }
 
 @end

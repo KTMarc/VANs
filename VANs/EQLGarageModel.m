@@ -54,6 +54,7 @@
             if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
                 // NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
+                
                 self.allVans = [objects mutableCopy];
                 for (id van in _allVans){
                     // NSLog(@"Entra al for");
@@ -116,7 +117,8 @@
                 _queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
             }
             
-            [self doAsyncQueryToParse];
+        
+        
         }
     }
 return self;
