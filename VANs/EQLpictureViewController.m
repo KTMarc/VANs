@@ -28,8 +28,11 @@
     PFFile *thumbnail = _parseVan[@"photo"];
     _imageView = (PFImageView*)[self.view viewWithTag:100];
     _imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    _imageView.file = thumbnail;
-    [_imageView loadInBackground];
+    
+#pragma mark TODO: Arreglar esto que me he cargado al actualizar Parse
+
+//    _imageView.file = thumbnail;
+//    [_imageView loadInBackground];
 
     self.scrollView.contentSize = self.imageView.frame.size;
 //    [self.scrollView addSubview:self.imageView];

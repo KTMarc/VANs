@@ -11,7 +11,7 @@
 @interface EQLPictureViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) PFObject *parseVan;
-@property (strong, nonatomic) IBOutlet PFImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 

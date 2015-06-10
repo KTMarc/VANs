@@ -17,7 +17,7 @@
 
 @property (strong, nonatomic) EQLmodeloVan *van;
 @property (strong, nonatomic) PFObject *parseVan;
-@property (strong, nonatomic) PFImageView *fotoVan;
+@property (strong, nonatomic) UIImageView *fotoVan;
 
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *NameLabel;

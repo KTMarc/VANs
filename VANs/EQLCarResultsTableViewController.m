@@ -131,11 +131,22 @@
     //NSLog(@"Peso maximo guardado es: %i",maxWeightClient);
     
     PFFile *thumbnail = PFvan[@"photo"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    //cell.imageView.image = thumbnailImageView.image;
+//    PFFile *userImageFile = anotherPhoto[@"imageFile"];
+    
+//    UIImageView *thumbnailImageView = (UIImageView*)[cell viewWithTag:100];
+//    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+//    thumbnailImageView.file = thumbnail;
+//    [thumbnailImageView loadInBackground];
+
+    UIImageView *thumbnailImageView = (UIImageView*)[cell viewWithTag:100];
+    [thumbnail getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:imageData];
+            thumbnailImageView.image = image;
+        }
+    }];
+
+
 
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [PFvan objectForKey:@"Name"];
