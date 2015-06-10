@@ -39,6 +39,7 @@ BOOL testing = true;
     garage = [[EQLGarageModel alloc]init];
     
     //Aqui he entes els bloques!! Li pasem un Array de objectes que encara no tenim pero que tindrem en el futur. I el codi de test que nomes pot estar dintre de la clase de testing.
+    
     garage.testBlock = ^void(NSArray *objects){
         XCTAssert((unsigned long)objects.count > 0);
         [expectation fulfill];
