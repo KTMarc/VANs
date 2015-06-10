@@ -30,6 +30,7 @@ BOOL testing = true;
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     //Generar un EQLGarageModel a mano es la currada de la vida. He refactorizado codigo de otro sitio para poder hacer esto.
+    
      formData = [[EQLFormData alloc] init];
     
     //https://www.bignerdranch.com/blog/asynchronous-testing-with-xcode-6/
