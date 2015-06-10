@@ -26,13 +26,19 @@
     [super viewWillAppear:animated];
     
     PFFile *thumbnail = _parseVan[@"photo"];
-    _imageView = (PFImageView*)[self.view viewWithTag:100];
+    _imageView = (UIImageView*)[self.view viewWithTag:100];
     _imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
     
 #pragma mark TODO: Arreglar esto que me he cargado al actualizar Parse
 
-//    _imageView.file = thumbnail;
-//    [_imageView loadInBackground];
+    [thumbnail getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:imageData];
+            _imageView.image = image;
+        }
+    }];
+//    _imageView.image = thumbnail;
+
 
     self.scrollView.contentSize = self.imageView.frame.size;
 //    [self.scrollView addSubview:self.imageView];
