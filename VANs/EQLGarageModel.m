@@ -101,7 +101,10 @@
     
     if (self = [super init]) {
         self.executionFlag = false; //En realidad tendriamos que hacer un singleton
+        
+#pragma mark - TODO: productionFlag change for Production
         self.productionFlag = false;
+        
         _oneHorseVans = [[NSMutableArray alloc]init];
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
@@ -114,14 +117,11 @@
         
         if (!self.executionFlag){
             if (_productionFlag){
-                _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
+               // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
                 
             }else{
-                _queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
+                //_queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
             }
-            
-        
-        
         }
     }
 return self;

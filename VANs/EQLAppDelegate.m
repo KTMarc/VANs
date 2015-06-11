@@ -26,7 +26,8 @@
     // Override point for customization after application launch.
     [self customiseAppeareance];
   //  [GMSServices provideAPIKey:@"AIzaSyDDnCFkUcGIWVRkYmbhLCHMkfa6jTpI0Fw"];
-    
+
+    [Parse enableLocalDatastore];
     
     [Parse setApplicationId:@"BYpZjCJR6Fc65Kp0vDrxL0s0eEJvH6RCITynyp0z"
                   clientKey:@"rrjGk2sy6Tpb4RTa3IYntgWrU3x5nrA6qR1Wav2V"];
@@ -34,7 +35,6 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     //Instanciamos el singleton para poder guardar alli lo que tengamos en NSUserdefaults
-    
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
     BOOL debugMode= true;
@@ -46,6 +46,7 @@
     } else {
         //NSLog(@"NSUserdefaults esta LLENO");
         //Copiamos lo que tenemos guardado en nuestro singleton.
+        #pragma mark TODO: Canviar esto para release
         if (!debugMode){
             NSLog(@"Cargamos los NSUserDefaults");
             sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
@@ -72,6 +73,8 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
     //Guardar en NSUserdefaults antes de salir
+#pragma mark TODO: poner el guardar antes de salir dentro de una funcion
+    
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];

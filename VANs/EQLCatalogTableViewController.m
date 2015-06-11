@@ -11,12 +11,12 @@
 
 @interface EQLCatalogTableViewController ()
 
-
-
-
 @end
 
 @implementation EQLCatalogTableViewController
+
+
+#pragma mark - Parse
 
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -43,6 +43,74 @@
         self.objectsPerPage = 15;
     }
     return self;
+}
+
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    // This method is called every time objects are loaded from Parse via the PFQuery
+    //    NSLog(@"%lu", (unsigned long)[self.objects count]);
+    
+    // Only to know the number of rows in each section
+    if (!self.executionFlag){
+        
+        for (id van in self.objects){
+            // NSLog(@"Entra al for");
+            int numHorsesInPFObject = [van[@"horsesNum"] intValue];
+            switch (numHorsesInPFObject) {
+                case 1:
+                    _oneHorseCount++;
+                    break;
+                case 2:
+                    _twoHorseCount++;
+                    break;
+                case 3:
+                    _threeHorseCount++;
+                    break;
+                case 4:
+                    _fourHorseCount++;
+                    break;
+                default:
+                    break;
+            }
+        }
+        self.executionFlag = YES;
+    }
+    /*
+     NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
+     NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
+     NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
+     NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
+     */
+}
+
+- (void)objectsWillLoad {
+    [super objectsWillLoad];
+    // This method is called before a PFQuery is fired to get more objects
+    
+    self.executionFlag = NO;
+    _oneHorseCount = 0;
+    _twoHorseCount = 0;
+    _threeHorseCount = 0;
+    _fourHorseCount = 0;
+}
+
+
+// Override to customize what kind of query to perform on the class. The default is to query for
+// all objects ordered by createdAt descending.
+
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    //Esto lo pone en la superclase PFQueryViewController:
+        // If no objects are loaded in memory, we look to the cache first to fill the table
+        // and then subsequently do a query against the network.
+   //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
+    
+    [query orderByAscending:@"Priority"];
+    [query whereKey:@"enabled" equalTo:@(YES)];
+    
+    return query;
 }
 
 #pragma mark - View lifecycle
@@ -100,81 +168,61 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - Parse
 
-- (void)objectsDidLoad:(NSError *)error {
-    [super objectsDidLoad:error];
-        // This method is called every time objects are loaded from Parse via the PFQuery
-
-   
-//    NSLog(@"%lu", (unsigned long)[self.objects count]);
+// Override to customize the look of a cell representing an object. The default is to display
+// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"catalogCell";
     
-   // Only to know the number of rows in each section
-    if (!self.executionFlag){
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    
+    PFFile *thumbnailFile = [object objectForKey:@"photo"];
+    PFImageView *thumbnailImageView = [[PFImageView alloc] init];
+    thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.file = thumbnailFile;
+    [thumbnailImageView loadInBackground];
+    
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = [object objectForKey:@"Name"];
+    
+    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
+    prepTimeLabel.text = [object objectForKey:@"price"];
+    
+    EQLPriceView *priceView = (EQLPriceView *) [cell viewWithTag:103];
+    priceView.price = [object objectForKey:@"price"];
+    
+    EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [cell viewWithTag:104];
+    numhorsesView.numHorses = [[object objectForKey:@"horsesNum"] stringValue];
+    
+    UILabel *suspensionLabel = (UILabel*) [cell viewWithTag:107];
+    EQLVistoView *vistoView = (EQLVistoView *) [cell viewWithTag:108];
+    vistoView.hidden = true;
+    
+    if ([[object objectForKey:@"pullman"] boolValue]){
+        /*Icono massa gran per posar aqui
+         EQLsuspensionIcon *suspensionView = (EQLsuspensionIcon *) [cell viewWithTag:105];
+         suspensionView.suspension = [[object objectForKey:@"pullman"] boolValue];
+         */
+        vistoView.hidden = false;
+        suspensionLabel.text = @"Suspensión";
         
-    for (id van in self.objects){
-        // NSLog(@"Entra al for");
-        int numHorsesInPFObject = [van[@"horsesNum"] intValue];
-        switch (numHorsesInPFObject) {
-            case 1:
-                _oneHorseCount++;
-                break;
-            case 2:
-                _twoHorseCount++;
-                break;
-            case 3:
-                _threeHorseCount++;
-                break;
-            case 4:
-                _fourHorseCount++;
-                break;
-            default:
-                break;
-        }
+    } else {
+        suspensionLabel.hidden = true;
     }
-        self.executionFlag = YES;
-
-    }
+    
     /*
-    NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
-    NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
-    NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
-    NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
+     EQLplancherIcon *plancherView = (EQLplancherIcon *) [cell viewWithTag:106];
+     plancherView.sueloAluminio = [[object objectForKey:@"plancherAlu"] boolValue];
      */
     
+    return cell;
 }
-
-- (void)objectsWillLoad {
-    [super objectsWillLoad];
-    // This method is called before a PFQuery is fired to get more objects
-    
-    self.executionFlag = NO;
-    _oneHorseCount = 0;
-    _twoHorseCount = 0;
-    _threeHorseCount = 0;
-    _fourHorseCount = 0;
-}
-
-
-// Override to customize what kind of query to perform on the class. The default is to query for
-// all objects ordered by createdAt descending.
-
-- (PFQuery *)queryForTable {
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    
-    // If no objects are loaded in memory, we look to the cache first to fill the table
-    // and then subsequently do a query against the network.
-    if ([self.objects count] == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-//       query.cachePolicy = kPFCachePolicyCacheOnly;
-    }
-
-    [query orderByAscending:@"Priority"];
-    [query whereKey:@"enabled" equalTo:@(YES)];
-
-    return query;
-}
-
 
 /*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -229,66 +277,7 @@
     }
     return sectionName;
 }
-*/
 
-
-
-// Override to customize the look of a cell representing an object. The default is to display
-// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    static NSString *CellIdentifier = @"catalogCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    // Configure the cell
-    
-    PFFile *thumbnail = [object objectForKey:@"photo"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
-    nameLabel.text = [object objectForKey:@"Name"];
-    
-    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
-    prepTimeLabel.text = [object objectForKey:@"price"];
-
-    EQLPriceView *priceView = (EQLPriceView *) [cell viewWithTag:103];
-    priceView.price = [object objectForKey:@"price"];
-    
-    EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [cell viewWithTag:104];
-    numhorsesView.numHorses = [[object objectForKey:@"horsesNum"] stringValue];
-    
-    UILabel *suspensionLabel = (UILabel*) [cell viewWithTag:107];
-    EQLVistoView *vistoView = (EQLVistoView *) [cell viewWithTag:108];
-    vistoView.hidden = true;
-
-    if ([[object objectForKey:@"pullman"] boolValue]){
-        /*Icono massa gran per posar aqui
-        EQLsuspensionIcon *suspensionView = (EQLsuspensionIcon *) [cell viewWithTag:105];
-        suspensionView.suspension = [[object objectForKey:@"pullman"] boolValue];
-         */
-        vistoView.hidden = false;
-        suspensionLabel.text = @"Suspensión";
-        
-    } else {
-        suspensionLabel.hidden = true;
-    }
-    
-    /*
-    EQLplancherIcon *plancherView = (EQLplancherIcon *) [cell viewWithTag:106];
-    plancherView.sueloAluminio = [[object objectForKey:@"plancherAlu"] boolValue];
-    */
-    
-    return cell;
-}
-
-
-/*
  // Override if you need to change the ordering of objects in the table.
  - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
  return [objects objectAtIndex:indexPath.row];

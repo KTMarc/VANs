@@ -20,24 +20,23 @@
     
     /*Apariencia del navigation controller */
 //   colorWithRed:255./255.0 green:74.0/255.0 blue:74/255.0
-   
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-    
-    
     self.view.backgroundColor = [UIColor blackColor]; //Fondo negro
 
-    
-    
 //    self.navigationController.navigationBarHidden = true;
+    
+    //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
     self.garage = [[EQLGarageModel alloc]init];
     
-    [self.garage doAsyncQueryToParse:false];
     
-    //Para poder hacer tests, aqui es donde llamariamos el metodo que se descarga los vans
-   // [self.garage doAsyncQueryToParse];
+    //Bajamos los vans si no los tenemos en el localDataStore.
+    
+    
+    //Aqui bajamos de la red todos los Vans
+    [self.garage doAsyncQueryToParse:false];
     
     
 }
@@ -106,7 +105,7 @@
              //   NSLog(@"Entramos en el preparforsegue del formulario AVANAZADO");
             //We pass the fulfiled array with all the vans inside.
         }
-        
+#pragma mark - FIX: parece todo igual y solo canvia Form / Form1
         //Opcion paso a paso
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
             EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;

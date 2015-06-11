@@ -28,6 +28,7 @@
 		495B599C1A054E3A00D87869 /* EQLcallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599B1A054E3A00D87869 /* EQLcallButton.m */; };
 		495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599E1A05519F00D87869 /* EQLmailButton.m */; };
 		495C6F641A125B7800C14F0D /* EQLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C6F631A125B7800C14F0D /* EQLPictureViewController.m */; };
+		496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -143,6 +144,7 @@
 		495B599E1A05519F00D87869 /* EQLmailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmailButton.m; sourceTree = "<group>"; };
 		495C6F621A125B7800C14F0D /* EQLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPictureViewController.h; sourceTree = "<group>"; };
 		495C6F631A125B7800C14F0D /* EQLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPictureViewController.m; sourceTree = "<group>"; };
+		496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497C58F01AC9099500D1AD57 /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */,
 				495B59981A053EBA00D87869 /* MessageUI.framework in Frameworks */,
 				4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */,
 				49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */,
@@ -414,6 +417,7 @@
 		49A871AA198158F6008BB3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */,
 				495B59971A053EBA00D87869 /* MessageUI.framework */,
 				4923A5AC19CDD2B500585202 /* CoreLocation.framework */,
 				49249C7219C8A20600AE4BC5 /* MapKit.framework */,
