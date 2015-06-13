@@ -29,6 +29,10 @@
 		495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599E1A05519F00D87869 /* EQLmailButton.m */; };
 		495C6F641A125B7800C14F0D /* EQLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C6F631A125B7800C14F0D /* EQLPictureViewController.m */; };
 		496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */; };
+		496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A101B2BD688002D1B1F /* Play-Bold.ttf */; };
+		496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A111B2BD688002D1B1F /* Play-Regular.ttf */; };
+		496B3A171B2BDD9C002D1B1F /* EQLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A161B2BDD9C002D1B1F /* EQLLabel.m */; };
+		496B3A1A1B2BDE88002D1B1F /* EQLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A191B2BDE88002D1B1F /* EQLTextField.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -145,6 +149,12 @@
 		495C6F621A125B7800C14F0D /* EQLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPictureViewController.h; sourceTree = "<group>"; };
 		495C6F631A125B7800C14F0D /* EQLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPictureViewController.m; sourceTree = "<group>"; };
 		496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		496B3A101B2BD688002D1B1F /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Bold.ttf"; path = "fonts/Play/Play-Bold.ttf"; sourceTree = "<group>"; };
+		496B3A111B2BD688002D1B1F /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Regular.ttf"; path = "fonts/Play/Play-Regular.ttf"; sourceTree = "<group>"; };
+		496B3A151B2BDD9C002D1B1F /* EQLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLabel.h; sourceTree = "<group>"; };
+		496B3A161B2BDD9C002D1B1F /* EQLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLabel.m; sourceTree = "<group>"; };
+		496B3A181B2BDE88002D1B1F /* EQLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTextField.h; sourceTree = "<group>"; };
+		496B3A191B2BDE88002D1B1F /* EQLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTextField.m; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497C58F01AC9099500D1AD57 /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
@@ -335,6 +345,26 @@
 			name = "UI Detail View";
 			sourceTree = "<group>";
 		};
+		496B3A0F1B2BD66B002D1B1F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				496B3A101B2BD688002D1B1F /* Play-Bold.ttf */,
+				496B3A111B2BD688002D1B1F /* Play-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		496B3A141B2BDD72002D1B1F /* UI controls sublasses */ = {
+			isa = PBXGroup;
+			children = (
+				496B3A151B2BDD9C002D1B1F /* EQLLabel.h */,
+				496B3A161B2BDD9C002D1B1F /* EQLLabel.m */,
+				496B3A181B2BDE88002D1B1F /* EQLTextField.h */,
+				496B3A191B2BDE88002D1B1F /* EQLTextField.m */,
+			);
+			name = "UI controls sublasses";
+			sourceTree = "<group>";
+		};
 		497F444919DFF3640065BD07 /* Formulario paso a paso */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +463,7 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
+				496B3A141B2BDD72002D1B1F /* UI controls sublasses */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
 				49EB517D1A083CAF00B441B8 /* UI Catalog */,
@@ -456,6 +487,7 @@
 		49A871B2198158F6008BB3B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				496B3A0F1B2BD66B002D1B1F /* Fonts */,
 				498212371987BBDF00022486 /* Fotos */,
 				49B1FBEA19825EBE008E0ABD /* icon */,
 				49A871B3198158F6008BB3B3 /* VAN Selector-Info.plist */,
@@ -684,9 +716,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */,
+				496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */,
 				49907CC4198CCF96005CF560 /* Optimax_Pont_avant.jpg in Resources */,
 				49907CC6198CD024005CF560 /* Gold_XL_Western.jpg in Resources */,
 				49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */,
+				496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */,
 				49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */,
 				49A428F41987ED7700C02F53 /* ejemploFichaA4.jpg in Resources */,
 				49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */,
@@ -785,6 +819,7 @@
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
 				497C58F11AC9099500D1AD57 /* EQLlicenceIconView.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
+				496B3A171B2BDD9C002D1B1F /* EQLLabel.m in Sources */,
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
 				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
 				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
@@ -798,6 +833,7 @@
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
 				49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
+				496B3A1A1B2BDE88002D1B1F /* EQLTextField.m in Sources */,
 				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
 				49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,

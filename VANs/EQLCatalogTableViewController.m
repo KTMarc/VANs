@@ -95,7 +95,6 @@
     _fourHorseCount = 0;
 }
 
-
 // Override to customize what kind of query to perform on the class. The default is to query for
 // all objects ordered by createdAt descending.
 
@@ -106,10 +105,10 @@
         // If no objects are loaded in memory, we look to the cache first to fill the table
         // and then subsequently do a query against the network.
    //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
-    
+    //Como ya hemos hecho el acceso a la red en el EQLGarageModel ya nos ha guardado en el Datastore los datos. Y si intentamos acceder al catalogo sin red, aun funciona.
+    [query fromLocalDatastore];
     [query orderByAscending:@"Priority"];
     [query whereKey:@"enabled" equalTo:@(YES)];
-    
     return query;
 }
 

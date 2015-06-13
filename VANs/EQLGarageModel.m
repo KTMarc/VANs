@@ -50,6 +50,7 @@
 
 - (void)doAsyncQueryToParse: (BOOL) testing{
     
+
         [_queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
@@ -59,6 +60,7 @@
                     
                 }
                 self.allVans = [objects mutableCopy];
+                
                 for (id van in _allVans){
                     // NSLog(@"Entra al for");
                     PFObject *parseVan = van;
@@ -84,6 +86,10 @@
                             break;
                     }
                 }
+                
+                // Pin PFQuery results
+                
+                [PFObject pinAllInBackground:self.allVans];
                 /*
                  NSLog(@"%lu", (unsigned long)_oneHorseVans.count);
                  NSLog(@"%lu", (unsigned long)_twoHorseVans.count);
@@ -111,6 +117,7 @@
         _fourHorseVans = [[NSMutableArray alloc]init];
        // _form = [[EQLFormData alloc]init];
    
+        [_queryVans fromLocalDatastore];
         _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
         [_queryVans orderByAscending:@"Priority"];
         [_queryVans whereKey:@"enabled" equalTo:@(YES)];
