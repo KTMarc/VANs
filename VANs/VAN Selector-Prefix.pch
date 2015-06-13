@@ -18,4 +18,11 @@
     #import <FontasticIcons.h>
     #import "VanStyleKit.h"
     #import "EQLFormData.h"
+
+    //Appearance personalization
+    #import "UILabel+EQLCustomFont.h"
+    #import "UITextField+EQLCustomTextField.h"
+    #import "UIButton+EQLCustomButton.h"
+    #define sameFontEverywhere @"Play"
+
 #endif

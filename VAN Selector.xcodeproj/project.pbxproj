@@ -31,8 +31,9 @@
 		496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */; };
 		496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A101B2BD688002D1B1F /* Play-Bold.ttf */; };
 		496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A111B2BD688002D1B1F /* Play-Regular.ttf */; };
-		496B3A171B2BDD9C002D1B1F /* EQLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A161B2BDD9C002D1B1F /* EQLLabel.m */; };
-		496B3A1A1B2BDE88002D1B1F /* EQLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A191B2BDE88002D1B1F /* EQLTextField.m */; };
+		496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */; };
+		496B3A261B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */; };
+		496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -151,10 +152,12 @@
 		496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		496B3A101B2BD688002D1B1F /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Bold.ttf"; path = "fonts/Play/Play-Bold.ttf"; sourceTree = "<group>"; };
 		496B3A111B2BD688002D1B1F /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Regular.ttf"; path = "fonts/Play/Play-Regular.ttf"; sourceTree = "<group>"; };
-		496B3A151B2BDD9C002D1B1F /* EQLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLabel.h; sourceTree = "<group>"; };
-		496B3A161B2BDD9C002D1B1F /* EQLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLabel.m; sourceTree = "<group>"; };
-		496B3A181B2BDE88002D1B1F /* EQLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLTextField.h; sourceTree = "<group>"; };
-		496B3A191B2BDE88002D1B1F /* EQLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLTextField.m; sourceTree = "<group>"; };
+		496B3A211B2BFB33002D1B1F /* UILabel+EQLCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+EQLCustomFont.h"; sourceTree = "<group>"; };
+		496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+EQLCustomFont.m"; sourceTree = "<group>"; };
+		496B3A241B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+EQLCustomTextField.h"; sourceTree = "<group>"; };
+		496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+EQLCustomTextField.m"; sourceTree = "<group>"; };
+		496B3A271B2BFC40002D1B1F /* UIButton+EQLCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EQLCustomButton.h"; sourceTree = "<group>"; };
+		496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EQLCustomButton.m"; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497C58F01AC9099500D1AD57 /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
@@ -357,10 +360,12 @@
 		496B3A141B2BDD72002D1B1F /* UI controls sublasses */ = {
 			isa = PBXGroup;
 			children = (
-				496B3A151B2BDD9C002D1B1F /* EQLLabel.h */,
-				496B3A161B2BDD9C002D1B1F /* EQLLabel.m */,
-				496B3A181B2BDE88002D1B1F /* EQLTextField.h */,
-				496B3A191B2BDE88002D1B1F /* EQLTextField.m */,
+				496B3A211B2BFB33002D1B1F /* UILabel+EQLCustomFont.h */,
+				496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */,
+				496B3A241B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.h */,
+				496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */,
+				496B3A271B2BFC40002D1B1F /* UIButton+EQLCustomButton.h */,
+				496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */,
 			);
 			name = "UI controls sublasses";
 			sourceTree = "<group>";
@@ -818,8 +823,8 @@
 				4956E3F319EC842900966A8E /* EQLcatalogButtonView.m in Sources */,
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
 				497C58F11AC9099500D1AD57 /* EQLlicenceIconView.m in Sources */,
+				496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
-				496B3A171B2BDD9C002D1B1F /* EQLLabel.m in Sources */,
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
 				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
 				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
@@ -828,12 +833,13 @@
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
+				496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */,
 				492DF03E1A116BD000483101 /* EQLVistoView.m in Sources */,
 				494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */,
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
+				496B3A261B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m in Sources */,
 				49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
-				496B3A1A1B2BDE88002D1B1F /* EQLTextField.m in Sources */,
 				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
 				49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
