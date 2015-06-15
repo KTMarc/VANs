@@ -19,17 +19,8 @@
     
     [[UISegmentedControl appearance] setTintColor:colorEquus];
     [[UIButton appearance] setTintColor:colorEquus];
-    
-    
-    //Ver todas las fuentes del sistema por consola
-    //    for (NSString *familyName in [UIFont familyNames]) {
-    //        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-    //            NSLog(@"%@", fontName);
-    //        }
-    //    }
-    
-   // [[UILabel appearance] setFont:[UIFont fontWithName:@"Play" size:10.0]];
     [[UILabel appearance] setFontName:sameFontEverywhere];
+    
     
 }
 

@@ -16,29 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //Fondo negro de la vista principal
+    self.view.backgroundColor = [UIColor blackColor];
     
     /*Apariencia del navigation controller */
-//   colorWithRed:255./255.0 green:74.0/255.0 blue:74/255.0
-    
+    //Queria sacar estas lineas de aqui y ponerlas en el EQLNavigationController, pero alli no funcionan.
+
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]}; //Texto del titulo en blanco
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-    self.view.backgroundColor = [UIColor blackColor]; //Fondo negro
 
 //    self.navigationController.navigationBarHidden = true;
     
     //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
     self.garage = [[EQLGarageModel alloc]init];
     
-    
     //Bajamos los vans si no los tenemos en el localDataStore.
-    
     
     //Aqui bajamos de la red todos los Vans
     [self.garage doAsyncQueryToParse:false];
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,6 +19,7 @@
 
 @implementation EQLLicenceFormViewController 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +31,13 @@
     [self.view endEditing:YES];
     
     self.navigationController.navigationBarHidden = false;
+
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{
+//        NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:20],
+//        NSForegroundColorAttributeName : [UIColor whiteColor],
+//                                                                                 }];
+//    
+//    
     // _result.hidden = false;
     
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/

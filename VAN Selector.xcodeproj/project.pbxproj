@@ -68,7 +68,6 @@
 		49A871B8198158F6008BB3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871B7198158F6008BB3B3 /* main.m */; };
 		49A871BC198158F6008BB3B3 /* EQLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */; };
 		49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */; };
-		49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */; };
 		49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */; };
 		49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A871C6198158F6008BB3B3 /* Images.xcassets */; };
 		49A871CE198158F6008BB3B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A871CD198158F6008BB3B3 /* XCTest.framework */; };
@@ -210,7 +209,6 @@
 		49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQLAppDelegate.h; sourceTree = "<group>"; };
 		49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQLAppDelegate.m; sourceTree = "<group>"; };
 		49A871BE198158F6008BB3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		49A871C1198158F6008BB3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQLLicenceFormViewController.h; sourceTree = "<group>"; };
 		49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceFormViewController.m; sourceTree = "<group>"; };
 		49A871C6198158F6008BB3B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 				49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */,
 				49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */,
 				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
-				49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */,
 				49A871C6198158F6008BB3B3 /* Images.xcassets */,
 				49A871B2198158F6008BB3B3 /* Supporting Files */,
 			);
@@ -720,7 +717,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */,
 				496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */,
 				49907CC4198CCF96005CF560 /* Optimax_Pont_avant.jpg in Resources */,
 				49907CC6198CD024005CF560 /* Gold_XL_Western.jpg in Resources */,
@@ -883,14 +879,6 @@
 				49A871BE198158F6008BB3B3 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49A871C1198158F6008BB3B3 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		49A871D6198158F6008BB3B3 /* InfoPlist.strings */ = {

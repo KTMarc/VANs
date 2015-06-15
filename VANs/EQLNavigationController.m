@@ -28,14 +28,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
     self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:0.1];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:0.1];
 
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.0 alpha:0.5]];
-
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+            NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:20],
+            NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                           }];
     
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+            NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:18],
+            NSForegroundColorAttributeName : [UIColor whiteColor],}
+            forState:UIControlStateNormal];
+   
     // [VanStyleKit vermellEquus]
 }
 
