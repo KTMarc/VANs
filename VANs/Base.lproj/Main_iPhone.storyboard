@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4ye-rQ-MZa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OIW-W9-Lkq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Gauge View Controller-->
+        <scene sceneID="oOD-Ht-Ek7">
+            <objects>
+                <viewController id="OIW-W9-Lkq" customClass="EQLGaugeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CT8-vV-d2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSY-gL-5Kf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RNi-1Y-dIg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNA-5w-WRc" customClass="EQLGaugeCarAndVanView">
+                                <rect key="frame" x="0.0" y="88" width="320" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v42-DN-VBZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Kl-bs-cxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-1224"/>
+        </scene>
         <!--Modo avanzado-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -219,7 +244,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4wx-nn-BaY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dle-wz-XV6">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Cj-Ufg">
@@ -738,7 +763,7 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="k0R-HC-DTN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L0f-Gb-azg">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-Xz-yxP">
@@ -787,7 +812,7 @@ Lateral extra en acero inoxidable</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f4-PU-485" customClass="EQLcatalogButtonView">
                                 <rect key="frame" x="4" y="253" width="154" height="305"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="154" id="Ifw-gg-hcE"/>
+                                    <constraint firstAttribute="width" constant="154" id="aFS-IZ-7Q4"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -800,9 +825,6 @@ Lateral extra en acero inoxidable</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Miw-NY-N2o">
                                 <rect key="frame" x="193" y="207" width="111" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UhE-Sp-yua"/>
-                                </constraints>
                                 <state key="normal" title="Modo avanzado">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -821,24 +843,36 @@ Lateral extra en acero inoxidable</string>
                                     <segue destination="5Bc-hK-YVx" kind="push" id="cIy-yk-Z9Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-s0-cej">
+                                <rect key="frame" x="16" y="207" width="111" height="30"/>
+                                <state key="normal" title="Modo avanzado">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OIW-W9-Lkq" kind="push" id="MnL-c0-uq8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nSA-oP-WeH" firstAttribute="top" secondItem="4f4-PU-485" secondAttribute="bottom" constant="10" id="33Z-pF-Uyy"/>
-                            <constraint firstItem="Miw-NY-N2o" firstAttribute="trailing" secondItem="iNO-L0-MNL" secondAttribute="trailingMargin" id="I3H-M8-yIi"/>
-                            <constraint firstItem="4f4-PU-485" firstAttribute="top" secondItem="ZPk-yI-vvT" secondAttribute="top" id="I6U-M7-iWi"/>
-                            <constraint firstItem="Miw-NY-N2o" firstAttribute="top" secondItem="TAW-CA-OCA" secondAttribute="bottom" constant="187" id="IcA-3W-XHS"/>
-                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="top" secondItem="Miw-NY-N2o" secondAttribute="bottom" constant="16" id="IpR-o0-0KJ"/>
-                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="baseline" secondItem="4f4-PU-485" secondAttribute="baseline" id="MO1-ZQ-BPS"/>
-                            <constraint firstItem="4f4-PU-485" firstAttribute="firstBaseline" secondItem="ZPk-yI-vvT" secondAttribute="firstBaseline" id="NKf-yT-RI1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZPk-yI-vvT" secondAttribute="trailing" constant="-11" id="Rvr-bK-C1V"/>
-                            <constraint firstItem="tqv-tF-BJa" firstAttribute="centerX" secondItem="iNO-L0-MNL" secondAttribute="centerX" id="TyO-Ah-yxM"/>
-                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="leading" secondItem="4f4-PU-485" secondAttribute="trailing" constant="3" id="UVF-Ml-PxA"/>
-                            <constraint firstItem="tqv-tF-BJa" firstAttribute="leading" secondItem="4f4-PU-485" secondAttribute="leading" id="UXM-pt-s2h"/>
-                            <constraint firstItem="tqv-tF-BJa" firstAttribute="top" secondItem="iNO-L0-MNL" secondAttribute="top" id="bVy-a6-tMf"/>
-                            <constraint firstItem="4f4-PU-485" firstAttribute="bottom" secondItem="ZPk-yI-vvT" secondAttribute="bottom" id="hVT-Ce-XzF"/>
-                            <constraint firstItem="4f4-PU-485" firstAttribute="top" secondItem="tqv-tF-BJa" secondAttribute="bottom" constant="3" id="pk2-nj-sSl"/>
-                            <constraint firstItem="tqv-tF-BJa" firstAttribute="leading" secondItem="iNO-L0-MNL" secondAttribute="leadingMargin" constant="-12" id="vsz-yN-7Lf"/>
+                            <constraint firstItem="Miw-NY-N2o" firstAttribute="trailing" secondItem="iNO-L0-MNL" secondAttribute="trailingMargin" id="0sP-5T-Enl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZPk-yI-vvT" secondAttribute="trailing" constant="-11" id="1g7-dU-W5J"/>
+                            <constraint firstItem="4f4-PU-485" firstAttribute="leading" secondItem="tqv-tF-BJa" secondAttribute="leading" id="Dwv-0u-ZVJ"/>
+                            <constraint firstItem="M5s-s0-cej" firstAttribute="top" secondItem="TAW-CA-OCA" secondAttribute="bottom" constant="187" id="Fof-YP-fw0"/>
+                            <constraint firstItem="tqv-tF-BJa" firstAttribute="top" secondItem="iNO-L0-MNL" secondAttribute="top" id="Fqr-oL-ITz"/>
+                            <constraint firstItem="4f4-PU-485" firstAttribute="top" secondItem="M5s-s0-cej" secondAttribute="bottom" constant="16" id="HtQ-QB-sem"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="leading" secondItem="4f4-PU-485" secondAttribute="trailing" constant="3" id="O8G-x5-fAg"/>
+                            <constraint firstItem="Miw-NY-N2o" firstAttribute="top" secondItem="M5s-s0-cej" secondAttribute="top" id="SWs-zY-iBA"/>
+                            <constraint firstItem="M5s-s0-cej" firstAttribute="leading" secondItem="iNO-L0-MNL" secondAttribute="leadingMargin" id="XvV-VU-509"/>
+                            <constraint firstItem="4f4-PU-485" firstAttribute="top" secondItem="tqv-tF-BJa" secondAttribute="bottom" constant="3" id="aat-GU-IP6"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="firstBaseline" secondItem="4f4-PU-485" secondAttribute="firstBaseline" id="dk5-A6-AsK"/>
+                            <constraint firstItem="nSA-oP-WeH" firstAttribute="top" secondItem="4f4-PU-485" secondAttribute="bottom" constant="10" id="fN4-aF-4tR"/>
+                            <constraint firstItem="tqv-tF-BJa" firstAttribute="centerX" secondItem="iNO-L0-MNL" secondAttribute="centerX" id="ga7-ft-cKY"/>
+                            <constraint firstItem="tqv-tF-BJa" firstAttribute="leading" secondItem="iNO-L0-MNL" secondAttribute="leadingMargin" constant="-12" id="h9R-9K-sD4"/>
+                            <constraint firstItem="M5s-s0-cej" firstAttribute="baseline" secondItem="Miw-NY-N2o" secondAttribute="baseline" id="hl0-8g-G2j"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="top" secondItem="4f4-PU-485" secondAttribute="top" id="ii3-N4-Y1C"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="baseline" secondItem="4f4-PU-485" secondAttribute="baseline" id="sYp-f2-F3h"/>
+                            <constraint firstItem="ZPk-yI-vvT" firstAttribute="bottom" secondItem="4f4-PU-485" secondAttribute="bottom" id="wsl-Mx-D1m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w50-xX-V9s">
@@ -848,7 +882,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZS-PJ-LSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="-540"/>
+            <point key="canvasLocation" x="437" y="-540"/>
         </scene>
         <!--Licence Form1 View Controller-->
         <scene sceneID="YMJ-Cs-xGu">
@@ -1461,7 +1495,7 @@ Asturcon: 350-400Kg</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qEQ-MI-DAb"/>
+        <segue reference="Wiw-cc-ZWA"/>
         <segue reference="TrJ-Ad-Ng0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
