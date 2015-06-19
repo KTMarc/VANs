@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EQLGaugeCarAndVanView.h"
 
 @interface EQLGaugeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *mmaCar;
+
+@property (weak, nonatomic) IBOutlet EQLGaugeCarAndVanView *gaugeView;
+
+- (IBAction)newAmountInTextField:(id)sender;
+
+
 @end
+
+

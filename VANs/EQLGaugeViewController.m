@@ -24,6 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)newAmountInTextField:(UITextField *)textField{
+
+    self.gaugeView.pressure = [NSNumber numberWithInteger: [textField.text integerValue]];
+    [self.gaugeView setNeedsDisplay];
+    
+}
+
 /*
 #pragma mark - Navigation
 

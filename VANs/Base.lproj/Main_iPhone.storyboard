@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OIW-W9-Lkq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U3g-si-Nee">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -18,14 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNA-5w-WRc" customClass="EQLGaugeCarAndVanView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.2" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-r6-zOm">
+                                <rect key="frame" x="74" y="39" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="M13-Hc-xZQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="newAmountInTextField:" destination="OIW-W9-Lkq" eventType="valueChanged" id="7cG-nt-DGy"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSn-8X-6fU">
+                                <rect key="frame" x="177" y="38" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="Icj-Gg-EbO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNA-5w-WRc" customClass="EQLGaugeCarAndVanView">
                                 <rect key="frame" x="0.0" y="88" width="320" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNA-5w-WRc" firstAttribute="top" secondItem="RYL-r6-zOm" secondAttribute="bottom" constant="19" id="2PV-dt-BMb"/>
+                            <constraint firstItem="kSn-8X-6fU" firstAttribute="top" secondItem="CT8-vV-d2G" secondAttribute="bottom" constant="18" id="bLh-U1-FY6"/>
+                            <constraint firstItem="kSn-8X-6fU" firstAttribute="leading" secondItem="RYL-r6-zOm" secondAttribute="trailing" constant="8" symbolic="YES" id="gbN-wh-dMo"/>
+                            <constraint firstItem="RYL-r6-zOm" firstAttribute="leading" secondItem="RNi-1Y-dIg" secondAttribute="leadingMargin" constant="58" id="hJT-L3-aBP"/>
+                            <constraint firstItem="RYL-r6-zOm" firstAttribute="top" secondItem="CT8-vV-d2G" secondAttribute="bottom" constant="19" id="i1k-bG-a0n"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v42-DN-VBZ"/>
+                    <connections>
+                        <outlet property="gaugeView" destination="kNA-5w-WRc" id="rRh-7j-pH1"/>
+                        <outlet property="mmaCar" destination="RYL-r6-zOm" id="xVK-UU-kW7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kl-bs-cxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -932,6 +962,9 @@ Lateral extra en acero inoxidable</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vNa-Ps-lwz" id="6sA-EN-oO1"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
                                 <rect key="frame" x="208" y="80" width="53" height="30"/>
@@ -975,6 +1008,10 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                     <segue destination="78Y-pY-z43" kind="push" id="Wiw-cc-ZWA"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qwq-eZ-zZ8" customClass="EQLGaugeCarAndVanView">
+                                <rect key="frame" x="10" y="146" width="294" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1012,6 +1049,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="easyFormMmaTextField" destination="BRA-CJ-Bd4" id="mHI-hf-hid"/>
+                        <outlet property="gaugeView" destination="Qwq-eZ-zZ8" id="fxr-UC-DQo"/>
                         <outlet property="toHelp" destination="NZT-iC-J0t" id="0Kc-Jh-VLT"/>
                     </connections>
                 </viewController>

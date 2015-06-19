@@ -10,11 +10,21 @@
 
 @implementation EQLGaugeCarAndVanView
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+-(id)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
+        self.pressure = @80;
+        self.contentMode = UIViewContentModeRedraw;
+    }
+    
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawGaugeWithPressure:0.81];
+    NSLog(@"we receive a new value:%@",self.pressure);
+    [VanStyleKit drawGaugeWithPressure:([self.pressure floatValue])/100];
+
 }
+
 
 @end

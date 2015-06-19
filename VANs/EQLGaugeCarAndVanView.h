@@ -14,4 +14,7 @@ IBInspectable
 
 @interface EQLGaugeCarAndVanView : UIView
 
+@property (strong, nonatomic) NSNumber *pressure;
+
+
 @end

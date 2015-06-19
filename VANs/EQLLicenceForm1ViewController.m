@@ -78,6 +78,10 @@
 - (void)doneClicked:(id)sender
 {
     [self.easyFormMmaTextField endEditing:YES];
+    NSLog(@"inside doneClicked:%@",[self.easyFormMmaTextField description]);
+    self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
+    [self.gaugeView setNeedsDisplay];
+    
 }
 /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
@@ -91,7 +95,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)mmaNewValue:(UITextField *)textField{
+    NSLog(@"we receive a new value in mmaNewValue:%@",[textField description]);
+    self.gaugeView.pressure = [NSNumber numberWithInteger: [textField.text integerValue]];
+    [self.gaugeView setNeedsDisplay];
+}
 
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"we receive a new value in mmaNewValue:%@",[textField description]);
+    self.gaugeView.pressure = [NSNumber numberWithInteger: [textField.text integerValue]];
+    [self.gaugeView setNeedsDisplay];
+    
+}
 #pragma mark - Navigation
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
@@ -136,6 +152,7 @@
         }
     }
 }
+
 
 
 - (IBAction)toForm2Button:(UIButton *)sender {
