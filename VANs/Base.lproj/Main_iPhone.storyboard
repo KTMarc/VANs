@@ -1008,8 +1008,8 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                     <segue destination="78Y-pY-z43" kind="push" id="Wiw-cc-ZWA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qwq-eZ-zZ8" customClass="EQLGaugeCarAndVanView">
-                                <rect key="frame" x="10" y="146" width="294" height="260"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwq-eZ-zZ8" customClass="EQLGaugeCarAndVanView">
+                                <rect key="frame" x="15" y="155" width="292" height="223"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -1018,18 +1018,22 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         <constraints>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="08G-Gr-9If"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="trailing" constant="8" symbolic="YES" id="248-LN-29w"/>
+                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" constant="-1" id="2hz-ed-hjO"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="leading" id="4Xy-v0-fRk"/>
                             <constraint firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" constant="-1" id="AQC-yT-vh7"/>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="10" id="Am3-Zf-jGY"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="centerX" secondItem="BRA-CJ-Bd4" secondAttribute="centerX" id="Blr-TI-iQW"/>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
+                            <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="Qwq-eZ-zZ8" secondAttribute="bottom" constant="38" id="Mdu-qo-rGH"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="9" id="Suu-kh-iqa"/>
                             <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="6q1-Ss-RDZ" secondAttribute="bottom" constant="10" id="WiW-tA-1d2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bkd-PZ-Fr1" secondAttribute="trailing" id="X3J-RB-XrA"/>
+                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="top" secondItem="tMy-Ce-aKv" secondAttribute="top" id="ZcB-ye-rDR"/>
                             <constraint firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="afs-xF-BTl"/>
                             <constraint firstAttribute="centerX" secondItem="tMy-Ce-aKv" secondAttribute="centerX" id="pKM-Uu-Ohz"/>
                             <constraint firstItem="BRA-CJ-Bd4" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="pOp-ve-UNW"/>
+                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" id="pmG-MT-eje"/>
                             <constraint firstItem="tMy-Ce-aKv" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="155" id="qf2-pZ-Efj"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="5" id="s2F-6X-YDP"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="100" id="xvo-ku-0Ta"/>

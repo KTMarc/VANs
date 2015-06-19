@@ -20,7 +20,6 @@
 @property (nonatomic, strong) EQLGarageModel *model;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
 
-- (IBAction)mmaNewValue:(id)sender;
 - (IBAction)toForm2Button:(UIButton *)sender;
 
 @end

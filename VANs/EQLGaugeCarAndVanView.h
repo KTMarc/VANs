@@ -16,5 +16,6 @@ IBInspectable
 
 @property (strong, nonatomic) NSNumber *pressure;
 
+- (void)animatePath;
 
 @end
