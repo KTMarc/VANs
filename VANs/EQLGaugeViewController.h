@@ -7,16 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLGaugeCarAndVanView.h"
+#import "EQLGauge1Layer.h"
+#import "EQLGauge1View.h"
 
 @interface EQLGaugeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *mmaCar;
 
-@property (weak, nonatomic) IBOutlet EQLGaugeCarAndVanView *gaugeView;
 
-- (IBAction)newAmountInTextField:(id)sender;
+//@property (strong, nonatomic) EQLGauge1Layer *gaugeLayer;
 
+//Este es el nombre que tiene en storyboards
+//@property (strong, nonatomic) EQLGauge1View *gaugeView;
+
+
+//- (IBAction)newAmountInTextField:(id)sender;
+
+
+- (IBAction)touchedArrow:(EQLGauge1View *)sender;
 
 @end
 

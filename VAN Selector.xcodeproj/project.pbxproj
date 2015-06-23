@@ -36,6 +36,8 @@
 		496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */; };
 		496B3A2F1B2E99BE002D1B1F /* EQLGaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */; };
 		496B3A321B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */; };
+		496B3A461B386D42002D1B1F /* EQLGauge1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */; };
+		496B3A491B386E5F002D1B1F /* EQLGauge1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A481B386E5F002D1B1F /* EQLGauge1View.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -163,6 +165,10 @@
 		496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGaugeViewController.m; sourceTree = "<group>"; };
 		496B3A301B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGaugeCarAndVanView.h; sourceTree = "<group>"; };
 		496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGaugeCarAndVanView.m; sourceTree = "<group>"; };
+		496B3A441B386D42002D1B1F /* EQLGauge1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGauge1Layer.h; sourceTree = "<group>"; };
+		496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGauge1Layer.m; sourceTree = "<group>"; };
+		496B3A471B386E5F002D1B1F /* EQLGauge1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGauge1View.h; sourceTree = "<group>"; };
+		496B3A481B386E5F002D1B1F /* EQLGauge1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGauge1View.m; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497C58F01AC9099500D1AD57 /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
@@ -379,6 +385,13 @@
 			children = (
 				496B3A301B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.h */,
 				496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */,
+				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
+				496B3A441B386D42002D1B1F /* EQLGauge1Layer.h */,
+				496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */,
+				496B3A471B386E5F002D1B1F /* EQLGauge1View.h */,
+				496B3A481B386E5F002D1B1F /* EQLGauge1View.m */,
+				496B3A2D1B2E99BE002D1B1F /* EQLGaugeViewController.h */,
+				496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */,
 			);
 			name = "UI Gauges";
 			sourceTree = "<group>";
@@ -495,7 +508,6 @@
 				49A871E619815918008BB3B3 /* Modelo */,
 				49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */,
 				49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */,
-				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
 				49A871C6198158F6008BB3B3 /* Images.xcassets */,
 				49A871B2198158F6008BB3B3 /* Supporting Files */,
 			);
@@ -570,8 +582,6 @@
 				49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */,
 				49249C7019C885A700AE4BC5 /* EQLMapViewController.m */,
 				49A428FB1987FB8600C02F53 /* Fichas tecnicas */,
-				496B3A2D1B2E99BE002D1B1F /* EQLGaugeViewController.h */,
-				496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */,
 			);
 			name = Controladores;
 			sourceTree = "<group>";
@@ -844,9 +854,11 @@
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
 				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
 				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
+				496B3A461B386D42002D1B1F /* EQLGauge1Layer.m in Sources */,
 				4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */,
 				49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */,
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
+				496B3A491B386E5F002D1B1F /* EQLGauge1View.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
 				496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */,

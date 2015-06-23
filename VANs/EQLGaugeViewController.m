@@ -14,23 +14,59 @@
 
 @implementation EQLGaugeViewController
 
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    
     // Do any additional setup after loading the view.
+    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
+    
+    /*
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc]
+                                      initWithTitle:@"OK" style:UIBarButtonItemStyleDone
+                                        target:self action:@selector(doneClicked:)];
+    doneBarButton.tintColor = [VanStyleKit vermellEquus];
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.mmaCar.inputAccessoryView = keyboardToolbar;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (IBAction)newAmountInTextField:(UITextField *)textField{
 
-    self.gaugeView.pressure = [NSNumber numberWithInteger: [textField.text integerValue]];
-    [self.gaugeView setNeedsDisplay];
+    NSLog(@"Recibimos del textfield %@", textField.text);
+    
+    [CATransaction setAnimationDuration:1.0];
+   // self.gaugeLayer.percentage = [textField.text floatValue];
+
+}
+*/
+/*
+- (void)doneClicked:(id)sender
+{
+    [self.mmaCar endEditing:YES];
+    
+    //NSLog(@"inside doneClicked:%@",[self.easyFormMmaTextField description]);
+    
+    //self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
+    
+    //[self.gaugeView setNeedsDisplay];
+    //    [self.gaugeView animatePath];
     
 }
+*/
+    
+- (IBAction)touchedArrow:(EQLGauge1View *)sender {
+    
+    [CATransaction setAnimationDuration:1.0];
+    sender.percentage = 0.75;
+    
+}
+
 
 /*
 #pragma mark - Navigation

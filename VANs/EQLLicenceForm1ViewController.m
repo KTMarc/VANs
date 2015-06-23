@@ -81,10 +81,10 @@
     
     //NSLog(@"inside doneClicked:%@",[self.easyFormMmaTextField description]);
 
-//    self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
-//    
-//    [self.gaugeView setNeedsDisplay];
-        [self.gaugeView animatePath];
+    self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
+    
+    [self.gaugeView setNeedsDisplay];
+    //    [self.gaugeView animatePath];
 
     
 }
@@ -104,7 +104,7 @@
     NSLog(@"we receive a new value in mmaNewValue:%@",[textField description]);
     self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
     [self.gaugeView setNeedsDisplay];
-    
+    [textField resignFirstResponder];
 }
 
 #pragma mark - Navigation
