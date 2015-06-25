@@ -101,10 +101,29 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+/*
     NSLog(@"we receive a new value in mmaNewValue:%@",[textField description]);
     self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
     [self.gaugeView setNeedsDisplay];
     [textField resignFirstResponder];
+ */
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    NSInteger inte = [textField.text intValue];
+    if (inte <5 || inte > 2){
+       UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"MMA" message:@"El Peso tiene que tener 4 cifras" delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
+        [alerta show];
+    
+        return NO;
+    }else{
+        return YES;
+    }
+        
 }
 
 #pragma mark - Navigation
