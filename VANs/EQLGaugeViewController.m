@@ -20,7 +20,7 @@
    
     
     // Do any additional setup after loading the view.
-    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
+    //-----"DONE" BUTTON IN NUMERIC PAD ---*/
     
     /*
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];

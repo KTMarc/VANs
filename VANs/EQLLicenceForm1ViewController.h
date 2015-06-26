@@ -15,11 +15,12 @@
 @interface EQLLicenceForm1ViewController : UIViewController <UIGestureRecognizerDelegate,UITextFieldDelegate>
 
 
-@property (weak, nonatomic) IBOutlet EQLGaugeCarAndVanView *gaugeView;
+
 @property (strong, nonatomic) IBOutlet UITextField *easyFormMmaTextField;
 @property (nonatomic, strong) EQLGarageModel *model;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
 
 - (IBAction)toForm2Button:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
 
 @end

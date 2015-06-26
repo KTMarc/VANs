@@ -385,7 +385,6 @@
 			children = (
 				496B3A301B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.h */,
 				496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */,
-				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
 				496B3A441B386D42002D1B1F /* EQLGauge1Layer.h */,
 				496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */,
 				496B3A471B386E5F002D1B1F /* EQLGauge1View.h */,
@@ -497,6 +496,7 @@
 				496B3A141B2BDD72002D1B1F /* UI controls sublasses */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
+				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
 				496B3A331B2E9C21002D1B1F /* UI Gauges */,
 				49EB517D1A083CAF00B441B8 /* UI Catalog */,
 				495B59991A054E1600D87869 /* UI Detail View */,

@@ -15,9 +15,18 @@
 
 @implementation EQLLicenceForm1ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Prepare de warning message
+    _wrongValueWarningLabel.alpha = 0;
+    [_wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
+    //esto se podria hacer en storyboards arrastrando desde el panel derecho, ultima opcion de la toolbar del textfield
+    [_easyFormMmaTextField addTarget:self action:@selector(textFieldEditingChangedAction:) forControlEvents:UIControlEventEditingChanged];
+    
+    
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
@@ -60,6 +69,11 @@
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)swipetoLeftDetection{
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
@@ -78,53 +92,44 @@
 - (void)doneClicked:(id)sender
 {
     [self.easyFormMmaTextField endEditing:YES];
-    
-    //NSLog(@"inside doneClicked:%@",[self.easyFormMmaTextField description]);
-
-    self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
-    
-    [self.gaugeView setNeedsDisplay];
-    //    [self.gaugeView animatePath];
-
-    
 }
 /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {
     [self.view endEditing:YES];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - TextField Delegate
+
+- (void) textFieldEditingChangedAction:(UITextField *)sender {
+  //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
+    [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
+    
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-/*
-    NSLog(@"we receive a new value in mmaNewValue:%@",[textField description]);
-    self.gaugeView.pressure = [NSNumber numberWithInteger: [self.easyFormMmaTextField.text integerValue]];
-    [self.gaugeView setNeedsDisplay];
-    [textField resignFirstResponder];
- */
-}
-
-
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+- (void) checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
 {
-    
-    NSInteger inte = [textField.text intValue];
-    if (inte <5 || inte > 2){
-       UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"MMA" message:@"El Peso tiene que tener 4 cifras" delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
-        [alerta show];
-    
-        return NO;
-    }else{
-        return YES;
-    }
+    if ([_easyFormMmaTextField.text length] < [maxLength unsignedIntegerValue]){
+        [_easyFormMmaTextField setTextColor:[UIColor redColor]];
+        _wrongValueWarningLabel.alpha = 0;
         
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{ _wrongValueWarningLabel.alpha = 1;}
+                         completion:nil];
+        
+    }else{
+        NSLog(@"El string es 4 o mas");
+        [_easyFormMmaTextField setTextColor:[UIColor blackColor]];
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{ _wrongValueWarningLabel.alpha = 0;}
+                         completion:nil];
+        
+        _wrongValueWarningLabel.alpha = 0;
+    }
 }
+
 
 #pragma mark - Navigation
 

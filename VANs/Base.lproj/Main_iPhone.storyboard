@@ -868,7 +868,7 @@ Lateral extra en acero inoxidable</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA (Masa Maxima Autorizada)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Do-pVw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA (Masa Máxima Autorizada)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Do-pVw">
                                 <rect key="frame" x="18" y="10" width="286" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="p8J-Ix-RZh"/>
@@ -904,9 +904,6 @@ Lateral extra en acero inoxidable</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vNa-Ps-lwz" id="6sA-EN-oO1"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
                                 <rect key="frame" x="208" y="80" width="53" height="30"/>
@@ -950,32 +947,34 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                     <segue destination="78Y-pY-z43" kind="push" id="Wiw-cc-ZWA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwq-eZ-zZ8" customClass="EQLGauge1View">
-                                <rect key="frame" x="15" y="155" width="292" height="223"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
+                                <rect key="frame" x="16" y="87" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="08G-Gr-9If"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="trailing" constant="8" symbolic="YES" id="248-LN-29w"/>
-                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" constant="-1" id="2hz-ed-hjO"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="leading" id="4Xy-v0-fRk"/>
                             <constraint firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" constant="-1" id="AQC-yT-vh7"/>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="10" id="Am3-Zf-jGY"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="centerX" secondItem="BRA-CJ-Bd4" secondAttribute="centerX" id="Blr-TI-iQW"/>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
-                            <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="Qwq-eZ-zZ8" secondAttribute="bottom" constant="38" id="Mdu-qo-rGH"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="leading" secondItem="Bkd-PZ-Fr1" secondAttribute="leading" id="SLP-ba-cSe"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="9" id="Suu-kh-iqa"/>
                             <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="6q1-Ss-RDZ" secondAttribute="bottom" constant="10" id="WiW-tA-1d2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bkd-PZ-Fr1" secondAttribute="trailing" id="X3J-RB-XrA"/>
-                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="top" secondItem="tMy-Ce-aKv" secondAttribute="top" id="ZcB-ye-rDR"/>
+                            <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="80" id="YKK-UZ-Xo9"/>
                             <constraint firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="afs-xF-BTl"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="16" id="ckJ-mx-bcs"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="baseline" secondItem="o56-l9-a5y" secondAttribute="baseline" id="hia-2x-K3W"/>
                             <constraint firstAttribute="centerX" secondItem="tMy-Ce-aKv" secondAttribute="centerX" id="pKM-Uu-Ohz"/>
                             <constraint firstItem="BRA-CJ-Bd4" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="pOp-ve-UNW"/>
-                            <constraint firstItem="Qwq-eZ-zZ8" firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" id="pmG-MT-eje"/>
                             <constraint firstItem="tMy-Ce-aKv" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="155" id="qf2-pZ-Efj"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="5" id="s2F-6X-YDP"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="100" id="xvo-ku-0Ta"/>
@@ -996,6 +995,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                     <connections>
                         <outlet property="easyFormMmaTextField" destination="BRA-CJ-Bd4" id="mHI-hf-hid"/>
                         <outlet property="toHelp" destination="NZT-iC-J0t" id="0Kc-Jh-VLT"/>
+                        <outlet property="wrongValueWarningLabel" destination="0Y7-ER-o4b" id="uZo-sn-djc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqC-nc-qsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1020,7 +1020,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR (Masa Maxima Remolcable)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-af-7aM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR (Masa Máxima Remolcable)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-af-7aM">
                                 <rect key="frame" x="12" y="10" width="297" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="5K8-qz-u7j"/>
@@ -1478,8 +1478,8 @@ Asturcon: 350-400Kg</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Wiw-cc-ZWA"/>
         <segue reference="TrJ-Ad-Ng0"/>
+        <segue reference="Wiw-cc-ZWA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
