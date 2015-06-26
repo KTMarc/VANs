@@ -25,7 +25,7 @@
     [_wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
     //esto se podria hacer en storyboards arrastrando desde el panel derecho, ultima opcion de la toolbar del textfield
     [_easyFormMmaTextField addTarget:self action:@selector(textFieldEditingChangedAction:) forControlEvents:UIControlEventEditingChanged];
-    
+    [_easyFormMmaTextField addTarget:self action:@selector(changeFontAction) forControlEvents: UIControlEventEditingDidBegin];
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
@@ -106,8 +106,9 @@
 - (void) textFieldEditingChangedAction:(UITextField *)sender {
   //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
     [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
-    
+    _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
 }
+
 
 - (void) checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
 {
@@ -125,11 +126,14 @@
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
                          animations:^{ _wrongValueWarningLabel.alpha = 0;}
                          completion:nil];
-        
         _wrongValueWarningLabel.alpha = 0;
     }
 }
 
+- (void)changeFontAction{
+    NSLog(@"UIControlEventEditingDidBegin");
+    _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
+}
 
 #pragma mark - Navigation
 
