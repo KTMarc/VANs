@@ -23,9 +23,12 @@
     //Prepare de warning message
     _wrongValueWarningLabel.alpha = 0;
     [_wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
+
     //esto se podria hacer en storyboards arrastrando desde el panel derecho, ultima opcion de la toolbar del textfield
+    //Texfield actions when it is first responder (EditingDidBegin) and when text starts to change (EditingChanged)
     [_easyFormMmaTextField addTarget:self action:@selector(textFieldEditingChangedAction:) forControlEvents:UIControlEventEditingChanged];
     [_easyFormMmaTextField addTarget:self action:@selector(changeFontAction) forControlEvents: UIControlEventEditingDidBegin];
+    
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
@@ -75,17 +78,12 @@
 }
 
 - (void)swipetoLeftDetection{
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
-    [self shouldPerformSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
-    //[self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
+    [self saveDataToSingleton:(_easyFormMmaTextField)];
+    [self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
 }
 
 - (void)swipetoRightDetection{
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
+    [self saveDataToSingleton:(_easyFormMmaTextField)];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -98,7 +96,6 @@
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {
     [self.view endEditing:YES];
-
 }
 
 #pragma mark - TextField Delegate
@@ -106,9 +103,13 @@
 - (void) textFieldEditingChangedAction:(UITextField *)sender {
   //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
     [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
-    _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
+    [self changeFontAction];
 }
 
+- (void)changeFontAction{
+    //NSLog(@"UIControlEventEditingDidBegin");
+    _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
+}
 
 - (void) checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
 {
@@ -121,7 +122,7 @@
                          completion:nil];
         
     }else{
-        NSLog(@"El string es 4 o mas");
+       // NSLog(@"El string es 4 o mas");
         [_easyFormMmaTextField setTextColor:[UIColor blackColor]];
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
                          animations:^{ _wrongValueWarningLabel.alpha = 0;}
@@ -130,9 +131,11 @@
     }
 }
 
-- (void)changeFontAction{
-    NSLog(@"UIControlEventEditingDidBegin");
-    _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
+#pragma mark - Helper methods
+
+- (void)saveDataToSingleton:(UITextField *)textField{
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    sharedForm.mmaCar = textField.text.integerValue;
 }
 
 #pragma mark - Navigation
@@ -156,8 +159,6 @@
             UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
             [missingDataAlert show];
         }
-        
-        
     } else{
         //Estamos en los segues del tabView y podemos hacer la transición.
         weDoSegue = true;
@@ -183,13 +184,7 @@
 
 
 - (IBAction)toForm2Button:(UIButton *)sender {
-
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    
-    sharedForm.mmaCar = _easyFormMmaTextField.text.integerValue;
-    
-
+    [self saveDataToSingleton:(_easyFormMmaTextField)];
 }
 
 @end
