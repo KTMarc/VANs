@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     //Prepare de warning message
     _wrongValueWarningLabel.alpha = 0;
@@ -38,12 +37,16 @@
     // _result.hidden = false;
     self.navigationController.navigationBarHidden = false;
     
+    
+    
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     if ([sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
         //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
         _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm mmaCar]];}
     /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    
+    
     
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
@@ -56,6 +59,9 @@
     doneBarButton.tintColor = [VanStyleKit vermellEquus];
     keyboardToolbar.items = @[flexBarButton, doneBarButton];
     self.easyFormMmaTextField.inputAccessoryView = keyboardToolbar;
+    /*-----END   "DONE" BUTTON IN NUMERIC PAD ---*/
+    
+    
     
     /* GESTURE RECOGNIZERS FOR NAVIGATION RIGHT AND LEFT*/
     UISwipeGestureRecognizer *leftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipetoLeftDetection)];
@@ -77,6 +83,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Gestures
+
 - (void)swipetoLeftDetection{
     [self saveDataToSingleton:(_easyFormMmaTextField)];
     [self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
@@ -87,20 +95,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - TextField interaction
+
 - (void)doneClicked:(id)sender
 {
     [self.easyFormMmaTextField endEditing:YES];
 }
-/*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {
     [self.view endEditing:YES];
 }
 
-#pragma mark - TextField Delegate
-
-- (void) textFieldEditingChangedAction:(UITextField *)sender {
+- (void)textFieldEditingChangedAction:(UITextField *)sender {
   //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
     [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
     [self changeFontAction];
@@ -111,7 +118,7 @@
     _easyFormMmaTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormMmaTextField.font.pointSize];
 }
 
-- (void) checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
+- (void)checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
 {
     if ([_easyFormMmaTextField.text length] < [maxLength unsignedIntegerValue]){
         [_easyFormMmaTextField setTextColor:[UIColor redColor]];

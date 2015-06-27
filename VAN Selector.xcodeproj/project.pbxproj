@@ -398,14 +398,10 @@
 		497F444919DFF3640065BD07 /* Formulario paso a paso */ = {
 			isa = PBXGroup;
 			children = (
-				497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */,
-				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
-				497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */,
-				497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */,
-				494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */,
-				494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */,
-				494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */,
-				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
+				49A3402C1B3E403A006FF2F5 /* Form 1 MMA Car */,
+				49A3402D1B3E4051006FF2F5 /* Form 2 MMR Car */,
+				49A3402E1B3E405E006FF2F5 /* Form 3 Horses */,
+				49A3402F1B3E406C006FF2F5 /* Form 4 Licence */,
 			);
 			name = "Formulario paso a paso";
 			sourceTree = "<group>";
@@ -439,6 +435,42 @@
 				498212381987BD0500022486 /* ejemploFichaA5.jpg */,
 			);
 			name = Fotos;
+			sourceTree = "<group>";
+		};
+		49A3402C1B3E403A006FF2F5 /* Form 1 MMA Car */ = {
+			isa = PBXGroup;
+			children = (
+				497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */,
+				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
+			);
+			name = "Form 1 MMA Car";
+			sourceTree = "<group>";
+		};
+		49A3402D1B3E4051006FF2F5 /* Form 2 MMR Car */ = {
+			isa = PBXGroup;
+			children = (
+				497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */,
+				497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */,
+			);
+			name = "Form 2 MMR Car";
+			sourceTree = "<group>";
+		};
+		49A3402E1B3E405E006FF2F5 /* Form 3 Horses */ = {
+			isa = PBXGroup;
+			children = (
+				494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */,
+				494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */,
+			);
+			name = "Form 3 Horses";
+			sourceTree = "<group>";
+		};
+		49A3402F1B3E406C006FF2F5 /* Form 4 Licence */ = {
+			isa = PBXGroup;
+			children = (
+				494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */,
+				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
+			);
+			name = "Form 4 Licence";
 			sourceTree = "<group>";
 		};
 		49A428FB1987FB8600C02F53 /* Fichas tecnicas */ = {

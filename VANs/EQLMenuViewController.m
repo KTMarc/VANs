@@ -25,7 +25,8 @@
 
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-
+     
+    
 //    self.navigationController.navigationBarHidden = true;
     
     //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
