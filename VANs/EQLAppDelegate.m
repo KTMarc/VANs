@@ -74,17 +74,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-
-    //Guardar en NSUserdefaults antes de salir
-#pragma mark TODO: poner el guardar antes de salir dentro de una funcion
-    
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
-    [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
-    [defaults setInteger: sharedForm.licence forKey:@"licence"];
-    [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
-    [defaults synchronize];
+    [self saveBeforeQuit];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -101,6 +91,11 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     //Guardar en NSUserdefaults antes de salir
+    [self saveBeforeQuit];
+}
+
+- (void) saveBeforeQuit{
+    //Guardar en NSUserdefaults antes de salir
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
@@ -108,7 +103,5 @@
     [defaults setInteger: sharedForm.licence forKey:@"licence"];
     [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
     [defaults synchronize];
-
 }
-
 @end

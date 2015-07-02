@@ -11,12 +11,10 @@
 @implementation EQLmodeloVan
 
 
-
 // Constructor (class method)
 +(id) modeloVanWithPFVan: (PFObject *)aPFVan
          calculationText: (NSString *)aCalculationText
-    maxPtacForClientsCar: (int) amaxPtacForClientsCar {
-    
+    maxPtacForClientsCar: (int) amaxPtacForClientsCar {    
     
     return [[self alloc]initWithPFVan:(PFObject *)aPFVan
                       calculationText:(NSString *)aCalculationText
@@ -36,8 +34,5 @@ maxPtacForClientsCar: (int) amaxPtacForClientsCar {
     }
     return self;
 }
-
-
-
 
 @end
