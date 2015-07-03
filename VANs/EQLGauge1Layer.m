@@ -44,7 +44,7 @@
     
     UIGraphicsPushContext(ctx);
     
-    [VanStyleKit drawGaugeWithPressure:self.percentage];
+   // [VanStyleKit drawGaugeWithPressure:self.percentage];
     
     UIGraphicsPopContext();
 }

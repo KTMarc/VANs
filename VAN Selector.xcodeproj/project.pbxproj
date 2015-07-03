@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04705A1206024A408ED26ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6F93922AF54A898E0D6690 /* libPods.a */; };
+		491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801C11B4509490043CA49 /* QuartzCore.framework */; };
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
 		49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49249C7219C8A20600AE4BC5 /* MapKit.framework */; };
@@ -114,6 +115,7 @@
 /* Begin PBXFileReference section */
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		491801BF1B44EAFE0043CA49 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
+		491801C11B4509490043CA49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4923A5AC19CDD2B500585202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
 		49249C7019C885A700AE4BC5 /* EQLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapViewController.m; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */,
 				496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */,
 				495B59981A053EBA00D87869 /* MessageUI.framework in Frameworks */,
 				4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */,
@@ -510,6 +513,7 @@
 		49A871AA198158F6008BB3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491801C11B4509490043CA49 /* QuartzCore.framework */,
 				491801BF1B44EAFE0043CA49 /* Telekinesis.framework */,
 				496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */,
 				495B59971A053EBA00D87869 /* MessageUI.framework */,

@@ -22,7 +22,7 @@
     // Drawing code
 //    NSLog(@"we receive a new value:%@",self.pressure);
 //    NSLog(@"And we transform it to:%f",[self.pressure floatValue]/1000);
-    [VanStyleKit drawGaugeWithPressure:[self.pressure floatValue]/1000];
+  //  [VanStyleKit drawGaugeWithPressure:[self.pressure floatValue]/1000];
 
 }
 

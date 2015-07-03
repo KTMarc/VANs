@@ -780,7 +780,10 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botonApretado:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="Qea-7a-rfb"/>
+                                    <action selector="touchCancel:" destination="9xF-GQ-1ht" eventType="touchCancel" id="0eI-FT-Yd2"/>
+                                    <action selector="touchDown:" destination="9xF-GQ-1ht" eventType="touchDown" id="sFH-q1-CDz"/>
+                                    <action selector="touchDragOutside:" destination="9xF-GQ-1ht" eventType="touchDragOutside" id="AO0-co-Kfx"/>
+                                    <action selector="touchUpInside:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="Oyj-0o-dS8"/>
                                     <segue destination="U3g-si-Nee" kind="push" id="OXN-ZB-Evp"/>
                                 </connections>
                             </button>
@@ -794,7 +797,10 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botonApretado:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="5L6-ck-IQO"/>
+                                    <action selector="touchCancel:" destination="9xF-GQ-1ht" eventType="touchCancel" id="gOB-eb-P4T"/>
+                                    <action selector="touchDown:" destination="9xF-GQ-1ht" eventType="touchDown" id="LDo-F7-qxX"/>
+                                    <action selector="touchDragOutside:" destination="9xF-GQ-1ht" eventType="touchDragOutside" id="rwG-5T-ey3"/>
+                                    <action selector="touchUpInside:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="o7x-FN-iBS"/>
                                     <segue destination="f9k-xT-bA4" kind="push" id="dXD-Lv-kcF"/>
                                 </connections>
                             </button>
@@ -814,11 +820,14 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botonApretado:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="kOA-Fm-ewp"/>
+                                    <action selector="touchCancel:" destination="9xF-GQ-1ht" eventType="touchCancel" id="ACj-3y-Wzl"/>
+                                    <action selector="touchDown:" destination="9xF-GQ-1ht" eventType="touchDown" id="Ffe-A5-HNP"/>
+                                    <action selector="touchDragOutside:" destination="9xF-GQ-1ht" eventType="touchDragOutside" id="1Vu-MA-DIP"/>
+                                    <action selector="touchUpInside:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="HyE-rL-7ib"/>
                                     <segue destination="5Bc-hK-YVx" kind="push" id="cIy-yk-Z9Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-s0-cej">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-s0-cej">
                                 <rect key="frame" x="16" y="207" width="92" height="30"/>
                                 <state key="normal" title="Modo gráfico">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

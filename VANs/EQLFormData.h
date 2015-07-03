@@ -29,6 +29,9 @@
 @property (nonatomic, strong) NSString* licenceString;
 @property (nonatomic, strong) NSString* numHorsesString;
 
+//Navigation track: Para saber desde que boton nos han hecho click y hacer una pequeña animación para que el usuario sepa de donde viene.
+@property (strong, nonatomic) UIView* lastButtonPressed;
+
 
 + (id) sharedForm;
 

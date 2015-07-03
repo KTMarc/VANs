@@ -17,6 +17,10 @@
 @property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *vansArray;
 
-- (IBAction)botonApretado:(id)sender;
+- (IBAction)touchUpInside:(id)sender;
+- (IBAction)touchDown:(id)sender;
+- (IBAction)touchCancel:(id)sender;
+- (IBAction)touchDragOutside:(id)sender;
+
 
 @end

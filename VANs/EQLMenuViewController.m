@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //Fondo negro de la vista principal
-    self.view.backgroundColor = [UIColor blackColor];
+    //Fondo de la vista principal
+    self.view.backgroundColor = [UIColor grayColor];
     
     /*Apariencia del navigation controller */
     //Queria sacar estas lineas de aqui y ponerlas en el EQLNavigationController, pero alli no funcionan.
@@ -56,8 +56,12 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = true;
-}
 
+    //Do de same animation so the user knows from which option did he came from
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    sharedForm.lastButtonPressed.alpha = 0.2;
+    [self fadeWith:sharedForm.lastButtonPressed andDuration: 0.3 Delay:0.0 finalAlpha:1];
+}
 
 
 - (void)viewDidDisAppear:(BOOL)animated{
@@ -69,12 +73,38 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     [VanStyleKit drawMenuBackgroundWithFrame:self.view.bounds];
-    
 }
 
+#pragma mark - Buttons interaction
 
-- (IBAction)botonApretado:(id)sender {
+- (IBAction)touchUpInside:(UIView *)sender {
+    [self fadeWith:sender andDuration: 0.1 Delay:0.0 finalAlpha:0.2];
+    
+    //To be able to repeat the animation when we come back to the menu and the user knows from where he comes from.
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    sharedForm.lastButtonPressed = sender;
+  }
 
+- (IBAction)touchDown:(id)sender {
+    [self fadeWith:sender andDuration: 1.0 Delay:0.0 finalAlpha:0.5];
+}
+
+- (IBAction)touchCancel:(id)sender {
+    [self fadeWith:sender andDuration: 1.0 Delay:0.0 finalAlpha:1.0];
+}
+
+- (IBAction)touchDragOutside:(id)sender {
+    [self fadeWith:sender andDuration: 1.0 Delay:0.0 finalAlpha:1.0];
+}
+
+- (void) fadeWith:(UIView *)sender andDuration: (float)duration Delay:(float)delay finalAlpha:(float)alpha {
+    [UIView animateWithDuration:duration
+                          delay: delay
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         sender.alpha = alpha;
+                     }
+                     completion:nil];
 }
 
 /*
@@ -90,8 +120,6 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([sender isKindOfClass:[UIButton class]]){
@@ -118,6 +146,7 @@
             //We pass the fulfiled array with all the vans inside.
         }
     }
+    
 }
 
 @end
