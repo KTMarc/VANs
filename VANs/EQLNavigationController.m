@@ -23,6 +23,17 @@
     return self;
 }
 
+- (BOOL)shouldAutorotate
+{
+    id currentViewController = self.topViewController;
+    
+    //We don´t want the menu to rotate.
+    if ([currentViewController isKindOfClass:[EQLMenuViewController class]])
+        return NO;
+    
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

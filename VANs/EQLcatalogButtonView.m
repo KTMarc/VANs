@@ -33,7 +33,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    [VanStyleKit drawCatalogMenuButtonWithButtonPressed:1.0];
+    [VanStyleKit drawCatalogMenuButtonWithFrame:self.bounds];
     // Drawing code
 }
 

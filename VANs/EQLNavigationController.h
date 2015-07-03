@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EQLMenuViewController.h"
 
 @interface EQLNavigationController : UINavigationController
 

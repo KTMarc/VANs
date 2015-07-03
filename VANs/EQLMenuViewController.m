@@ -72,7 +72,7 @@
 //ESTO NO VA
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawMenuBackgroundWithFrame:self.view.bounds];
+  //  [VanStyleKit drawMenuBackgroundWithFrame:self.view.bounds];
 }
 
 #pragma mark - Buttons interaction

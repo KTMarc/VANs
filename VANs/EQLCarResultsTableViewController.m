@@ -116,6 +116,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier forIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
+    
     // Configure the cell...
     NSArray *aux; //Guardamos el array con el numero de caballos en el que vamos a trabajar.
     int maxWeightClient=0;
