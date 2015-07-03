@@ -58,7 +58,7 @@
     int licenceWeight = -1;
     BOOL logs = true;
     int mmaVanActual = 0;
-    BOOL notBrochureWeights = NO;
+    //BOOL notBrochureWeights = NO;
     NSString *lastObjectId =@"";
     NSString *textoExplicativo=@"";
     PFObject *lastAdded;

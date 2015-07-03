@@ -16,7 +16,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
-    [VanStyleKit drawLicenceMenuButtonWithFrame:self.bounds colorParameter:[UIColor blackColor]];
+    [VanStyleKit drawLicenceMenuButtonWithFrame:self.bounds];
 }
 
 

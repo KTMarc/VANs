@@ -42,7 +42,7 @@
 + (void)drawLicenceNavIcon;
 + (void)drawCarWithColorParameter: (UIColor*)colorParameter scale: (CGFloat)scale;
 + (void)drawCalculationResults2WithMmaVan: (NSString*)mmaVan numHorses: (NSString*)numHorses weightHorse: (NSString*)weightHorse weightHorses: (NSString*)weightHorses weightTrailer: (NSString*)weightTrailer weightTrailerAndHorses: (NSString*)weightTrailerAndHorses;
-+ (void)drawIconoLicenceSolo2WithColorParameter: (UIColor*)colorParameter;
++ (void)drawIconoLicenceSolo2;
 + (void)drawHelpIconWithButtonText: (NSString*)buttonText;
 + (void)drawBotonEquusWithButtonText: (NSString*)buttonText pressed: (BOOL)pressed;
 + (void)drawLicencesHelp;
@@ -54,11 +54,16 @@
 + (void)drawMoreInfoButton;
 + (void)drawLogoDistribuidores;
 + (void)drawLogoChevalColorEquusWithButtonPressed: (CGFloat)buttonPressed;
++ (void)drawLogoDistribuidores2;
++ (void)drawTrailerShadowWithScale: (CGFloat)scale alpha: (CGFloat)alpha;
++ (void)drawCarShadowWithScale: (CGFloat)scale;
++ (void)drawLicenceShadowWithScale: (CGFloat)scale;
++ (void)drawEquusShadowWithScale: (CGFloat)scale;
++ (void)drawLicenceMenuButtonWithFrame: (CGRect)frame;
++ (void)drawCatalogMenuButtonWithFrame: (CGRect)frame;
++ (void)drawMapMenuButtonWithFrame: (CGRect)frame;
 + (void)drawFichaB5;
 + (void)drawFichaA4;
-+ (void)drawLicenceMenuButtonWithFrame: (CGRect)frame colorParameter: (UIColor*)colorParameter;
-+ (void)drawCatalogMenuButtonWithFrame: (CGRect)frame;
-+ (void)drawMApMenuButtonWithFrame: (CGRect)frame;
 + (void)drawGaugeWithPressure: (CGFloat)pressure maxWeight: (NSString*)maxWeight passOrFail: (NSString*)passOrFail;
 + (void)drawNumHorsesTableViewWithNumHorses: (NSString*)numHorses;
 + (void)drawPriceLabelWithButtonText: (NSString*)buttonText;
