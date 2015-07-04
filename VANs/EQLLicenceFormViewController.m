@@ -23,6 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
+
+    
     //Esto es para que desaparezca el teclado numerico cada vez que piquemos fuera de él
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
@@ -92,8 +96,9 @@
 }
 
 
-- (IBAction)calculateWeight:(UIButton *)sender {
+- (IBAction)calculateWeight:(UIBarButtonItem *)sender {
 
+    NSLog(@"Tenemos este modelo cuando llegamos a Calculamos peso :%@", _model);
 
         // of the field is not empty
         //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
@@ -104,9 +109,17 @@
         sharedForm.mmrCar =_mmrCarTextField.text.intValue;
         sharedForm.pesoCaballo = _horseWeight.text.intValue;
         sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
-        
+    
+    /*
+        NSLog(@"Antes de entrar a calculateThings");
+        NSLog(@"mmaCar: %ld", (long)sharedForm.mmaCar);
+        NSLog(@"mmrCar: %ld", (long)sharedForm.mmrCar);
+        NSLog(@"licence: %ld", (long)sharedForm.licence);
+        NSLog(@"pesoCaballo: %ld", (long)sharedForm.pesoCaballo);
+    */
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
 
+        NSLog(@"En CalculateWeight llama a calculateThingsWithModel y not sale que hay estos resultados despues de calcular todo: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
@@ -157,15 +170,12 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-
-        if ([sender isKindOfClass:[UIButton class]]){
+    if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
         }
-        }
-    
+    }
 }
 
 

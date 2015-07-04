@@ -32,10 +32,12 @@
 
 - (id)init {
     if (self = [super init]) {
+        /*
         mmaCar = 0;
         mmrCar = 0;
         licence = 0;
         pesoCaballo = 0;
+         */
     }
     return self;
 }

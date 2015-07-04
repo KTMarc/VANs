@@ -76,6 +76,8 @@
     [rightGesture setCancelsTouchesInView:NO];
     [self.view addGestureRecognizer:rightGesture];
     /* END GESTURE RECOGNIZERS */
+    
+    NSLog(@"Tenemos este modelo cuando llegamos a Form2:%@", _model);
 
 }
 
@@ -140,6 +142,7 @@
 - (void)saveDataToSingleton:(UITextField *)textField{
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.mmrCar = textField.text.integerValue;
+    NSLog(@"Guardamos en el SINGLETON mmrCar: %ld", (long)sharedForm.mmrCar);
 }
 
 
@@ -181,7 +184,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
+    if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm3ViewController class]]){
             EQLLicenceForm3ViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.model;

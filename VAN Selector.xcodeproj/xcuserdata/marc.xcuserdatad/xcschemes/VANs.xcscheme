@@ -37,6 +37,11 @@
                BlueprintName = "VAN SelectorTests"
                ReferencedContainer = "container:VAN Selector.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "VANsTests/test_BigCar_StdHorse_LicE">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
@@ -58,7 +63,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49A871A7198158F5008BB3B3"
@@ -76,7 +82,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49A871A7198158F5008BB3B3"

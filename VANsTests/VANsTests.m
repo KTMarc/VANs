@@ -97,9 +97,27 @@ BOOL testing = true;
     formData.licence = 1;
     
     resultsArray = [formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData];
-    
+    XCTAssertEqual([resultsArray[0] count], (NSUInteger) 2, @"Debería haber 2 vans de 1 caballo" );
     XCTAssertEqual([resultsArray[1] count], (NSUInteger) 1, @"Debería haber 1 van de 2 caballos" );
 
 }
+
+
+//- (void) test_BigCar_StdHorse_LicE
+//{
+//    
+//    formData.mmaCar = 3500;
+//    formData.mmrCar = 3500;
+//    formData.pesoCaballo = 450;
+//    formData.licence = 2;
+//    
+//    resultsArray = [formData calculateThingsWithModel:(EQLGarageModel *)garage andForm:(EQLFormData *) formData];
+//    XCTAssertEqual([resultsArray[0] count], (NSUInteger) 2, @"Debería haber 2 vans de 1 caballo" );
+//   // XCTAssertEqual([resultsArray[1] count], (NSUInteger) 2, @"Debería haber 1 van de 2 caballos" );
+//    
+//    //XCTAssertEqual([resultsArray[2] count], (NSUInteger) 1, @"Debería haber 1 van de 3 caballos" );
+//    //XCTAssertEqual([resultsArray[3] count], (NSUInteger) 1, @"Debería haber 1 van de 4 caballos" );
+//
+//     }
 
 @end

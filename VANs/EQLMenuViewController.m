@@ -30,6 +30,7 @@
 //    self.navigationController.navigationBarHidden = true;
     
     //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
+#pragma mark - TODO Aqui dentro hay un init que pone todo a 0 y se carga la persistencia
     self.garage = [[EQLGarageModel alloc]init];
     
     //Bajamos los vans si no los tenemos en el localDataStore.
@@ -135,9 +136,11 @@
         //Opcion paso a paso
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
             EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
-            nextViewController.model = self.garage;
-               //  NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
+            //NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
             //We pass the fulfiled array with all the vans inside.
+            nextViewController.model = self.garage;
+            //NSLog(@"Tenemos este modelo cuando estamos en el menu principal:%@", self.garage);
+
         }
         
         if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){

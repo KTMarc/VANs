@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //NSLog(@"Tenemos este modelo cuando llegamos a Form1:%@", self.model);
+    
     //Prepare de warning message
     _wrongValueWarningLabel.alpha = 0;
     [_wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
@@ -138,6 +140,7 @@
 - (void)saveDataToSingleton:(UITextField *)textField{
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.mmaCar = textField.text.integerValue;
+    //NSLog(@"Guardamos en el SINGLETON mmaCar: %ld", (long)sharedForm.mmaCar);
 }
 
 #pragma mark - Navigation
@@ -175,20 +178,29 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
+    //NSLog(@"Entramos al prepareforSegue de Form1");
+    if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
+            NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
 
+        }
+        if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
+            EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
+            nextViewController.model = self.model;
+            NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
         }
     }
 }
 
-
 - (IBAction)toForm2Button:(UIButton *)sender; {
+//TODO- DELETE THIS!!!
+    
     [self saveDataToSingleton:(_easyFormMmaTextField)];
     NSLog(@"Em picat el boto i guardem al formulari");
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

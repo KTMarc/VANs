@@ -25,12 +25,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-Bw-qAF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-Bw-qAF">
                                 <rect key="frame" x="158" y="109" width="81" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.500" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-Dt-JYh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1800" borderStyle="roundedRect" placeholder="1.500" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-Dt-JYh">
                                 <rect key="frame" x="158" y="148" width="81" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -138,7 +138,7 @@
                                     <segue destination="8Fj-oa-p5U" kind="show" identifier="toResultados" id="oh1-t8-hmF"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="450" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-wi-1XU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="450" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-wi-1XU">
                                 <rect key="frame" x="158" y="195" width="81" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -345,7 +345,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4027" y="-733"/>
+            <point key="canvasLocation" x="3949" y="-637"/>
         </scene>
         <!--Van View Controller-->
         <scene sceneID="CXi-K5-eeB">
@@ -554,27 +554,37 @@ Lateral extra en acero inoxidable</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odp-br-NCt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odp-br-NCt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-rR-0Kz">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-rR-0Kz">
                                         <rect key="frame" x="12" y="38" width="297" height="513"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-wq-Uzv">
+                                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-wq-Uzv">
                                                 <rect key="frame" x="0.0" y="106" width="330" height="224"/>
                                                 <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="224" id="4II-3E-5oN"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1333333333" green="0.85490196080000003" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="top" secondItem="ATd-rR-0Kz" secondAttribute="top" id="HjW-Iq-73l"/>
-                                            <constraint firstAttribute="bottom" secondItem="DMW-wq-Uzv" secondAttribute="bottom" id="Tlm-Sj-KI6"/>
-                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="leading" secondItem="ATd-rR-0Kz" secondAttribute="leading" id="dpJ-Ip-STn"/>
-                                            <constraint firstAttribute="trailing" secondItem="DMW-wq-Uzv" secondAttribute="trailing" id="gvR-km-Wwb"/>
+                                            <constraint firstAttribute="height" constant="513" id="9eG-88-LrW"/>
+                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="leading" secondItem="ATd-rR-0Kz" secondAttribute="leading" id="IC3-GN-WzY"/>
+                                            <constraint firstAttribute="width" constant="297" id="Qdg-iY-fcI"/>
+                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="top" secondItem="ATd-rR-0Kz" secondAttribute="top" constant="106" id="cSb-Pq-WyA"/>
+                                            <constraint firstAttribute="trailing" secondItem="DMW-wq-Uzv" secondAttribute="trailing" constant="-33" id="vbX-qd-VNI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ATd-rR-0Kz" secondAttribute="trailing" constant="291" id="3oN-cL-kjh"/>
+                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="leading" secondItem="odp-br-NCt" secondAttribute="leading" constant="12" id="olj-Xw-WZR"/>
+                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="top" secondItem="odp-br-NCt" secondAttribute="top" constant="38" id="xZf-HH-Lgi"/>
+                                    <constraint firstAttribute="bottom" secondItem="ATd-rR-0Kz" secondAttribute="bottom" constant="49" id="xyz-9h-yGd"/>
+                                </constraints>
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 </variation>
@@ -588,10 +598,10 @@ Lateral extra en acero inoxidable</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="odp-br-NCt" firstAttribute="leading" secondItem="iyE-lY-KG6" secondAttribute="leadingMargin" constant="-16" id="0Cf-gy-GUa"/>
-                            <constraint firstItem="lCB-t1-s2L" firstAttribute="top" secondItem="odp-br-NCt" secondAttribute="bottom" id="cOF-fi-PbB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="odp-br-NCt" secondAttribute="trailing" constant="-16" id="iZf-wP-J5W"/>
-                            <constraint firstItem="odp-br-NCt" firstAttribute="top" secondItem="iyE-lY-KG6" secondAttribute="topMargin" id="j5j-I7-LTe"/>
+                            <constraint firstAttribute="trailing" secondItem="odp-br-NCt" secondAttribute="trailing" id="2B4-3J-00x"/>
+                            <constraint firstItem="odp-br-NCt" firstAttribute="leading" secondItem="iyE-lY-KG6" secondAttribute="leading" id="6id-vj-D2Y"/>
+                            <constraint firstItem="odp-br-NCt" firstAttribute="bottom" secondItem="lCB-t1-s2L" secondAttribute="top" id="mz5-ZF-F0T"/>
+                            <constraint firstItem="odp-br-NCt" firstAttribute="top" secondItem="iyE-lY-KG6" secondAttribute="top" id="rBT-4a-OuW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bK0-5M-97C"/>
@@ -1576,8 +1586,8 @@ Asturcon: 350-400Kg</string>
     <inferredMetricsTieBreakers>
         <segue reference="OMT-vN-FnO"/>
         <segue reference="5ri-wS-jcL"/>
+        <segue reference="Wiw-cc-ZWA"/>
         <segue reference="357-NI-xMD"/>
-        <segue reference="ehW-0q-UCM"/>
         <segue reference="O99-Qq-3sd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
