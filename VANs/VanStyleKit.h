@@ -59,6 +59,8 @@
 + (void)drawCarShadowWithScale: (CGFloat)scale;
 + (void)drawLicenceShadowWithScale: (CGFloat)scale;
 + (void)drawEquusShadowWithScale: (CGFloat)scale;
++ (void)drawTrailerMaxPtac2;
++ (void)drawTrailer2WithScale: (CGFloat)scale alpha: (CGFloat)alpha;
 + (void)drawLicenceMenuButtonWithFrame: (CGRect)frame;
 + (void)drawCatalogMenuButtonWithFrame: (CGRect)frame;
 + (void)drawMapMenuButtonWithFrame: (CGRect)frame;

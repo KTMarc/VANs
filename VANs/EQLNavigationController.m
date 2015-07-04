@@ -27,7 +27,7 @@
 {
     id currentViewController = self.topViewController;
     
-    //We don´t want the menu to rotate.
+    //We don´t want the Main menu to rotate.
     if ([currentViewController isKindOfClass:[EQLMenuViewController class]])
         return NO;
     

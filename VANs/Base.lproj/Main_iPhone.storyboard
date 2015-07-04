@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busque en la ficha técnica de su coche:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-Hq-Ypy">
-                                <rect key="frame" x="12" y="78" width="280" height="21"/>
+                                <rect key="frame" x="13" y="78" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ttz-Bb-IeK"/>
                                 </constraints>
@@ -285,19 +285,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-oc-jdv" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="1" width="199" height="137"/>
+                                            <rect key="frame" x="0.0" y="1" width="199" height="138"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="199" id="11s-0U-X08"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="nameLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-ab-m8u">
-                                            <rect key="frame" x="336" y="9" width="85" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-ab-m8u">
+                                            <rect key="frame" x="167" y="9" width="143" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="priceLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-tN-3Fa">
-                                            <rect key="frame" x="340" y="40" width="81" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-tN-3Fa">
+                                            <rect key="frame" x="229" y="40" width="81" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -308,8 +308,8 @@
                                             <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="maxPtacLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33f-Vw-aLW">
-                                            <rect key="frame" x="200" y="111" width="221" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxPtacLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33f-Vw-aLW">
+                                            <rect key="frame" x="200" y="111" width="110" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -345,7 +345,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4751.25" y="-50.704225352112672"/>
+            <point key="canvasLocation" x="4027" y="-733"/>
         </scene>
         <!--Van View Controller-->
         <scene sceneID="CXi-K5-eeB">
@@ -428,6 +428,12 @@ Lateral extra en acero inoxidable</string>
                                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="9" y="266" width="291" height="417"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="9" y="266" width="291" height="417"/>
+                                                </variation>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-04-vIc" customClass="EQLmailButton">
                                                 <rect key="frame" x="10" y="693" width="140" height="50"/>
@@ -534,7 +540,7 @@ Lateral extra en acero inoxidable</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6360" y="-603.16901408450701"/>
+            <point key="canvasLocation" x="4856" y="-1002"/>
         </scene>
         <!--Foto ampliada-->
         <scene sceneID="Vfl-gS-xWJ">
@@ -569,6 +575,15 @@ Lateral extra en acero inoxidable</string>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -588,7 +603,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ht-Yp-X8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7213.125" y="-725.70422535211264"/>
+            <point key="canvasLocation" x="4869" y="-19"/>
         </scene>
         <!--Calculations View Controller-->
         <scene sceneID="iIF-OC-Jdo">
@@ -686,7 +701,7 @@ Lateral extra en acero inoxidable</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0b-32-vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Zc5-T8-OfW" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="5553.75" y="-50.704225352112672"/>
+            <point key="canvasLocation" x="4425" y="-619"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="28o-vR-PPQ">
@@ -703,6 +718,12 @@ Lateral extra en acero inoxidable</string>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yof-Ac-n0v">
                                 <rect key="frame" x="0.0" y="556" width="600" height="45"/>
                                 <items/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                </variation>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-h7-Qqw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -858,14 +879,14 @@ Lateral extra en acero inoxidable</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA (Masa Máxima Autorizada)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Do-pVw">
-                                <rect key="frame" x="18" y="10" width="286" height="39"/>
+                                <rect key="frame" x="17" y="10" width="286" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="p8J-Ix-RZh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Ce-aKv">
                                 <rect key="frame" x="70" y="155" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -937,7 +958,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
-                                <rect key="frame" x="16" y="87" width="112" height="21"/>
+                                <rect key="frame" x="12" y="87" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -962,6 +983,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="10" id="Am3-Zf-jGY"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="centerX" secondItem="BRA-CJ-Bd4" secondAttribute="centerX" id="Blr-TI-iQW"/>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
+                            <constraint firstAttribute="centerX" secondItem="4fp-Do-pVw" secondAttribute="centerX" id="IsG-Kd-AE4"/>
                             <constraint firstAttribute="bottom" secondItem="Kh4-pA-GaQ" secondAttribute="bottom" constant="15" id="Kgg-Cd-1EG"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
                             <constraint firstItem="0Y7-ER-o4b" firstAttribute="leading" secondItem="Bkd-PZ-Fr1" secondAttribute="leading" id="SLP-ba-cSe"/>
@@ -978,7 +1000,15 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <constraint firstAttribute="trailing" secondItem="Kh4-pA-GaQ" secondAttribute="trailing" constant="10" id="rKI-jj-rVt"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="5" id="s2F-6X-YDP"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="100" id="xvo-ku-0Ta"/>
+                            <constraint firstItem="BRA-CJ-Bd4" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="5" id="ywK-rc-35P"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="08G-Gr-9If"/>
+                                <exclude reference="SLP-ba-cSe"/>
+                                <exclude reference="YKK-UZ-Xo9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KbA-MG-W77">
                         <nil key="title"/>
@@ -988,6 +1018,11 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Siguente" id="NPy-1M-e5X">
+                            <connections>
+                                <segue destination="SuK-4y-5IO" kind="show" id="4Df-ch-6OJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1001,7 +1036,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqC-nc-qsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="vNa-Ps-lwz" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="2403.75" y="-820.77464788732391"/>
+            <point key="canvasLocation" x="2403" y="-900"/>
         </scene>
         <!--Licence Form2 View Controller-->
         <scene sceneID="Bh8-zA-JQi">
@@ -1041,7 +1076,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-ER-Eaj">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-ER-Eaj">
                                 <rect key="frame" x="74" y="155" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1063,9 +1098,15 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="43" y="50" width="237" height="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="43" y="50" width="237" height="18"/>
+                                </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-5y-PjK">
-                                <rect key="frame" x="43" y="208" width="243" height="126"/>
+                                <rect key="frame" x="43" y="208" width="242" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="gff-nb-11i"/>
                                 </constraints>
@@ -1094,6 +1135,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <constraints>
                             <constraint firstItem="qYx-af-7aM" firstAttribute="top" secondItem="Qix-6C-WEe" secondAttribute="bottom" constant="10" id="1GX-Fn-6bk"/>
                             <constraint firstAttribute="centerX" secondItem="TEa-ey-XSk" secondAttribute="centerX" id="Aha-S6-6fI"/>
+                            <constraint firstAttribute="centerX" secondItem="I4e-92-cDO" secondAttribute="centerX" constant="18" id="CHw-Tc-qlM"/>
                             <constraint firstItem="I4e-92-cDO" firstAttribute="leading" secondItem="hrq-YS-SPa" secondAttribute="leading" constant="2" id="CXX-PO-m8l"/>
                             <constraint firstItem="HjU-On-B2l" firstAttribute="top" secondItem="TEa-ey-XSk" secondAttribute="bottom" constant="10" id="Eg1-bU-2H5"/>
                             <constraint firstItem="smB-Er-HZP" firstAttribute="top" secondItem="qYx-af-7aM" secondAttribute="bottom" constant="1" id="M1d-vG-G4t"/>
@@ -1110,6 +1152,11 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             <constraint firstItem="EXd-ER-Eaj" firstAttribute="centerX" secondItem="zNA-5y-PjK" secondAttribute="centerX" id="wiz-LP-W8F"/>
                             <constraint firstItem="hrq-YS-SPa" firstAttribute="top" secondItem="I4e-92-cDO" secondAttribute="bottom" constant="5" id="zQu-4D-6nX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wbm-1W-4xC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="CSz-Sx-bGL">
                         <nil key="title"/>
@@ -1119,6 +1166,11 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="wWp-wy-ZPi">
+                            <connections>
+                                <segue destination="Q1r-lD-utm" kind="show" id="OMT-vN-FnO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mmrFormTextView" destination="I4e-92-cDO" id="qGc-dK-DMB"/>
@@ -1126,7 +1178,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-KV-UD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3138.75" y="-820.77464788732391"/>
+            <point key="canvasLocation" x="2789" y="-900"/>
         </scene>
         <!--Licence Form3 View Controller-->
         <scene sceneID="Axc-P4-9lU">
@@ -1144,6 +1196,12 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <rect key="frame" x="70" y="10" width="181" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="10" width="181" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="71" y="10" width="181" height="29"/>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
                                 <rect key="frame" x="125" y="77" width="70" height="30"/>
@@ -1154,7 +1212,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgi-Xc-Lfi">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgi-Xc-Lfi">
                                 <rect key="frame" x="70" y="122" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1200,13 +1258,13 @@ Percheron: 850-950Kg</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos caballo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-Tn-rX2">
-                                <rect key="frame" x="95" y="184" width="130" height="18"/>
+                                <rect key="frame" x="98" y="184" width="125" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos pony:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="938-1I-HcY">
-                                <rect key="frame" x="101" y="281" width="118" height="21"/>
+                                <rect key="frame" x="106" y="281" width="108" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4Ap-lk-Q6v"/>
                                 </constraints>
@@ -1234,6 +1292,7 @@ Asturcon: 350-400Kg</string>
                             <constraint firstItem="Q1n-Cm-k6W" firstAttribute="top" secondItem="fg2-Xj-13q" secondAttribute="bottom" constant="10" id="5f2-i3-fER"/>
                             <constraint firstItem="wtK-Tn-rX2" firstAttribute="centerX" secondItem="Rgi-Xc-Lfi" secondAttribute="centerX" id="6Eg-PM-gxc"/>
                             <constraint firstItem="11a-fJ-oog" firstAttribute="top" secondItem="Q1n-Cm-k6W" secondAttribute="bottom" constant="10" id="7CQ-MZ-mWi"/>
+                            <constraint firstAttribute="centerX" secondItem="938-1I-HcY" secondAttribute="centerX" id="JZV-QD-u1W"/>
                             <constraint firstItem="hJ1-hP-blk" firstAttribute="top" secondItem="938-1I-HcY" secondAttribute="bottom" constant="5" id="KJi-rq-i7u"/>
                             <constraint firstItem="938-1I-HcY" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="85" id="OiC-x2-bGr"/>
                             <constraint firstItem="ZWQ-gd-JK8" firstAttribute="top" secondItem="11a-fJ-oog" secondAttribute="bottom" constant="10" id="Wg1-yc-dTP"/>
@@ -1246,9 +1305,18 @@ Asturcon: 350-400Kg</string>
                             <constraint firstItem="PF1-dQ-blk" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="43" id="fgF-gb-JAD"/>
                             <constraint firstItem="938-1I-HcY" firstAttribute="top" secondItem="PF1-dQ-blk" secondAttribute="bottom" constant="3" id="hGo-fU-jzG"/>
                             <constraint firstItem="hJ1-hP-blk" firstAttribute="centerX" secondItem="938-1I-HcY" secondAttribute="centerX" id="m1m-Kx-1Jr"/>
+                            <constraint firstAttribute="centerX" secondItem="PF1-dQ-blk" secondAttribute="centerX" constant="-9.5" id="rwN-iv-5ww"/>
                             <constraint firstAttribute="centerX" secondItem="e3X-ng-h3O" secondAttribute="centerX" id="xAK-Zy-jdG"/>
                             <constraint firstItem="wtK-Tn-rX2" firstAttribute="leading" secondItem="uGg-NA-o97" secondAttribute="leadingMargin" constant="79" id="ycX-Aa-o9e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fgF-gb-JAD"/>
+                                <exclude reference="ycX-Aa-o9e"/>
+                                <exclude reference="OiC-x2-bGr"/>
+                                <exclude reference="bUG-zO-E3Q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HtG-BK-d5Y">
                         <nil key="title"/>
@@ -1258,6 +1326,11 @@ Asturcon: 350-400Kg</string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="e0y-Vx-DXx">
+                            <connections>
+                                <segue destination="sRs-8w-7nS" kind="show" id="O99-Qq-3sd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormHorseWeightTextField" destination="ZWQ-gd-JK8" id="fEc-s4-T8F"/>
@@ -1265,7 +1338,7 @@ Asturcon: 350-400Kg</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpk-ZW-qtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3871.875" y="-826.05633802816897"/>
+            <point key="canvasLocation" x="3189" y="-900"/>
         </scene>
         <!--Licence Form4 View Controller-->
         <scene sceneID="8IX-4e-7fH">
@@ -1284,7 +1357,7 @@ Asturcon: 350-400Kg</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-n3-3ox">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-n3-3ox">
                                 <rect key="frame" x="70" y="292" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1295,9 +1368,6 @@ Asturcon: 350-400Kg</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="toCarResultsButton:" destination="sRs-8w-7nS" eventType="touchUpInside" id="X6l-0c-zgq"/>
-                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
                                 <rect key="frame" x="36" y="49" width="250" height="29"/>
@@ -1346,6 +1416,11 @@ Asturcon: 350-400Kg</string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="05S-PA-YAi">
+                            <connections>
+                                <action selector="toCarResultsButton:" destination="sRs-8w-7nS" id="NqT-sf-8ZZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormLicenceSegmentedControl" destination="gXQ-j3-JZw" id="qsD-US-SX6"/>
@@ -1353,7 +1428,7 @@ Asturcon: 350-400Kg</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eST-E2-wb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623.75" y="-826.05633802816897"/>
+            <point key="canvasLocation" x="3565" y="-900"/>
         </scene>
         <!--Catálogo Cheval Liberté-->
         <scene sceneID="FfW-15-Ah8">
@@ -1371,8 +1446,8 @@ Asturcon: 350-400Kg</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con suspensión" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eI-sfL">
-                                            <rect key="frame" x="471" y="42" width="111" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suspensión" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eI-sfL">
+                                            <rect key="frame" x="501" y="52" width="81" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1397,13 +1472,6 @@ Asturcon: 350-400Kg</string>
                                                 <constraint firstAttribute="height" constant="22" id="yMH-9O-EPi"/>
                                             </constraints>
                                         </view>
-                                        <view opaque="NO" tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-e6-rxR" customClass="EQLNumHorsesView">
-                                            <rect key="frame" x="18" y="112" width="59" height="18"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="18" id="SjW-9F-jUE"/>
-                                                <constraint firstAttribute="width" constant="59" id="UCf-Ga-PCa"/>
-                                            </constraints>
-                                        </view>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IVA no incluido" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-BS-Aoi">
                                             <rect key="frame" x="519" y="122" width="63" height="11"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
@@ -1411,11 +1479,18 @@ Asturcon: 350-400Kg</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view tag="108" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j78-Jk-uFX" customClass="EQLVistoView">
-                                            <rect key="frame" x="450" y="42" width="18" height="18"/>
+                                            <rect key="frame" x="480" y="52" width="18" height="18"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="18" id="VSb-1K-or1"/>
                                                 <constraint firstAttribute="height" constant="18" id="ctc-IO-M1l"/>
+                                            </constraints>
+                                        </view>
+                                        <view opaque="NO" tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-e6-rxR" customClass="EQLNumHorsesView">
+                                            <rect key="frame" x="540" y="37" width="42" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="SjW-9F-jUE"/>
+                                                <constraint firstAttribute="width" constant="42" id="UCf-Ga-PCa"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1423,16 +1498,28 @@ Asturcon: 350-400Kg</string>
                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="trailing" secondItem="3SN-zh-EOc" secondAttribute="trailing" id="7FK-YU-PXv"/>
                                         <constraint firstItem="j78-Jk-uFX" firstAttribute="centerY" secondItem="OmN-eI-sfL" secondAttribute="centerY" id="ClN-qz-KPd"/>
                                         <constraint firstItem="3SN-zh-EOc" firstAttribute="top" secondItem="ShO-m1-gX6" secondAttribute="bottom" constant="69" id="CrM-hq-nKV"/>
+                                        <constraint firstAttribute="top" secondItem="1ek-e6-rxR" secondAttribute="top" constant="-28" id="E56-do-hxZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Hab-BS-Aoi" secondAttribute="bottom" constant="-8" id="QUa-Ht-FPw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ShO-m1-gX6" secondAttribute="trailing" constant="10" id="SjX-gk-BJv"/>
+                                        <constraint firstAttribute="trailing" secondItem="1ek-e6-rxR" secondAttribute="trailing" constant="10" id="YMv-F2-dBc"/>
                                         <constraint firstItem="Hab-BS-Aoi" firstAttribute="trailing" secondItem="ShO-m1-gX6" secondAttribute="trailing" id="YUR-y3-FTH"/>
                                         <constraint firstItem="1ek-e6-rxR" firstAttribute="leading" secondItem="3Wm-Rx-FSu" secondAttribute="leadingMargin" constant="10" id="Yb7-VA-Mdp"/>
                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="trailing" secondItem="OmN-eI-sfL" secondAttribute="trailing" id="dnN-g4-Nxj"/>
-                                        <constraint firstItem="OmN-eI-sfL" firstAttribute="top" secondItem="ShO-m1-gX6" secondAttribute="bottom" constant="10" id="ohP-KX-25R"/>
+                                        <constraint firstItem="1ek-e6-rxR" firstAttribute="top" secondItem="ShO-m1-gX6" secondAttribute="bottom" constant="5" id="jTC-2x-Paf"/>
+                                        <constraint firstItem="ShO-m1-gX6" firstAttribute="trailing" secondItem="1ek-e6-rxR" secondAttribute="trailing" id="ju3-Yj-xZe"/>
+                                        <constraint firstItem="OmN-eI-sfL" firstAttribute="top" secondItem="ShO-m1-gX6" secondAttribute="bottom" constant="20" id="ohP-KX-25R"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1ek-e6-rxR" secondAttribute="bottom" constant="-5" id="pfu-Qu-aeW"/>
                                         <constraint firstItem="OmN-eI-sfL" firstAttribute="leading" secondItem="j78-Jk-uFX" secondAttribute="trailing" constant="3" id="rVS-e0-Y5O"/>
                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="top" secondItem="3Wm-Rx-FSu" secondAttribute="topMargin" constant="3" id="w3M-aA-2LD"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="E56-do-hxZ"/>
+                                            <exclude reference="YMv-F2-dBc"/>
+                                            <exclude reference="Yb7-VA-Mdp"/>
+                                            <exclude reference="pfu-Qu-aeW"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1474,7 +1561,10 @@ Asturcon: 350-400Kg</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Wiw-cc-ZWA"/>
-        <segue reference="TrJ-Ad-Ng0"/>
+        <segue reference="5ri-wS-jcL"/>
+        <segue reference="OMT-vN-FnO"/>
+        <segue reference="O99-Qq-3sd"/>
+        <segue reference="357-NI-xMD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

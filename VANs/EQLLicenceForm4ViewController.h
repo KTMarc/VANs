@@ -18,6 +18,7 @@
 //@property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *resultsArray;
 
+
 - (IBAction)toCarResultsButton:(UIButton *)sender;
 
 @end

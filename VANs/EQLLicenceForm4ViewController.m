@@ -68,10 +68,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)toCarResultsButton:(UIButton *)sender {
 
+
+- (IBAction)toCarResultsButton:(UIButton *)sender {
     UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
-   // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
+    // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
     if ([_easyFormLicenceSegmentedControl selectedSegmentIndex] == -1){
         [alerta show];
     } else {
@@ -85,7 +86,7 @@
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
         nextViewController.resultsArray = self.resultsArray;
         [self.navigationController pushViewController:nextViewController animated:YES];
-//       [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
+        //       [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     }
 }
 

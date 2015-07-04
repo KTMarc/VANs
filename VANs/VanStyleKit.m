@@ -2400,14 +2400,25 @@ static UIImage* _imageOfFichaA4 = nil;
     //// General Declarations
     CGContextRef context = UIGraphicsGetCurrentContext();
 
+    //// Symbol 2 Drawing
+    CGRect symbol2Rect = CGRectMake(35, 7.75, 35.44, 20.25);
+    CGContextSaveGState(context);
+    UIRectClip(symbol2Rect);
+    CGContextTranslateCTM(context, symbol2Rect.origin.x, symbol2Rect.origin.y);
+    CGContextScaleCTM(context, symbol2Rect.size.width / 126, symbol2Rect.size.height / 72);
+
+    [VanStyleKit drawCarWithColorParameter: VanStyleKit.blancCavall scale: 1];
+    CGContextRestoreGState(context);
+
+
     //// Symbol Drawing
-    CGRect symbolRect = CGRectMake(2, 1, 41, 27);
+    CGRect symbolRect = CGRectMake(0, 3.04, 39.31, 24.96);
     CGContextSaveGState(context);
     UIRectClip(symbolRect);
     CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y);
     CGContextScaleCTM(context, symbolRect.size.width / 126, symbolRect.size.height / 80);
 
-    [VanStyleKit drawTrailerWithColorParameter: VanStyleKit.blancCavall scale: 1 alpha: 1];
+    [VanStyleKit drawTrailer2WithScale: 1 alpha: 1];
     CGContextRestoreGState(context);
 }
 
@@ -2672,9 +2683,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
@@ -3459,9 +3470,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// LOCALIZADOR Drawing
     UIBezierPath* lOCALIZADORPath = [UIBezierPath bezierPath];
@@ -3499,9 +3510,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// NANCY
     {
@@ -4035,9 +4046,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// LOCALIZADOR Drawing
     UIBezierPath* lOCALIZADORPath = [UIBezierPath bezierPath];
@@ -4099,9 +4110,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// Group
     {
@@ -4356,9 +4367,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// Bezier 2 Drawing
     CGContextSaveGState(context);
@@ -4436,9 +4447,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// Group
     {
@@ -4558,9 +4569,9 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Shadow Declarations
     NSShadow* shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.2]];
+    [shadow setShadowColor: [UIColor.blackColor colorWithAlphaComponent: 0.05]];
     [shadow setShadowOffset: CGSizeMake(0.1, 3.1)];
-    [shadow setShadowBlurRadius: 2];
+    [shadow setShadowBlurRadius: 1];
 
     //// Bezier 2 Drawing
     CGContextSaveGState(context);
@@ -4689,6 +4700,196 @@ static UIImage* _imageOfFichaA4 = nil;
     CGContextRestoreGState(context);
 }
 
++ (void)drawTrailerMaxPtac2
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    //// Symbol 2 Drawing
+    CGRect symbol2Rect = CGRectMake(35, 7.75, 35.44, 20.25);
+    CGContextSaveGState(context);
+    UIRectClip(symbol2Rect);
+    CGContextTranslateCTM(context, symbol2Rect.origin.x, symbol2Rect.origin.y);
+    CGContextScaleCTM(context, symbol2Rect.size.width / 126, symbol2Rect.size.height / 72);
+
+    [VanStyleKit drawCarWithColorParameter: VanStyleKit.blancCavall scale: 1];
+    CGContextRestoreGState(context);
+
+
+    //// Rectangle Drawing
+    CGRect rectangleRect = CGRectMake(2.11, 5.75, 29.73, 17.77);
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: rectangleRect];
+    [UIColor.whiteColor setStroke];
+    rectanglePath.lineWidth = 1;
+    CGFloat rectanglePattern[] = {2, 2};
+    [rectanglePath setLineDash: rectanglePattern count: 2 phase: 3];
+    [rectanglePath stroke];
+    {
+        NSString* textContent = @"MAX";
+        NSMutableParagraphStyle* rectangleStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+        rectangleStyle.alignment = NSTextAlignmentCenter;
+
+        NSDictionary* rectangleFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"HelveticaNeue" size: 12], NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: rectangleStyle};
+
+        CGFloat rectangleTextHeight = [textContent boundingRectWithSize: CGSizeMake(rectangleRect.size.width, INFINITY)  options: NSStringDrawingUsesLineFragmentOrigin attributes: rectangleFontAttributes context: nil].size.height;
+        CGContextSaveGState(context);
+        CGContextClipToRect(context, rectangleRect);
+        [textContent drawInRect: CGRectMake(CGRectGetMinX(rectangleRect), CGRectGetMinY(rectangleRect) + (CGRectGetHeight(rectangleRect) - rectangleTextHeight) / 2, CGRectGetWidth(rectangleRect), rectangleTextHeight) withAttributes: rectangleFontAttributes];
+        CGContextRestoreGState(context);
+    }
+
+
+    //// Oval Drawing
+    CGRect ovalRect = CGRectMake(10.46, 21.05, 5, 5);
+    UIBezierPath* ovalPath = [UIBezierPath bezierPath];
+    [ovalPath addArcWithCenter: CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect)) radius: CGRectGetWidth(ovalRect) / 2 startAngle: 0 * M_PI/180 endAngle: -180 * M_PI/180 clockwise: YES];
+    [ovalPath addLineToPoint: CGPointMake(CGRectGetMidX(ovalRect), CGRectGetMidY(ovalRect))];
+    [ovalPath closePath];
+
+    [UIColor.whiteColor setStroke];
+    ovalPath.lineWidth = 1;
+    CGFloat ovalPattern[] = {1, 1};
+    [ovalPath setLineDash: ovalPattern count: 2 phase: 6];
+    [ovalPath stroke];
+
+
+    //// Oval 2 Drawing
+    CGRect oval2Rect = CGRectMake(17.62, 21.05, 5, 5);
+    UIBezierPath* oval2Path = [UIBezierPath bezierPath];
+    [oval2Path addArcWithCenter: CGPointMake(CGRectGetMidX(oval2Rect), CGRectGetMidY(oval2Rect)) radius: CGRectGetWidth(oval2Rect) / 2 startAngle: 0 * M_PI/180 endAngle: -180 * M_PI/180 clockwise: YES];
+    [oval2Path addLineToPoint: CGPointMake(CGRectGetMidX(oval2Rect), CGRectGetMidY(oval2Rect))];
+    [oval2Path closePath];
+
+    [UIColor.whiteColor setStroke];
+    oval2Path.lineWidth = 1;
+    CGFloat oval2Pattern[] = {1, 1};
+    [oval2Path setLineDash: oval2Pattern count: 2 phase: 6];
+    [oval2Path stroke];
+
+
+    //// Rectangle 2 Drawing
+    UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(31.84, 23.05, 6.59, 1)];
+    [UIColor.whiteColor setFill];
+    [rectangle2Path fill];
+}
+
++ (void)drawTrailer2WithScale: (CGFloat)scale alpha: (CGFloat)alpha
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    //// Color Declarations
+    UIColor* color1 = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+
+    //// Rectangle Drawing
+
+
+    //// Group
+    {
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, 4.37, 2.73);
+        CGContextScaleCTM(context, scale, scale);
+
+        CGContextSetAlpha(context, alpha);
+        CGContextBeginTransparencyLayer(context, NULL);
+
+
+        //// Oval 2 Drawing
+
+
+        //// Oval 4 Drawing
+
+
+        //// Bezier 16 Drawing
+        UIBezierPath* bezier16Path = [UIBezierPath bezierPath];
+        [bezier16Path moveToPoint: CGPointMake(45.93, 65.54)];
+        [bezier16Path addLineToPoint: CGPointMake(89.64, 65.54)];
+        [bezier16Path addLineToPoint: CGPointMake(105.36, 65.54)];
+        [bezier16Path addLineToPoint: CGPointMake(114.38, 65.54)];
+        [bezier16Path addCurveToPoint: CGPointMake(115.34, 65.14) controlPoint1: CGPointMake(114.74, 65.54) controlPoint2: CGPointMake(115.08, 65.4)];
+        [bezier16Path addCurveToPoint: CGPointMake(115.72, 64.17) controlPoint1: CGPointMake(115.59, 64.88) controlPoint2: CGPointMake(115.73, 64.53)];
+        [bezier16Path addCurveToPoint: CGPointMake(114.93, 61.09) controlPoint1: CGPointMake(115.72, 64.01) controlPoint2: CGPointMake(115.68, 62.57)];
+        [bezier16Path addCurveToPoint: CGPointMake(109.4, 57.86) controlPoint1: CGPointMake(113.87, 59.01) controlPoint2: CGPointMake(111.9, 57.86)];
+        [bezier16Path addLineToPoint: CGPointMake(103.36, 57.86)];
+        [bezier16Path addLineToPoint: CGPointMake(95.23, 57.82)];
+        [bezier16Path addLineToPoint: CGPointMake(95.57, 49.91)];
+        [bezier16Path addLineToPoint: CGPointMake(95.8, 46.07)];
+        [bezier16Path addLineToPoint: CGPointMake(95.97, 41.09)];
+        [bezier16Path addLineToPoint: CGPointMake(95.97, 25.51)];
+        [bezier16Path addCurveToPoint: CGPointMake(84.46, 5.61) controlPoint1: CGPointMake(95.97, 16.9) controlPoint2: CGPointMake(91.99, 10.02)];
+        [bezier16Path addCurveToPoint: CGPointMake(59.71, 0) controlPoint1: CGPointMake(76.54, 0.97) controlPoint2: CGPointMake(66.63, 0)];
+        [bezier16Path addCurveToPoint: CGPointMake(41.06, 2.56) controlPoint1: CGPointMake(50.53, 0) controlPoint2: CGPointMake(45.72, 1.3)];
+        [bezier16Path addCurveToPoint: CGPointMake(24.37, 4.9) controlPoint1: CGPointMake(36.59, 3.76) controlPoint2: CGPointMake(32.37, 4.9)];
+        [bezier16Path addCurveToPoint: CGPointMake(14.07, 3.48) controlPoint1: CGPointMake(19.02, 4.9) controlPoint2: CGPointMake(16.39, 4.15)];
+        [bezier16Path addCurveToPoint: CGPointMake(8.88, 2.58) controlPoint1: CGPointMake(12.45, 3.01) controlPoint2: CGPointMake(10.93, 2.58)];
+        [bezier16Path addLineToPoint: CGPointMake(3.33, 2.58)];
+        [bezier16Path addCurveToPoint: CGPointMake(0, 5.91) controlPoint1: CGPointMake(0.88, 2.58) controlPoint2: CGPointMake(0, 4.57)];
+        [bezier16Path addLineToPoint: CGPointMake(0, 65.54)];
+        [bezier16Path addLineToPoint: CGPointMake(8.88, 65.54)];
+        bezier16Path.miterLimit = 4;
+
+        [UIColor.whiteColor setStroke];
+        bezier16Path.lineWidth = 4;
+        CGFloat bezier16Pattern[] = {9, 7};
+        [bezier16Path setLineDash: bezier16Pattern count: 2 phase: 26];
+        [bezier16Path stroke];
+
+
+        //// Text Drawing
+        CGRect textRect = CGRectMake(3.05, 14.98, 107.42, 41.89);
+        {
+            NSString* textContent = @"MAX";
+            NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+            textStyle.alignment = NSTextAlignmentLeft;
+
+            NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 40], NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: textStyle};
+
+            CGFloat textTextHeight = [textContent boundingRectWithSize: CGSizeMake(textRect.size.width, INFINITY)  options: NSStringDrawingUsesLineFragmentOrigin attributes: textFontAttributes context: nil].size.height;
+            CGContextSaveGState(context);
+            CGContextClipToRect(context, textRect);
+            [textContent drawInRect: CGRectMake(CGRectGetMinX(textRect), CGRectGetMinY(textRect) + (CGRectGetHeight(textRect) - textTextHeight) / 2, CGRectGetWidth(textRect), textTextHeight) withAttributes: textFontAttributes];
+            CGContextRestoreGState(context);
+        }
+
+
+        //// Bezier Drawing
+        UIBezierPath* bezierPath = [UIBezierPath bezierPath];
+        [bezierPath moveToPoint: CGPointMake(18.62, 59.14)];
+        [bezierPath addCurveToPoint: CGPointMake(14.08, 60.94) controlPoint1: CGPointMake(16.87, 59.14) controlPoint2: CGPointMake(15.31, 59.86)];
+        [bezierPath addCurveToPoint: CGPointMake(11.58, 66.32) controlPoint1: CGPointMake(12.58, 62.26) controlPoint2: CGPointMake(11.58, 64.14)];
+        [bezierPath addCurveToPoint: CGPointMake(18.62, 73.51) controlPoint1: CGPointMake(11.58, 70.3) controlPoint2: CGPointMake(14.73, 73.51)];
+        [bezierPath addCurveToPoint: CGPointMake(25.67, 66.32) controlPoint1: CGPointMake(22.51, 73.51) controlPoint2: CGPointMake(25.67, 70.3)];
+        [bezierPath addCurveToPoint: CGPointMake(23.17, 60.94) controlPoint1: CGPointMake(25.67, 64.14) controlPoint2: CGPointMake(24.67, 62.26)];
+        [bezierPath addCurveToPoint: CGPointMake(18.62, 59.14) controlPoint1: CGPointMake(21.93, 59.86) controlPoint2: CGPointMake(20.38, 59.14)];
+        [bezierPath closePath];
+        bezierPath.miterLimit = 4;
+
+        [color1 setFill];
+        [bezierPath fill];
+
+
+        //// Bezier 2 Drawing
+        UIBezierPath* bezier2Path = [UIBezierPath bezierPath];
+        [bezier2Path moveToPoint: CGPointMake(38.03, 59.14)];
+        [bezier2Path addCurveToPoint: CGPointMake(33.5, 60.94) controlPoint1: CGPointMake(36.28, 59.14) controlPoint2: CGPointMake(34.73, 59.86)];
+        [bezier2Path addCurveToPoint: CGPointMake(30.99, 66.32) controlPoint1: CGPointMake(31.99, 62.26) controlPoint2: CGPointMake(30.99, 64.14)];
+        [bezier2Path addCurveToPoint: CGPointMake(38.03, 73.51) controlPoint1: CGPointMake(30.99, 70.3) controlPoint2: CGPointMake(34.15, 73.51)];
+        [bezier2Path addCurveToPoint: CGPointMake(45.09, 66.32) controlPoint1: CGPointMake(41.93, 73.51) controlPoint2: CGPointMake(45.09, 70.3)];
+        [bezier2Path addCurveToPoint: CGPointMake(42.59, 60.94) controlPoint1: CGPointMake(45.09, 64.14) controlPoint2: CGPointMake(44.09, 62.26)];
+        [bezier2Path addCurveToPoint: CGPointMake(38.03, 59.14) controlPoint1: CGPointMake(41.35, 59.86) controlPoint2: CGPointMake(39.79, 59.14)];
+        [bezier2Path closePath];
+        bezier2Path.miterLimit = 4;
+
+        [color1 setFill];
+        [bezier2Path fill];
+
+
+        CGContextEndTransparencyLayer(context);
+
+        CGContextRestoreGState(context);
+    }
+}
+
 + (void)drawLicenceMenuButtonWithFrame: (CGRect)frame
 {
     //// General Declarations
@@ -4715,7 +4916,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 3 Drawing
-    CGRect text3Rect = CGRectMake(CGRectGetMinX(frame) + floor((CGRectGetWidth(frame) - 312) / 2 + 0.5), CGRectGetMinY(frame) + floor((CGRectGetHeight(frame) - 24) * 0.77876 + 0.5), 312, 24);
+    CGRect text3Rect = CGRectMake(CGRectGetMinX(frame) + floor((CGRectGetWidth(frame) - 312) / 2 + 0.5), CGRectGetMinY(frame) + floor((CGRectGetHeight(frame) - 24) * 0.92920 + 0.5), 312, 24);
     NSMutableParagraphStyle* text3Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text3Style.alignment = NSTextAlignmentCenter;
 
@@ -4725,10 +4926,11 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol Drawing
-    CGRect symbolRect = CGRectMake(CGRectGetMinX(frame) + 29, CGRectGetMinY(frame) + 38, 254, 122);
+    CGRect symbolRect = CGRectMake(CGRectGetMinX(frame) + floor((CGRectGetWidth(frame) - 287.77) * 0.50000 + 0.39) + 0.11, CGRectGetMinY(frame) + floor((CGRectGetHeight(frame) - 138.22) * 0.35512 + 0.42) + 0.08, 287.77, 138.22);
     CGContextSaveGState(context);
     UIRectClip(symbolRect);
     CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y);
+    CGContextScaleCTM(context, symbolRect.size.width / 254, symbolRect.size.height / 122);
 
     [VanStyleKit drawIconoLicenceSolo2];
     CGContextRestoreGState(context);
@@ -4754,7 +4956,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Boton catalogo Drawing
     CGRect botonCatalogoRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), floor((CGRectGetWidth(frame)) * 1.00000 + 0.5), floor((CGRectGetHeight(frame)) * 1.00000 + 0.5));
-    UIBezierPath* botonCatalogoPath = [UIBezierPath bezierPathWithRoundedRect: botonCatalogoRect byRoundingCorners: UIRectCornerTopLeft | UIRectCornerBottomLeft cornerRadii: CGSizeMake(14, 14)];
+    UIBezierPath* botonCatalogoPath = [UIBezierPath bezierPathWithRoundedRect: botonCatalogoRect byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft cornerRadii: CGSizeMake(14, 14)];
     [botonCatalogoPath closePath];
     CGContextSaveGState(context);
     [botonCatalogoPath addClip];
@@ -4812,7 +5014,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Map Menu Button Drawing
     CGRect mapMenuButtonRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), floor((CGRectGetWidth(frame)) * 1.00000 + 0.5), floor((CGRectGetHeight(frame)) * 1.00000 + 0.5));
-    UIBezierPath* mapMenuButtonPath = [UIBezierPath bezierPathWithRoundedRect: mapMenuButtonRect byRoundingCorners: UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii: CGSizeMake(14, 14)];
+    UIBezierPath* mapMenuButtonPath = [UIBezierPath bezierPathWithRoundedRect: mapMenuButtonRect byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii: CGSizeMake(14, 14)];
     [mapMenuButtonPath closePath];
     CGContextSaveGState(context);
     [mapMenuButtonPath addClip];
@@ -5292,36 +5494,36 @@ static UIImage* _imageOfFichaA4 = nil;
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //// Color Declarations
-    UIColor* lightGrey = [UIColor colorWithRed: 0.5 green: 0.5 blue: 0.5 alpha: 1];
+    UIColor* grisClar = [UIColor colorWithRed: 0.77 green: 0.762 blue: 0.762 alpha: 1];
 
     //// Text 9 Drawing
-    CGRect text9Rect = CGRectMake(38, 0, 76, 16);
+    CGRect text9Rect = CGRectMake(31, 0, 76, 16);
     NSMutableParagraphStyle* text9Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text9Style.alignment = NSTextAlignmentLeft;
 
-    NSDictionary* text9FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica-Bold" size: 14], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text9Style};
+    NSDictionary* text9FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica-Bold" size: 14], NSForegroundColorAttributeName: grisClar, NSParagraphStyleAttributeName: text9Style};
 
     [numHorses drawInRect: text9Rect withAttributes: text9FontAttributes];
 
 
     //// Text 11 Drawing
-    CGRect text11Rect = CGRectMake(19, 0, 25, 18);
+    CGRect text11Rect = CGRectMake(12, 0, 25, 18);
     NSMutableParagraphStyle* text11Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text11Style.alignment = NSTextAlignmentCenter;
 
-    NSDictionary* text11FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica-Bold" size: 14], NSForegroundColorAttributeName: lightGrey, NSParagraphStyleAttributeName: text11Style};
+    NSDictionary* text11FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica-Bold" size: 14], NSForegroundColorAttributeName: grisClar, NSParagraphStyleAttributeName: text11Style};
 
     [@"x" drawInRect: text11Rect withAttributes: text11FontAttributes];
 
 
     //// Symbol 3 Drawing
-    CGRect symbol3Rect = CGRectMake(0, 0, 30, 18);
+    CGRect symbol3Rect = CGRectMake(-2, 0.84, 23.6, 14.16);
     CGContextSaveGState(context);
     UIRectClip(symbol3Rect);
     CGContextTranslateCTM(context, symbol3Rect.origin.x, symbol3Rect.origin.y);
     CGContextScaleCTM(context, symbol3Rect.size.width / 130, symbol3Rect.size.height / 80);
 
-    [VanStyleKit drawEquusHorseWithColorParameter: lightGrey scale: 1];
+    [VanStyleKit drawEquusHorseWithColorParameter: grisClar scale: 1];
     CGContextRestoreGState(context);
 }
 
