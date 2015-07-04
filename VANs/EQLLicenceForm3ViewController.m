@@ -16,13 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //Prepare de warning message
+    _wrongValueWarningLabel.alpha = 0;
+    [_wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
+    
+    //esto se podria hacer en storyboards arrastrando desde el panel derecho, ultima opcion de la toolbar del textfield
+    //Texfield actions when it is first responder (EditingDidBegin) and when text starts to change (EditingChanged)
+    [_easyFormHorseWeightTextField addTarget:self action:@selector(textFieldEditingChangedAction:) forControlEvents:UIControlEventEditingChanged];
+    [_easyFormHorseWeightTextField addTarget:self action:@selector(changeFontAction) forControlEvents: UIControlEventEditingDidBegin];
+    
+    
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapRecognizer];
     [self.view endEditing:YES];
     // _result.hidden = false;
+    self.navigationController.navigationBarHidden = false;
+    
     
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
     EQLFormData *sharedForm = [EQLFormData sharedForm];
@@ -30,6 +41,8 @@
         //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
         _easyFormHorseWeightTextField.text = [NSString stringWithFormat: @"%li",(long)[sharedForm pesoCaballo]];}
     /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    
+
     
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
@@ -40,9 +53,10 @@
     UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone
                                                                      target:self action:@selector(doneClicked:)];
     doneBarButton.tintColor = [VanStyleKit vermellEquus];
-    
     keyboardToolbar.items = @[flexBarButton, doneBarButton];
     self.easyFormHorseWeightTextField.inputAccessoryView = keyboardToolbar;
+    /*-----END   "DONE" BUTTON IN NUMERIC PAD ---*/
+    
     
     /* GESTURE RECOGNIZERS FOR NAVIGATION RIGHT AND LEFT*/
     UISwipeGestureRecognizer *leftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipetoLeftDetection)];
@@ -55,22 +69,20 @@
     [rightGesture setCancelsTouchesInView:NO];
     [self.view addGestureRecognizer:rightGesture];
     /* END GESTURE RECOGNIZERS */
-    
+
     
 }
 
+#pragma mark - Gestures
+
 - (void)swipetoLeftDetection{
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;
-    [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
+    [self performSegueWithIdentifier: @"toLicenceSegue" sender: self];
     
 }
 
 - (void)swipetoRightDetection{
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;    [self.navigationController popViewControllerAnimated:YES];
+    [self saveDataToSingleton:(_easyFormHorseWeightTextField)];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)doneClicked:(id)sender
@@ -84,11 +96,43 @@ sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;    [se
     [self.view endEditing:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)textFieldEditingChangedAction:(UITextField *)sender {
+    //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
+    [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
+    [self changeFontAction];
 }
 
+- (void)changeFontAction{
+    //NSLog(@"UIControlEventEditingDidBegin");
+    _easyFormHorseWeightTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormHorseWeightTextField.font.pointSize];
+}
+
+- (void)checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
+{
+    if ([_easyFormHorseWeightTextField.text length] < [maxLength unsignedIntegerValue]){
+        [_easyFormHorseWeightTextField setTextColor:[UIColor redColor]];
+        _wrongValueWarningLabel.alpha = 0;
+        
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{ _wrongValueWarningLabel.alpha = 1;}
+                         completion:nil];
+        
+    }else{
+        // NSLog(@"El string es 4 o mas");
+        [_easyFormHorseWeightTextField setTextColor:[UIColor blackColor]];
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{ _wrongValueWarningLabel.alpha = 0;}
+                         completion:nil];
+        _wrongValueWarningLabel.alpha = 0;
+    }
+}
+
+#pragma mark - Helper methods
+
+- (void)saveDataToSingleton:(UITextField *)textField{
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    sharedForm.pesoCaballo = textField.text.integerValue;
+}
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
@@ -109,16 +153,18 @@ sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;    [se
             UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
             [missingDataAlert show];
         }
-        
-        
     } else{
         //Estamos en los segues del tabView y podemos hacer la transición.
+        [self saveDataToSingleton:(_easyFormHorseWeightTextField)];
         weDoSegue = true;
     }
     
     return weDoSegue;
     
 }
+
+
+#pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -138,4 +184,11 @@ sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;    [se
     
     sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;
 }
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end

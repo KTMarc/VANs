@@ -78,15 +78,10 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Gestures
 
 - (void)swipetoLeftDetection{
-    [self saveDataToSingleton:(_easyFormMmaTextField)];
     [self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
 }
 
@@ -170,7 +165,7 @@
         //Estamos en los segues del tabView y podemos hacer la transición.
         weDoSegue = true;
     }
-    
+    [self saveDataToSingleton:(_easyFormMmaTextField)];
     return weDoSegue;
     
 }
@@ -184,14 +179,19 @@
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
+
         }
     }
 }
 
 
-
-- (IBAction)toForm2Button:(UIButton *)sender {
+- (IBAction)toForm2Button:(UIButton *)sender; {
     [self saveDataToSingleton:(_easyFormMmaTextField)];
+    NSLog(@"Em picat el boto i guardem al formulari");
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

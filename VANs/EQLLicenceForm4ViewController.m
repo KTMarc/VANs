@@ -16,14 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    [tapRecognizer setDelegate:self];
-    [tapRecognizer setNumberOfTapsRequired:1];
-    [self.view addGestureRecognizer:tapRecognizer];
-    [self.view endEditing:YES];
-    // _result.hidden = false;
-
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     if ([sharedForm licence] != -1){ //En caso contrario no queremos cargar un 0
@@ -42,9 +34,9 @@
     [rightGesture setCancelsTouchesInView:NO];
     [self.view addGestureRecognizer:rightGesture];
     /* END GESTURE RECOGNIZERS */
-    
-    
 }
+
+#pragma mark - Gestures
 
 - (void)swipetoLeftDetection{
     [self toCarResultsButton:nil];
@@ -57,18 +49,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
-{
-    [self.view endEditing:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+#pragma mark - Navigation
 
 - (IBAction)toCarResultsButton:(UIButton *)sender {
     UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
@@ -86,8 +67,13 @@
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
         nextViewController.resultsArray = self.resultsArray;
         [self.navigationController pushViewController:nextViewController animated:YES];
-        //       [self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
+        //[self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

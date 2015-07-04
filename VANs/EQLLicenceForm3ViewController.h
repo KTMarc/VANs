@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *easyFormHorseWeightTextField;
 @property (nonatomic, strong) EQLGarageModel *model;
 
+@property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
 
 @end

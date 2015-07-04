@@ -898,7 +898,6 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="toForm2Button:" destination="U3g-si-Nee" eventType="touchUpInside" id="8il-TH-tKo"/>
                                     <segue destination="SuK-4y-5IO" kind="show" identifier="toMaxPtacSegue" id="5ri-wS-jcL"/>
                                 </connections>
                             </button>
@@ -1020,6 +1019,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguente" id="NPy-1M-e5X">
                             <connections>
+                                <action selector="toForm2Button:" destination="U3g-si-Nee" id="Iif-GM-GTH"/>
                                 <segue destination="SuK-4y-5IO" kind="show" id="4Df-ch-6OJ"/>
                             </connections>
                         </barButtonItem>
@@ -1130,6 +1130,12 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                     <segue destination="78Y-pY-z43" kind="show" id="ehW-0q-UCM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-Rk-GTf">
+                                <rect key="frame" x="14" y="85" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1173,7 +1179,8 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mmrFormTextView" destination="I4e-92-cDO" id="qGc-dK-DMB"/>
+                        <outlet property="mmrFormTextField" destination="I4e-92-cDO" id="M1q-Zf-bvH"/>
+                        <outlet property="wrongValueWarningLabel" destination="s2z-Rk-GTf" id="ec6-53-IMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-KV-UD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1281,6 +1288,12 @@ Asturcon: 350-400Kg</string>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-0d-sY4">
+                                <rect key="frame" x="20" y="86" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1334,6 +1347,7 @@ Asturcon: 350-400Kg</string>
                     </navigationItem>
                     <connections>
                         <outlet property="easyFormHorseWeightTextField" destination="ZWQ-gd-JK8" id="fEc-s4-T8F"/>
+                        <outlet property="wrongValueWarningLabel" destination="Wfc-0d-sY4" id="yUU-jR-YMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpk-ZW-qtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1560,11 +1574,11 @@ Asturcon: 350-400Kg</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wiw-cc-ZWA"/>
-        <segue reference="5ri-wS-jcL"/>
         <segue reference="OMT-vN-FnO"/>
-        <segue reference="O99-Qq-3sd"/>
+        <segue reference="5ri-wS-jcL"/>
         <segue reference="357-NI-xMD"/>
+        <segue reference="ehW-0q-UCM"/>
+        <segue reference="O99-Qq-3sd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

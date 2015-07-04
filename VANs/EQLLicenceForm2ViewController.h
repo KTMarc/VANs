@@ -13,13 +13,14 @@
 @interface EQLLicenceForm2ViewController : UIViewController <UIGestureRecognizerDelegate>
 
 
-@property (strong, nonatomic) IBOutlet UITextField *mmrFormTextView;
+@property (strong, nonatomic) IBOutlet UITextField *mmrFormTextField;
 @property (nonatomic, strong) EQLGarageModel *model;
 
 
 - (IBAction)toForm3Button:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
 
+@property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
 
 
 @end

@@ -93,6 +93,7 @@
 		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
+		49C325671B47AE69007DC224 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801BF1B44EAFE0043CA49 /* Telekinesis.framework */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
 		49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505461A04090500CBAE64 /* EQLmyButton.m */; };
 		49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D68C241A0945F900C54307 /* EQLNumHorsesView.m */; };
@@ -300,6 +301,7 @@
 			files = (
 				49A871CE198158F6008BB3B3 /* XCTest.framework in Frameworks */,
 				49A871D0198158F6008BB3B3 /* UIKit.framework in Frameworks */,
+				49C325671B47AE69007DC224 /* Telekinesis.framework in Frameworks */,
 				49A871CF198158F6008BB3B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1094,6 +1096,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
@@ -1117,6 +1120,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";

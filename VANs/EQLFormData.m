@@ -50,7 +50,7 @@
     //NSLog(@"Te habla en singleton");
     NSArray *resultsArray = @[[[NSMutableArray alloc]init], [[NSMutableArray alloc]init], [[NSMutableArray alloc]init],[[NSMutableArray alloc]init]];
 //    NSArray *licences = @[@3500, @4250, @7000];
-
+    
     int maximumPTAC = 0;
     //   int _pesoCaballo = 450;
     int pesoTotalCaballos = 0;

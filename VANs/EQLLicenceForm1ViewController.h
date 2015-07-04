@@ -20,7 +20,7 @@
 @property (nonatomic, strong) EQLGarageModel *model;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
 
-- (IBAction)toForm2Button:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
+- (IBAction)toForm2Button:(UIButton *)sender;
 
 @end
