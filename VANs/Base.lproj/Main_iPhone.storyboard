@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-xb-9Kf">
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WS-Eb-AQE">
-                                <rect key="frame" x="74" y="354" width="180" height="42"/>
+                                <rect key="frame" x="74" y="442" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="FD1-UR-U0r"/>
@@ -219,7 +219,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4wx-nn-BaY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dle-wz-XV6">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Cj-Ufg">
@@ -267,7 +267,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="carResults" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Fj-oa-p5U" customClass="EQLCarResultsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="vzv-la-0ZH">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SkV-DK-AWu">
@@ -625,7 +625,7 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="f0s-kx-6hS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vOX-7V-F4h">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVQ-S4-Eyb">
@@ -664,7 +664,7 @@ Lateral extra en acero inoxidable</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xs-x5-NlG" customClass="EQLmoreInfoButton">
-                                <rect key="frame" x="90" y="316" width="140" height="50"/>
+                                <rect key="frame" x="90" y="404" width="140" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="R47-GL-xfO"/>
                                     <constraint firstAttribute="height" constant="50" id="UBB-hJ-74l"/>
@@ -767,7 +767,7 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="k0R-HC-DTN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L0f-Gb-azg">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-Xz-yxP">
@@ -886,7 +886,7 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="ajA-T2-wUS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4E6-WQ-pt6">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA (Masa Máxima Autorizada)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Do-pVw">
@@ -898,7 +898,7 @@ Lateral extra en acero inoxidable</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-Ss-RDZ">
-                                <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <rect key="frame" x="133" y="457" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -929,7 +929,7 @@ Lateral extra en acero inoxidable</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkd-PZ-Fr1">
-                                <rect key="frame" x="16" y="223" width="288" height="126"/>
+                                <rect key="frame" x="16" y="311" width="288" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="POE-i8-wBu"/>
                                 </constraints>
@@ -952,14 +952,16 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                     <segue destination="78Y-pY-z43" kind="show" id="Wiw-cc-ZWA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
-                                <rect key="frame" x="12" y="87" width="103" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
+                                <rect key="frame" x="63" y="79" width="52" height="34"/>
+                                <string key="text">4 cifras!
+Ni + ni -</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-pA-GaQ">
-                                <rect key="frame" x="199" y="371" width="111" height="30"/>
+                                <rect key="frame" x="199" y="459" width="111" height="30"/>
                                 <state key="normal" title="Modo avanzado">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -976,8 +978,10 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="leading" id="4Xy-v0-fRk"/>
                             <constraint firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" constant="-1" id="AQC-yT-vh7"/>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="10" id="Am3-Zf-jGY"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="BRA-CJ-Bd4" secondAttribute="centerY" id="B9s-D9-KDd"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="centerX" secondItem="BRA-CJ-Bd4" secondAttribute="centerXWithinMargins" id="Blr-TI-iQW"/>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="BRA-CJ-Bd4" secondAttribute="centerY" constant="8" id="Hfb-Tj-YLt"/>
                             <constraint firstAttribute="centerX" secondItem="4fp-Do-pVw" secondAttribute="centerX" id="IsG-Kd-AE4"/>
                             <constraint firstAttribute="bottom" secondItem="Kh4-pA-GaQ" secondAttribute="bottom" constant="15" id="Kgg-Cd-1EG"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
@@ -988,7 +992,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="80" id="YKK-UZ-Xo9"/>
                             <constraint firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="afs-xF-BTl"/>
                             <constraint firstItem="0Y7-ER-o4b" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="16" id="ckJ-mx-bcs"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="baseline" secondItem="o56-l9-a5y" secondAttribute="baseline" id="hia-2x-K3W"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="o56-l9-a5y" secondAttribute="baseline" id="hia-2x-K3W"/>
                             <constraint firstItem="BRA-CJ-Bd4" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="pOp-ve-UNW"/>
                             <constraint firstAttribute="trailing" secondItem="Kh4-pA-GaQ" secondAttribute="trailing" constant="10" id="rKI-jj-rVt"/>
                             <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="5" id="s2F-6X-YDP"/>
@@ -999,9 +1003,12 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="08G-Gr-9If"/>
+                                <exclude reference="Hfb-Tj-YLt"/>
                                 <exclude reference="SLP-ba-cSe"/>
-                                <exclude reference="xvo-ku-0Ta"/>
+                                <exclude reference="ckJ-mx-bcs"/>
+                                <exclude reference="hia-2x-K3W"/>
                                 <exclude reference="YKK-UZ-Xo9"/>
+                                <exclude reference="xvo-ku-0Ta"/>
                             </mask>
                         </variation>
                     </view>
@@ -1021,7 +1028,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="easyFormMmaTextField" destination="BRA-CJ-Bd4" id="mHI-hf-hid"/>
                         <outlet property="toHelp" destination="NZT-iC-J0t" id="0Kc-Jh-VLT"/>
@@ -1042,11 +1049,11 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         <viewControllerLayoutGuide type="bottom" id="HjU-On-B2l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6OK-TQ-kEJ">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="TEa-ey-XSk">
-                                <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <rect key="frame" x="133" y="457" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -1084,7 +1091,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-5y-PjK">
-                                <rect key="frame" x="43" y="223" width="242" height="126"/>
+                                <rect key="frame" x="43" y="311" width="242" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="gff-nb-11i"/>
                                 </constraints>
@@ -1108,8 +1115,8 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                     <segue destination="78Y-pY-z43" kind="show" id="ehW-0q-UCM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-Rk-GTf">
-                                <rect key="frame" x="12" y="84" width="103" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 cifras!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-Rk-GTf">
+                                <rect key="frame" x="63" y="84" width="52" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1176,7 +1183,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <viewControllerLayoutGuide type="bottom" id="5zU-nc-xh6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uGg-NA-o97">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso por Caballo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-Cm-k6W">
@@ -1200,7 +1207,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-ng-h3O">
-                                <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <rect key="frame" x="133" y="457" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -1218,7 +1225,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF1-dQ-blk">
                                 <rect key="frame" x="59" y="202" width="221" height="90"/>
                                 <string key="text">
-Arabe: 380-500Kg 
+Árabe: 380-500Kg 
 Pura Raza Español:  400-550Kg 
 American Quarter: 450-545Kg
 Hannoveriano: 400-600Kg
@@ -1326,7 +1333,7 @@ Asturcon: 350-400Kg</string>
                         <viewControllerLayoutGuide type="bottom" id="rgT-og-Ec4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MtW-a6-rWu">
-                        <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
@@ -1358,7 +1365,7 @@ Asturcon: 350-400Kg</string>
                                 </segments>
                             </segmentedControl>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-uq-qt4">
-                                <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <rect key="frame" x="133" y="457" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>

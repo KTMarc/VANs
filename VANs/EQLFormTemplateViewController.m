@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _sharedForm = [EQLFormData sharedForm];
-    _logs = true;
+    _logs = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,11 +29,13 @@
 }
 
 
-- (void) initialSetup:(UILabel *) wrongValueWarningLabel andTextField:(UITextField *) textField andSegueId:(NSString *) segueId andDataMissing: (NSString *)dataMissingMessage {
+- (void) initialSetup:(UILabel *) wrongValueWarningLabel andTextField:(UITextField *) textField andSegueId:(NSString *) segueId andDataMissing: (NSString *)dataMissingMessage andMaxTextFieldSize:(NSNumber *)maxTextFieldSize{
     
     _textFieldPadre = textField;
     _segueIdPadre = segueId;
     _dataMissingMessage = dataMissingMessage;
+    _maxTextFieldSize = maxTextFieldSize;
+    _wrongValueWarningLabelPadre = wrongValueWarningLabel;
 
     wrongValueWarningLabel.alpha = 0;
     [wrongValueWarningLabel setTextColor: [VanStyleKit vermellEquus]];
@@ -41,8 +43,8 @@
     //esto se podria hacer en storyboards arrastrando desde el panel derecho, ultima opcion de la toolbar del textfield
     //Texfield actions when it is first responder (EditingDidBegin) and when text starts to change (EditingChanged)
     
-    [textField addTarget:self action:@selector(textFieldEditingChangedAction:andMaxLength:andWarningLabel:) forControlEvents:UIControlEventEditingChanged];
-    [textField addTarget:self action:@selector(changeFontAction:) forControlEvents: UIControlEventEditingDidBegin];
+    [textField addTarget:self action:@selector(textFieldEditingChangedAction) forControlEvents:UIControlEventEditingChanged];
+    [textField addTarget:self action:@selector(changeFontAction) forControlEvents: UIControlEventEditingDidBegin];
     
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
@@ -65,7 +67,7 @@
                                       initWithTitle:@"OK"
                                       style:UIBarButtonItemStyleDone
                                       target:self
-                                      action:@selector(doneClicked:)];
+                                      action:@selector(doneClicked)];
     doneBarButton.tintColor = [VanStyleKit vermellEquus];
     keyboardToolbar.items = @[flexBarButton, doneBarButton];
     textField.inputAccessoryView = keyboardToolbar;
@@ -95,71 +97,76 @@
 - (void)swipetoLeftDetection
 {
     if (_logs) {  NSLog(@"SwipeToLeft, antes de guardar en el singleton, tenemos esto en el textfield: %@", _textFieldPadre.text);}
-    [self saveDataToSingleton:(_textFieldPadre)];
-    [self performSegueWithIdentifier: _segueIdPadre sender: self];
+    [self saveDataToSingleton];
+    if ([self shouldPerformSegueWithIdentifier:_segueIdPadre sender:self]) {
+        [self performSegueWithIdentifier: _segueIdPadre sender: self];
+    }else{
+        //We show a pop up (it´s in the other function below shouldPerfom....)
+    }
+    
 }
 
 - (void)swipetoRightDetection
 {
-    [self saveDataToSingleton:(_textFieldPadre)];
+    [self saveDataToSingleton];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Helper methods
 
-- (void)saveDataToSingleton:(UITextField *)textField{
+- (void)saveDataToSingleton{
     
-        if ([[textField restorationIdentifier] isEqualToString:@"mma"]){
-            _sharedForm.mmaCar = textField.text.integerValue;
-            if (_logs) {NSLog(@"El nombre que tiene el textField en storyboards es: %@", [textField restorationIdentifier]);}
+        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mma"]){
+            _sharedForm.mmaCar = _textFieldPadre.text.integerValue;
+            if (_logs) {NSLog(@"El nombre que tiene el textField en storyboards es: %@", [_textFieldPadre restorationIdentifier]);}
             if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON MMA CAR: %ld", (long)_sharedForm.mmaCar);}
         }
-        if ([[textField restorationIdentifier] isEqualToString:@"mmr"]){
-        _sharedForm.mmrCar = textField.text.integerValue;
+        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mmr"]){
+        _sharedForm.mmrCar = _textFieldPadre.text.integerValue;
         if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON MMR CAR: %ld", (long)_sharedForm.mmrCar);}
         }
-        if ([[textField restorationIdentifier] isEqualToString:@"horseWeight"]){
-            _sharedForm.pesoCaballo = textField.text.integerValue;
+        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"horseWeight"]){
+            _sharedForm.pesoCaballo = _textFieldPadre.text.integerValue;
         if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON PESO CABALLOS: %ld", (long)_sharedForm.pesoCaballo);}
         }
 }
 
 #pragma mark - TextField interaction
 
-- (void)doneClicked:(UITextField *)textField
+- (void)doneClicked
 {
-    [textField endEditing:YES];
+    [_textFieldPadre endEditing:YES];
 }
 
 
-- (void)textFieldEditingChangedAction:(UITextField *)textField andMaxLength:(NSNumber *) number andWarningLabel:(UILabel *) wrongLabelLabel{
+- (void)textFieldEditingChangedAction{
     //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
-    [self checkTypedTextContentSizeWithMaxLength:@4 andTextField:textField andLabel:wrongLabelLabel];
-     [self changeFontAction:textField];
+    [self checkTypedTextContentSize];
+     [self changeFontAction];
 }
 
-- (void)changeFontAction:(UITextField *)textField{
+- (void)changeFontAction{
     //NSLog(@"UIControlEventEditingDidBegin");
-    textField.font =[UIFont fontWithName:sameFontEverywhere size:textField.font.pointSize];
+    _textFieldPadre.font =[UIFont fontWithName:sameFontEverywhere size:_textFieldPadre.font.pointSize];
 }
 
-- (void)checkTypedTextContentSizeWithMaxLength: (NSNumber *)maxLength andTextField:(UITextField *) textField andLabel:(UILabel *) wrongValueWarningLabel
+- (void)checkTypedTextContentSize
 {
-    if ([textField.text length] < [maxLength unsignedIntegerValue]){
-        [textField setTextColor:[UIColor redColor]];
-        textField.alpha = 0;
+    if ([_textFieldPadre.text length] < [_maxTextFieldSize unsignedIntegerValue] | [_textFieldPadre.text length] > [_maxTextFieldSize unsignedIntegerValue]){
+        [_textFieldPadre setTextColor:[UIColor redColor]];
+        _wrongValueWarningLabelPadre.alpha = 0;
         
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{ textField.alpha = 1;}
+                         animations:^{ _wrongValueWarningLabelPadre.alpha = 1;}
                          completion:nil];
         
     }else{
         // NSLog(@"El string es 4 o mas");
-        [textField setTextColor:[UIColor blackColor]];
+        [_textFieldPadre setTextColor:[UIColor blackColor]];
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{ wrongValueWarningLabel.alpha = 0;}
+                         animations:^{ _wrongValueWarningLabelPadre.alpha = 0;}
                          completion:nil];
-        wrongValueWarningLabel.alpha = 0;
+        _wrongValueWarningLabelPadre.alpha = 0;
     }
 }
 
@@ -173,7 +180,7 @@
     if ([identifier isEqualToString: _segueIdPadre]){
         //We check if the user entered all he has to enter
         NSMutableString *missingEntry = [NSMutableString stringWithString: @"Faltan los siguientes datos:\n"];
-        if([_textFieldPadre.text length] == 0){
+        if([_textFieldPadre.text length] < [_maxTextFieldSize integerValue]){
             flagSomethingIsMissing = true;
             [missingEntry appendString:_dataMissingMessage];
         }
@@ -187,32 +194,9 @@
         //Estamos en los segues del tabView y podemos hacer la transición.
         weDoSegue = true;
     }
-    [self saveDataToSingleton:_textFieldPadre];
+    [self saveDataToSingleton];
     return weDoSegue;
 }
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    NSLog(@"Entramos al prepareforSegue de Form1");
-//    if ([sender isKindOfClass:[UIBarButtonItem class]]){
-//        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
-//            EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
-//            nextViewController.model = self.model;
-//            // NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
-//        }
-//    }
-//#pragma mark - CUIDADO con la clase que decimos que venimos! no es lo mismo un UIBarButtonItem que un UIButton normal.
-//    
-//    if ([sender isKindOfClass:[UIButton class]]){
-//        if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
-//            EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
-//            nextViewController.model = self.model;
-//            //NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
-//        }
-//    }
-//}
 
 
 @end
