@@ -7,8 +7,8 @@
 //
 
 #import "EQLLicenceForm1ViewController.h"
-#import "EQLLicenceForm2ViewController.h"
-#import "EQLLicenceFormViewController.h"
+//#import "EQLLicenceForm2ViewController.h"
+//#import "EQLLicenceFormViewController.h"
 
 
 @interface EQLLicenceForm1ViewController ()
@@ -21,52 +21,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initialSetup:_wrongValueWarningLabel andTextField:_easyFormMmaTextField andTargetForDoneButton:self];
+    [self initialSetup:_wrongValueWarningLabel
+          andTextField:_easyFormMmaTextField
+            andSegueId:@"toMaxPtacSegue"
+        andDataMissing:@"MMa coche\n"];
     
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA porque Viene de NSUserDefaults*/
     super.sharedForm = [EQLFormData sharedForm];
     if ([super.sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
         _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];}
-    /* FIN CARGA DE PERSISTENCIA --------------------------*/
-    
-    /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
-//    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
-//    [keyboardToolbar sizeToFit];
-//    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
-//                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-//                                      target:nil action:nil];
-//    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc]
-//                                      initWithTitle:@"OK"
-//                                      style:UIBarButtonItemStyleDone
-//                                      target:self
-//                                      action:@selector(doneClicked:)];
-//    doneBarButton.tintColor = [VanStyleKit vermellEquus];
-//    keyboardToolbar.items = @[flexBarButton, doneBarButton];
-//    _easyFormMmaTextField.inputAccessoryView = keyboardToolbar;
-    /*-----END   "DONE" BUTTON IN NUMERIC PAD ---*/
 }
 
-#pragma mark - Gestures
-
-- (void)swipetoLeftDetection{
-    [super swipetoLeftDetection:@"toMaxPtacSegue" andSender:self andTextField:_easyFormMmaTextField ];
-}
-
-- (void)swipetoRightDetection{
-    [super swipetoRightDetection:_easyFormMmaTextField];
-}
 
 #pragma mark - TextField interaction
 
-- (void)doneClicked:(id)sender
+
+- (void)doneClicked:(UITextField *)textField
 {
     [super doneClicked:_easyFormMmaTextField];
 }
 
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
-{
-    [super handleSingleTap:self.view];
-}
 
 - (void)textFieldEditingChangedAction:(UITextField *)sender {
   //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
@@ -85,17 +59,17 @@
 
 #pragma mark - Navigation
 
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    return [super shouldPerformSegueWithIdentifier:identifier sender:sender andTextField:_easyFormMmaTextField andSegueID:@"toMaxPtacSegue" andDataMissingString:@"MMA coche\n"];
-}
+//- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+//{
+//    return [super shouldPerformSegueWithIdentifier:identifier sender:sender andTextField:_easyFormMmaTextField andSegueID:@"toMaxPtacSegue" andDataMissingString:@"MMA coche\n"];
+//}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    //NSLog(@"Entramos al prepareforSegue de Form1");
+    NSLog(@"Entramos al prepareforSegue de Form1");
     if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;

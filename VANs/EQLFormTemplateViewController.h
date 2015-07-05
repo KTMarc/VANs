@@ -7,20 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EQLGarageModel.h"
+
+
 
 @interface EQLFormTemplateViewController : UIViewController <UIGestureRecognizerDelegate,UITextFieldDelegate>
 
 @property (nonatomic, strong) EQLGarageModel *model;
 @property (nonatomic, strong) EQLFormData *sharedForm;
+@property (nonatomic, strong) UITextField *textFieldPadre;
+@property (nonatomic,strong) NSString *segueIdPadre;
+@property (nonatomic,strong) NSString *dataMissingMessage;
+@property (nonatomic) BOOL logs;
 
+- (void) initialSetup:(UILabel *) wrongValueWarningLabel andTextField:(UITextField *) textField andSegueId:(NSString *) segueId andDataMissing: (NSString *)dataMissingMessage;
 
-- (void) initialSetup:(UILabel *) wrongValueWarningLabel andTextField:(UITextField *) textField andTargetForDoneButton:(id) target;
+- (void)handleSingleTap;
 
-- (void)handleSingleTap:(UIView *)view;
+- (void)swipetoLeftDetection;
 
-- (void)swipetoLeftDetection:(NSString *) segueId andSender:(id)sender andTextField:(UITextField *)textField;
-
-- (void)swipetoRightDetection:(UITextField *) textField;
+- (void)swipetoRightDetection;
 
 - (void)doneClicked:(UITextField *)textField;
 
@@ -32,5 +38,4 @@
 
 - (void)saveDataToSingleton:(UITextField *)textField;
 
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender andTextField:(UITextField *)textField andSegueID:(NSString *)segue andDataMissingString: (NSString *)dataMissing;
 @end

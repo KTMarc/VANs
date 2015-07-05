@@ -1015,7 +1015,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguente" id="NPy-1M-e5X">
                             <connections>
-                                <segue destination="SuK-4y-5IO" kind="show" id="4Df-ch-6OJ"/>
+                                <segue destination="SuK-4y-5IO" kind="show" identifier="toMaxPtacSegue" id="4Df-ch-6OJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1058,7 +1058,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1900" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mmr" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1900" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
                                 <rect key="frame" x="120" y="78" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="9XJ-EZ-bme"/>
@@ -1153,7 +1153,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="wWp-wy-ZPi">
                             <connections>
-                                <segue destination="Q1r-lD-utm" kind="show" id="OMT-vN-FnO"/>
+                                <segue destination="Q1r-lD-utm" kind="show" identifier="toHorseWeightSegue" id="OMT-vN-FnO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1190,7 +1190,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                     <rect key="frame" x="71" y="10" width="181" height="29"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="horseWeight" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
                                 <rect key="frame" x="125" y="77" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8i0-ub-20b"/>
@@ -1304,7 +1304,7 @@ Asturcon: 350-400Kg</string>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="e0y-Vx-DXx">
                             <connections>
-                                <segue destination="sRs-8w-7nS" kind="show" id="O99-Qq-3sd"/>
+                                <segue destination="sRs-8w-7nS" kind="show" identifier="toLicenceSegue" id="O99-Qq-3sd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
