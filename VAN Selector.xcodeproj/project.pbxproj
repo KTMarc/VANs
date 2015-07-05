@@ -94,6 +94,7 @@
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
 		49C325671B47AE69007DC224 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801BF1B44EAFE0043CA49 /* Telekinesis.framework */; };
+		49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
 		49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505461A04090500CBAE64 /* EQLmyButton.m */; };
 		49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D68C241A0945F900C54307 /* EQLNumHorsesView.m */; };
@@ -260,6 +261,8 @@
 		49B1FC1019825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		49C325681B48DD4F007DC224 /* EQLFormTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFormTemplateViewController.h; sourceTree = "<group>"; };
+		49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormTemplateViewController.m; sourceTree = "<group>"; };
 		49D505421A04057500CBAE64 /* EQLhelpIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLhelpIconView.h; sourceTree = "<group>"; };
 		49D505431A04057500CBAE64 /* EQLhelpIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLhelpIconView.m; sourceTree = "<group>"; };
 		49D505451A04090500CBAE64 /* EQLmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmyButton.h; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 		497F444919DFF3640065BD07 /* Formulario paso a paso */ = {
 			isa = PBXGroup;
 			children = (
+				49C325681B48DD4F007DC224 /* EQLFormTemplateViewController.h */,
+				49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */,
 				49A3402C1B3E403A006FF2F5 /* Form 1 MMA Car */,
 				49A3402D1B3E4051006FF2F5 /* Form 2 MMR Car */,
 				49A3402E1B3E405E006FF2F5 /* Form 3 Horses */,
@@ -869,6 +874,7 @@
 				494B685D19F2898F00F453AC /* EQLtrailerMaxPtacView.m in Sources */,
 				496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */,
 				49904A32198FE63800A4A79E /* EQLCatalogTableViewController.m in Sources */,
+				49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */,
 				4956E3F019EC814E00966A8E /* EQLMenuViewController.m in Sources */,
 				49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */,
 				49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */,

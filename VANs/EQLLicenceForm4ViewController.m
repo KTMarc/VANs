@@ -60,14 +60,15 @@
         EQLFormData *sharedForm = [EQLFormData sharedForm];
         /* -------------------------------------------------------*/
         sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
-        NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
+      //  NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
         
         
         /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
         nextViewController.resultsArray = self.resultsArray;
-        NSLog(@"Después de ejectuar un calculatethings with model dentro de toCarResultsButton: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
+        //NSLog(@"Después de ejectuar un calculatethings with model dentro de toCarResultsButton: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
+        
         [self.navigationController pushViewController:nextViewController animated:YES];
         //[self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     }

@@ -16,11 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    /*
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    NSLog(@"El contenido de sharedForm es: %ld", (long)sharedForm.mmaCar);
-    */
     
     //Prepare de warning message
     _wrongValueWarningLabel.alpha = 0;
@@ -77,7 +72,7 @@
     [self.view addGestureRecognizer:rightGesture];
     /* END GESTURE RECOGNIZERS */
     
-    NSLog(@"Tenemos este modelo cuando llegamos a Form2:%@", _model);
+    //NSLog(@"Tenemos este modelo cuando llegamos a Form2:%@", _model);
 
 }
 
@@ -142,7 +137,7 @@
 - (void)saveDataToSingleton:(UITextField *)textField{
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.mmrCar = textField.text.integerValue;
-    NSLog(@"Guardamos en el SINGLETON mmrCar: %ld", (long)sharedForm.mmrCar);
+    //NSLog(@"Guardamos en el SINGLETON mmrCar: %ld", (long)sharedForm.mmrCar);
 }
 
 
@@ -190,11 +185,6 @@
             nextViewController.model = self.model;
         }
     }
-}
-
-
-- (IBAction)toForm3Button:(UIButton *)sender {
-    [self saveDataToSingleton:(_mmrFormTextField)];
 }
 
 - (void)didReceiveMemoryWarning {

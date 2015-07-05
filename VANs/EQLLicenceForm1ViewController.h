@@ -20,8 +20,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *easyFormMmaTextField;
 @property (nonatomic, strong) EQLGarageModel *model;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
-
 @property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
-- (IBAction)toForm2Button:(UIButton *)sender;
 
 @end

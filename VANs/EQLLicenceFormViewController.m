@@ -119,7 +119,7 @@
     */
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
 
-        NSLog(@"En CalculateWeight llama a calculateThingsWithModel y not sale que hay estos resultados despues de calcular todo: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
+       // NSLog(@"En CalculateWeight llama a calculateThingsWithModel y not sale que hay estos resultados despues de calcular todo: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender

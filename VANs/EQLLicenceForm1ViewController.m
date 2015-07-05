@@ -84,7 +84,7 @@
 #pragma mark - Gestures
 
 - (void)swipetoLeftDetection{
-    [self performSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
+    [self shouldPerformSegueWithIdentifier: @"toMaxPtacSegue" sender: self];
 }
 
 - (void)swipetoRightDetection{
@@ -183,7 +183,7 @@
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
-            NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
+           // NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
         }
     }
 #pragma mark - CUIDADO con la clase que decimos que venimos! no es lo mismo un UIBarButtonItem que un UIButton normal.
@@ -192,16 +192,9 @@
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.model;
-            NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
+            //NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
         }
     }
-}
-
-- (IBAction)toForm2Button:(UIButton *)sender; {
-//TODO- DELETE THIS!!!
-    
-    [self saveDataToSingleton:(_easyFormMmaTextField)];
-    NSLog(@"Em picat el boto i guardem al formulari");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -98,33 +98,32 @@
 
 - (void)textFieldEditingChangedAction:(UITextField *)sender {
     //  NSLog(@"REcibimos mensaje de que el texto ha cambiado");
-    [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
+  //  [self checkTypedTextContentSize:(sender.text) withMaxLength:@4];
     [self changeFontAction];
 }
 
 - (void)changeFontAction{
-    //NSLog(@"UIControlEventEditingDidBegin");
     _easyFormHorseWeightTextField.font =[UIFont fontWithName:sameFontEverywhere size:_easyFormHorseWeightTextField.font.pointSize];
 }
 
 - (void)checkTypedTextContentSize: (NSString *)string withMaxLength: (NSNumber *)maxLength
 {
-    if ([_easyFormHorseWeightTextField.text length] < [maxLength unsignedIntegerValue]){
-        [_easyFormHorseWeightTextField setTextColor:[UIColor redColor]];
-        _wrongValueWarningLabel.alpha = 0;
-        
-        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{ _wrongValueWarningLabel.alpha = 1;}
-                         completion:nil];
-        
-    }else{
-        // NSLog(@"El string es 4 o mas");
-        [_easyFormHorseWeightTextField setTextColor:[UIColor blackColor]];
-        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{ _wrongValueWarningLabel.alpha = 0;}
-                         completion:nil];
-        _wrongValueWarningLabel.alpha = 0;
-    }
+//    if ([_easyFormHorseWeightTextField.text length] < [maxLength unsignedIntegerValue]){
+//        [_easyFormHorseWeightTextField setTextColor:[UIColor redColor]];
+//        _wrongValueWarningLabel.alpha = 0;
+//        
+//        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+//                         animations:^{ _wrongValueWarningLabel.alpha = 1;}
+//                         completion:nil];
+//        
+//    }else{
+//        // NSLog(@"El string es 4 o mas");
+//        [_easyFormHorseWeightTextField setTextColor:[UIColor blackColor]];
+//        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+//                         animations:^{ _wrongValueWarningLabel.alpha = 0;}
+//                         completion:nil];
+//        _wrongValueWarningLabel.alpha = 0;
+//    }
 }
 
 #pragma mark - Helper methods
@@ -178,14 +177,6 @@
         }
     }
 }
-
-- (IBAction)toForm4Button:(UIButton *)sender {
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
-    
-    sharedForm.pesoCaballo = _easyFormHorseWeightTextField.text.integerValue;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
