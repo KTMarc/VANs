@@ -902,16 +902,30 @@ Lateral extra en acero inoxidable</string>
                                 <color key="pageIndicatorTintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mma" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
-                                <rect key="frame" x="120" y="81" width="80" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTZ-Th-eq0" customClass="EQLCarLargeIconView">
+                                <rect key="frame" x="21" y="81" width="288" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
+                                        <rect key="frame" x="32" y="86" width="52" height="34"/>
+                                        <string key="text">4 cifras!
+Ni + ni -</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="mma" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
+                                <rect key="frame" x="120" y="170" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="wng-x9-7zs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
-                                <rect key="frame" x="208" y="80" width="53" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
+                                <rect key="frame" x="208" y="170" width="53" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="vZq-0Y-xYH"/>
                                 </constraints>
@@ -943,23 +957,6 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-iC-J0t" customClass="EQLhelpIconView">
-                                <rect key="frame" x="120" y="116" width="120" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="lyn-QQ-DaE"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="78Y-pY-z43" kind="show" id="Wiw-cc-ZWA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y7-ER-o4b">
-                                <rect key="frame" x="63" y="79" width="52" height="34"/>
-                                <string key="text">4 cifras!
-Ni + ni -</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-pA-GaQ">
                                 <rect key="frame" x="199" y="459" width="111" height="30"/>
                                 <state key="normal" title="Modo avanzado">
@@ -969,45 +966,60 @@ Ni + ni -</string>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="sbI-ip-gUj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-iC-J0t" customClass="EQLhelpIconView">
+                                <rect key="frame" x="179" y="80" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="A0X-fa-GBI"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="78Y-pY-z43" kind="show" id="Wiw-cc-ZWA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="08G-Gr-9If"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="trailing" constant="8" symbolic="YES" id="248-LN-29w"/>
-                            <constraint firstItem="NZT-iC-J0t" firstAttribute="leading" secondItem="BRA-CJ-Bd4" secondAttribute="leading" id="4Xy-v0-fRk"/>
+                            <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="80" id="4Ib-4Q-5Ew"/>
+                            <constraint firstItem="iTZ-Th-eq0" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="-90" id="4lW-Hd-VDa"/>
+                            <constraint firstItem="BRA-CJ-Bd4" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="15" id="65h-yi-iQu"/>
+                            <constraint firstItem="BRA-CJ-Bd4" firstAttribute="centerY" secondItem="iTZ-Th-eq0" secondAttribute="centerY" constant="7.5" id="6Yf-f0-8pY"/>
                             <constraint firstAttribute="centerX" secondItem="quq-Gk-08H" secondAttribute="centerX" constant="-1" id="AQC-yT-vh7"/>
                             <constraint firstItem="4fp-Do-pVw" firstAttribute="top" secondItem="4wi-hr-jPf" secondAttribute="bottom" constant="10" id="Am3-Zf-jGY"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="BRA-CJ-Bd4" secondAttribute="centerY" id="B9s-D9-KDd"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="centerX" secondItem="BRA-CJ-Bd4" secondAttribute="centerXWithinMargins" id="Blr-TI-iQW"/>
                             <constraint firstItem="quq-Gk-08H" firstAttribute="top" secondItem="4fp-Do-pVw" secondAttribute="bottom" constant="1" id="Cgc-GR-vfy"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="BRA-CJ-Bd4" secondAttribute="centerY" constant="8" id="Hfb-Tj-YLt"/>
+                            <constraint firstItem="iTZ-Th-eq0" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="DJK-Mc-XA9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NZT-iC-J0t" secondAttribute="trailing" constant="5" id="Dg9-Fe-Rti"/>
+                            <constraint firstItem="iTZ-Th-eq0" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" constant="5" id="Fcv-Fh-nR4"/>
                             <constraint firstAttribute="centerX" secondItem="4fp-Do-pVw" secondAttribute="centerX" id="IsG-Kd-AE4"/>
                             <constraint firstAttribute="bottom" secondItem="Kh4-pA-GaQ" secondAttribute="bottom" constant="15" id="Kgg-Cd-1EG"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="leading" secondItem="4E6-WQ-pt6" secondAttribute="leadingMargin" id="MS9-IN-rbS"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="leading" secondItem="Bkd-PZ-Fr1" secondAttribute="leading" id="SLP-ba-cSe"/>
+                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="BRA-CJ-Bd4" secondAttribute="centerY" constant="-1" id="MaE-CT-Dn6"/>
                             <constraint firstItem="o56-l9-a5y" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="9" id="Suu-kh-iqa"/>
+                            <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="iTZ-Th-eq0" secondAttribute="bottom" constant="90" id="TmI-bN-gAd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NZT-iC-J0t" secondAttribute="trailing" constant="22" id="WI7-fb-dii"/>
                             <constraint firstItem="ajA-T2-wUS" firstAttribute="top" secondItem="6q1-Ss-RDZ" secondAttribute="bottom" constant="10" id="WiW-tA-1d2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bkd-PZ-Fr1" secondAttribute="trailing" id="X3J-RB-XrA"/>
-                            <constraint firstItem="o56-l9-a5y" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="80" id="YKK-UZ-Xo9"/>
+                            <constraint firstItem="iTZ-Th-eq0" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="-110" id="Xqf-on-CTI"/>
                             <constraint firstAttribute="centerX" secondItem="6q1-Ss-RDZ" secondAttribute="centerX" id="afs-xF-BTl"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="16" id="ckJ-mx-bcs"/>
-                            <constraint firstItem="0Y7-ER-o4b" firstAttribute="centerY" secondItem="o56-l9-a5y" secondAttribute="baseline" id="hia-2x-K3W"/>
+                            <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="NZT-iC-J0t" secondAttribute="bottom" constant="26" id="fmq-dU-KOW"/>
+                            <constraint firstItem="iTZ-Th-eq0" firstAttribute="trailing" secondItem="4E6-WQ-pt6" secondAttribute="trailingMargin" constant="5" id="jnl-9i-1GC"/>
                             <constraint firstItem="BRA-CJ-Bd4" firstAttribute="top" secondItem="quq-Gk-08H" secondAttribute="bottom" constant="10" id="pOp-ve-UNW"/>
                             <constraint firstAttribute="trailing" secondItem="Kh4-pA-GaQ" secondAttribute="trailing" constant="10" id="rKI-jj-rVt"/>
-                            <constraint firstItem="NZT-iC-J0t" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="5" id="s2F-6X-YDP"/>
+                            <constraint firstItem="BRA-CJ-Bd4" firstAttribute="centerY" secondItem="o56-l9-a5y" secondAttribute="centerY" id="sY5-tK-MA4"/>
                             <constraint firstItem="Bkd-PZ-Fr1" firstAttribute="top" secondItem="BRA-CJ-Bd4" secondAttribute="bottom" constant="100" id="xvo-ku-0Ta"/>
                             <constraint firstItem="6q1-Ss-RDZ" firstAttribute="top" secondItem="Bkd-PZ-Fr1" secondAttribute="bottom" constant="20" id="yVj-aO-Xdi"/>
-                            <constraint firstItem="BRA-CJ-Bd4" firstAttribute="leading" secondItem="0Y7-ER-o4b" secondAttribute="trailing" constant="5" id="ywK-rc-35P"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="08G-Gr-9If"/>
-                                <exclude reference="Hfb-Tj-YLt"/>
-                                <exclude reference="SLP-ba-cSe"/>
-                                <exclude reference="ckJ-mx-bcs"/>
-                                <exclude reference="hia-2x-K3W"/>
-                                <exclude reference="YKK-UZ-Xo9"/>
+                                <exclude reference="4lW-Hd-VDa"/>
+                                <exclude reference="Xqf-on-CTI"/>
+                                <exclude reference="WI7-fb-dii"/>
+                                <exclude reference="pOp-ve-UNW"/>
+                                <exclude reference="Suu-kh-iqa"/>
+                                <exclude reference="fmq-dU-KOW"/>
                                 <exclude reference="xvo-ku-0Ta"/>
                             </mask>
                         </variation>
@@ -1027,8 +1039,7 @@ Ni + ni -</string>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="568"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="easyFormMmaTextField" destination="BRA-CJ-Bd4" id="mHI-hf-hid"/>
                         <outlet property="toHelp" destination="NZT-iC-J0t" id="0Kc-Jh-VLT"/>
