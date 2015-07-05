@@ -98,7 +98,7 @@
 
 - (IBAction)calculateWeight:(UIBarButtonItem *)sender {
 
-    NSLog(@"Tenemos este modelo cuando llegamos a Calculamos peso :%@", _model);
+    NSLog(@"Tenemos este modelo cuando llegamos a CalculateWeight :%@", _model);
 
         // of the field is not empty
         //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
@@ -155,15 +155,11 @@
             UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
             [missingDataAlert show];
         }
-
-    
     } else{
         //Estamos en los segues del tabView y podemos hacer la transición.
         weDoSegue = true;
     }
-
     return weDoSegue;
-    
 }
 
 
@@ -174,6 +170,8 @@
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
+            NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
+
         }
     }
 }

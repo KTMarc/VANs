@@ -25,8 +25,6 @@
 
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-     
-    
 //    self.navigationController.navigationBarHidden = true;
     
     //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
@@ -123,13 +121,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
+    if ([sender isKindOfClass:[EQLLicenceButtonView class]]){
 
-        //Opcion avanzada
+        //Opcion avanzada: Ya no haria falta porque la hemos puesto dentro de la primera pantalla del formulario paso a paso.
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.garage;
-             //   NSLog(@"Entramos en el preparforsegue del formulario AVANAZADO");
+            NSLog(@"Entramos en el preparforsegue del formulario AVANAZADO");
+            NSLog(@"%@", self.garage);
             //We pass the fulfiled array with all the vans inside.
         }
 #pragma mark - FIX: parece todo igual y solo canvia Form / Form1

@@ -184,8 +184,11 @@
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
             NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
-
         }
+    }
+#pragma mark - CUIDADO con la clase que decimos que venimos! no es lo mismo un UIBarButtonItem que un UIButton normal.
+    
+    if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.model;
