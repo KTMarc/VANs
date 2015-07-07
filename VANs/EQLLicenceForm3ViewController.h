@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "EQLFormData.h"
+#import "EQLFormTemplateViewController.h"
 #import "EQLLicenceForm4ViewController.h"
 
-@interface EQLLicenceForm3ViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface EQLLicenceForm3ViewController : EQLFormTemplateViewController
 @property (strong, nonatomic) IBOutlet UITextField *easyFormHorseWeightTextField;
-@property (nonatomic, strong) EQLGarageModel *model;
 @property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
 
 @end

@@ -101,6 +101,7 @@
     //Accedemos a objetos
     maximumPTAC = licenceWeight - (int)mmaCar;
     //  if (licenceWeight.intValue == licenceWeight){ //Solo haremos todo en el carne que tengamos seleccionado
+    if (model != nil){
     if (logs) {NSLog(@"Se ha seleccionado el carne de %i Kg" ,licenceWeight);}
     if (logs) {NSLog(@"Peso Maximo: %d - %i = %i",licenceWeight, (int)mmaCar, maximumPTAC);NSLog(@"-----------------CARNE %d---------------",licenceWeight);}
     
@@ -174,7 +175,9 @@
     } //Fin for Array todos los VANs
     //  } //Carné en el que estamos
     //  } //Fin for licences
-    
+    } else{
+        if (logs){ NSLog(@"El modelo es nil cuando llega a Calculatethings");}
+    }
     return  resultsArray;
 }
 
