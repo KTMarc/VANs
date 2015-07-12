@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view.
 
     self.navigationController.navigationItem.title = [NSString stringWithFormat:@"Modelo de VAN:%@", _parseVan[@"Name"]];
+
+    self.navigationController.hidesBarsOnSwipe = true;
+    self.navigationController.hidesBarsOnTap = true;
+    self.navigationController.hidesBarsWhenVerticallyCompact = true;
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -45,7 +49,7 @@
     self.scrollView.delegate = self;
     self.scrollView.zoomScale = 1.0;
     self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.3;
+    self.scrollView.minimumZoomScale = 1.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +59,7 @@
 
 
 -(UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    return self.imageView;
+    return self.contentView;
     
 }
 
