@@ -347,7 +347,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3949" y="-637"/>
+            <point key="canvasLocation" x="3987" y="-723"/>
         </scene>
         <!--Van View Controller-->
         <scene sceneID="CXi-K5-eeB">
@@ -568,7 +568,7 @@ Lateral extra en acero inoxidable</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4893.5" y="-816.5"/>
+            <point key="canvasLocation" x="4869.5" y="-826.5"/>
         </scene>
         <!--Foto ampliada-->
         <scene sceneID="Vfl-gS-xWJ">
@@ -586,32 +586,29 @@ Lateral extra en acero inoxidable</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-rR-0Kz">
-                                        <rect key="frame" x="12" y="38" width="297" height="513"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-wq-Uzv">
-                                                <rect key="frame" x="0.0" y="106" width="330" height="224"/>
+                                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gold_one.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-wq-Uzv">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                                 <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="224" id="4II-3E-5oN"/>
-                                                </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.1333333333" green="0.85490196080000003" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="513" id="9eG-88-LrW"/>
                                             <constraint firstItem="DMW-wq-Uzv" firstAttribute="leading" secondItem="ATd-rR-0Kz" secondAttribute="leading" id="IC3-GN-WzY"/>
-                                            <constraint firstAttribute="width" constant="297" id="Qdg-iY-fcI"/>
-                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="top" secondItem="ATd-rR-0Kz" secondAttribute="top" constant="106" id="cSb-Pq-WyA"/>
-                                            <constraint firstAttribute="trailing" secondItem="DMW-wq-Uzv" secondAttribute="trailing" constant="-33" id="vbX-qd-VNI"/>
+                                            <constraint firstItem="DMW-wq-Uzv" firstAttribute="top" secondItem="ATd-rR-0Kz" secondAttribute="top" id="cSb-Pq-WyA"/>
+                                            <constraint firstAttribute="bottom" secondItem="DMW-wq-Uzv" secondAttribute="bottom" id="gYC-To-eyo"/>
+                                            <constraint firstAttribute="trailing" secondItem="DMW-wq-Uzv" secondAttribute="trailing" id="vbX-qd-VNI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ATd-rR-0Kz" secondAttribute="trailing" constant="291" id="3oN-cL-kjh"/>
-                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="leading" secondItem="odp-br-NCt" secondAttribute="leading" constant="12" id="olj-Xw-WZR"/>
-                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="top" secondItem="odp-br-NCt" secondAttribute="top" constant="38" id="xZf-HH-Lgi"/>
-                                    <constraint firstAttribute="bottom" secondItem="ATd-rR-0Kz" secondAttribute="bottom" constant="49" id="xyz-9h-yGd"/>
+                                    <constraint firstAttribute="trailing" secondItem="ATd-rR-0Kz" secondAttribute="trailing" id="3oN-cL-kjh"/>
+                                    <constraint firstAttribute="centerY" secondItem="DMW-wq-Uzv" secondAttribute="centerY" id="8aZ-E2-Tec"/>
+                                    <constraint firstAttribute="bottom" secondItem="ATd-rR-0Kz" secondAttribute="bottom" id="8r0-Yc-5jY"/>
+                                    <constraint firstAttribute="centerY" secondItem="ATd-rR-0Kz" secondAttribute="centerY" id="9P4-Es-tTa"/>
+                                    <constraint firstAttribute="centerX" secondItem="ATd-rR-0Kz" secondAttribute="centerX" id="Ld8-pn-Txn"/>
+                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="leading" secondItem="odp-br-NCt" secondAttribute="leading" id="olj-Xw-WZR"/>
+                                    <constraint firstItem="ATd-rR-0Kz" firstAttribute="top" secondItem="odp-br-NCt" secondAttribute="top" id="xZf-HH-Lgi"/>
                                 </constraints>
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
@@ -628,7 +625,7 @@ Lateral extra en acero inoxidable</string>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="odp-br-NCt" secondAttribute="trailing" id="2B4-3J-00x"/>
                             <constraint firstItem="odp-br-NCt" firstAttribute="leading" secondItem="iyE-lY-KG6" secondAttribute="leading" id="6id-vj-D2Y"/>
-                            <constraint firstItem="odp-br-NCt" firstAttribute="bottom" secondItem="lCB-t1-s2L" secondAttribute="top" id="mz5-ZF-F0T"/>
+                            <constraint firstItem="lCB-t1-s2L" firstAttribute="top" secondItem="odp-br-NCt" secondAttribute="bottom" id="owU-IY-YTk"/>
                             <constraint firstItem="odp-br-NCt" firstAttribute="top" secondItem="iyE-lY-KG6" secondAttribute="top" id="rBT-4a-OuW"/>
                         </constraints>
                     </view>
@@ -641,7 +638,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ht-Yp-X8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4869" y="-19"/>
+            <point key="canvasLocation" x="4869" y="-63"/>
         </scene>
         <!--Calculations View Controller-->
         <scene sceneID="iIF-OC-Jdo">
@@ -739,7 +736,7 @@ Lateral extra en acero inoxidable</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0b-32-vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Zc5-T8-OfW" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="4425" y="-619"/>
+            <point key="canvasLocation" x="4409" y="-723"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="28o-vR-PPQ">
@@ -1054,8 +1051,8 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <exclude reference="08G-Gr-9If"/>
                                 <exclude reference="4lW-Hd-VDa"/>
                                 <exclude reference="Xqf-on-CTI"/>
-                                <exclude reference="WI7-fb-dii"/>
                                 <exclude reference="pOp-ve-UNW"/>
+                                <exclude reference="WI7-fb-dii"/>
                                 <exclude reference="Suu-kh-iqa"/>
                                 <exclude reference="TmI-bN-gAd"/>
                                 <exclude reference="fmq-dU-KOW"/>
@@ -1594,8 +1591,11 @@ Asturcon: 350-400Kg</string>
             <point key="canvasLocation" x="26.25" y="-570.42253521126759"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gold_one.jpg" width="626" height="466"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wiw-cc-ZWA"/>
+        <segue reference="qEQ-MI-DAb"/>
         <segue reference="357-NI-xMD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>

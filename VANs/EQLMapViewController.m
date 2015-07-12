@@ -56,7 +56,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationController.navigationBarHidden = FALSE;
+    self.navigationController.hidesBarsOnSwipe = true;
+    self.navigationController.hidesBarsOnTap = true;
+    self.navigationController.hidesBarsWhenVerticallyCompact = true;
     
     //anotar puntos en el mapa
     MKPointAnnotation *poin0 =[[MKPointAnnotation alloc] init];

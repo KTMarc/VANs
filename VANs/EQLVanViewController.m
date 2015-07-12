@@ -33,7 +33,11 @@
    // self.navigationController.navigationBar.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     //self.navigationController.navigationBar.translucent = YES;
-
+    
+    //If we are coming from another view we may want to make the navigationBar fix again
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
     
     //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
