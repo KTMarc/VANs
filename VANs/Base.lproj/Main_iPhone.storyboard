@@ -5,7 +5,6 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Modo avanzado-->
@@ -363,13 +362,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-xS-FB8">
-                                <rect key="frame" x="16" y="0.0" width="368" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-gS-IpI">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="750"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="750"/>
                                         <subviews>
                                             <imageView tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FH0-wJ-ZPi" customClass="PFImageView">
-                                                <rect key="frame" x="0.0" y="10" width="360" height="244"/>
+                                                <rect key="frame" x="0.0" y="15" width="400" height="271"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FH0-wJ-ZPi" secondAttribute="height" multiplier="320:217" id="K9C-mT-Xwq"/>
@@ -379,19 +378,19 @@
                                                 </connections>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modelo VAN" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-Od-ol1">
-                                                <rect key="frame" x="252" y="10" width="98" height="21"/>
+                                                <rect key="frame" x="292" y="10" width="98" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Características" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-g3-v9m">
-                                                <rect key="frame" x="10" y="259" width="115" height="21"/>
+                                                <rect key="frame" x="10" y="291" width="115" height="21"/>
                                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV7-r3-vDW">
-                                                <rect key="frame" x="10" y="285" width="340" height="367"/>
+                                                <rect key="frame" x="10" y="317" width="380" height="351"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Frontal de polyester y laterales de aluminio
 Puerta trasera doble "tipo Americana" de aluminio.
@@ -422,21 +421,21 @@ Lateral extra en acero inoxidable</string>
                                                 </variation>
                                             </textView>
                                             <view opaque="NO" tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeB-Sc-gvJ" customClass="EQLPriceView">
-                                                <rect key="frame" x="260" y="41" width="90" height="22"/>
+                                                <rect key="frame" x="300" y="41" width="90" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="XJl-rD-iep"/>
                                                     <constraint firstAttribute="width" constant="90" id="vbj-rr-vHg"/>
                                                 </constraints>
                                             </view>
                                             <view opaque="NO" tag="105" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIR-7J-U5R" customClass="EQLNumHorsesView">
-                                                <rect key="frame" x="266" y="261" width="59" height="18"/>
+                                                <rect key="frame" x="306" y="293" width="59" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="BLC-s8-EGN"/>
                                                     <constraint firstAttribute="width" constant="59" id="fbX-LP-Iot"/>
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGT-cK-g0l" customClass="EQLPlancherIcon">
-                                                <rect key="frame" x="151" y="259" width="90" height="37"/>
+                                                <rect key="frame" x="151" y="291" width="90" height="37"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="ELF-4N-mB3"/>
@@ -444,7 +443,7 @@ Lateral extra en acero inoxidable</string>
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydq-iT-zRB" customClass="EQLPlancherIcon">
-                                                <rect key="frame" x="266" y="259" width="90" height="37"/>
+                                                <rect key="frame" x="306" y="291" width="90" height="37"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="ORo-c6-JDP"/>
@@ -452,7 +451,7 @@ Lateral extra en acero inoxidable</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-04-vIc" customClass="EQLmailButton">
-                                                <rect key="frame" x="20" y="662" width="140" height="50"/>
+                                                <rect key="frame" x="20" y="678" width="140" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="9w2-1o-Xbi"/>
                                                     <constraint firstAttribute="height" constant="50" id="KeR-Z3-kb8"/>
@@ -465,7 +464,7 @@ Lateral extra en acero inoxidable</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK" customClass="EQLcallButton">
-                                                <rect key="frame" x="200" y="662" width="140" height="50"/>
+                                                <rect key="frame" x="240" y="678" width="140" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="HT9-On-wYu"/>
                                                     <constraint firstAttribute="height" constant="50" id="Oed-vY-bhm"/>
@@ -478,7 +477,6 @@ Lateral extra en acero inoxidable</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="Lqc-g3-v9m" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="2Cb-Co-7jt"/>
@@ -493,12 +491,11 @@ Lateral extra en acero inoxidable</string>
                                             <constraint firstItem="noW-Qn-VLK" firstAttribute="top" secondItem="OV7-r3-vDW" secondAttribute="bottom" constant="10" id="QSb-q3-Mtw"/>
                                             <constraint firstAttribute="trailing" secondItem="FH0-wJ-ZPi" secondAttribute="trailing" id="RJQ-me-bmm"/>
                                             <constraint firstItem="DLu-04-vIc" firstAttribute="top" secondItem="OV7-r3-vDW" secondAttribute="bottom" constant="10" id="TzG-Bo-REu"/>
-                                            <constraint firstItem="FH0-wJ-ZPi" firstAttribute="top" secondItem="hoK-gS-IpI" secondAttribute="top" constant="10" id="UFk-Zp-Cqa"/>
+                                            <constraint firstItem="FH0-wJ-ZPi" firstAttribute="top" secondItem="hoK-gS-IpI" secondAttribute="top" constant="15" id="UFk-Zp-Cqa"/>
                                             <constraint firstAttribute="trailing" secondItem="OV7-r3-vDW" secondAttribute="trailing" constant="10" id="V2C-M8-yBA"/>
                                             <constraint firstAttribute="trailing" secondItem="noW-Qn-VLK" secondAttribute="trailing" constant="20" id="ZA7-9m-elz"/>
                                             <constraint firstItem="OeB-Sc-gvJ" firstAttribute="top" secondItem="G9l-Od-ol1" secondAttribute="bottom" constant="10" id="ZLQ-jN-gzl"/>
                                             <constraint firstItem="DLu-04-vIc" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="20" id="bHA-c0-Be2"/>
-                                            <constraint firstAttribute="centerX" secondItem="FH0-wJ-ZPi" secondAttribute="centerX" id="cG7-fc-rnV"/>
                                             <constraint firstAttribute="trailing" secondItem="G9l-Od-ol1" secondAttribute="trailing" constant="10" id="dGk-9Z-6ce"/>
                                             <constraint firstItem="OV7-r3-vDW" firstAttribute="top" secondItem="FH0-wJ-ZPi" secondAttribute="bottom" constant="31" id="eBS-hF-c5r"/>
                                             <constraint firstItem="PGT-cK-g0l" firstAttribute="top" secondItem="Lqc-g3-v9m" secondAttribute="top" id="jeU-Oi-nOD"/>
@@ -509,6 +506,7 @@ Lateral extra en acero inoxidable</string>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="hoK-gS-IpI" secondAttribute="centerX" id="Ady-qg-o3F"/>
                                     <constraint firstItem="hoK-gS-IpI" firstAttribute="leading" secondItem="jM0-xS-FB8" secondAttribute="leading" id="Mev-h6-xhs"/>
                                     <constraint firstItem="hoK-gS-IpI" firstAttribute="top" secondItem="jM0-xS-FB8" secondAttribute="top" id="U4r-JK-87b"/>
                                     <constraint firstAttribute="bottom" secondItem="hoK-gS-IpI" secondAttribute="bottom" id="ae7-hA-TRY"/>
@@ -518,11 +516,10 @@ Lateral extra en acero inoxidable</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b67-5t-vqx" firstAttribute="top" secondItem="jM0-xS-FB8" secondAttribute="bottom" id="B1g-Wm-4aH"/>
-                            <constraint firstItem="jM0-xS-FB8" firstAttribute="top" secondItem="4Jw-X1-Ecp" secondAttribute="bottom" id="NDJ-OS-Iwc"/>
-                            <constraint firstItem="jM0-xS-FB8" firstAttribute="leading" secondItem="pI9-Wj-CGY" secondAttribute="leadingMargin" id="VtV-QG-wuR"/>
-                            <constraint firstItem="hoK-gS-IpI" firstAttribute="width" secondItem="pI9-Wj-CGY" secondAttribute="width" multiplier="0.9" id="aFf-H6-C6Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jM0-xS-FB8" secondAttribute="trailing" id="gkg-xN-Une"/>
+                            <constraint firstItem="jM0-xS-FB8" firstAttribute="top" secondItem="4Jw-X1-Ecp" secondAttribute="bottom" id="5Lm-tx-SAY"/>
+                            <constraint firstItem="b67-5t-vqx" firstAttribute="top" secondItem="jM0-xS-FB8" secondAttribute="bottom" id="6qS-Rp-Tgv"/>
+                            <constraint firstItem="jM0-xS-FB8" firstAttribute="leading" secondItem="pI9-Wj-CGY" secondAttribute="leading" id="R3T-f5-yw2"/>
+                            <constraint firstItem="hoK-gS-IpI" firstAttribute="width" secondItem="pI9-Wj-CGY" secondAttribute="width" id="aFf-H6-C6Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9sV-Et-Rm1">
