@@ -137,6 +137,11 @@
         EQLPictureViewController *nextViewController = segue.destinationViewController;
         nextViewController.parseVan =  _parseVan;
     }
+    /*
+    if ([segue.destinationViewController isKindOfClass:[EQLPhotosCollectionVC class]]){
+        EQLPhotosCollectionVC *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan =  _parseVan;
+    }*/
 }
 
 

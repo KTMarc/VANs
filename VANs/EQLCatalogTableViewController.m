@@ -100,8 +100,11 @@
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    // tell the query to fetch all of the Weapon objects along with the user
+    // get the "many" at the same time that you're getting the "one"
+ //   [query includeKey:@"photosArray"];
     
-    //Esto lo pone en la superclase PFQueryViewController:
+    //Esto es lo pone en la superclase PFQueryViewController:
         // If no objects are loaded in memory, we look to the cache first to fill the table
         // and then subsequently do a query against the network.
    //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
@@ -361,6 +364,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
+            //We pass the array of pictures, not the vanObject
             EQLVanViewController *nextViewController = segue.destinationViewController;
             nextViewController.parseVan = sender;
         }

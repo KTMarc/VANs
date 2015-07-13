@@ -564,7 +564,7 @@ Lateral extra en acero inoxidable</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75U-T4-uhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="DHp-QU-hsu">
                     <connections>
-                        <segue destination="a0e-Ps-2Uf" kind="show" id="O3t-4z-jrj"/>
+                        <segue destination="a0e-Ps-2Uf" kind="show" id="zu7-gM-bL0"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -638,7 +638,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ht-Yp-X8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4869" y="-63"/>
+            <point key="canvasLocation" x="5026" y="-45"/>
         </scene>
         <!--Calculations View Controller-->
         <scene sceneID="iIF-OC-Jdo">

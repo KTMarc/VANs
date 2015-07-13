@@ -12,6 +12,7 @@
 #import "EQLPriceView.h"
 #import "EQLNumHorsesView.h"
 #import "EQLPictureViewController.h"
+//#import "EQLPhotosCollectionVC.h"
 
 @interface EQLVanViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
