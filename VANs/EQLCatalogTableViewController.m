@@ -127,7 +127,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBarHidden = FALSE;
 //    self.tableView.allowsSelection = NO;
-
+   
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
 }
 
 - (void)viewDidUnload

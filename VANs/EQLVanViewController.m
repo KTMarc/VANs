@@ -35,9 +35,6 @@
     //self.navigationController.navigationBar.translucent = YES;
     
     //If we are coming from another view we may want to make the navigationBar fix again
-    self.navigationController.hidesBarsOnSwipe = false;
-    self.navigationController.hidesBarsOnTap = false;
-    self.navigationController.hidesBarsWhenVerticallyCompact = false;
     
     //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
@@ -63,6 +60,7 @@
     EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [self.view viewWithTag:105];
     numhorsesView.numHorses = [_parseVan[@"horsesNum"] stringValue];
  
+    self.navigationController.title = _parseVan[@"Name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +69,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
+
+}
 
 
 #pragma mark Contact Buttons

@@ -35,7 +35,6 @@
     
     //Aqui bajamos de la red todos los Vans
     [self.garage doAsyncQueryToParse:false];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +59,9 @@
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.lastButtonPressed.alpha = 0.2;
     [self fadeWith:sharedForm.lastButtonPressed andDuration: 0.3 Delay:0.0 finalAlpha:1];
+//    self.navigationController.hidesBarsOnSwipe = false;
+//    self.navigationController.hidesBarsOnTap = false;
+//    self.navigationController.hidesBarsWhenVerticallyCompact = false;
 }
 
 
