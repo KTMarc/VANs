@@ -365,7 +365,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-gS-IpI">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="750"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="748"/>
                                         <subviews>
                                             <imageView tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FH0-wJ-ZPi" customClass="PFImageView">
                                                 <rect key="frame" x="0.0" y="15" width="400" height="271"/>
@@ -451,7 +451,7 @@ Lateral extra en acero inoxidable</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-04-vIc" customClass="EQLmailButton">
-                                                <rect key="frame" x="20" y="678" width="140" height="50"/>
+                                                <rect key="frame" x="10" y="678" width="140" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="9w2-1o-Xbi"/>
                                                     <constraint firstAttribute="height" constant="50" id="KeR-Z3-kb8"/>
@@ -464,7 +464,7 @@ Lateral extra en acero inoxidable</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK" customClass="EQLcallButton">
-                                                <rect key="frame" x="240" y="678" width="140" height="50"/>
+                                                <rect key="frame" x="250" y="678" width="140" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="HT9-On-wYu"/>
                                                     <constraint firstAttribute="height" constant="50" id="Oed-vY-bhm"/>
@@ -484,7 +484,6 @@ Lateral extra en acero inoxidable</string>
                                             <constraint firstItem="Ydq-iT-zRB" firstAttribute="leading" secondItem="NIR-7J-U5R" secondAttribute="leading" id="7wC-gC-9WZ"/>
                                             <constraint firstItem="FH0-wJ-ZPi" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" id="AWZ-Hp-9J5"/>
                                             <constraint firstItem="OeB-Sc-gvJ" firstAttribute="trailing" secondItem="G9l-Od-ol1" secondAttribute="trailing" id="CWL-Vm-0QY"/>
-                                            <constraint firstAttribute="height" constant="750" id="KLh-8h-4NA"/>
                                             <constraint firstItem="NIR-7J-U5R" firstAttribute="centerY" secondItem="Lqc-g3-v9m" secondAttribute="centerY" constant="0.5" id="MKj-f8-Dy6"/>
                                             <constraint firstItem="OV7-r3-vDW" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="Nna-b3-xgY"/>
                                             <constraint firstItem="Ydq-iT-zRB" firstAttribute="top" secondItem="PGT-cK-g0l" secondAttribute="top" id="Ob5-6c-baT"/>
@@ -493,9 +492,10 @@ Lateral extra en acero inoxidable</string>
                                             <constraint firstItem="DLu-04-vIc" firstAttribute="top" secondItem="OV7-r3-vDW" secondAttribute="bottom" constant="10" id="TzG-Bo-REu"/>
                                             <constraint firstItem="FH0-wJ-ZPi" firstAttribute="top" secondItem="hoK-gS-IpI" secondAttribute="top" constant="15" id="UFk-Zp-Cqa"/>
                                             <constraint firstAttribute="trailing" secondItem="OV7-r3-vDW" secondAttribute="trailing" constant="10" id="V2C-M8-yBA"/>
-                                            <constraint firstAttribute="trailing" secondItem="noW-Qn-VLK" secondAttribute="trailing" constant="20" id="ZA7-9m-elz"/>
+                                            <constraint firstAttribute="trailing" secondItem="noW-Qn-VLK" secondAttribute="trailing" constant="10" id="ZA7-9m-elz"/>
                                             <constraint firstItem="OeB-Sc-gvJ" firstAttribute="top" secondItem="G9l-Od-ol1" secondAttribute="bottom" constant="10" id="ZLQ-jN-gzl"/>
-                                            <constraint firstItem="DLu-04-vIc" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="20" id="bHA-c0-Be2"/>
+                                            <constraint firstItem="DLu-04-vIc" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="bHA-c0-Be2"/>
+                                            <constraint firstAttribute="bottom" secondItem="DLu-04-vIc" secondAttribute="bottom" constant="20" id="cKH-xO-ovI"/>
                                             <constraint firstAttribute="trailing" secondItem="G9l-Od-ol1" secondAttribute="trailing" constant="10" id="dGk-9Z-6ce"/>
                                             <constraint firstItem="OV7-r3-vDW" firstAttribute="top" secondItem="FH0-wJ-ZPi" secondAttribute="bottom" constant="31" id="eBS-hF-c5r"/>
                                             <constraint firstItem="PGT-cK-g0l" firstAttribute="top" secondItem="Lqc-g3-v9m" secondAttribute="top" id="jeU-Oi-nOD"/>
