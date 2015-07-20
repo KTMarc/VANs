@@ -15,7 +15,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawTrailerMaxPtac];
+    [VanStyleKit drawTrailerMaxPtac3WithFrame:self.bounds];
     
 }
 

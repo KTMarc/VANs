@@ -20,7 +20,7 @@
     
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA porque Viene de NSUserDefaults*/
     super.sharedForm = [EQLFormData sharedForm];
-    if ([super.sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
+    if ([super.sharedForm mmrCar] != 0){ //En caso contrario no queremos cargar un 0
         _mmrFormTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmrCar]];}
     
     [self initialSetup:_wrongValueWarningLabel
