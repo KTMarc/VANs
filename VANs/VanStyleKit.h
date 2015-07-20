@@ -36,12 +36,12 @@
 + (void)drawLicenceIconWithColorParameter: (UIColor*)colorParameter scale: (CGFloat)scale;
 + (void)drawIconoLicenceSoloWithFrame: (CGRect)frame colorParameter: (UIColor*)colorParameter;
 + (void)drawMap;
-+ (void)drawCalculationResults1WithMmaVan: (NSString*)mmaVan mmaCar: (NSString*)mmaCar numHorses: (NSString*)numHorses licence: (NSString*)licence sumaMMAs: (NSString*)sumaMMAs;
++ (void)drawCalculationResults1WithFrame: (CGRect)frame mmaVan: (NSString*)mmaVan mmaCar: (NSString*)mmaCar numHorses: (NSString*)numHorses licence: (NSString*)licence sumaMMAs: (NSString*)sumaMMAs;
 + (void)drawEquusHorseNavBar;
 + (void)drawTrailerMaxPtac;
 + (void)drawLicenceNavIcon;
 + (void)drawCarWithScale: (CGFloat)scale strokeWidth: (CGFloat)strokeWidth;
-+ (void)drawCalculationResults2WithMmaVan: (NSString*)mmaVan numHorses: (NSString*)numHorses weightHorse: (NSString*)weightHorse weightHorses: (NSString*)weightHorses weightTrailer: (NSString*)weightTrailer weightTrailerAndHorses: (NSString*)weightTrailerAndHorses;
++ (void)drawCalculationResults2WithFrame: (CGRect)frame mmaVan: (NSString*)mmaVan numHorses: (NSString*)numHorses weightHorse: (NSString*)weightHorse weightHorses: (NSString*)weightHorses weightTrailer: (NSString*)weightTrailer weightTrailerAndHorses: (NSString*)weightTrailerAndHorses;
 + (void)drawIconoLicenceSolo2;
 + (void)drawHelpIconWithButtonText: (NSString*)buttonText;
 + (void)drawBotonEquusWithButtonText: (NSString*)buttonText pressed: (BOOL)pressed;

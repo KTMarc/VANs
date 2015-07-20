@@ -8,6 +8,8 @@
 
 #import "EQLCalculationsCondition2.h"
 
+IB_DESIGNABLE
+
 @implementation EQLCalculationsCondition2
 
 
@@ -20,7 +22,8 @@
     NSString *weightHorses = [NSString stringWithFormat:@"%liKg.", (long)[sharedForm pesoCaballo]*[sharedForm numHorses]];
     
     NSString *weightTrailerAndHorses = [NSString stringWithFormat:@"%liKg.",(long)(([sharedForm pesoCaballo]*[sharedForm numHorses])+[sharedForm trailerWeight])];
-    [VanStyleKit drawCalculationResults2WithMmaVan:[sharedForm mmaVanString]
+    [VanStyleKit drawCalculationResults2WithFrame: self.bounds
+                                           mmaVan:[sharedForm mmaVanString]
                                          numHorses:[sharedForm numHorsesString]
                                        weightHorse:[NSString stringWithFormat: @"%liKg.",(long)[sharedForm pesoCaballo]]
                                       weightHorses: weightHorses

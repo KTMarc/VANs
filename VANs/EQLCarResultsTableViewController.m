@@ -123,7 +123,6 @@
 
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    
     PFObject *PFvan;
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
     //NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
@@ -149,17 +148,14 @@
     }];
 
 
-
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [PFvan objectForKey:@"Name"];
     
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
-//  priceLabel.text = [PFvan objectForKey:@"price"];
 
     int auxInt = (int)[sharedForm mmrCar];
     
     priceLabel.text = [NSString stringWithFormat: @"%i", auxInt];
-    
     
 //    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
 //    NSString *cadena = @"MMA:";
@@ -179,7 +175,6 @@
     
     return cell;
 }
-
 
 
 /*

@@ -2212,13 +2212,13 @@ static UIImage* _imageOfFichaA4 = nil;
     [bezier2Path fill];
 }
 
-+ (void)drawCalculationResults1WithMmaVan: (NSString*)mmaVan mmaCar: (NSString*)mmaCar numHorses: (NSString*)numHorses licence: (NSString*)licence sumaMMAs: (NSString*)sumaMMAs
++ (void)drawCalculationResults1WithFrame: (CGRect)frame mmaVan: (NSString*)mmaVan mmaCar: (NSString*)mmaCar numHorses: (NSString*)numHorses licence: (NSString*)licence sumaMMAs: (NSString*)sumaMMAs
 {
     //// General Declarations
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //// Text Drawing
-    CGRect textRect = CGRectMake(92, 49, 25, 36);
+    CGRect textRect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.30665 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.30764 + 0.5), floor(CGRectGetWidth(frame) * 0.38998 - 0.49) - floor(CGRectGetWidth(frame) * 0.30665 - 0.49), floor(CGRectGetHeight(frame) * 0.53219 + 0.5) - floor(CGRectGetHeight(frame) * 0.30764 + 0.5));
     NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     textStyle.alignment = NSTextAlignmentCenter;
 
@@ -2228,7 +2228,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 2 Drawing
-    CGRect text2Rect = CGRectMake(177, 50, 43, 36);
+    CGRect text2Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.58999 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.31387 + 0.5), floor(CGRectGetWidth(frame) * 0.73333 - 0.49) - floor(CGRectGetWidth(frame) * 0.58999 - 0.49), floor(CGRectGetHeight(frame) * 0.53842 + 0.5) - floor(CGRectGetHeight(frame) * 0.31387 + 0.5));
     NSMutableParagraphStyle* text2Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text2Style.alignment = NSTextAlignmentCenter;
 
@@ -2238,7 +2238,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 4 Drawing
-    CGRect text4Rect = CGRectMake(116, 108, 66, 30);
+    CGRect text4Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.38665 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.67565 + 0.5), floor(CGRectGetWidth(frame) * 0.60666 - 0.49) - floor(CGRectGetWidth(frame) * 0.38665 - 0.49), floor(CGRectGetHeight(frame) * 0.86277 + 0.5) - floor(CGRectGetHeight(frame) * 0.67565 + 0.5));
     NSMutableParagraphStyle* text4Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text4Style.alignment = NSTextAlignmentCenter;
 
@@ -2248,7 +2248,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 5 Drawing
-    CGRect text5Rect = CGRectMake(211, 108, 78, 30);
+    CGRect text5Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.70333 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.67565 + 0.5), floor(CGRectGetWidth(frame) * 0.96333 - 0.49) - floor(CGRectGetWidth(frame) * 0.70333 - 0.49), floor(CGRectGetHeight(frame) * 0.86277 + 0.5) - floor(CGRectGetHeight(frame) * 0.67565 + 0.5));
     NSMutableParagraphStyle* text5Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text5Style.alignment = NSTextAlignmentCenter;
 
@@ -2258,7 +2258,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 6 Drawing
-    CGRect text6Rect = CGRectMake(3, 108, 66, 30);
+    CGRect text6Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.00997 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.67565 + 0.5), floor(CGRectGetWidth(frame) * 0.22998 - 0.49) - floor(CGRectGetWidth(frame) * 0.00997 - 0.49), floor(CGRectGetHeight(frame) * 0.86277 + 0.5) - floor(CGRectGetHeight(frame) * 0.67565 + 0.5));
     NSMutableParagraphStyle* text6Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text6Style.alignment = NSTextAlignmentCenter;
 
@@ -2268,7 +2268,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 7 Drawing
-    CGRect text7Rect = CGRectMake(6, 93, 59, 16);
+    CGRect text7Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.01997 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.58209 + 0.5), floor(CGRectGetWidth(frame) * 0.21665 - 0.49) - floor(CGRectGetWidth(frame) * 0.01997 - 0.49), floor(CGRectGetHeight(frame) * 0.68189 + 0.5) - floor(CGRectGetHeight(frame) * 0.58209 + 0.5));
     NSMutableParagraphStyle* text7Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text7Style.alignment = NSTextAlignmentCenter;
 
@@ -2278,7 +2278,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 8 Drawing
-    CGRect text8Rect = CGRectMake(119, 93, 66, 16);
+    CGRect text8Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.39665 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.58209 + 0.5), floor(CGRectGetWidth(frame) * 0.61666 - 0.49) - floor(CGRectGetWidth(frame) * 0.39665 - 0.49), floor(CGRectGetHeight(frame) * 0.68189 + 0.5) - floor(CGRectGetHeight(frame) * 0.58209 + 0.5));
     NSMutableParagraphStyle* text8Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text8Style.alignment = NSTextAlignmentCenter;
 
@@ -2288,7 +2288,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 10 Drawing
-    CGRect text10Rect = CGRectMake(220, 93, 63, 16);
+    CGRect text10Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.73333 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.58209 + 0.5), floor(CGRectGetWidth(frame) * 0.94333 - 0.49) - floor(CGRectGetWidth(frame) * 0.73333 - 0.49), floor(CGRectGetHeight(frame) * 0.68189 + 0.5) - floor(CGRectGetHeight(frame) * 0.58209 + 0.5));
     NSMutableParagraphStyle* text10Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text10Style.alignment = NSTextAlignmentCenter;
 
@@ -2298,7 +2298,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 9 Drawing
-    CGRect text9Rect = CGRectMake(56, 4, 77, 15);
+    CGRect text9Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.18665 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.02695 + 0.5), floor(CGRectGetWidth(frame) * 0.44332 - 0.49) - floor(CGRectGetWidth(frame) * 0.18665 - 0.49), floor(CGRectGetHeight(frame) * 0.12051 + 0.5) - floor(CGRectGetHeight(frame) * 0.02695 + 0.5));
     NSMutableParagraphStyle* text9Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text9Style.alignment = NSTextAlignmentLeft;
 
@@ -2308,7 +2308,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 11 Drawing
-    CGRect text11Rect = CGRectMake(36, 4, 25, 18);
+    CGRect text11Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.11998 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.02695 + 0.5), floor(CGRectGetWidth(frame) * 0.20331 - 0.49) - floor(CGRectGetWidth(frame) * 0.11998 - 0.49), floor(CGRectGetHeight(frame) * 0.13922 + 0.5) - floor(CGRectGetHeight(frame) * 0.02695 + 0.5));
     NSMutableParagraphStyle* text11Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text11Style.alignment = NSTextAlignmentCenter;
 
@@ -2318,7 +2318,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol 2 Drawing
-    CGRect symbol2Rect = CGRectMake(123, 49, 66, 38);
+    CGRect symbol2Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.40998 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.30764 + 0.5), floor(CGRectGetWidth(frame) * 0.62999 - 0.49) - floor(CGRectGetWidth(frame) * 0.40998 - 0.49), floor(CGRectGetHeight(frame) * 0.54466 + 0.5) - floor(CGRectGetHeight(frame) * 0.30764 + 0.5));
     CGContextSaveGState(context);
     UIRectClip(symbol2Rect);
     CGContextTranslateCTM(context, symbol2Rect.origin.x, symbol2Rect.origin.y);
@@ -2329,7 +2329,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol Drawing
-    CGRect symbolRect = CGRectMake(225, 53, 53, 37);
+    CGRect symbolRect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.74999 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.33259 + 0.5), floor(CGRectGetWidth(frame) * 0.92666 - 0.49) - floor(CGRectGetWidth(frame) * 0.74999 - 0.49), floor(CGRectGetHeight(frame) * 0.56337 + 0.5) - floor(CGRectGetHeight(frame) * 0.33259 + 0.5));
     CGContextSaveGState(context);
     UIRectClip(symbolRect);
     CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y);
@@ -2340,7 +2340,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol 3 Drawing
-    CGRect symbol3Rect = CGRectMake(17, 4, 30, 18);
+    CGRect symbol3Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.05664 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.02695 + 0.5), floor(CGRectGetWidth(frame) * 0.15664 - 0.49) - floor(CGRectGetWidth(frame) * 0.05664 - 0.49), floor(CGRectGetHeight(frame) * 0.13922 + 0.5) - floor(CGRectGetHeight(frame) * 0.02695 + 0.5));
     CGContextSaveGState(context);
     UIRectClip(symbol3Rect);
     CGContextTranslateCTM(context, symbol3Rect.origin.x, symbol3Rect.origin.y);
@@ -2351,13 +2351,13 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(6, 141, 179, 2)];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.01997 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.88149 + 0.5), floor(CGRectGetWidth(frame) * 0.61666 - 0.49) - floor(CGRectGetWidth(frame) * 0.01997 - 0.49), floor(CGRectGetHeight(frame) * 0.89396 + 0.5) - floor(CGRectGetHeight(frame) * 0.88149 + 0.5))];
     [UIColor.grayColor setFill];
     [rectanglePath fill];
 
 
     //// Text 3 Drawing
-    CGRect text3Rect = CGRectMake(69, 145, 66, 16);
+    CGRect text3Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.22998 - 0.49) + 0.99, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.90644 + 0.5), floor(CGRectGetWidth(frame) * 0.44999 - 0.49) - floor(CGRectGetWidth(frame) * 0.22998 - 0.49), floor(CGRectGetHeight(frame) * 1.00624 + 0.5) - floor(CGRectGetHeight(frame) * 0.90644 + 0.5));
     NSMutableParagraphStyle* text3Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text3Style.alignment = NSTextAlignmentCenter;
 
@@ -2368,8 +2368,8 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint: CGPointMake(283.5, 70.5)];
-    [bezierPath addCurveToPoint: CGPointMake(295.5, 52.5) controlPoint1: CGPointMake(284.5, 89.5) controlPoint2: CGPointMake(295.5, 52.5)];
+    [bezierPath moveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.94500 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.44174 * CGRectGetHeight(frame))];
+    [bezierPath addCurveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.98500 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.32947 * CGRectGetHeight(frame)) controlPoint1: CGPointMake(CGRectGetMinX(frame) + 0.94833 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.56026 * CGRectGetHeight(frame)) controlPoint2: CGPointMake(CGRectGetMinX(frame) + 0.98500 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.32947 * CGRectGetHeight(frame))];
     [VanStyleKit.oKCalculation setStroke];
     bezierPath.lineWidth = 3;
     [bezierPath stroke];
@@ -2512,13 +2512,13 @@ static UIImage* _imageOfFichaA4 = nil;
     CGContextRestoreGState(context);
 }
 
-+ (void)drawCalculationResults2WithMmaVan: (NSString*)mmaVan numHorses: (NSString*)numHorses weightHorse: (NSString*)weightHorse weightHorses: (NSString*)weightHorses weightTrailer: (NSString*)weightTrailer weightTrailerAndHorses: (NSString*)weightTrailerAndHorses
++ (void)drawCalculationResults2WithFrame: (CGRect)frame mmaVan: (NSString*)mmaVan numHorses: (NSString*)numHorses weightHorse: (NSString*)weightHorse weightHorses: (NSString*)weightHorses weightTrailer: (NSString*)weightTrailer weightTrailerAndHorses: (NSString*)weightTrailerAndHorses
 {
     //// General Declarations
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //// Text Drawing
-    CGRect textRect = CGRectMake(90, 9, 25, 36);
+    CGRect textRect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.29977 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.07059 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.38323 - 0.3) - floor(CGRectGetWidth(frame) * 0.29977 - 0.3), floor(CGRectGetHeight(frame) * 0.35926 - 0.41) - floor(CGRectGetHeight(frame) * 0.07059 - 0.41));
     NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     textStyle.alignment = NSTextAlignmentCenter;
 
@@ -2528,7 +2528,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 6 Drawing
-    CGRect text6Rect = CGRectMake(218, 68, 66, 30);
+    CGRect text6Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.72705 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.54369 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.94736 - 0.3) - floor(CGRectGetWidth(frame) * 0.72705 - 0.3), floor(CGRectGetHeight(frame) * 0.78425 - 0.41) - floor(CGRectGetHeight(frame) * 0.54369 - 0.41));
     NSMutableParagraphStyle* text6Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text6Style.alignment = NSTextAlignmentCenter;
 
@@ -2538,7 +2538,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 7 Drawing
-    CGRect text7Rect = CGRectMake(222, 49, 59, 16);
+    CGRect text7Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.74040 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.39133 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.93735 - 0.3) - floor(CGRectGetWidth(frame) * 0.74040 - 0.3), floor(CGRectGetHeight(frame) * 0.51963 - 0.41) - floor(CGRectGetHeight(frame) * 0.39133 - 0.41));
     NSMutableParagraphStyle* text7Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text7Style.alignment = NSTextAlignmentCenter;
 
@@ -2548,7 +2548,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 9 Drawing
-    CGRect text9Rect = CGRectMake(172, 15, 28, 15);
+    CGRect text9Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.57350 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.11870 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.66696 - 0.3) - floor(CGRectGetWidth(frame) * 0.57350 - 0.3), floor(CGRectGetHeight(frame) * 0.23898 - 0.41) - floor(CGRectGetHeight(frame) * 0.11870 - 0.41));
     NSMutableParagraphStyle* text9Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text9Style.alignment = NSTextAlignmentLeft;
 
@@ -2558,7 +2558,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 11 Drawing
-    CGRect text11Rect = CGRectMake(152, 15, 25, 18);
+    CGRect text11Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.50673 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.11870 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.59019 - 0.3) - floor(CGRectGetWidth(frame) * 0.50673 - 0.3), floor(CGRectGetHeight(frame) * 0.26303 - 0.41) - floor(CGRectGetHeight(frame) * 0.11870 - 0.41));
     NSMutableParagraphStyle* text11Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text11Style.alignment = NSTextAlignmentCenter;
 
@@ -2568,7 +2568,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol 3 Drawing
-    CGRect symbol3Rect = CGRectMake(124, 10, 43, 26);
+    CGRect symbol3Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.41327 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.07860 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.55681 - 0.3) - floor(CGRectGetWidth(frame) * 0.41327 - 0.3), floor(CGRectGetHeight(frame) * 0.28709 - 0.41) - floor(CGRectGetHeight(frame) * 0.07860 - 0.41));
     CGContextSaveGState(context);
     UIRectClip(symbol3Rect);
     CGContextTranslateCTM(context, symbol3Rect.origin.x, symbol3Rect.origin.y);
@@ -2579,7 +2579,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 2 Drawing
-    CGRect text2Rect = CGRectMake(176, 10, 43, 36);
+    CGRect text2Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.58685 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.07860 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.73039 - 0.3) - floor(CGRectGetWidth(frame) * 0.58685 - 0.3), floor(CGRectGetHeight(frame) * 0.36728 - 0.41) - floor(CGRectGetHeight(frame) * 0.07860 - 0.41));
     NSMutableParagraphStyle* text2Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text2Style.alignment = NSTextAlignmentCenter;
 
@@ -2589,7 +2589,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 3 Drawing
-    CGRect text3Rect = CGRectMake(1, 68, 83, 30);
+    CGRect text3Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.00269 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.54369 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.27975 - 0.3) - floor(CGRectGetWidth(frame) * 0.00269 - 0.3), floor(CGRectGetHeight(frame) * 0.78425 - 0.41) - floor(CGRectGetHeight(frame) * 0.54369 - 0.41));
     NSMutableParagraphStyle* text3Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text3Style.alignment = NSTextAlignmentCenter;
 
@@ -2599,7 +2599,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 4 Drawing
-    CGRect text4Rect = CGRectMake(116, 68, 66, 30);
+    CGRect text4Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.38656 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.54369 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.60688 - 0.3) - floor(CGRectGetWidth(frame) * 0.38656 - 0.3), floor(CGRectGetHeight(frame) * 0.78425 - 0.41) - floor(CGRectGetHeight(frame) * 0.54369 - 0.41));
     NSMutableParagraphStyle* text4Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text4Style.alignment = NSTextAlignmentCenter;
 
@@ -2609,7 +2609,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Symbol Drawing
-    CGRect symbolRect = CGRectMake(218, 5, 69, 44);
+    CGRect symbolRect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.72705 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.03851 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.95737 - 0.3) - floor(CGRectGetWidth(frame) * 0.72705 - 0.3), floor(CGRectGetHeight(frame) * 0.39133 - 0.41) - floor(CGRectGetHeight(frame) * 0.03851 - 0.41));
     CGContextSaveGState(context);
     UIRectClip(symbolRect);
     CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y);
@@ -2620,19 +2620,19 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(3, 101, 179, 2)];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.00936 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.80830 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.60688 - 0.3) - floor(CGRectGetWidth(frame) * 0.00936 - 0.3), floor(CGRectGetHeight(frame) * 0.82434 - 0.41) - floor(CGRectGetHeight(frame) * 0.80830 - 0.41))];
     [UIColor.grayColor setFill];
     [rectanglePath fill];
 
 
     //// Rectangle 2 Drawing
-    UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(125, 47, 59, 2)];
+    UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.41661 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.37530 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.61355 - 0.3) - floor(CGRectGetWidth(frame) * 0.41661 - 0.3), floor(CGRectGetHeight(frame) * 0.39133 - 0.41) - floor(CGRectGetHeight(frame) * 0.37530 - 0.41))];
     [UIColor.grayColor setFill];
     [rectangle2Path fill];
 
 
     //// Text 5 Drawing
-    CGRect text5Rect = CGRectMake(121, 35, 52, 16);
+    CGRect text5Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.40325 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.27907 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.57683 - 0.3) - floor(CGRectGetWidth(frame) * 0.40325 - 0.3), floor(CGRectGetHeight(frame) * 0.40737 - 0.41) - floor(CGRectGetHeight(frame) * 0.27907 - 0.41));
     NSMutableParagraphStyle* text5Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text5Style.alignment = NSTextAlignmentCenter;
 
@@ -2642,7 +2642,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 8 Drawing
-    CGRect text8Rect = CGRectMake(114, 49, 79, 16);
+    CGRect text8Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.37989 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.39133 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.64360 - 0.3) - floor(CGRectGetWidth(frame) * 0.37989 - 0.3), floor(CGRectGetHeight(frame) * 0.51963 - 0.41) - floor(CGRectGetHeight(frame) * 0.39133 - 0.41));
     NSMutableParagraphStyle* text8Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text8Style.alignment = NSTextAlignmentCenter;
 
@@ -2652,7 +2652,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 10 Drawing
-    CGRect text10Rect = CGRectMake(4, 49, 81, 16);
+    CGRect text10Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.01270 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.39133 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.28308 - 0.3) - floor(CGRectGetWidth(frame) * 0.01270 - 0.3), floor(CGRectGetHeight(frame) * 0.51963 - 0.41) - floor(CGRectGetHeight(frame) * 0.39133 - 0.41));
     NSMutableParagraphStyle* text10Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text10Style.alignment = NSTextAlignmentCenter;
 
@@ -2662,7 +2662,7 @@ static UIImage* _imageOfFichaA4 = nil;
 
 
     //// Text 12 Drawing
-    CGRect text12Rect = CGRectMake(55, 106, 81, 16);
+    CGRect text12Rect = CGRectMake(CGRectGetMinX(frame) + floor(CGRectGetWidth(frame) * 0.18294 - 0.3) + 0.8, CGRectGetMinY(frame) + floor(CGRectGetHeight(frame) * 0.84840 - 0.41) + 0.91, floor(CGRectGetWidth(frame) * 0.45333 - 0.3) - floor(CGRectGetWidth(frame) * 0.18294 - 0.3), floor(CGRectGetHeight(frame) * 0.97670 - 0.41) - floor(CGRectGetHeight(frame) * 0.84840 - 0.41));
     NSMutableParagraphStyle* text12Style = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     text12Style.alignment = NSTextAlignmentCenter;
 
@@ -2673,8 +2673,8 @@ static UIImage* _imageOfFichaA4 = nil;
 
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint: CGPointMake(284.5, 27.5)];
-    [bezierPath addCurveToPoint: CGPointMake(296.5, 9.5) controlPoint1: CGPointMake(285.5, 46.5) controlPoint2: CGPointMake(296.5, 9.5)];
+    [bezierPath moveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.94903 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.21893 * CGRectGetHeight(frame))];
+    [bezierPath addCurveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.98909 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.07460 * CGRectGetHeight(frame)) controlPoint1: CGPointMake(CGRectGetMinX(frame) + 0.95237 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.37129 * CGRectGetHeight(frame)) controlPoint2: CGPointMake(CGRectGetMinX(frame) + 0.98909 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.07460 * CGRectGetHeight(frame))];
     [VanStyleKit.oKCalculation setStroke];
     bezierPath.lineWidth = 3;
     [bezierPath stroke];
