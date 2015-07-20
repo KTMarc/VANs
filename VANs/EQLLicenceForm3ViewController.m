@@ -42,6 +42,7 @@
             nextViewController.model = self.model;
         }
     }
+    [self saveDataToSingleton];
 }
 
 - (void)didReceiveMemoryWarning {

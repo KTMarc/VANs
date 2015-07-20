@@ -56,6 +56,8 @@
             //NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
         }
     }
+    
+    [self saveDataToSingleton];
 }
 
 - (void)didReceiveMemoryWarning {

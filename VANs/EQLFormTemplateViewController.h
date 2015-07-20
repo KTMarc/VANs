@@ -38,4 +38,6 @@
 
 - (void)checkTypedTextContentSize;
 
+- (void)saveDataToSingleton;
+
 @end
