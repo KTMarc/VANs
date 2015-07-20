@@ -8,6 +8,8 @@
 
 #import "EQLlicenceHelpView.h"
 
+IB_DESIGNABLE
+
 @implementation EQLlicenceHelpView
 
 
@@ -15,7 +17,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [VanStyleKit drawLicencesHelp];
+    [VanStyleKit drawLicencesHelpWithFrame:self.bounds];
 }
 
 

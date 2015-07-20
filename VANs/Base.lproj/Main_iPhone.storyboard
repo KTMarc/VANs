@@ -1365,12 +1365,12 @@ Asturcon: 350-400Kg</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
-                                <rect key="frame" x="55" y="10" width="212" height="29"/>
+                                <rect key="frame" x="54" y="10" width="212" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-n3-3ox">
-                                <rect key="frame" x="70" y="292" width="180" height="42"/>
+                                <rect key="frame" x="70" y="307" width="180" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="gZh-Ri-iah"/>
@@ -1382,7 +1382,7 @@ Asturcon: 350-400Kg</string>
                                 </state>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
-                                <rect key="frame" x="36" y="49" width="250" height="29"/>
+                                <rect key="frame" x="35" y="49" width="250" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="3Hl-4D-KVT"/>
                                 </constraints>
@@ -1397,27 +1397,38 @@ Asturcon: 350-400Kg</string>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="406-JS-NXa" customClass="EQLlicenceHelpView">
-                                <rect key="frame" x="16" y="94" width="290" height="180"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-FF-3T6" userLabel="Container View">
+                                <rect key="frame" x="10" y="97" width="300" height="252"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="406-JS-NXa" customClass="EQLlicenceHelpView">
+                                        <rect key="frame" x="0.0" y="33" width="300" height="186"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="406-JS-NXa" secondAttribute="height" multiplier="29:18" id="7Tl-81-4ns"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="7wv-lD-9Ny"/>
-                                    <constraint firstAttribute="height" constant="180" id="Chs-cw-j0h"/>
+                                    <constraint firstAttribute="trailing" secondItem="406-JS-NXa" secondAttribute="trailing" id="SsF-vj-h4L"/>
+                                    <constraint firstAttribute="centerY" secondItem="406-JS-NXa" secondAttribute="centerY" id="li4-j8-yb1"/>
+                                    <constraint firstItem="406-JS-NXa" firstAttribute="leading" secondItem="hyp-FF-3T6" secondAttribute="leading" id="mUW-gc-VpK"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hyp-FF-3T6" secondAttribute="trailing" constant="10" id="0jB-lo-Oxs"/>
+                            <constraint firstItem="W4W-uq-qt4" firstAttribute="top" secondItem="hyp-FF-3T6" secondAttribute="bottom" constant="20" id="0rV-bi-fge"/>
                             <constraint firstItem="rgT-og-Ec4" firstAttribute="top" secondItem="W4W-uq-qt4" secondAttribute="bottom" constant="10" id="10Q-Wv-dbg"/>
-                            <constraint firstItem="JO3-n3-3ox" firstAttribute="top" secondItem="406-JS-NXa" secondAttribute="bottom" constant="18" id="2rm-Xv-Vx9"/>
-                            <constraint firstAttribute="centerX" secondItem="406-JS-NXa" secondAttribute="centerX" constant="-1" id="FNX-cD-3kg"/>
                             <constraint firstItem="djS-9T-iUW" firstAttribute="top" secondItem="bM3-lq-XES" secondAttribute="bottom" constant="10" id="FZo-dH-XU3"/>
-                            <constraint firstItem="gXQ-j3-JZw" firstAttribute="leading" secondItem="MtW-a6-rWu" secondAttribute="leadingMargin" constant="20" id="GGb-cB-mDk"/>
-                            <constraint firstItem="406-JS-NXa" firstAttribute="top" secondItem="gXQ-j3-JZw" secondAttribute="bottom" constant="17" id="JAP-5y-Haa"/>
                             <constraint firstAttribute="centerX" secondItem="W4W-uq-qt4" secondAttribute="centerX" id="KLY-bS-DkY"/>
+                            <constraint firstItem="W4W-uq-qt4" firstAttribute="top" secondItem="JO3-n3-3ox" secondAttribute="bottom" constant="20" id="Tfs-S2-Hf7"/>
                             <constraint firstItem="gXQ-j3-JZw" firstAttribute="top" secondItem="djS-9T-iUW" secondAttribute="bottom" constant="10" id="U04-rY-2lV"/>
-                            <constraint firstItem="djS-9T-iUW" firstAttribute="centerX" secondItem="gXQ-j3-JZw" secondAttribute="centerX" id="YE3-28-0YX"/>
+                            <constraint firstAttribute="centerX" secondItem="gXQ-j3-JZw" secondAttribute="centerX" id="h4H-9D-HVE"/>
                             <constraint firstAttribute="centerX" secondItem="JO3-n3-3ox" secondAttribute="centerX" id="ui5-hP-fBY"/>
+                            <constraint firstItem="hyp-FF-3T6" firstAttribute="top" secondItem="gXQ-j3-JZw" secondAttribute="bottom" constant="20" id="vWw-bn-28E"/>
+                            <constraint firstItem="hyp-FF-3T6" firstAttribute="leading" secondItem="MtW-a6-rWu" secondAttribute="leading" constant="10" id="wNJ-zN-23u"/>
+                            <constraint firstAttribute="centerX" secondItem="djS-9T-iUW" secondAttribute="centerX" id="wx3-dB-JkF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uHF-gY-j2r">

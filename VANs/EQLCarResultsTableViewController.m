@@ -35,6 +35,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _noResultsLabel.hidden = YES;
+    
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
 }
 
 - (void)didReceiveMemoryWarning
