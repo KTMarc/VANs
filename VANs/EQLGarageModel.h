@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EQLmodeloVan.h"
-#import "EQLFormData.h"
+
+@class EQLmodeloVan;
+@class EQLFormData;
 
 
 #define ONE_HORSE_KEY      @"1 caballo"

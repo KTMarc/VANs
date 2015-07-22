@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "EQLFormTemplateViewController.h"
-#import "EQLLicenceForm3ViewController.h"
 
 @interface EQLLicenceForm2ViewController : EQLFormTemplateViewController
 

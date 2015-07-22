@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLmodeloVan.h"
-#import "EQLVanViewController.h"
+@class EQLmodeloVan;
+
 //#import "EQLFormData.h"
 
 @interface EQLCalculationsViewController : UIViewController

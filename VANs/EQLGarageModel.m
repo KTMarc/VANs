@@ -7,6 +7,8 @@
 //
 
 #import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
+#import "EQLFormData.h"
 
 @interface EQLGarageModel()
 

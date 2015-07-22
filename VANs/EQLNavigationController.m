@@ -7,6 +7,8 @@
 //
 
 #import "EQLNavigationController.h"
+#import "EQLMenuViewController.h"
+
 
 @interface EQLNavigationController ()
 

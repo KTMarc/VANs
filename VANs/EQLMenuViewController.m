@@ -7,6 +7,12 @@
 //
 
 #import "EQLMenuViewController.h"
+#import "EQLCatalogTableViewController.h"
+#import "EQLLicenceFormViewController.h"
+#import "EQLLicenceForm1ViewController.h"
+#import "EQLcatalogButtonView.h"
+#import "EQLLicenceButtonView.h"
+#import "EQLGarageModel.h"
 
 @interface EQLMenuViewController ()
 

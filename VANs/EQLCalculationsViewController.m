@@ -7,6 +7,9 @@
 //
 
 #import "EQLCalculationsViewController.h"
+#import "EQLVanViewController.h"
+#import "EQLmodeloVan.h"
+
 
 @interface EQLCalculationsViewController ()
 

@@ -7,9 +7,8 @@
 //
 
 #import "EQLLicenceForm1ViewController.h"
-//#import "EQLLicenceForm2ViewController.h"
-//#import "EQLLicenceFormViewController.h"
-
+#import "EQLLicenceForm2ViewController.h"
+#import "EQLLicenceFormViewController.h"
 
 @interface EQLLicenceForm1ViewController ()
 

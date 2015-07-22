@@ -7,10 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLGarageModel.h"
-#import "EQLmodeloVan.h"
-#import "EQLVanViewController.h"
-#import "EQLCalculationsViewController.h"
 
 #define ONE_HORSE_SECTION       0
 #define TWO_HORSE_SECTION       1
@@ -19,7 +15,7 @@
 
 #define SECTION_KEY @"section"
 #define ROW_KEY @"row"
-
+@class EQLGarageModel;
 
 @interface EQLCarResultsTableViewController : UITableViewController
 

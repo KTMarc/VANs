@@ -7,6 +7,8 @@
 // This singleton is used to encapsulate the form data that the user enters and is used across all view controllers.
 
 #import "EQLFormData.h"
+#import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
 
 #define CARNE_B     3500;
 #define CARNE_B96   4250;

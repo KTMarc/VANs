@@ -10,6 +10,12 @@
 //                   _van.PFVan (en EQLCalculationsViewController.m)
 
 #import "EQLVanViewController.h"
+#import "EQLmodeloVan.h"
+#import "EQLPriceView.h"
+#import "EQLNumHorsesView.h"
+#import "EQLPictureViewController.h"
+
+
 
 @interface EQLVanViewController ()
 

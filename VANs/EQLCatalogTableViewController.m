@@ -8,6 +8,12 @@
 
 #import "EQLCatalogTableViewController.h"
 #import "EQLVanViewController.h"
+#import "EQLGarageModel.h"
+#import "EQLPriceView.h"
+#import "EQLNumHorsesView.h"
+#import "EQLSuspensionIcon.h"
+#import "EQLPlancherIcon.h"
+#import "EQLVistoView.h"
 
 @interface EQLCatalogTableViewController ()
 

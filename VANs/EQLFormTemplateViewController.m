@@ -7,6 +7,8 @@
 //
 
 #import "EQLFormTemplateViewController.h"
+#import "EQLGarageModel.h"
+
 
 @interface EQLFormTemplateViewController ()
 

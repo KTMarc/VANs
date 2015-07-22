@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "EQLFormTemplateViewController.h"
-#import "EQLLicenceForm4ViewController.h"
 
 @interface EQLLicenceForm3ViewController : EQLFormTemplateViewController
 @property (strong, nonatomic) IBOutlet UITextField *easyFormHorseWeightTextField;

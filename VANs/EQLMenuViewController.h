@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLCatalogTableViewController.h"
-#import "EQLLicenceFormViewController.h"
-#import "EQLLicenceForm1ViewController.h"
-#import "EQLcatalogButtonView.h"
-#import "EQLLicenceButtonView.h"
+
+@class EQLGarageModel;
 
 @interface EQLMenuViewController : UIViewController
 

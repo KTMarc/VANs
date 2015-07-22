@@ -7,6 +7,7 @@
 //
 
 #import "EQLLicenceForm3ViewController.h"
+#import "EQLLicenceForm4ViewController.h"
 
 @interface EQLLicenceForm3ViewController ()
 

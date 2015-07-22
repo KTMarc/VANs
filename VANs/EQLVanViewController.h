@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
-#import "EQLmodeloVan.h"
-#import "EQLPriceView.h"
-#import "EQLNumHorsesView.h"
-#import "EQLPictureViewController.h"
 //#import "EQLPhotosCollectionVC.h"
+@class EQLmodeloVan;
 
 @interface EQLVanViewController : UIViewController <MFMailComposeViewControllerDelegate>
 

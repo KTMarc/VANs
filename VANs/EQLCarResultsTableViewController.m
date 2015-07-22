@@ -7,7 +7,10 @@
 //
 
 #import "EQLCarResultsTableViewController.h"
-
+#import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
+#import "EQLVanViewController.h"
+#import "EQLCalculationsViewController.h"
 
 @interface EQLCarResultsTableViewController ()
 

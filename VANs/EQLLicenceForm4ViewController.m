@@ -7,6 +7,7 @@
 //
 
 #import "EQLLicenceForm4ViewController.h"
+#import "EQLCarResultsTableViewController.h"
 
 @interface EQLLicenceForm4ViewController ()
 

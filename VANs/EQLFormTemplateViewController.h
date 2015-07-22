@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLGarageModel.h"
+@class EQLGarageModel;
 
 
 
