@@ -1574,12 +1574,12 @@ Asturcon: 350-400Kg</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9xF-GQ-1ht" kind="relationship" relationship="rootViewController" id="Fev-G2-mIU"/>
+                        <segue destination="9xF-GQ-1ht" kind="relationship" relationship="rootViewController" id="nnW-VC-xwG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWZ-r1-71k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-894"/>
+            <point key="canvasLocation" x="122" y="-905"/>
         </scene>
     </scenes>
     <resources>

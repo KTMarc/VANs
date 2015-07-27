@@ -48,6 +48,14 @@
         // The number of objects to show per page
         self.objectsPerPage = 15;
         
+#pragma mark - TODO: Descomentar esto cuando entremos directamente al catalogo.
+        /*
+        self.model = [[EQLGarageModel alloc]init];
+        
+        //Bajamos los vans de la red si no los tenemos en el localDataStore.
+        [self.model doAsyncQueryToParse:false];
+         */
+        
     }
     return self;
 }
