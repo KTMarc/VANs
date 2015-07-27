@@ -126,7 +126,8 @@
         
         if (!self.executionFlag){
             if (_productionFlag){
-               // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
+#pragma mark - TODO: Clean if really don´t needed anymore
+                // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
                 
             }else{
                 //_queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;

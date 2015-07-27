@@ -16,7 +16,10 @@
 
 @interface EQLCatalogTableViewController : PFQueryTableViewController
 
+//Esta variable no se esta usando porque se descargan todos los vans cuando entramos en la tableview.
 @property (strong, nonatomic) EQLGarageModel *model;
+
+//Objects are being saved in PFQueryTableViewController -> _mutableObjects
 @property (strong, nonatomic) PFObject *parseVanOrigen;
 @property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
 @property (nonatomic) BOOL executionFlag;

@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-//No se exactament pq vaig posar aixo aqui, pero soposo que es pq despres ho passo a una funcio.
 @class EQLGarageModel;
 @interface EQLFormData : NSObject
 

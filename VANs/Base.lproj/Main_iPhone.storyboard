@@ -1586,8 +1586,8 @@ Asturcon: 350-400Kg</string>
         <image name="Gold_one.jpg" width="626" height="466"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TrJ-Ad-Ng0"/>
         <segue reference="Wiw-cc-ZWA"/>
-        <segue reference="357-NI-xMD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

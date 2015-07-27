@@ -33,13 +33,11 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
 //    self.navigationController.navigationBarHidden = true;
     
+#pragma mark - TODO: Aqui dentro hay un init que pone todo a 0 y se carga la persistencia
     //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
-#pragma mark - TODO Aqui dentro hay un init que pone todo a 0 y se carga la persistencia
     self.garage = [[EQLGarageModel alloc]init];
     
-    //Bajamos los vans si no los tenemos en el localDataStore.
-    
-    //Aqui bajamos de la red todos los Vans
+    //Bajamos los vans de la red si no los tenemos en el localDataStore.
     [self.garage doAsyncQueryToParse:false];
 }
 
@@ -70,11 +68,9 @@
 //    self.navigationController.hidesBarsWhenVerticallyCompact = false;
 }
 
-
 - (void)viewDidDisAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = false;
 }
-
 
 //ESTO NO VA
 - (void)drawRect:(CGRect)rect {
@@ -152,6 +148,7 @@
         
         if ([segue.destinationViewController isKindOfClass:[EQLCatalogTableViewController class]]){
             EQLCatalogTableViewController *nextViewController = segue.destinationViewController;
+#pragma mark - FIX: This is doing nothing because all the vans are downloaded in the tableViewController
             nextViewController.model = self.garage;
             //We pass the fulfiled array with all the vans inside.
         }

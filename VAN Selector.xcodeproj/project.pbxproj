@@ -385,7 +385,7 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		496B3A141B2BDD72002D1B1F /* UI controls sublasses */ = {
+		496B3A141B2BDD72002D1B1F /* UI - Categories for UIKit Standard Controls  */ = {
 			isa = PBXGroup;
 			children = (
 				496B3A211B2BFB33002D1B1F /* UILabel+EQLCustomFont.h */,
@@ -395,7 +395,7 @@
 				496B3A271B2BFC40002D1B1F /* UIButton+EQLCustomButton.h */,
 				496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */,
 			);
-			name = "UI controls sublasses";
+			name = "UI - Categories for UIKit Standard Controls ";
 			sourceTree = "<group>";
 		};
 		496B3A331B2E9C21002D1B1F /* UI Gauges */ = {
@@ -549,7 +549,7 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
-				496B3A141B2BDD72002D1B1F /* UI controls sublasses */,
+				496B3A141B2BDD72002D1B1F /* UI - Categories for UIKit Standard Controls  */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
 				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,

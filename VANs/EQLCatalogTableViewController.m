@@ -47,6 +47,7 @@
         
         // The number of objects to show per page
         self.objectsPerPage = 15;
+        
     }
     return self;
 }

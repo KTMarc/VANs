@@ -40,9 +40,15 @@
         licence = 0;
         pesoCaballo = 0;
          */
+    
     }
     return self;
 }
+
+//Effective Objective C book: Item 17 Implement the description method
+//- (NSString*) description{
+//    return [NSString stringWithFormat:@"%ld %ld %ld %ld", (long)mmaCar,(long) _mmrCar, (long)licence, (long)pesoCaballo];
+//}
 
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
