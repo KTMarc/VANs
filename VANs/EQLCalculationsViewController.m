@@ -34,8 +34,8 @@
     PFFile *thumbnail = _parseVan[@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[self.view viewWithTag:100];
     PFImageView *thumbnailImageView2 = (PFImageView*)[self.view viewWithTag:105];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    thumbnailImageView2.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
+    thumbnailImageView2.image = [UIImage imageNamed:@"placeholder.png"];
     thumbnailImageView.file = thumbnail;
     thumbnailImageView2.file = thumbnail;
     [thumbnailImageView loadInBackground];

@@ -143,7 +143,7 @@
 //    PFFile *userImageFile = anotherPhoto[@"imageFile"];
     
 //    UIImageView *thumbnailImageView = (UIImageView*)[cell viewWithTag:100];
-//    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+//    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
 //    thumbnailImageView.file = thumbnail;
 //    [thumbnailImageView loadInBackground];
 

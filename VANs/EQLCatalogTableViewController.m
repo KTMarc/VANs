@@ -208,7 +208,7 @@
     PFFile *thumbnailFile = [object objectForKey:@"photo"];
     PFImageView *thumbnailImageView = [[PFImageView alloc] init];
     thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
     thumbnailImageView.file = thumbnailFile;
     [thumbnailImageView loadInBackground];
     

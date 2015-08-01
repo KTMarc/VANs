@@ -31,7 +31,7 @@
     
     PFFile *thumbnail = _parseVan[@"photo"];
     _imageView = (UIImageView*)[self.view viewWithTag:100];
-    _imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    _imageView.image = [UIImage imageNamed:@"placeholder.png"];
     
 #pragma mark TODO: Arreglar esto que me he cargado al actualizar Parse
 
