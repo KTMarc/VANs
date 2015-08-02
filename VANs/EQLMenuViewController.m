@@ -29,16 +29,18 @@
     /*Apariencia del navigation controller */
     //Queria sacar estas lineas de aqui y ponerlas en el EQLNavigationController, pero alli no funcionan.
 
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-//    self.navigationController.navigationBarHidden = true;
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
     
 #pragma mark - TODO: Aqui dentro hay un init que pone todo a 0 y se carga la persistencia
-    //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
-    self.garage = [[EQLGarageModel alloc]init];
-    
-    //Bajamos los vans de la red si no los tenemos en el localDataStore.
-    [self.garage doAsyncQueryToParse:false];
+//    
+//    //Este objeto es como un singleton, porque solo tendremos uno y pondremos todos los vans ahi.
+//    self.garage = [[EQLGarageModel alloc]init];
+//    
+//    //Bajamos los vans de la red si no los tenemos en el localDataStore.
+//    [self.garage doAsyncQueryToParse:false];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,11 +59,12 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = true;
+    self.navigationController.navigationBarHidden = false;
 
     //Do de same animation so the user knows from which option did he came from
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.lastButtonPressed.alpha = 0.2;
+    
     [self fadeWith:sharedForm.lastButtonPressed andDuration: 0.3 Delay:0.0 finalAlpha:1];
 //    self.navigationController.hidesBarsOnSwipe = false;
 //    self.navigationController.hidesBarsOnTap = false;

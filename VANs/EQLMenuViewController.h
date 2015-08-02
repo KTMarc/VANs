@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @class EQLGarageModel;
 
-@interface EQLMenuViewController : UIViewController
+@interface EQLMenuViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *vansArray;

@@ -48,14 +48,11 @@
         // The number of objects to show per page
         self.objectsPerPage = 15;
         
-#pragma mark - TODO: Descomentar esto cuando entremos directamente al catalogo.
-        /*
+        //Creamos nuestro modelo una sola vez
         self.model = [[EQLGarageModel alloc]init];
         
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
         [self.model doAsyncQueryToParse:false];
-         */
-        
     }
     return self;
 }
@@ -142,7 +139,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBarHidden = FALSE;
 //    self.tableView.allowsSelection = NO;
-   
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
+
     self.navigationController.hidesBarsOnSwipe = false;
     self.navigationController.hidesBarsOnTap = false;
     self.navigationController.hidesBarsWhenVerticallyCompact = false;

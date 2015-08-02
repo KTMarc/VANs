@@ -45,7 +45,8 @@
     //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
     nameLabel.text = _parseVan[@"Name"];
-    self.navigationController.title= nameLabel.text;
+//    self.navigationController.title= nameLabel.text;
+    self.navigationItem.title = nameLabel.text;
 //    NSLog(@"Nombre del VaN:%@",_parseVan[@"Name"]);
     
     PFFile *thumbnail = _parseVan[@"photo"];
