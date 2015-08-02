@@ -14,6 +14,7 @@
 #import "EQLSuspensionIcon.h"
 #import "EQLPlancherIcon.h"
 #import "EQLVistoView.h"
+#import "EQLLicenceForm1ViewController.h"
 
 @interface EQLCatalogTableViewController ()
 
@@ -52,7 +53,7 @@
         self.model = [[EQLGarageModel alloc]init];
         
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
-        [self.model doAsyncQueryToParse:false];
+       // [self.model doAsyncQueryToParse:false];
     }
     return self;
 }
@@ -62,6 +63,10 @@
     [super objectsDidLoad:error];
     // This method is called every time objects are loaded from Parse via the PFQuery
     //    NSLog(@"%lu", (unsigned long)[self.objects count]);
+    
+    //PFQueryTableView already downloaded an array with all information and now we need to assign it to our mode.
+    self.model.allVans = self.objects;
+    [self.model separateVansByNumberOfHorses];
     
     // Only to know the number of rows in each section
     if (!self.executionFlag){
@@ -392,6 +397,15 @@
             EQLVanViewController *nextViewController = segue.destinationViewController;
             nextViewController.parseVan = sender;
         }
+    
+        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
+            EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
+            NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
+            //We pass the fulfiled array with all the vans inside.
+            nextViewController.model = self.model;
+            NSLog(@"Tenemos este modelo cuando vamos a pasar al formulario:%@", self.model);
+        
+    }
 }
 
 @end

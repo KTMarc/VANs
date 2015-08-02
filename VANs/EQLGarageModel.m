@@ -82,10 +82,9 @@
     
 }*/
 
+#pragma mark - TODO: Clean if it´s not really used anymore because we are not using initial menu.
 
 - (void)doAsyncQueryToParse: (BOOL) testing{
-    
-
         [_queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
@@ -96,31 +95,7 @@
                 }
                 self.allVans = [objects mutableCopy];
                 
-                for (id van in _allVans){
-                    // NSLog(@"Entra al for");
-                    PFObject *parseVan = van;
-                    int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
-                    
-                    //  switch ([van horsesNum]) {
-                    //Put each object where it belongs by horses number
-                    switch (numHorsesInPFObject) {
-                        case 1:
-                            [_oneHorseVans addObject:van];
-                            break;
-                        case 2:
-                            [_twoHorseVans addObject:van];
-                            break;
-                        case 3:
-                            [_threeHorseVans addObject:van];
-                            break;
-                        case 4:
-                            [_fourHorseVans addObject:van];
-                            break;
-                        default:
-                            self.executionFlag = YES;
-                            break;
-                    }
-                }
+                [self separateVansByNumberOfHorses];
                 
                 // Pin PFQuery results
                 
@@ -136,11 +111,40 @@
         }];
 }
 
+- (void) separateVansByNumberOfHorses {
+    
+    for (id van in _allVans){
+        // NSLog(@"Entra al for");
+        PFObject *parseVan = van;
+        int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
+        
+        //  switch ([van horsesNum]) {
+        //Put each object where it belongs by horses number
+        switch (numHorsesInPFObject) {
+            case 1:
+                [_oneHorseVans addObject:van];
+                break;
+            case 2:
+                [_twoHorseVans addObject:van];
+                break;
+            case 3:
+                [_threeHorseVans addObject:van];
+                break;
+            case 4:
+                [_fourHorseVans addObject:van];
+                break;
+            default:
+                self.executionFlag = YES;
+                break;
+        }
+    }
+    
+}
 
 
 
 //+ (NSArray *) allVans{
-//   
+//
 //    //Nos construye el array con todos los modelos
 //    NSMutableArray *allVans = [@[] mutableCopy];
 //    return allVans;

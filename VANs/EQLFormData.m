@@ -73,9 +73,10 @@
     NSString *textoExplicativo=@"";
     PFObject *lastAdded;
     EQLmodeloVan *modeloVan;
-    
+//    EQLFormData *sharedForm = [EQLFormData sharedForm];
     //Para poder hacer testing. Si es nil es que no estamos haciendo tests
-    if (form !=nil){
+    
+    if (form != nil){ //Si estamos pasando algo que no es nil es que estamos haciendo testing de datos que metemos desde fuera
         mmaCar = form.mmaCar;
         mmrCar = form.mmrCar;
         licence = form.licence;

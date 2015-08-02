@@ -35,7 +35,7 @@
 
 #pragma mark - Navigation
 - (IBAction)unwind:(UIStoryboardSegue *)segue{
-    //To be able to come back from the advanced mode
+    //To be able to come back from the advanced mode viewController (EQLLicenceFormViewController)
 }
 
 
@@ -46,7 +46,7 @@
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
-           // NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
+            NSLog(@"Entramos en el prepareForSegue de Form1 : Tenemos este modelo cuando estamos a punto de saltar a Form2:%@", self.model);
         }
     }
 

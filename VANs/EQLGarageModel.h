@@ -43,6 +43,7 @@
 //+ (NSArray *) allVans;
 
 - (void)doAsyncQueryToParse: (BOOL) testing;
+- (void)separateVansByNumberOfHorses;
 - (EQLmodeloVan *)oneHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)twoHorseAtIndex:(NSUInteger)index;
 - (EQLmodeloVan *)threeHorseAtIndex:(NSUInteger)index;

@@ -1503,7 +1503,7 @@ Asturcon: 350-400Kg</string>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-kO-NhD" customClass="PFImageView">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-kO-NhD" customClass="PFImageView">
                                             <rect key="frame" x="8" y="8" width="158" height="117"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="YHe-kO-NhD" secondAttribute="height" multiplier="144:107" id="7nx-qb-xmL"/>
@@ -1586,7 +1586,11 @@ Asturcon: 350-400Kg</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Catálogo Cheval Liberté" id="amn-Nn-Uis">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="082-KF-P7m"/>
+                        <barButtonItem key="rightBarButtonItem" title="Carné" id="N3e-lJ-cg6">
+                            <connections>
+                                <segue destination="U3g-si-Nee" kind="show" id="Nbf-5L-pPO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

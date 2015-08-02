@@ -62,6 +62,9 @@
         /* -------------------------------------------------------*/
         sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
       //  NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
+
+        
+        //Aqui pasamos nil porque el formulario lo pillamos dentro de la funcion que llamaremos ahora. PQ es un singleton
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
         
         

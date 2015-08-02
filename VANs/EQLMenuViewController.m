@@ -138,7 +138,7 @@
             NSLog(@"%@", self.garage);
             //We pass the fulfiled array with all the vans inside.
         }
-#pragma mark - FIX: parece todo igual y solo canvia Form / Form1
+#pragma mark - FIX: Limpiar todo esto que ya no procede
         //Opcion paso a paso
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
             EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
