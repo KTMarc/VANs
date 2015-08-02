@@ -102,6 +102,7 @@
 		49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D68C241A0945F900C54307 /* EQLNumHorsesView.m */; };
 		49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */; };
 		49E513341B6D79F8006E63E3 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E513331B6D79F8006E63E3 /* placeholder.png */; };
+		49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */; };
 		49EB51801A083CCF00B441B8 /* EQLPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB517F1A083CCF00B441B8 /* EQLPriceView.m */; };
 		49F2281E1A0976CE00E5889E /* EQLPlancherIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2281D1A0976CE00E5889E /* EQLPlancherIcon.m */; };
 		49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F228201A09800600E5889E /* EQLSuspensionIcon.m */; };
@@ -278,6 +279,8 @@
 		49E4E14419EEB255009EC47D /* EQLMapsButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapsButtonView.h; sourceTree = "<group>"; };
 		49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapsButtonView.m; sourceTree = "<group>"; };
 		49E513331B6D79F8006E63E3 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		49E513351B6D8CAD006E63E3 /* EQLFlipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFlipSegue.h; sourceTree = "<group>"; };
+		49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFlipSegue.m; sourceTree = "<group>"; };
 		49EB517E1A083CCF00B441B8 /* EQLPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPriceView.h; sourceTree = "<group>"; };
 		49EB517F1A083CCF00B441B8 /* EQLPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPriceView.m; sourceTree = "<group>"; };
 		49F2281C1A0976CE00E5889E /* EQLPlancherIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPlancherIcon.h; sourceTree = "<group>"; };
@@ -467,6 +470,8 @@
 				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
 				49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */,
 				49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */,
+				49E513351B6D8CAD006E63E3 /* EQLFlipSegue.h */,
+				49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */,
 			);
 			name = "Form 1 MMA Car";
 			sourceTree = "<group>";
@@ -928,6 +933,7 @@
 				496B3A261B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m in Sources */,
 				49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
+				49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */,
 				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
 				49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,

@@ -36,6 +36,23 @@
     return YES;
 }
 
+
+# pragma mark - Unwind from Advanced Form back to MMA form with custom flip transition.
+-(UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier{
+    
+    return [UIStoryboardSegue segueWithIdentifier:identifier source:fromViewController destination:toViewController performHandler:^{
+        UIViewController *src = fromViewController;
+        UIViewController *dst = toViewController;
+        [UIView transitionWithView:src.navigationController.view duration:0.3
+                           options:UIViewAnimationOptionTransitionFlipFromRight
+                        animations:^{
+                            
+                            [src.navigationController popToViewController:dst animated:NO];
+                        }
+                        completion:NULL];
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

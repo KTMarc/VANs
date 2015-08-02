@@ -18,6 +18,39 @@
 
 @implementation EQLGarageModel
 
+#pragma mark - Init
+-(id)init{
+    
+    if (self = [super init]) {
+        self.executionFlag = false; //En realidad tendriamos que hacer un singleton
+        
+#pragma mark - TODO: productionFlag change for Production
+        self.productionFlag = false;
+        
+        _oneHorseVans = [[NSMutableArray alloc]init];
+        _twoHorseVans = [[NSMutableArray alloc]init];
+        _threeHorseVans = [[NSMutableArray alloc]init];
+        _fourHorseVans = [[NSMutableArray alloc]init];
+        // _form = [[EQLFormData alloc]init];
+        
+        [_queryVans fromLocalDatastore];
+        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+        [_queryVans orderByAscending:@"Priority"];
+        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
+        
+        if (!self.executionFlag){
+            if (_productionFlag){
+#pragma mark - TODO: Clean if really don´t needed anymore
+                // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
+                
+            }else{
+                //_queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
+            }
+        }
+    }
+    return self;
+}
+
 #pragma mark - Properties
 
 - (NSUInteger)oneHorseCount
@@ -104,38 +137,7 @@
 }
 
 
-#pragma mark - Init
--(id)init{
-    
-    if (self = [super init]) {
-        self.executionFlag = false; //En realidad tendriamos que hacer un singleton
-        
-#pragma mark - TODO: productionFlag change for Production
-        self.productionFlag = false;
-        
-        _oneHorseVans = [[NSMutableArray alloc]init];
-        _twoHorseVans = [[NSMutableArray alloc]init];
-        _threeHorseVans = [[NSMutableArray alloc]init];
-        _fourHorseVans = [[NSMutableArray alloc]init];
-       // _form = [[EQLFormData alloc]init];
-   
-        [_queryVans fromLocalDatastore];
-        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
-        [_queryVans orderByAscending:@"Priority"];
-        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
-        
-        if (!self.executionFlag){
-            if (_productionFlag){
-#pragma mark - TODO: Clean if really don´t needed anymore
-                // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
-                
-            }else{
-                //_queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
-            }
-        }
-    }
-return self;
-}
+
 
 //+ (NSArray *) allVans{
 //   

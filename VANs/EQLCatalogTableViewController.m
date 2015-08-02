@@ -203,6 +203,12 @@
     
     //To avoid the fade to grey once we select it.
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+#pragma mark: TODO - Filter cells when checking licence needed.
+    //To display dimmed the cells of the trailers that cannot be driven because of something
+    //cell.contentView.alpha = 0.5;
+    
+    
     // Configure the cell
     
     PFFile *thumbnailFile = [object objectForKey:@"photo"];

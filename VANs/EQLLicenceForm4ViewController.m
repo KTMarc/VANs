@@ -69,7 +69,8 @@
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
         nextViewController.resultsArray = self.resultsArray;
         //NSLog(@"Después de ejectuar un calculatethings with model dentro de toCarResultsButton: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
-        
+     
+
         [self.navigationController pushViewController:nextViewController animated:YES];
         //[self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
     }

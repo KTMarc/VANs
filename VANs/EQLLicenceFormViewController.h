@@ -27,6 +27,7 @@
 
 - (IBAction)technicalSheetButton:(UIButton *)sender;
 - (IBAction)calculateWeight:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *buttonToLongForm;
 
 
 @end

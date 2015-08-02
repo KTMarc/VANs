@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
  
-    NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
+    //NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
 
     
     //Esto es para que desaparezca el teclado numerico cada vez que piquemos fuera de él
@@ -101,7 +101,7 @@
 
 - (IBAction)calculateWeight:(UIBarButtonItem *)sender {
 
-    NSLog(@"Tenemos este modelo cuando llegamos a CalculateWeight :%@", _model);
+   // NSLog(@"Tenemos este modelo cuando llegamos a CalculateWeight :%@", _model);
 
         // of the field is not empty
         //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
@@ -166,6 +166,7 @@
 }
 
 
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -173,7 +174,7 @@
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
-            NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
+            //NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
 
         }
     }
