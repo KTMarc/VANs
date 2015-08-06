@@ -8,6 +8,8 @@
 
 #import "EQLhelpIconView.h"
 
+IB_DESIGNABLE
+
 @implementation EQLhelpIconView
 
 

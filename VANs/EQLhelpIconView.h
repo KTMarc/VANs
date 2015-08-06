@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
-
-
 @interface EQLhelpIconView : UIButton
 
 @end

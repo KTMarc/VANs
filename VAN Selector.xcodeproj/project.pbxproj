@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04705A1206024A408ED26ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6F93922AF54A898E0D6690 /* libPods.a */; };
+		490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */; };
 		491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801C11B4509490043CA49 /* QuartzCore.framework */; };
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
@@ -120,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPoliceIconView.h; sourceTree = "<group>"; };
+		490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPoliceIconView.m; sourceTree = "<group>"; };
 		491801BF1B44EAFE0043CA49 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
 		491801C11B4509490043CA49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4923A5AC19CDD2B500585202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -701,6 +704,8 @@
 		49EB517D1A083CAF00B441B8 /* UI Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */,
+				490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */,
 				49EB517E1A083CCF00B441B8 /* EQLPriceView.h */,
 				49EB517F1A083CCF00B441B8 /* EQLPriceView.m */,
 				49D68C231A0945F900C54307 /* EQLNumHorsesView.h */,
@@ -924,6 +929,7 @@
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
 				496B3A491B386E5F002D1B1F /* EQLGauge1View.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
+				490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */,
 				494BA3C01B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
 				496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */,

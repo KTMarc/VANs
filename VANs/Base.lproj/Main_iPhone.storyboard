@@ -312,19 +312,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-ab-m8u">
-                                            <rect key="frame" x="244" y="9" width="85" height="21"/>
+                                            <rect key="frame" x="189" y="9" width="85" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="j0X-1o-n4E">
-                                            <rect key="frame" x="298" y="71" width="31" height="15"/>
+                                            <rect key="frame" x="243" y="71" width="31" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxPtacPossible" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33f-Vw-aLW">
-                                            <rect key="frame" x="196" y="40" width="133" height="21"/>
+                                            <rect key="frame" x="141" y="40" width="133" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1586,10 +1586,18 @@ Asturcon: 350-400Kg</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Catálogo Cheval Liberté" id="amn-Nn-Uis">
-                        <barButtonItem key="rightBarButtonItem" title="Carné" id="N3e-lJ-cg6">
-                            <connections>
-                                <segue destination="U3g-si-Nee" kind="show" id="Nbf-5L-pPO"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="kJ7-r5-QeV">
+                            <button key="customView" opaque="NO" contentMode="topRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4q-pc-U0w" customClass="EQLPoliceIconView">
+                                <rect key="frame" x="260" y="7" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="U3g-si-Nee" kind="show" id="5DG-pF-5g7"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
