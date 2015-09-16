@@ -1,15 +1,16 @@
 PODS:
-  - Bolts (1.2.0):
-    - Bolts/AppLinks (= 1.2.0)
-    - Bolts/Tasks (= 1.2.0)
-  - Bolts/AppLinks (1.2.0):
+  - Bolts (1.2.2):
+    - Bolts/AppLinks (= 1.2.2)
+    - Bolts/Tasks (= 1.2.2)
+  - Bolts/AppLinks (1.2.2):
     - Bolts/Tasks
-  - Bolts/Tasks (1.2.0)
+  - Bolts/Tasks (1.2.2)
   - FontasticIcons (0.5.0)
-  - Parse (1.7.5):
-    - Bolts/Tasks (>= 1.2.0)
-  - ParseUI (1.1.4):
-    - Parse (~> 1.7)
+  - Parse (1.8.4):
+    - Bolts/Tasks (>= 1.2.2)
+  - ParseUI (1.1.6):
+    - Bolts/Tasks (~> 1.2)
+    - Parse (~> 1.8)
 
 DEPENDENCIES:
   - Bolts
@@ -18,9 +19,9 @@ DEPENDENCIES:
   - ParseUI
 
 SPEC CHECKSUMS:
-  Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  Bolts: 20a2bd788273360cb1e31530dc19b8544eef2544
   FontasticIcons: f20740bf8f1d3565c312f1c3b9806339212b58aa
-  Parse: 7c0f115eff3e0cea3fac08d50bda47154edb8832
-  ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  Parse: c09d6efe4b2eea752765bc6f365a55516d909079
+  ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
