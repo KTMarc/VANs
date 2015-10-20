@@ -94,7 +94,6 @@
 		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
-		49C325671B47AE69007DC224 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801BF1B44EAFE0043CA49 /* Telekinesis.framework */; };
 		49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */; };
 		49C3256D1B49DBF5007DC224 /* EQLCarLargeIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
@@ -123,7 +122,6 @@
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPoliceIconView.h; sourceTree = "<group>"; };
 		490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPoliceIconView.m; sourceTree = "<group>"; };
-		491801BF1B44EAFE0043CA49 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
 		491801C11B4509490043CA49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4923A5AC19CDD2B500585202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 			files = (
 				49A871CE198158F6008BB3B3 /* XCTest.framework in Frameworks */,
 				49A871D0198158F6008BB3B3 /* UIKit.framework in Frameworks */,
-				49C325671B47AE69007DC224 /* Telekinesis.framework in Frameworks */,
 				49A871CF198158F6008BB3B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +542,6 @@
 			isa = PBXGroup;
 			children = (
 				491801C11B4509490043CA49 /* QuartzCore.framework */,
-				491801BF1B44EAFE0043CA49 /* Telekinesis.framework */,
 				496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */,
 				495B59971A053EBA00D87869 /* MessageUI.framework */,
 				4923A5AC19CDD2B500585202 /* CoreLocation.framework */,
@@ -743,6 +739,7 @@
 				49A871A5198158F5008BB3B3 /* Frameworks */,
 				49A871A6198158F5008BB3B3 /* Resources */,
 				362FA713467C461E8BCC8A68 /* Copy Pods Resources */,
+				6F92211372B0F203242956B3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -893,6 +890,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		6F92211372B0F203242956B3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1038,11 +1050,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					Telekinesis,
-				);
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1075,6 +1083,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

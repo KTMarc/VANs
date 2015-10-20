@@ -263,6 +263,7 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
 
     } else if ([node isKindOfClass:[PFObject class]]) {
         PFObject *object = (PFObject *)node;
+        NSDictionary *toSearch = nil;
 
         @synchronized ([object lock]) {
             // Check for cycles of new objects.  Any such cycle means it will be
@@ -288,18 +289,19 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
             // Recurse into this object's children looking for dirty children.
             // We only need to look at the child object's current estimated data,
             // because that's the only data that might need to be saved now.
-            [self collectDirtyChildren:object->_estimatedData.dictionaryRepresentation
-                              children:dirtyChildren
-                                 files:dirtyFiles
-                                  seen:seen
-                               seenNew:seenNew
-                           currentUser:currentUser];
-
-            if ([object isDirty:NO]) {
-                [dirtyChildren addObject:object];
-            }
+            toSearch = [object->_estimatedData.dictionaryRepresentation copy];
         }
 
+        [self collectDirtyChildren:toSearch
+                          children:dirtyChildren
+                             files:dirtyFiles
+                              seen:seen
+                           seenNew:seenNew
+                       currentUser:currentUser];
+
+        if ([object isDirty:NO]) {
+            [dirtyChildren addObject:object];
+        }
     } else if ([node isKindOfClass:[PFFile class]]) {
         PFFile *file = (PFFile *)node;
         if (!file.url) {
@@ -476,6 +478,7 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
                         for (PFObject *object in objectBatch) {
                             PFRESTCommand *command = nil;
                             @synchronized ([object lock]) {
+                                [object _objectWillSave];
                                 [object _checkSaveParametersWithCurrentUser:currentUser];
                                 command = [object _constructSaveCommandForChanges:[object unsavedChanges]
                                                                      sessionToken:sessionToken
@@ -796,11 +799,6 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
 ///--------------------------------------
 #pragma mark - Validations
 ///--------------------------------------
-
-// Validations that are done on delete. For now, there is nothing.
-- (void)checkDeleteParams {
-    return;
-}
 
 // Validations that are done on save. For now, there is nothing.
 - (void)_checkSaveParametersWithCurrentUser:(PFUser *)currentUser {
@@ -1148,6 +1146,7 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
             return [self _validateSaveEventuallyAsync];
         }] continueWithSuccessBlock:^id(BFTask *task) {
             @synchronized (lock) {
+                [self _objectWillSave];
                 if (![self isDirty:NO]) {
                     return [BFTask taskWithResult:@YES];
                 }
@@ -1484,6 +1483,8 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
                     return [BFTask taskWithResult:@YES];
                 }
 
+                [self _objectWillSave];
+
                 // Snapshot the current set of changes, and push a new changeset into the queue.
                 PFOperationSet *changes = [self unsavedChanges];
 
@@ -1527,8 +1528,6 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
 }
 
 - (BFTask *)deleteAsync:(BFTask *)toAwait {
-    [self checkDeleteParams];
-
     PFCurrentUserController *controller = [[self class] currentUserController];
     return [[controller getCurrentUserSessionTokenAsync] continueWithBlock:^id(BFTask *task) {
         NSString *sessionToken = task.result;
@@ -1564,11 +1563,7 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
 }
 
 - (PFRESTCommand *)_currentDeleteCommandWithSessionToken:(NSString *)sessionToken {
-    @synchronized (lock) {
-        [self checkDeleteParams];
-        return [PFRESTObjectCommand deleteObjectCommandForObjectState:self._state
-                                                     withSessionToken:sessionToken];
-    }
+    return [PFRESTObjectCommand deleteObjectCommandForObjectState:self._state withSessionToken:sessionToken];
 }
 
 ///--------------------------------------
@@ -1793,10 +1788,31 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
     return [PFObjectState stateWithParseClassName:className objectId:objectId isComplete:complete];
 }
 
-#pragma mark Validation
+///--------------------------------------
+#pragma mark - Validation
+///--------------------------------------
 
-- (BFTask *)_validateSaveEventuallyAsync {
+- (BFTask PF_GENERIC(PFVoid) *)_validateFetchAsync {
+    if (!self._state.objectId) {
+        NSError *error = [PFErrorUtilities errorWithCode:kPFErrorMissingObjectId
+                                                 message:@"Can't fetch an object that hasn't been saved to the server."];
+        return [BFTask taskWithError:error];
+    }
     return [BFTask taskWithResult:nil];
+}
+
+- (BFTask PF_GENERIC(PFVoid) *)_validateDeleteAsync {
+    return [BFTask taskWithResult:nil];
+}
+
+- (BFTask PF_GENERIC(PFVoid) *)_validateSaveEventuallyAsync {
+    return [BFTask taskWithResult:nil];
+}
+
+#pragma mark Object Will Save
+
+- (void)_objectWillSave {
+    // Do nothing.
 }
 
 ///--------------------------------------
@@ -2002,9 +2018,10 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
 - (BFTask *)deleteEventually {
     return [[[_eventuallyTaskQueue enqueue:^BFTask *(BFTask *toAwait) {
         NSString *sessionToken = [PFUser currentSessionToken];
-        return [toAwait continueAsyncWithBlock:^id(BFTask *task) {
+        return [[toAwait continueAsyncWithBlock:^id(BFTask *task) {
+            return [self _validateDeleteAsync];
+        }] continueWithSuccessBlock:^id(BFTask *task) {
             @synchronized (lock) {
-                [self checkDeleteParams];
                 _deletingEventually += 1;
 
                 PFOfflineStore *store = [Parse _currentManager].offlineStore;
@@ -2462,12 +2479,18 @@ static BOOL PFObjectValueIsKindOfMutableContainerClass(id object) {
         NSArray *uniqueObjects = [PFObjectBatchController uniqueObjectsArrayFromArray:deleteObjects usingFilter:^BOOL(PFObject *object) {
             return (object.objectId != nil);
         }];
-        [uniqueObjects makeObjectsPerformSelector:@selector(checkDeleteParams)]; // TODO: (nlutsenko) Make it async?
-        return [self _enqueue:^BFTask *(BFTask *toAwait) {
-            return [toAwait continueAsyncWithBlock:^id(BFTask *task) {
-                return [[self objectBatchController] deleteObjectsAsync:uniqueObjects withSessionToken:sessionToken];
-            }];
-        } forObjects:uniqueObjects];
+        NSMutableArray PF_GENERIC(BFTask <PFVoid> *) *validationTasks = [NSMutableArray array];
+        for (PFObject *object in uniqueObjects) {
+            [validationTasks addObject:[object _validateDeleteAsync]];
+        }
+        return [[BFTask taskForCompletionOfAllTasks:validationTasks] continueWithSuccessBlock:^id(BFTask *task) {
+            return [self _enqueue:^BFTask *(BFTask *toAwait) {
+                return [toAwait continueAsyncWithBlock:^id(BFTask *task) {
+                    return [[self objectBatchController] deleteObjectsAsync:uniqueObjects
+                                                           withSessionToken:sessionToken];
+                }];
+            } forObjects:uniqueObjects];
+        }];
     }] continueWithSuccessResult:@YES];
 }
 
