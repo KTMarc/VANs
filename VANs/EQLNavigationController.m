@@ -65,13 +65,16 @@
             NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:20],
             NSForegroundColorAttributeName : [UIColor whiteColor],
                                                            }];
-    
+    //This is going to affect all instances in the whole App. That means that we may want to specifiy different values in some places.
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
             NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:18],
             NSForegroundColorAttributeName : [UIColor whiteColor],}
             forState:UIControlStateNormal];
    
-    // [VanStyleKit vermellEquus]
+    //if we want to specify a special case, we must do some introspection to see where we are.
+    //Here we specify the color of the font when we are inside the toolbar above the keyboard in the textFields
+    [[UIBarButtonItem appearanceWhenContainedIn:[UIToolbar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [VanStyleKit vermellEquus]} forState:UIControlStateNormal];
+    
 }
 
 

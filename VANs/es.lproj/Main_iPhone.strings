@@ -1,225 +1,249 @@
 
-/* Class = "IBUIBarButtonItem"; title = "Menu"; ObjectID = "082-KF-P7m"; */
-"082-KF-P7m.title" = "Menu";
+/* Class = "UIBarButtonItem"; title = "Siguiente"; ObjectID = "05S-PA-YAi"; */
+"05S-PA-YAi.title" = "Siguiente";
 
-/* Class = "IBUILabel"; text = "El peso de media de uno de sus caballos"; ObjectID = "11a-fJ-oog"; */
+/* Class = "UILabel"; text = "El peso de media de uno de sus caballos"; ObjectID = "11a-fJ-oog"; */
 "11a-fJ-oog.text" = "El peso de media de uno de sus caballos";
 
-/* Class = "IBUITabBarItem"; title = "Ficha A4 (Nuevas)"; ObjectID = "1hr-4f-7DH"; */
+/* Class = "UITabBarItem"; title = "Ficha A4 (Nuevas)"; ObjectID = "1hr-4f-7DH"; */
 "1hr-4f-7DH.title" = "Ficha A4 (Nuevas)";
 
-/* Class = "IBUILabel"; text = "maxPtacLabel"; ObjectID = "33f-Vw-aLW"; */
-"33f-Vw-aLW.text" = "maxPtacLabel";
+/* Class = "UILabel"; text = "maxPtacPossible"; ObjectID = "33f-Vw-aLW"; */
+"33f-Vw-aLW.text" = "maxPtacPossible";
 
-/* Class = "IBUIBarButtonItem"; title = "MMA"; ObjectID = "3Eg-QC-LWo"; */
+/* Class = "UIBarButtonItem"; title = "MMA"; ObjectID = "3Eg-QC-LWo"; */
 "3Eg-QC-LWo.title" = "MMA";
 
-/* Class = "IBUISegmentedControl"; 4VJ-XW-iWk.segmentTitles[0] = "B"; ObjectID = "4VJ-XW-iWk"; */
+/* Class = "UISegmentedControl"; 4VJ-XW-iWk.segmentTitles[0] = "B"; ObjectID = "4VJ-XW-iWk"; */
 "4VJ-XW-iWk.segmentTitles[0]" = "B";
 
-/* Class = "IBUISegmentedControl"; 4VJ-XW-iWk.segmentTitles[1] = "B-96"; ObjectID = "4VJ-XW-iWk"; */
+/* Class = "UISegmentedControl"; 4VJ-XW-iWk.segmentTitles[1] = "B-96"; ObjectID = "4VJ-XW-iWk"; */
 "4VJ-XW-iWk.segmentTitles[1]" = "B-96";
 
-/* Class = "IBUISegmentedControl"; 4VJ-XW-iWk.segmentTitles[2] = "B+E"; ObjectID = "4VJ-XW-iWk"; */
+/* Class = "UISegmentedControl"; 4VJ-XW-iWk.segmentTitles[2] = "B+E"; ObjectID = "4VJ-XW-iWk"; */
 "4VJ-XW-iWk.segmentTitles[2]" = "B+E";
 
-/* Class = "IBUILabel"; text = "MMA (Masa Maxima Autorizada)"; ObjectID = "4fp-Do-pVw"; */
-"4fp-Do-pVw.text" = "MMA (Masa Maxima Autorizada)";
+/* Class = "UILabel"; text = "MMA (Masa Máxima Autorizada)"; ObjectID = "4fp-Do-pVw"; */
+"4fp-Do-pVw.text" = "MMA (Masa Máxima Autorizada)";
 
-/* Class = "IBUILabel"; text = "MMA"; ObjectID = "7xP-xb-9Kf"; */
+/* Class = "UILabel"; text = "MMA"; ObjectID = "7xP-xb-9Kf"; */
 "7xP-xb-9Kf.text" = "MMA";
 
-/* Class = "IBUIButton"; normalTitle = "Hecho!"; ObjectID = "8WS-Eb-AQE"; */
+/* Class = "UIButton"; normalTitle = "Hecho!"; ObjectID = "8WS-Eb-AQE"; */
 "8WS-Eb-AQE.normalTitle" = "Hecho!";
 
-/* Class = "IBUILabel"; text = "Ejemplos pony:"; ObjectID = "938-1I-HcY"; */
+/* Class = "UILabel"; text = "Ejemplos pony:"; ObjectID = "938-1I-HcY"; */
 "938-1I-HcY.text" = "Ejemplos pony:";
 
-/* Class = "IBUILabel"; text = "MMR c/f"; ObjectID = "9e3-kq-aAa"; */
+/* Class = "UILabel"; text = "MMR c/f"; ObjectID = "9e3-kq-aAa"; */
 "9e3-kq-aAa.text" = "MMR c/f";
 
-/* Class = "IBUIViewController"; title = "MENU - Van Selector"; ObjectID = "9xF-GQ-1ht"; */
+/* Class = "UIViewController"; title = "MENU - Van Selector"; ObjectID = "9xF-GQ-1ht"; */
 "9xF-GQ-1ht.title" = "MENU - Van Selector";
 
-/* Class = "IBUITextField"; placeholder = "2.000"; ObjectID = "BRA-CJ-Bd4"; */
+/* Class = "UITextField"; placeholder = "2.000"; ObjectID = "BRA-CJ-Bd4"; */
 "BRA-CJ-Bd4.placeholder" = "2.000";
 
-/* Class = "IBUITextField"; text = "2350"; ObjectID = "BRA-CJ-Bd4"; */
+/* Class = "UITextField"; text = "2350"; ObjectID = "BRA-CJ-Bd4"; */
 "BRA-CJ-Bd4.text" = "2350";
 
-/* Class = "IBUILabel"; text = "Seleccione su carné:"; ObjectID = "Bhf-WO-E0S"; */
+/* Class = "UILabel"; text = "Seleccione su carné:"; ObjectID = "Bhf-WO-E0S"; */
 "Bhf-WO-E0S.text" = "Seleccione su carné:";
 
-/* Class = "IBUILabel"; text = "Ejemplos:\n\nBMW X5 3.0d: 3.085Kg \nRange Rover Evoque: 2.350Kg\nToyota Land Cruiser 3.0d: 2.600Kg \nAudi A4 Avant 2.0TDI: 2.215Kg "; ObjectID = "Bkd-PZ-Fr1"; */
+/* Class = "UILabel"; text = "Ejemplos:\n\nBMW X5 3.0d: 3.085Kg \nRange Rover Evoque: 2.350Kg\nToyota Land Cruiser 3.0d: 2.600Kg \nAudi A4 Avant 2.0TDI: 2.215Kg "; ObjectID = "Bkd-PZ-Fr1"; */
 "Bkd-PZ-Fr1.text" = "Ejemplos:\n\nBMW X5 3.0d: 3.085Kg \nRange Rover Evoque: 2.350Kg\nToyota Land Cruiser 3.0d: 2.600Kg \nAudi A4 Avant 2.0TDI: 2.215Kg ";
 
-/* Class = "IBUIButton"; normalTitle = "Siguiente"; ObjectID = "EXd-ER-Eaj"; */
-"EXd-ER-Eaj.normalTitle" = "Siguiente";
-
-/* Class = "IBUILabel"; text = "Modelo VAN"; ObjectID = "G9l-Od-ol1"; */
+/* Class = "UILabel"; text = "Modelo VAN"; ObjectID = "G9l-Od-ol1"; */
 "G9l-Od-ol1.text" = "Modelo VAN";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "HFu-GI-4Qc"; */
+/* Class = "UILabel"; text = "Kg."; ObjectID = "HFu-GI-4Qc"; */
 "HFu-GI-4Qc.text" = "Kg.";
 
-/* Class = "IBUILabel"; text = "IVA no incluido"; ObjectID = "Hab-BS-Aoi"; */
+/* Class = "UILabel"; text = "IVA no incluido"; ObjectID = "Hab-BS-Aoi"; */
 "Hab-BS-Aoi.text" = "IVA no incluido";
 
-/* Class = "IBUITextField"; placeholder = "2.000"; ObjectID = "I4e-92-cDO"; */
+/* Class = "UIButton"; normalTitle = "Modo paso a paso"; ObjectID = "Hul-Rv-TWZ"; */
+"Hul-Rv-TWZ.normalTitle" = "Modo paso a paso";
+
+/* Class = "UITextField"; placeholder = "2.000"; ObjectID = "I4e-92-cDO"; */
 "I4e-92-cDO.placeholder" = "2.000";
 
-/* Class = "IBUITextField"; text = "1900"; ObjectID = "I4e-92-cDO"; */
+/* Class = "UITextField"; text = "1900"; ObjectID = "I4e-92-cDO"; */
 "I4e-92-cDO.text" = "1900";
 
-/* Class = "IBUITextField"; placeholder = "1.500"; ObjectID = "Ivt-Dt-JYh"; */
+/* Class = "UITextField"; placeholder = "1.500"; ObjectID = "Ivt-Dt-JYh"; */
 "Ivt-Dt-JYh.placeholder" = "1.500";
 
-/* Class = "IBUIButton"; normalTitle = "Siguiente"; ObjectID = "JO3-n3-3ox"; */
+/* Class = "UITextField"; text = "1800"; ObjectID = "Ivt-Dt-JYh"; */
+"Ivt-Dt-JYh.text" = "1800";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "JO3-n3-3ox"; */
 "JO3-n3-3ox.normalTitle" = "Siguiente";
 
-/* Class = "IBUILabel"; text = "nameLabel"; ObjectID = "JQu-ab-m8u"; */
+/* Class = "UILabel"; text = "nameLabel"; ObjectID = "JQu-ab-m8u"; */
 "JQu-ab-m8u.text" = "nameLabel";
 
-/* Class = "IBUIBarButtonItem"; title = "Menu"; ObjectID = "Jnj-bq-AQ1"; */
+/* Class = "UIBarButtonItem"; title = "Menu"; ObjectID = "Jnj-bq-AQ1"; */
 "Jnj-bq-AQ1.title" = "Menu";
 
-/* Class = "IBUILabel"; text = "nameLabel"; ObjectID = "KVQ-S4-Eyb"; */
+/* Class = "UILabel"; text = "nameLabel"; ObjectID = "KVQ-S4-Eyb"; */
 "KVQ-S4-Eyb.text" = "nameLabel";
 
-/* Class = "IBUILabel"; text = "Características"; ObjectID = "Lqc-g3-v9m"; */
+/* Class = "UIButton"; normalTitle = "Contacto"; ObjectID = "KdG-Nb-obF"; */
+"KdG-Nb-obF.normalTitle" = "Contacto";
+
+/* Class = "UIButton"; normalTitle = "Modo avanzado"; ObjectID = "Kh4-pA-GaQ"; */
+"Kh4-pA-GaQ.normalTitle" = "Modo avanzado";
+
+/* Class = "UILabel"; text = "Características"; ObjectID = "Lqc-g3-v9m"; */
 "Lqc-g3-v9m.text" = "Características";
 
-/* Class = "IBUIBarButtonItem"; title = "Caballos"; ObjectID = "M1W-mA-5Db"; */
+/* Class = "UIBarButtonItem"; title = "Caballos"; ObjectID = "M1W-mA-5Db"; */
 "M1W-mA-5Db.title" = "Caballos";
 
-/* Class = "IBUIButton"; normalTitle = "Modo avanzado"; ObjectID = "Miw-NY-N2o"; */
-"Miw-NY-N2o.normalTitle" = "Modo avanzado";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "M4q-pc-U0w"; */
+"M4q-pc-U0w.normalTitle" = "Button";
 
-/* Class = "IBUITextView"; text = "Frontal de polyester y laterales de aluminio\nPuerta trasera doble \"tipo Americana\" de aluminio.\nGran compartimento para guadarnés de serie.\nSuspensión Pullman (4 amortiguadores independientes)\nSuelo de aluminio. (novedad!)\nVentanas laterales para que los caballos saquen la cabeza cuando el van esta aparcado.\nTrampilla de ventilación en el techo\nAlumbrado interior\n3ª luz de freno\nOpciones Disponibles:\n\nVentana en la rampa frontal\n2 ventanas en las puertas traseras\n2 escotillas en el techo\nKit interior acero inoxidable\nSegunda barra para atar caballos en el exterior en inoxidable\nLateral extra\nLateral extra en acero inoxidable"; ObjectID = "OV7-r3-vDW"; */
+/* Class = "UIBarButtonItem"; title = "Siguente"; ObjectID = "NPy-1M-e5X"; */
+"NPy-1M-e5X.title" = "Siguente";
+
+/* Class = "UITextView"; text = "Frontal de polyester y laterales de aluminio\nPuerta trasera doble \"tipo Americana\" de aluminio.\nGran compartimento para guadarnés de serie.\nSuspensión Pullman (4 amortiguadores independientes)\nSuelo de aluminio. (novedad!)\nVentanas laterales para que los caballos saquen la cabeza cuando el van esta aparcado.\nTrampilla de ventilación en el techo\nAlumbrado interior\n3ª luz de freno\nOpciones Disponibles:\n\nVentana en la rampa frontal\n2 ventanas en las puertas traseras\n2 escotillas en el techo\nKit interior acero inoxidable\nSegunda barra para atar caballos en el exterior en inoxidable\nLateral extra\nLateral extra en acero inoxidable"; ObjectID = "OV7-r3-vDW"; */
 "OV7-r3-vDW.text" = "Frontal de polyester y laterales de aluminio\nPuerta trasera doble \"tipo Americana\" de aluminio.\nGran compartimento para guadarnés de serie.\nSuspensión Pullman (4 amortiguadores independientes)\nSuelo de aluminio. (novedad!)\nVentanas laterales para que los caballos saquen la cabeza cuando el van esta aparcado.\nTrampilla de ventilación en el techo\nAlumbrado interior\n3ª luz de freno\nOpciones Disponibles:\n\nVentana en la rampa frontal\n2 ventanas en las puertas traseras\n2 escotillas en el techo\nKit interior acero inoxidable\nSegunda barra para atar caballos en el exterior en inoxidable\nLateral extra\nLateral extra en acero inoxidable";
 
-/* Class = "IBUILabel"; text = "Con suspensión"; ObjectID = "OmN-eI-sfL"; */
-"OmN-eI-sfL.text" = "Con suspensión";
+/* Class = "UILabel"; text = "Suspensión"; ObjectID = "OmN-eI-sfL"; */
+"OmN-eI-sfL.text" = "Suspensión";
 
-/* Class = "IBUILabel"; text = "\nArabe: 380-500Kg \nPura Raza Español:  400-550Kg \nAmerican Quarter: 450-545Kg\nHannoveriano: 400-600Kg\nPercheron: 850-950Kg"; ObjectID = "PF1-dQ-blk"; */
-"PF1-dQ-blk.text" = "\nArabe: 380-500Kg \nPura Raza Español:  400-550Kg \nAmerican Quarter: 450-545Kg\nHannoveriano: 400-600Kg\nPercheron: 850-950Kg";
+/* Class = "UILabel"; text = "\nÁrabe: 380-500Kg \nPura Raza Español:  400-550Kg \nAmerican Quarter: 450-545Kg\nHannoveriano: 400-600Kg\nPercheron: 850-950Kg"; ObjectID = "PF1-dQ-blk"; */
+"PF1-dQ-blk.text" = "\nÁrabe: 380-500Kg \nPura Raza Español:  400-550Kg \nAmerican Quarter: 450-545Kg\nHannoveriano: 400-600Kg\nPercheron: 850-950Kg";
 
-/* Class = "IBUILabel"; text = "Peso por Caballo"; ObjectID = "Q1n-Cm-k6W"; */
+/* Class = "UILabel"; text = "Peso por Caballo"; ObjectID = "Q1n-Cm-k6W"; */
 "Q1n-Cm-k6W.text" = "Peso por Caballo";
 
-/* Class = "IBUIButton"; normalTitle = "Siguiente"; ObjectID = "Rgi-Xc-Lfi"; */
-"Rgi-Xc-Lfi.normalTitle" = "Siguiente";
-
-/* Class = "IBUILabel"; text = "Name"; ObjectID = "ShO-m1-gX6"; */
+/* Class = "UILabel"; text = "Name"; ObjectID = "ShO-m1-gX6"; */
 "ShO-m1-gX6.text" = "Name";
 
-/* Class = "IBUILabel"; text = "LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné."; ObjectID = "SkV-DK-AWu"; */
+/* Class = "UILabel"; text = "LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné."; ObjectID = "SkV-DK-AWu"; */
 "SkV-DK-AWu.text" = "LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné.";
 
-/* Class = "IBUIBarButtonItem"; title = "Detalles"; ObjectID = "Srf-GT-hMZ"; */
-"Srf-GT-hMZ.title" = "Detalles";
-
-/* Class = "IBUIBarButtonItem"; title = "Menu"; ObjectID = "TLR-AJ-d2h"; */
+/* Class = "UIBarButtonItem"; title = "Menu"; ObjectID = "TLR-AJ-d2h"; */
 "TLR-AJ-d2h.title" = "Menu";
 
-/* Class = "IBUILabel"; text = "Masa Maxima Remolcable con freno"; ObjectID = "Xgl-aY-R5K"; */
+/* Class = "UILabel"; text = "mínimo 4 cifras!"; ObjectID = "Wfc-0d-sY4"; */
+"Wfc-0d-sY4.text" = "mínimo 4 cifras!";
+
+/* Class = "UILabel"; text = "Masa Maxima Remolcable con freno"; ObjectID = "Xgl-aY-R5K"; */
 "Xgl-aY-R5K.text" = "Masa Maxima Remolcable con freno";
 
-/* Class = "IBUIBarButtonItem"; title = "MMR"; ObjectID = "ZHZ-BN-yy2"; */
+/* Class = "UIBarButtonItem"; title = "MMR"; ObjectID = "ZHZ-BN-yy2"; */
 "ZHZ-BN-yy2.title" = "MMR";
 
-/* Class = "IBUITextField"; placeholder = "400"; ObjectID = "ZWQ-gd-JK8"; */
+/* Class = "UITextField"; placeholder = "400"; ObjectID = "ZWQ-gd-JK8"; */
 "ZWQ-gd-JK8.placeholder" = "400";
 
-/* Class = "IBUITextField"; text = "450"; ObjectID = "ZWQ-gd-JK8"; */
+/* Class = "UITextField"; text = "450"; ObjectID = "ZWQ-gd-JK8"; */
 "ZWQ-gd-JK8.text" = "450";
 
-/* Class = "IBUIViewController"; title = "Foto ampliada"; ObjectID = "a0e-Ps-2Uf"; */
+/* Class = "UIViewController"; title = "Foto ampliada"; ObjectID = "a0e-Ps-2Uf"; */
 "a0e-Ps-2Uf.title" = "Foto ampliada";
 
-/* Class = "IBUINavigationItem"; title = "Catálogo Cheval Liberté"; ObjectID = "amn-Nn-Uis"; */
+/* Class = "UINavigationItem"; title = "Catálogo Cheval Liberté"; ObjectID = "amn-Nn-Uis"; */
 "amn-Nn-Uis.title" = "Catálogo Cheval Liberté";
 
-/* Class = "IBUILabel"; text = "priceLabel"; ObjectID = "bBc-tN-3Fa"; */
-"bBc-tN-3Fa.text" = "priceLabel";
-
-/* Class = "IBUITextField"; placeholder = "2.000"; ObjectID = "cFk-Bw-qAF"; */
+/* Class = "UITextField"; placeholder = "2.000"; ObjectID = "cFk-Bw-qAF"; */
 "cFk-Bw-qAF.placeholder" = "2.000";
 
-/* Class = "IBUILabel"; text = "Seleccione su carné"; ObjectID = "djS-9T-iUW"; */
+/* Class = "UITextField"; text = "2350"; ObjectID = "cFk-Bw-qAF"; */
+"cFk-Bw-qAF.text" = "2350";
+
+/* Class = "UILabel"; text = "Seleccione su carné"; ObjectID = "djS-9T-iUW"; */
 "djS-9T-iUW.text" = "Seleccione su carné";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "dwB-wD-4Jq"; */
+/* Class = "UILabel"; text = "Kg."; ObjectID = "dwB-wD-4Jq"; */
 "dwB-wD-4Jq.text" = "Kg.";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "g2H-2g-tfY"; */
+/* Class = "UIBarButtonItem"; title = "Siguiente"; ObjectID = "e0y-Vx-DXx"; */
+"e0y-Vx-DXx.title" = "Siguiente";
+
+/* Class = "UILabel"; text = "Kg."; ObjectID = "g2H-2g-tfY"; */
 "g2H-2g-tfY.text" = "Kg.";
 
-/* Class = "IBUISegmentedControl"; gXQ-j3-JZw.segmentTitles[0] = "B"; ObjectID = "gXQ-j3-JZw"; */
+/* Class = "UISegmentedControl"; gXQ-j3-JZw.segmentTitles[0] = "B"; ObjectID = "gXQ-j3-JZw"; */
 "gXQ-j3-JZw.segmentTitles[0]" = "B";
 
-/* Class = "IBUISegmentedControl"; gXQ-j3-JZw.segmentTitles[1] = "B-96"; ObjectID = "gXQ-j3-JZw"; */
+/* Class = "UISegmentedControl"; gXQ-j3-JZw.segmentTitles[1] = "B-96"; ObjectID = "gXQ-j3-JZw"; */
 "gXQ-j3-JZw.segmentTitles[1]" = "B-96";
 
-/* Class = "IBUISegmentedControl"; gXQ-j3-JZw.segmentTitles[2] = "B+E"; ObjectID = "gXQ-j3-JZw"; */
+/* Class = "UISegmentedControl"; gXQ-j3-JZw.segmentTitles[2] = "B+E"; ObjectID = "gXQ-j3-JZw"; */
 "gXQ-j3-JZw.segmentTitles[2]" = "B+E";
 
-/* Class = "IBUIBarButtonItem"; title = "Carnés"; ObjectID = "gaA-5L-nXc"; */
+/* Class = "UIBarButtonItem"; title = "Carnés"; ObjectID = "gaA-5L-nXc"; */
 "gaA-5L-nXc.title" = "Carnés";
 
-/* Class = "IBUILabel"; text = "Falabella: 35-50Kg\nShetland: 135-180Kg\nAsturcon: 350-400Kg"; ObjectID = "hJ1-hP-blk"; */
+/* Class = "UILabel"; text = "Falabella: 35-50Kg\nShetland: 135-180Kg\nAsturcon: 350-400Kg"; ObjectID = "hJ1-hP-blk"; */
 "hJ1-hP-blk.text" = "Falabella: 35-50Kg\nShetland: 135-180Kg\nAsturcon: 350-400Kg";
 
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "j0X-1o-n4E"; */
+/* Class = "UILabel"; text = "Label"; ObjectID = "j0X-1o-n4E"; */
 "j0X-1o-n4E.text" = "Label";
 
-/* Class = "IBUITextField"; placeholder = "450"; ObjectID = "nCY-wi-1XU"; */
+/* Class = "UITextField"; placeholder = "450"; ObjectID = "nCY-wi-1XU"; */
 "nCY-wi-1XU.placeholder" = "450";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "o56-l9-a5y"; */
+/* Class = "UITextField"; text = "450"; ObjectID = "nCY-wi-1XU"; */
+"nCY-wi-1XU.text" = "450";
+
+/* Class = "UILabel"; text = "Kg."; ObjectID = "o56-l9-a5y"; */
 "o56-l9-a5y.text" = "Kg.";
 
-/* Class = "IBUINavigationItem"; title = "Resultados"; ObjectID = "ojH-S9-a9L"; */
+/* Class = "UINavigationItem"; title = "Resultados"; ObjectID = "ojH-S9-a9L"; */
 "ojH-S9-a9L.title" = "Resultados";
 
-/* Class = "IBUITabBarItem"; title = "Ficha A5 (Viejas)"; ObjectID = "pOv-Y2-Rlk"; */
+/* Class = "UITabBarItem"; title = "Ficha A5 (Viejas)"; ObjectID = "pOv-Y2-Rlk"; */
 "pOv-Y2-Rlk.title" = "Ficha A5 (Viejas)";
 
-/* Class = "IBUILabel"; text = "Peso de caballo(s) "; ObjectID = "pzS-0X-vV4"; */
+/* Class = "UILabel"; text = "Peso de caballo(s) "; ObjectID = "pzS-0X-vV4"; */
 "pzS-0X-vV4.text" = "Peso de caballo(s) ";
 
-/* Class = "IBUILabel"; text = "MMR (Masa Maxima Remolcable)"; ObjectID = "qYx-af-7aM"; */
-"qYx-af-7aM.text" = "MMR (Masa Maxima Remolcable)";
+/* Class = "UILabel"; text = "MMR (Masa Máxima Remolcable)"; ObjectID = "qYx-af-7aM"; */
+"qYx-af-7aM.text" = "MMR (Masa Máxima Remolcable)";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "qZy-oR-FVC"; */
+/* Class = "UILabel"; text = "Kg."; ObjectID = "qZy-oR-FVC"; */
 "qZy-oR-FVC.text" = "Kg.";
 
-/* Class = "IBUINavigationItem"; title = "Modo avanzado"; ObjectID = "qaq-f9-JPf"; */
+/* Class = "UINavigationItem"; title = "Modo avanzado"; ObjectID = "qaq-f9-JPf"; */
 "qaq-f9-JPf.title" = "Modo avanzado";
 
-/* Class = "IBUILabel"; text = "Peso del coche más ocupantes y equipaje"; ObjectID = "quq-Gk-08H"; */
+/* Class = "UILabel"; text = "Peso del coche más ocupantes y equipaje"; ObjectID = "quq-Gk-08H"; */
 "quq-Gk-08H.text" = "Peso del coche más ocupantes y equipaje";
 
-/* Class = "IBUILabel"; text = "Peso que el coche puede arrastrar"; ObjectID = "smB-Er-HZP"; */
+/* Class = "UILabel"; text = "4 cifras!"; ObjectID = "s2z-Rk-GTf"; */
+"s2z-Rk-GTf.text" = "4 cifras!";
+
+/* Class = "UILabel"; text = "Peso que el coche puede arrastrar"; ObjectID = "smB-Er-HZP"; */
 "smB-Er-HZP.text" = "Peso que el coche puede arrastrar";
 
-/* Class = "IBUIButton"; normalTitle = "Siguiente"; ObjectID = "tMy-Ce-aKv"; */
-"tMy-Ce-aKv.normalTitle" = "Siguiente";
-
-/* Class = "IBUILabel"; text = "Busque en la ficha técnica de su coche:"; ObjectID = "uxW-Hq-Ypy"; */
+/* Class = "UILabel"; text = "Busque en la ficha técnica de su coche:"; ObjectID = "uxW-Hq-Ypy"; */
 "uxW-Hq-Ypy.text" = "Busque en la ficha técnica de su coche:";
 
-/* Class = "IBUILabel"; text = "Ejemplos caballo:"; ObjectID = "wtK-Tn-rX2"; */
+/* Class = "UILabel"; text = "4 cifras!"; ObjectID = "vw6-fk-zld"; */
+"vw6-fk-zld.text" = "4 cifras!";
+
+/* Class = "UINavigationItem"; title = "Contacto"; ObjectID = "w50-xX-V9s"; */
+"w50-xX-V9s.title" = "Contacto";
+
+/* Class = "UIBarButtonItem"; title = "Siguiente"; ObjectID = "wWp-wy-ZPi"; */
+"wWp-wy-ZPi.title" = "Siguiente";
+
+/* Class = "UILabel"; text = "Ejemplos caballo:"; ObjectID = "wtK-Tn-rX2"; */
 "wtK-Tn-rX2.text" = "Ejemplos caballo:";
 
-/* Class = "IBUILabel"; text = "Puedes llevar el"; ObjectID = "wyd-pz-fE5"; */
-"wyd-pz-fE5.text" = "Puedes llevar el";
+/* Class = "UILabel"; text = "Cálculos para el"; ObjectID = "wyd-pz-fE5"; */
+"wyd-pz-fE5.text" = "Cálculos para el";
 
-/* Class = "IBUILabel"; text = "Kg."; ObjectID = "x92-Mm-bin"; */
+/* Class = "UILabel"; text = "Kg."; ObjectID = "x92-Mm-bin"; */
 "x92-Mm-bin.text" = "Kg.";
 
-/* Class = "IBUILabel"; text = "Masa Maxima Autorizada"; ObjectID = "xJE-l3-OSP"; */
+/* Class = "UILabel"; text = "Masa Maxima Autorizada"; ObjectID = "xJE-l3-OSP"; */
 "xJE-l3-OSP.text" = "Masa Maxima Autorizada";
 
-/* Class = "IBUILabel"; text = "Ejemplos:\n\nBMW X5 3.0d: 2.700Kg \nRange Rover Evoque: 1.800Kg \nToyota Land Cruiser 3.0d: 2.800Kg \nAudi A4 Avant 2.0TDI: 1.700Kg "; ObjectID = "zNA-5y-PjK"; */
+/* Class = "UILabel"; text = "Ejemplos:\n\nBMW X5 3.0d: 2.700Kg \nRange Rover Evoque: 1.800Kg \nToyota Land Cruiser 3.0d: 2.800Kg \nAudi A4 Avant 2.0TDI: 1.700Kg "; ObjectID = "zNA-5y-PjK"; */
 "zNA-5y-PjK.text" = "Ejemplos:\n\nBMW X5 3.0d: 2.700Kg \nRange Rover Evoque: 1.800Kg \nToyota Land Cruiser 3.0d: 2.800Kg \nAudi A4 Avant 2.0TDI: 1.700Kg ";

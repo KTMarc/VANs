@@ -65,13 +65,14 @@
                                       initWithBarButtonSystemItem:
                                       UIBarButtonSystemItemFlexibleSpace
                                       target:nil action:nil];
-    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc]
-                                      initWithTitle:@"OK"
-                                      style:UIBarButtonItemStyleDone
-                                      target:self
-                                      action:@selector(doneClicked)];
-    doneBarButton.tintColor = [VanStyleKit vermellEquus];
-    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+
+    UIBarButtonItem *saveBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:
+                                      UIBarButtonSystemItemSave target:self action:
+                                      @selector(doneClicked)];
+
+    saveBarButton.style = UIBarButtonSystemItemSave;
+    keyboardToolbar.items = @[flexBarButton, saveBarButton];
     textField.inputAccessoryView = keyboardToolbar;
     /*-----END   "DONE" BUTTON IN NUMERIC PAD ---*/
     

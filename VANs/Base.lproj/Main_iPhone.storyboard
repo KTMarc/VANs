@@ -1632,7 +1632,7 @@ Asturcon: 350-400Kg</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWZ-r1-71k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="-1656"/>
+            <point key="canvasLocation" x="1020" y="-1656"/>
         </scene>
     </scenes>
     <resources>
