@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FontasticIcons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3BE1D979F7DD158600BDE8F661639DE5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5366B7F679CF2BA31EA583EA35CA2D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D46CFA760FB2DE2ECB302FBB3C38CFE</key>
+		<key>81A821810DD0DF5876BDF6000BADF044</key>
 		<dict>
 			<key>primary</key>
 			<true/>

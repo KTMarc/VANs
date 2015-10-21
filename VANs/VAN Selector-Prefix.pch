@@ -15,7 +15,6 @@
     #import <Foundation/Foundation.h>
     #import <Parse/Parse.h>
     #import <ParseUI/ParseUI.h>
-    #import <FontasticIcons.h>
     #import "VanStyleKit.h"
     #import "EQLFormData.h"
 

@@ -270,9 +270,6 @@
 		49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormTemplateViewController.m; sourceTree = "<group>"; };
 		49C3256B1B49DBF5007DC224 /* EQLCarLargeIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCarLargeIconView.h; sourceTree = "<group>"; };
 		49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCarLargeIconView.m; sourceTree = "<group>"; };
-		49D2C70B1BD7DF570022F731 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
-		49D2C70C1BD7DF570022F731 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49D2C70D1BD7DF580022F731 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49D505421A04057500CBAE64 /* EQLhelpIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLhelpIconView.h; sourceTree = "<group>"; };
 		49D505431A04057500CBAE64 /* EQLhelpIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLhelpIconView.m; sourceTree = "<group>"; };
 		49D505451A04090500CBAE64 /* EQLmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmyButton.h; sourceTree = "<group>"; };
@@ -801,7 +798,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 			);
 			mainGroup = 49A8719F198158F5008BB3B3;
 			productRefGroup = 49A871A9198158F6008BB3B3 /* Products */;
@@ -996,7 +992,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				49A871B5198158F6008BB3B3 /* en */,
-				49D2C70C1BD7DF570022F731 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1005,7 +1000,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				49A871BE198158F6008BB3B3 /* Base */,
-				49D2C70B1BD7DF570022F731 /* es */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -1014,7 +1008,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				49A871D7198158F6008BB3B3 /* en */,
-				49D2C70D1BD7DF580022F731 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
