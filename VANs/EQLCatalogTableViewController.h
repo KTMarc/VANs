@@ -23,6 +23,7 @@
 @property (strong, nonatomic) PFObject *parseVanOrigen;
 @property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
 @property (nonatomic) BOOL executionFlag;
+@property (nonatomic) BOOL shouldUpdateFromServer;
 @property (nonatomic) BOOL productionFlag;
 
 //@property (nonatomic, strong) NSArray *vansArray;

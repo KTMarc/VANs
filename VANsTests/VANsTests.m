@@ -69,7 +69,7 @@ BOOL testing = true;
     
     //Aqui lo que me gustaria es poder hacer que cargue todo el modelo normal de la aplicación (EQLGarageModel) y solo variar los valores que le hemos pasado por el formulario.
     
-    XCTAssertEqual([garage.allVans count], (NSUInteger) 6, @"No se han descargado 6 vans." );
+    XCTAssertEqual([garage.allVans count], (NSUInteger) 7, @"No se han descargado 7 vans." );
     
 }
 

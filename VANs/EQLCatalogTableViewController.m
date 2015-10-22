@@ -49,28 +49,43 @@
         // The number of objects to show per page
         self.objectsPerPage = 15;
         
+        //First time we load we want to load from the server
+        self.shouldUpdateFromServer= true;
+        
         //Creamos nuestro modelo una sola vez
         self.model = [[EQLGarageModel alloc]init];
         
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
-       // [self.model doAsyncQueryToParse:false];
+        //[self.model doAsyncQueryToParse:false];
     }
     return self;
 }
 
 
+- (void)updateGarage{
+    //PFQueryTableView already downloaded an array with all information and now we need to assign it to our model.
+    //This is done to get rid of Parse at some point and use another backend
+    self.model.allVans = [self.objects mutableCopy];
+    [self.model separateVansByNumberOfHorses];
+}
+
 - (void)objectsDidLoad:(NSError *)error {
     [super objectsDidLoad:error];
     // This method is called every time objects are loaded from Parse via the PFQuery
-    //    NSLog(@"%lu", (unsigned long)[self.objects count]);
+    //NSLog(@"Downloaded %lu objects from Parse",  (unsigned long)[self.objects count]);
     
-    //PFQueryTableView already downloaded an array with all information and now we need to assign it to our mode.
-    self.model.allVans = self.objects;
-    [self.model separateVansByNumberOfHorses];
+    // If we just updated from the server, do nothing, otherwise update from server.
+    if (self.shouldUpdateFromServer) {
+        [self refreshLocalDataStoreFromServer];
+    } else {
+        //MH: We leave this as true for the next time we are in this callback. We assume that the next time we will want to update the datastore from data form the network
+        self.shouldUpdateFromServer = true;
+    }
+    
+    [self updateGarage];
     
     // Only to know the number of rows in each section
     if (!self.executionFlag){
-        
         for (id van in self.objects){
             // NSLog(@"Entra al for");
             int numHorsesInPFObject = [van[@"horsesNum"] intValue];
@@ -93,12 +108,12 @@
         }
         self.executionFlag = YES;
     }
-    /*
-     NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
-     NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
-     NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
-     NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
-     */
+
+//     NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
+//     NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
+//     NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
+//     NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
+    
 }
 
 - (void)objectsWillLoad {
@@ -116,7 +131,7 @@
 // all objects ordered by createdAt descending.
 
 - (PFQuery *)queryForTable {
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    //PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     // tell the query to fetch all of the Weapon objects along with the user
     // get the "many" at the same time that you're getting the "one"
  //   [query includeKey:@"photosArray"];
@@ -126,11 +141,40 @@
         // and then subsequently do a query against the network.
    //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
     //Como ya hemos hecho el acceso a la red en el EQLGarageModel ya nos ha guardado en el Datastore los datos. Y si intentamos acceder al catalogo sin red, aun funciona.
-    [query fromLocalDatastore];
+    // [query fromLocalDatastore];
+    // [query orderByAscending:@"Priority"];
+    // [query whereKey:@"enabled" equalTo:@(YES)];
+    // return query;
+    return [[self baseQuery] fromLocalDatastore];
+}
+
+
+- (void)refreshLocalDataStoreFromServer
+{
+    [[[self baseQuery] findObjectsInBackground] continueWithBlock:^id(BFTask *task) {
+        if (task.error) {
+            [self.refreshControl endRefreshing];
+            return nil;
+        }
+        return [[PFObject unpinAllObjectsInBackgroundWithName:@"modeloVan"] continueWithSuccessBlock:^id(BFTask *unused) {
+            NSArray *objects = task.result;
+            return [[PFObject pinAllInBackground:objects withName:@"modeloVan"] continueWithSuccessBlock:^id(BFTask *unused) {
+                [self.refreshControl endRefreshing];
+                [self loadObjects];
+                _shouldUpdateFromServer = false;
+                return nil;
+            }];
+        }];
+    }];
+}
+
+- (PFQuery *)baseQuery {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query orderByAscending:@"Priority"];
     [query whereKey:@"enabled" equalTo:@(YES)];
     return query;
 }
+
 
 #pragma mark - View lifecycle
 

@@ -31,9 +31,12 @@
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
-        // _form = [[EQLFormData alloc]init];
         
-        [_queryVans fromLocalDatastore];
+         //_form = [[EQLFormData alloc]init];
+
+
+       // [_queryVans fromLocalDatastore];
+        //NSLog(@"Creamos el modelo Garage");
         _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
         [_queryVans orderByAscending:@"Priority"];
         [_queryVans whereKey:@"enabled" equalTo:@(YES)];
@@ -88,7 +91,7 @@
         [_queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
-                // NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
+                NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
                 if (testing) {
                     _testBlock(objects);
                     
