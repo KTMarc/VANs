@@ -29,7 +29,7 @@
 @property (strong, nonatomic) NSMutableArray *threeHorseVans;
 @property (strong, nonatomic) NSMutableArray *fourHorseVans;
 
-@property (retain, nonatomic) NSMutableDictionary *sectionMap;
+//@property (retain, nonatomic) NSMutableDictionary *sectionMap;
 
 
 @property (strong, nonatomic) PFQuery *queryVans;
