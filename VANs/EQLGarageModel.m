@@ -18,6 +18,7 @@
 
 @implementation EQLGarageModel
 
+
 #pragma mark - Init
 -(id)init{
     
@@ -31,16 +32,16 @@
         _twoHorseVans = [[NSMutableArray alloc]init];
         _threeHorseVans = [[NSMutableArray alloc]init];
         _fourHorseVans = [[NSMutableArray alloc]init];
-        
+        //_sectionMap = [[NSMutableDictionary alloc]init];
          //_form = [[EQLFormData alloc]init];
-
 
        // [_queryVans fromLocalDatastore];
         //NSLog(@"Creamos el modelo Garage");
-        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
-        [_queryVans orderByAscending:@"Priority"];
-        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
-        
+//       
+//        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+//        [_queryVans orderByAscending:@"Priority"];
+//        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
+//        
         if (!self.executionFlag){
             if (_productionFlag){
 #pragma mark - TODO: Clean if really don´t needed anymore
@@ -115,10 +116,11 @@
 }
 
 - (void) separateVansByNumberOfHorses {
-    
+
+    PFObject *parseVan;
     for (id van in _allVans){
         // NSLog(@"Entra al for");
-        PFObject *parseVan = van;
+        parseVan = van;
         int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
         
         //  switch ([van horsesNum]) {
@@ -137,14 +139,22 @@
                 [_fourHorseVans addObject:van];
                 break;
             default:
-                self.executionFlag = YES;
                 break;
         }
+     
+        
+//        NSLog(@"%@",[NSNumber numberWithUnsignedInteger:[_allVans indexOfObject:van]]);
+//        NSNumber *indexToSave =[NSNumber numberWithUnsignedInteger:[_allVans indexOfObject:van]];
+//        NSString *objectIdString = [NSString stringWithFormat:@"%@",[parseVan objectForKey:@"objectId"]];
+//        
+////        [_sectionMap setObject:indexToSave forKey:objectIdString];
+//        _sectionMap[objectIdString] = indexToSave;
+//    
     }
+//    NSLog(@"We currently have %ld elements in the dictionary", [_sectionMap count]);
+    self.executionFlag = YES;
     
 }
-
-
 
 //+ (NSArray *) allVans{
 //
@@ -152,8 +162,6 @@
 //    NSMutableArray *allVans = [@[] mutableCopy];
 //    return allVans;
 //}
-
-
 
 #pragma mark - Other
 

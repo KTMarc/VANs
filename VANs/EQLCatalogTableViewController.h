@@ -25,6 +25,8 @@
 @property (nonatomic) BOOL executionFlag;
 @property (nonatomic) BOOL shouldUpdateFromServer;
 @property (nonatomic) BOOL productionFlag;
+//@property (nonatomic, retain) NSMutableDictionary *sections;
+//@property (nonatomic, retain) NSMutableDictionary *sectionToSportTypeMap;
 
 //@property (nonatomic, strong) NSArray *vansArray;
 //@property (nonatomic, strong) NSMutableArray *vansArray;

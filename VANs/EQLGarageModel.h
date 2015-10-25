@@ -29,6 +29,9 @@
 @property (strong, nonatomic) NSMutableArray *threeHorseVans;
 @property (strong, nonatomic) NSMutableArray *fourHorseVans;
 
+@property (retain, nonatomic) NSMutableDictionary *sectionMap;
+
+
 @property (strong, nonatomic) PFQuery *queryVans;
 
 @property (nonatomic,copy)void (^testBlock)();

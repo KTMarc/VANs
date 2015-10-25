@@ -54,7 +54,8 @@
         
         //Creamos nuestro modelo una sola vez
         self.model = [[EQLGarageModel alloc]init];
-        
+//        _sections = [[NSMutableDictionary alloc]init];
+//        _sectionToSportTypeMap = [[NSMutableDictionary alloc]init];
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
         //[self.model doAsyncQueryToParse:false];
     }
@@ -65,7 +66,14 @@
 - (void)updateGarage{
     //PFQueryTableView already downloaded an array with all information and now we need to assign it to our model.
     //This is done to get rid of Parse at some point and use another backend
-    self.model.allVans = [self.objects mutableCopy];
+    
+    [self.model.oneHorseVans removeAllObjects];
+    [self.model.twoHorseVans removeAllObjects];
+    [self.model.threeHorseVans removeAllObjects];
+    [self.model.fourHorseVans removeAllObjects];
+    //Para descomentar esto primero tengo que hacer allVans mutable
+    //[self.model.allVans removeAllObjects];
+    self.model.allVans = self.objects;
     [self.model separateVansByNumberOfHorses];
 }
 
@@ -77,54 +85,17 @@
     // If we just updated from the server, do nothing, otherwise update from server.
     if (self.shouldUpdateFromServer) {
         [self refreshLocalDataStoreFromServer];
+        [self updateGarage];
     } else {
         //MH: We leave this as true for the next time we are in this callback. We assume that the next time we will want to update the datastore from data form the network
         self.shouldUpdateFromServer = true;
     }
-    
-    [self updateGarage];
-    
-    // Only to know the number of rows in each section
-    if (!self.executionFlag){
-        for (id van in self.objects){
-            // NSLog(@"Entra al for");
-            int numHorsesInPFObject = [van[@"horsesNum"] intValue];
-            switch (numHorsesInPFObject) {
-                case 1:
-                    _oneHorseCount++;
-                    break;
-                case 2:
-                    _twoHorseCount++;
-                    break;
-                case 3:
-                    _threeHorseCount++;
-                    break;
-                case 4:
-                    _fourHorseCount++;
-                    break;
-                default:
-                    break;
-            }
-        }
-        self.executionFlag = YES;
-    }
-
-//     NSLog(@" Recuento 1 caballo: %d", _oneHorseCount);
-//     NSLog(@" Recuento 2 caballos: %d", _twoHorseCount);
-//     NSLog(@" Recuento 3 caballos: %d", _threeHorseCount);
-//     NSLog(@" Recuento 4 caballos: %d", _fourHorseCount);
-    
 }
+
 
 - (void)objectsWillLoad {
     [super objectsWillLoad];
     // This method is called before a PFQuery is fired to get more objects
-    
-    self.executionFlag = NO;
-    _oneHorseCount = 0;
-    _twoHorseCount = 0;
-    _threeHorseCount = 0;
-    _fourHorseCount = 0;
 }
 
 // Override to customize what kind of query to perform on the class. The default is to query for
@@ -134,12 +105,12 @@
     //PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     // tell the query to fetch all of the Weapon objects along with the user
     // get the "many" at the same time that you're getting the "one"
- //   [query includeKey:@"photosArray"];
+    //   [query includeKey:@"photosArray"];
     
     //Esto es lo pone en la superclase PFQueryViewController:
-        // If no objects are loaded in memory, we look to the cache first to fill the table
-        // and then subsequently do a query against the network.
-   //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    //Asi pues ya controla si se han cargado objetos la vez anterior y si estamos usando localDatastore. Si usamos local Datastore no podemos usar las cachepolicy!!
     //Como ya hemos hecho el acceso a la red en el EQLGarageModel ya nos ha guardado en el Datastore los datos. Y si intentamos acceder al catalogo sin red, aun funciona.
     // [query fromLocalDatastore];
     // [query orderByAscending:@"Priority"];
@@ -187,10 +158,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBarHidden = FALSE;
-//    self.tableView.allowsSelection = NO;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0]; //Fondo rojo equus
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; //Texto de los botones en blanco
-
+    //    self.tableView.allowsSelection = NO;
+    //Fondo rojo equus
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:1.0];
+    //Texto de los botones en blanco
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
     self.navigationController.hidesBarsOnSwipe = false;
     self.navigationController.hidesBarsOnTap = false;
     self.navigationController.hidesBarsWhenVerticallyCompact = false;
@@ -239,6 +212,84 @@
 }
 
 
+- (PFObject *)objectAtIndexPath:(NSIndexPath *)indexPath {
+    PFObject *aux = nil;
+    switch (indexPath.section) {
+        case 0:
+            aux = [self.model.oneHorseVans objectAtIndex:indexPath.row];
+            break;
+        case 1:
+            aux = [self.model.twoHorseVans objectAtIndex:indexPath.row];
+            break;
+        case 2:
+            aux = [self.model.threeHorseVans objectAtIndex:indexPath.row];
+            break;
+        case 3:
+            aux = [self.model.fourHorseVans objectAtIndex:indexPath.row];
+            break;
+        default:
+            break;
+    }
+
+    return aux;
+    //return [self.objects objectAtIndex:(NSInteger)[_model.sectionMap objectForKey:[aux objectForKey:@"objectId"]]];
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+     return 4;
+    //return self.sections.allKeys.count;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    
+        NSUInteger count = 0;
+    
+        if (section == ONE_HORSE_SECTION) {
+            count = _model.oneHorseCount;
+    
+        }else if (section == TWO_HORSE_SECTION) {
+            count = _model.twoHorseCount;
+        }else if (section == THREE_HORSE_SECTION) {
+            count = _model.threeHorseCount;
+        }
+        else {
+            count = _model.fourHorseCount;
+        }
+    
+        return count;
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+        NSString *sectionName;
+    
+        switch (section)
+        {
+            case 0:
+                sectionName = @"1 Caballo";
+                break;
+            case 1:
+                sectionName = @"2 Caballos";
+                break;
+            case 2:
+                sectionName = @"3 Caballos";
+                break;
+            case 3:
+                sectionName = @"4 Caballos";
+                break;
+            default:
+                break;
+        }
+        return sectionName;
+
+}
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the first key in the object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
@@ -302,60 +353,10 @@
     return cell;
 }
 
+
+
+
 /*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 4;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    
-    NSUInteger count = 0;
-    
-    if (section == ONE_HORSE_SECTION) {
-        count = _oneHorseCount;
-    
-    }else if (section == TWO_HORSE_SECTION) {
-        count = _twoHorseCount;
-    }else if (section == THREE_HORSE_SECTION) {
-        count = _threeHorseCount;
-    }
-    else {
-        count = _fourHorseCount;
-    }
-    
-    return count;
-}
-
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    
-    switch (section)
-    {
-        case 0:
-            sectionName = @"1 Caballo";
-            break;
-        case 1:
-            sectionName = @"2 Caballos";
-            break;
-        case 2:
-            sectionName = @"3 Caballos";
-            break;
-        case 3:
-            sectionName = @"4 Caballos";
-            break;
-        default:
-            break;
-    }
-    return sectionName;
-}
-
  // Override if you need to change the ordering of objects in the table.
  - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
  return [objects objectAtIndex:indexPath.row];
@@ -430,24 +431,24 @@
     
     self.parseVanOrigen = [self.objects objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"comingFromCatalog" sender:self.parseVanOrigen];
-   // NSLog(@"%@", self.parseVanOrigen[@"Name"]);
+    // NSLog(@"%@", self.parseVanOrigen[@"Name"]);
     
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-        if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
-            //We pass the array of pictures, not the vanObject
-            EQLVanViewController *nextViewController = segue.destinationViewController;
-            nextViewController.parseVan = sender;
-        }
+    if ([segue.destinationViewController isKindOfClass:[EQLVanViewController class]]){
+        //We pass the array of pictures, not the vanObject
+        EQLVanViewController *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan = sender;
+    }
     
-        if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
-            EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
-            NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
-            //We pass the fulfiled array with all the vans inside.
-            nextViewController.model = self.model;
-            NSLog(@"Tenemos este modelo cuando vamos a pasar al formulario:%@", self.model);
+    if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
+        EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
+        NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
+        //We pass the fulfiled array with all the vans inside.
+        nextViewController.model = self.model;
+        NSLog(@"Tenemos este modelo cuando vamos a pasar al formulario:%@", self.model);
         
     }
 }
