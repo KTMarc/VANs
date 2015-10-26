@@ -67,6 +67,7 @@
     int pesoDisponible= 0;
     int licenceWeight = -1;
     BOOL logs = true;
+    BOOL canHavePtacbetweenBoundries = true;
     int mmaVanActual = 0;
     //BOOL notBrochureWeights = NO;
     NSString *lastObjectId =@"";
@@ -108,7 +109,8 @@
     
     //  for (NSNumber *each in licences){ //Iteramos en numeros enteros
     //Accedemos a objetos
-    maximumPTAC = licenceWeight - (int)mmaCar;
+    maximumPTAC = licenceWeight - (int)mmaCar; //In some countries like Spain, it´s possible to specify an exact weight.
+
     //  if (licenceWeight.intValue == licenceWeight){ //Solo haremos todo en el carne que tengamos seleccionado
     if (model != nil){
     if (logs) {NSLog(@"Se ha seleccionado el carne de %i Kg" ,licenceWeight);}
@@ -118,15 +120,17 @@
         if (logs) {NSLog(@"Estamos en la posición del array: %lu", (unsigned long)[model.allVans indexOfObject:van]);}
         //Aquesta merda comença amb index 1, no 0 .
         
-        
         if (logs) { NSLog(@"\n\n--------------------------------------VAN %@---------------------------------------",van[@"Name"]);}
         
+        if (canHavePtacbetweenBoundries){
+            [van[@"ptacs"] addObject:[NSNumber numberWithInt:maximumPTAC]];
+        }
         for (NSNumber *ptacAct in van[@"ptacs"]){ //Aqui ja estem en el punt on volem, no cal dir [[_vansArray objectAtIndex: van] ptacs]. Iteramos en numeros enteros
             mmaVanActual = ptacAct.intValue;
             if (logs) { NSLog(@"\n---------------------------------------------------------------------MMA %@----------",ptacAct);
             }
             
-            //Si el coche permite arrastrar este PTAC y que la ptac del van que estamos mirando no es superior a la MMA del coche
+            //Si el coche permite arrastrar este PTAC y  la ptac del van que estamos mirando no es superior a la MMA del coche
             if ((mmrCar >= mmaVanActual) && (tara >= mmaVanActual)){
                 //Si el peso Maximo disponible es mayor al peso actual que estamos comprovando
               

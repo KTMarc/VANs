@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ye-rQ-MZa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ye-rQ-MZa">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -27,6 +27,7 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-xb-9Kf">
                                 <rect key="frame" x="-40" y="112" width="98" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="OMq-Gk-bKI"/>
                                 </constraints>
@@ -35,31 +36,37 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-Bw-qAF">
                                 <rect key="frame" x="160" y="109" width="357" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1800" borderStyle="roundedRect" placeholder="1.500" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-Dt-JYh">
                                 <rect key="frame" x="160" y="148" width="357" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR c/f" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e3-kq-aAa">
                                 <rect key="frame" x="17" y="152" width="65" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZy-oR-FVC">
                                 <rect key="frame" x="525" y="108" width="25" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso de caballo(s) " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzS-0X-vV4">
                                 <rect key="frame" x="19" y="199" width="547" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busque en la ficha técnica de su coche:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-Hq-Ypy">
                                 <rect key="frame" x="149" y="78" width="287" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ttz-Bb-IeK"/>
                                 </constraints>
@@ -68,6 +75,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-WO-E0S">
                                 <rect key="frame" x="22" y="9" width="539" height="18"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="OPf-lr-fKF"/>
                                 </constraints>
@@ -76,6 +84,7 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-XW-iWk">
                                 <rect key="frame" x="22" y="40" width="564" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="B"/>
                                     <segment title="B-96"/>
@@ -84,17 +93,20 @@
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x92-Mm-bin">
                                 <rect key="frame" x="525" y="152" width="25" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa Maxima Autorizada" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-l3-OSP">
                                 <rect key="frame" x="18" y="129" width="476" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-aT-bvc">
                                 <rect key="frame" x="558" y="108" width="22" height="22"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="O14-dh-WE9"/>
                                 </constraints>
@@ -109,6 +121,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-LQ-vga">
                                 <rect key="frame" x="558" y="151" width="22" height="22"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -118,6 +131,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa Maxima Remolcable con freno" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-aY-R5K">
                                 <rect key="frame" x="17" y="175" width="552" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Qnz-Ld-kTZ"/>
                                 </constraints>
@@ -127,11 +141,13 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-2g-tfY">
                                 <rect key="frame" x="525" y="199" width="25" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WS-Eb-AQE">
                                 <rect key="frame" x="210" y="444" width="180" height="42"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="FD1-UR-U0r"/>
@@ -148,11 +164,13 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="450" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-wi-1XU">
                                 <rect key="frame" x="160" y="195" width="357" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hul-Rv-TWZ">
                                 <rect key="frame" x="444" y="491" width="126" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Modo paso a paso">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -161,6 +179,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pzS-0X-vV4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-1" id="0kY-81-A51"/>
@@ -244,8 +263,10 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Cj-Ufg">
                                 <rect key="frame" x="0.0" y="-65" width="320" height="432"/>
+                                <animations/>
                             </scrollView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Bda-Cj-Ufg" secondAttribute="trailing" id="Gur-D4-tA6"/>
@@ -266,7 +287,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2030" y="799"/>
+            <point key="canvasLocation" x="1664" y="467"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="D3R-Of-cTD">
@@ -277,6 +298,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="iA3-rP-w99">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -286,7 +308,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez7-IS-Qev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="-192"/>
+            <point key="canvasLocation" x="1865" y="-158"/>
         </scene>
         <!--Resultados-->
         <scene sceneID="oum-ae-qeG">
@@ -295,10 +317,12 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="vzv-la-0ZH">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SkV-DK-AWu">
                             <rect key="frame" x="0.0" y="162" width="320" height="89"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -313,29 +337,34 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-oc-jdv" customClass="PFImageView">
                                             <rect key="frame" x="0.0" y="1" width="199" height="138"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="199" id="11s-0U-X08"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-ab-m8u">
                                             <rect key="frame" x="190" y="9" width="84" height="21"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="j0X-1o-n4E">
                                             <rect key="frame" x="243" y="71" width="31" height="15"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxPtacPossible" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33f-Vw-aLW">
                                             <rect key="frame" x="143" y="40" width="131" height="21"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="Jff-oc-jdv" firstAttribute="centerY" secondItem="gUN-qs-4sO" secondAttribute="centerY" id="1DE-yV-grR"/>
                                         <constraint firstItem="j0X-1o-n4E" firstAttribute="top" secondItem="33f-Vw-aLW" secondAttribute="bottom" constant="10" id="7X4-NN-ZSA"/>
@@ -348,6 +377,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="JQu-ab-m8u" secondAttribute="trailing" constant="5" id="raP-ya-g19"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <connections>
                                     <segue destination="pbS-Ez-t1M" kind="show" id="5Ly-Ds-1g4"/>
                                 </connections>
@@ -388,6 +418,7 @@
                                         <subviews>
                                             <imageView tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FH0-wJ-ZPi" customClass="PFImageView">
                                                 <rect key="frame" x="0.0" y="15" width="400" height="271"/>
+                                                <animations/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FH0-wJ-ZPi" secondAttribute="height" multiplier="320:217" id="K9C-mT-Xwq"/>
@@ -398,18 +429,21 @@
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modelo VAN" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-Od-ol1">
                                                 <rect key="frame" x="289" y="10" width="101" height="21"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Características" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-g3-v9m">
                                                 <rect key="frame" x="10" y="291" width="115" height="21"/>
+                                                <animations/>
                                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV7-r3-vDW">
                                                 <rect key="frame" x="10" y="317" width="380" height="351"/>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Frontal de polyester y laterales de aluminio
 Puerta trasera doble "tipo Americana" de aluminio.
@@ -441,6 +475,7 @@ Lateral extra en acero inoxidable</string>
                                             </textView>
                                             <view opaque="NO" tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeB-Sc-gvJ" customClass="EQLPriceView">
                                                 <rect key="frame" x="300" y="41" width="90" height="22"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="XJl-rD-iep"/>
                                                     <constraint firstAttribute="width" constant="90" id="vbj-rr-vHg"/>
@@ -448,6 +483,7 @@ Lateral extra en acero inoxidable</string>
                                             </view>
                                             <view opaque="NO" tag="105" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIR-7J-U5R" customClass="EQLNumHorsesView">
                                                 <rect key="frame" x="306" y="293" width="59" height="18"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="BLC-s8-EGN"/>
                                                     <constraint firstAttribute="width" constant="59" id="fbX-LP-Iot"/>
@@ -455,6 +491,7 @@ Lateral extra en acero inoxidable</string>
                                             </view>
                                             <view hidden="YES" tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGT-cK-g0l" customClass="EQLPlancherIcon">
                                                 <rect key="frame" x="151" y="291" width="90" height="37"/>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="ELF-4N-mB3"/>
@@ -463,6 +500,7 @@ Lateral extra en acero inoxidable</string>
                                             </view>
                                             <view hidden="YES" tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydq-iT-zRB" customClass="EQLPlancherIcon">
                                                 <rect key="frame" x="306" y="291" width="90" height="37"/>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="ORo-c6-JDP"/>
@@ -471,6 +509,7 @@ Lateral extra en acero inoxidable</string>
                                             </view>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-04-vIc" customClass="EQLmailButton">
                                                 <rect key="frame" x="10" y="678" width="140" height="50"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="9w2-1o-Xbi"/>
                                                     <constraint firstAttribute="height" constant="50" id="KeR-Z3-kb8"/>
@@ -484,6 +523,7 @@ Lateral extra en acero inoxidable</string>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK" customClass="EQLcallButton">
                                                 <rect key="frame" x="250" y="678" width="140" height="50"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="HT9-On-wYu"/>
                                                     <constraint firstAttribute="height" constant="50" id="Oed-vY-bhm"/>
@@ -497,6 +537,7 @@ Lateral extra en acero inoxidable</string>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-Nb-obF">
                                                 <rect key="frame" x="174" y="688" width="63" height="30"/>
+                                                <animations/>
                                                 <state key="normal" title="Contacto">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -505,6 +546,7 @@ Lateral extra en acero inoxidable</string>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <animations/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="Lqc-g3-v9m" firstAttribute="leading" secondItem="hoK-gS-IpI" secondAttribute="leading" constant="10" id="2Cb-Co-7jt"/>
@@ -535,6 +577,7 @@ Lateral extra en acero inoxidable</string>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="hoK-gS-IpI" secondAttribute="centerX" id="Ady-qg-o3F"/>
                                     <constraint firstItem="hoK-gS-IpI" firstAttribute="leading" secondItem="jM0-xS-FB8" secondAttribute="leading" id="Mev-h6-xhs"/>
@@ -544,6 +587,7 @@ Lateral extra en acero inoxidable</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jM0-xS-FB8" firstAttribute="top" secondItem="4Jw-X1-Ecp" secondAttribute="bottom" id="5Lm-tx-SAY"/>
@@ -570,7 +614,7 @@ Lateral extra en acero inoxidable</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2371" y="-1824"/>
+            <point key="canvasLocation" x="2223" y="-1764"/>
         </scene>
         <!--Foto ampliada-->
         <scene sceneID="Vfl-gS-xWJ">
@@ -592,9 +636,11 @@ Lateral extra en acero inoxidable</string>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gold_one.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-wq-Uzv">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                <animations/>
                                                 <gestureRecognizers/>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="DMW-wq-Uzv" firstAttribute="leading" secondItem="ATd-rR-0Kz" secondAttribute="leading" id="IC3-GN-WzY"/>
                                             <constraint firstItem="DMW-wq-Uzv" firstAttribute="top" secondItem="ATd-rR-0Kz" secondAttribute="top" id="cSb-Pq-WyA"/>
@@ -603,6 +649,7 @@ Lateral extra en acero inoxidable</string>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ATd-rR-0Kz" secondAttribute="trailing" id="3oN-cL-kjh"/>
                                     <constraint firstAttribute="centerY" secondItem="DMW-wq-Uzv" secondAttribute="centerY" id="8aZ-E2-Tec"/>
@@ -623,6 +670,7 @@ Lateral extra en acero inoxidable</string>
                                 </variation>
                             </scrollView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="odp-br-NCt" secondAttribute="trailing" id="2B4-3J-00x"/>
@@ -640,7 +688,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ht-Yp-X8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2944" y="-2280"/>
+            <point key="canvasLocation" x="2928" y="-2286"/>
         </scene>
         <!--Calculations View Controller-->
         <scene sceneID="iIF-OC-Jdo">
@@ -662,12 +710,14 @@ Lateral extra en acero inoxidable</string>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-oc-r42" customClass="PFImageView">
                                                 <rect key="frame" x="-10" y="23" width="92" height="73"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="13c-5y-2y4"/>
                                                     <constraint firstAttribute="height" constant="73" id="VGy-j1-x06"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="5Uk-oc-r42" firstAttribute="leading" secondItem="okR-rL-vTO" secondAttribute="leading" constant="-10" id="LM9-mv-JNj"/>
@@ -680,11 +730,13 @@ Lateral extra en acero inoxidable</string>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RAY-M3-z4l" customClass="PFImageView">
                                                 <rect key="frame" x="-10" y="-25" width="92" height="73"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="cee-B6-9FK"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="RAY-M3-z4l" firstAttribute="top" secondItem="1Ak-Fq-GZP" secondAttribute="top" constant="-25" id="Mwf-ku-4WH"/>
@@ -693,6 +745,7 @@ Lateral extra en acero inoxidable</string>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstItem="okR-rL-vTO" firstAttribute="top" secondItem="iCH-we-vK8" secondAttribute="top" id="EM7-Bt-UjC"/>
                                     <constraint firstAttribute="centerX" secondItem="1Ak-Fq-GZP" secondAttribute="centerX" id="EPs-UW-7Lf"/>
@@ -707,6 +760,7 @@ Lateral extra en acero inoxidable</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xs-x5-NlG" customClass="EQLmoreInfoButton">
                                 <rect key="frame" x="118" y="533" width="140" height="50"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="R47-GL-xfO"/>
                                     <constraint firstAttribute="height" constant="50" id="UBB-hJ-74l"/>
@@ -720,6 +774,7 @@ Lateral extra en acero inoxidable</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cálculos para el" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyd-pz-fE5">
                                 <rect key="frame" x="5" y="10" width="185" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="snV-Lj-azk"/>
                                 </constraints>
@@ -729,6 +784,7 @@ Lateral extra en acero inoxidable</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVQ-S4-Eyb">
                                 <rect key="frame" x="198" y="10" width="148" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="zgA-jv-bI2"/>
                                 </constraints>
@@ -737,6 +793,7 @@ Lateral extra en acero inoxidable</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="wyd-pz-fE5" secondAttribute="centerX" constant="90" id="4Wi-AC-gRj"/>
@@ -762,7 +819,7 @@ Lateral extra en acero inoxidable</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0b-32-vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Zc5-T8-OfW" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="2657.5" y="-158.5"/>
+            <point key="canvasLocation" x="2713.5" y="-136.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="28o-vR-PPQ">
@@ -778,6 +835,7 @@ Lateral extra en acero inoxidable</string>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yof-Ac-n0v">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
                                 <items/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -788,8 +846,10 @@ Lateral extra en acero inoxidable</string>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-h7-Qqw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
                             </mapView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dJf-h7-Qqw" secondAttribute="bottom" id="5Wr-ev-rYY"/>
@@ -806,7 +866,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYu-6q-qsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3482" y="-1656"/>
+            <point key="canvasLocation" x="3252" y="-1648"/>
         </scene>
         <!--Ficha A4 (Nuevas)-->
         <scene sceneID="6wd-UJ-QzP">
@@ -822,8 +882,10 @@ Lateral extra en acero inoxidable</string>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-Xz-yxP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <animations/>
                             </scrollView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ryn-Xz-yxP" firstAttribute="leading" secondItem="L0f-Gb-azg" secondAttribute="leading" id="7lm-JT-vq3"/>
@@ -844,7 +906,7 @@ Lateral extra en acero inoxidable</string>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2423" y="799"/>
+            <point key="canvasLocation" x="2039" y="467"/>
         </scene>
         <!--MENU - Van Selector-->
         <scene sceneID="T71-0g-oik">
@@ -860,6 +922,7 @@ Lateral extra en acero inoxidable</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f4-PU-485" customClass="EQLcatalogButtonView">
                                 <rect key="frame" x="10" y="10" width="145" height="237"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -874,6 +937,7 @@ Lateral extra en acero inoxidable</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPk-yI-vvT" customClass="EQLMapsButtonView">
                                 <rect key="frame" x="165" y="10" width="145" height="237"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -887,6 +951,7 @@ Lateral extra en acero inoxidable</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqv-tF-BJa" customClass="EQLLicenceButtonView">
                                 <rect key="frame" x="10" y="257" width="300" height="237"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -900,6 +965,7 @@ Lateral extra en acero inoxidable</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tqv-tF-BJa" secondAttribute="trailing" constant="-23" id="1ZR-6j-NB6"/>
@@ -935,7 +1001,7 @@ Lateral extra en acero inoxidable</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZS-PJ-LSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905" y="-1648"/>
+            <point key="canvasLocation" x="2788" y="-1648"/>
         </scene>
         <!--Licence Form1 View Controller-->
         <scene sceneID="YMJ-Cs-xGu">
@@ -951,6 +1017,7 @@ Lateral extra en acero inoxidable</string>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMA (Masa Máxima Autorizada)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Do-pVw">
                                 <rect key="frame" x="15" y="10" width="291" height="39"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="p8J-Ix-RZh"/>
                                 </constraints>
@@ -959,11 +1026,13 @@ Lateral extra en acero inoxidable</string>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-Ss-RDZ">
                                 <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <animations/>
                                 <color key="pageIndicatorTintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mma" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2350" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
                                 <rect key="frame" x="120" y="81" width="80" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="wng-x9-7zs"/>
                                 </constraints>
@@ -972,6 +1041,7 @@ Lateral extra en acero inoxidable</string>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
                                 <rect key="frame" x="208" y="81" width="53" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="vZq-0Y-xYH"/>
                                 </constraints>
@@ -980,6 +1050,7 @@ Lateral extra en acero inoxidable</string>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso del coche más ocupantes y equipaje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-Gk-08H">
                                 <rect key="frame" x="18" y="50" width="286" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ljW-gz-E1n"/>
                                     <constraint firstAttribute="width" constant="286" id="xL1-na-Rph"/>
@@ -990,6 +1061,7 @@ Lateral extra en acero inoxidable</string>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkd-PZ-Fr1">
                                 <rect key="frame" x="16" y="223" width="288" height="126"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="POE-i8-wBu"/>
                                 </constraints>
@@ -1005,6 +1077,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-pA-GaQ">
                                 <rect key="frame" x="201" y="371" width="109" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Modo avanzado">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1014,6 +1087,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-iC-J0t" customClass="EQLhelpIconView">
                                 <rect key="frame" x="120" y="116" width="120" height="34"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="A0X-fa-GBI"/>
                                 </constraints>
@@ -1023,6 +1097,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 cifras!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-fk-zld">
                                 <rect key="frame" x="62" y="87" width="53" height="17"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1032,12 +1107,14 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-eF-FcZ" customClass="EQLCarPeopleLuggageView">
                                         <rect key="frame" x="0.0" y="-9" width="288" height="87"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OMj-eF-FcZ" secondAttribute="height" multiplier="96:29" id="OcW-Og-mMH"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstItem="OMj-eF-FcZ" firstAttribute="leading" secondItem="eCT-JC-aWP" secondAttribute="leading" id="9E6-wL-hcz"/>
                                     <constraint firstAttribute="width" secondItem="OMj-eF-FcZ" secondAttribute="width" id="C1I-r4-Bld"/>
@@ -1047,6 +1124,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -1081,6 +1159,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         <view key="titleView" contentMode="scaleToFill" id="iEj-H1-6tV" customClass="EQLcarIconView">
                             <rect key="frame" x="136" y="8" width="48" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguente" id="NPy-1M-e5X">
@@ -1100,7 +1179,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqC-nc-qsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="vNa-Ps-lwz" customClass="VanStyleKit"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="-885"/>
+            <point key="canvasLocation" x="1353" y="-885"/>
         </scene>
         <!--Licence Form2 View Controller-->
         <scene sceneID="Bh8-zA-JQi">
@@ -1116,11 +1195,13 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="TEa-ey-XSk">
                                 <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <animations/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMR (Masa Máxima Remolcable)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-af-7aM">
                                 <rect key="frame" x="11" y="10" width="299" height="39"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="5K8-qz-u7j"/>
                                 </constraints>
@@ -1129,6 +1210,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mmr" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1900" borderStyle="roundedRect" placeholder="2.000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
                                 <rect key="frame" x="120" y="78" width="80" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="9XJ-EZ-bme"/>
                                 </constraints>
@@ -1137,11 +1219,13 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-GI-4Qc">
                                 <rect key="frame" x="208" y="78" width="37" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso que el coche puede arrastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smB-Er-HZP">
                                 <rect key="frame" x="43" y="50" width="236" height="18"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1154,6 +1238,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-5y-PjK">
                                 <rect key="frame" x="43" y="223" width="242" height="126"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="gff-nb-11i"/>
                                 </constraints>
@@ -1169,6 +1254,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-YS-SPa" customClass="EQLhelpIconView">
                                 <rect key="frame" x="118" y="113" width="120" height="22"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="7qA-6x-8b6"/>
                                     <constraint firstAttribute="width" constant="120" id="Jcx-br-WIZ"/>
@@ -1179,11 +1265,13 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 cifras!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-Rk-GTf">
                                 <rect key="frame" x="62" y="84" width="53" height="22"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qYx-af-7aM" firstAttribute="top" secondItem="Qix-6C-WEe" secondAttribute="bottom" constant="10" id="1GX-Fn-6bk"/>
@@ -1218,6 +1306,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <view key="titleView" contentMode="scaleToFill" id="0kW-OH-oBZ" customClass="EQLtrailerMaxPtacView">
                             <rect key="frame" x="136" y="8" width="48" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="wWp-wy-ZPi">
@@ -1234,7 +1323,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-KV-UD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="-885"/>
+            <point key="canvasLocation" x="1756" y="-885"/>
         </scene>
         <!--Licence Form3 View Controller-->
         <scene sceneID="Axc-P4-9lU">
@@ -1250,6 +1339,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso por Caballo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-Cm-k6W">
                                 <rect key="frame" x="70" y="10" width="181" height="29"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
@@ -1261,6 +1351,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="horseWeight" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="400" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
                                 <rect key="frame" x="125" y="77" width="70" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8i0-ub-20b"/>
                                     <constraint firstAttribute="height" priority="750" constant="30" id="IXS-4C-Py0"/>
@@ -1270,22 +1361,26 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                             </textField>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-ng-h3O">
                                 <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <animations/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-wD-4Jq">
                                 <rect key="frame" x="203" y="77" width="37" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El peso de media de uno de sus caballos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11a-fJ-oog">
                                 <rect key="frame" x="21" y="49" width="278" height="18"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF1-dQ-blk">
                                 <rect key="frame" x="59" y="202" width="221" height="90"/>
+                                <animations/>
                                 <string key="text">
 Árabe: 380-500Kg 
 Pura Raza Español:  400-550Kg 
@@ -1298,12 +1393,14 @@ Percheron: 850-950Kg</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos caballo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-Tn-rX2">
                                 <rect key="frame" x="97" y="184" width="128" height="18"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplos pony:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="938-1I-HcY">
                                 <rect key="frame" x="104" y="295" width="112" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4Ap-lk-Q6v"/>
                                 </constraints>
@@ -1313,6 +1410,7 @@ Percheron: 850-950Kg</string>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-hP-blk">
                                 <rect key="frame" x="85" y="321" width="150" height="54"/>
+                                <animations/>
                                 <string key="text">Falabella: 35-50Kg
 Shetland: 135-180Kg
 Asturcon: 350-400Kg</string>
@@ -1322,11 +1420,13 @@ Asturcon: 350-400Kg</string>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-0d-sY4">
                                 <rect key="frame" x="16" y="88" width="104" height="17"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PF1-dQ-blk" firstAttribute="top" secondItem="wtK-Tn-rX2" secondAttribute="bottom" id="14T-Wc-mzL"/>
@@ -1369,6 +1469,7 @@ Asturcon: 350-400Kg</string>
                         <view key="titleView" contentMode="scaleToFill" id="arr-80-AJF" customClass="EQLequusHorseNavBarView">
                             <rect key="frame" x="136" y="8" width="48" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="e0y-Vx-DXx">
@@ -1384,7 +1485,7 @@ Asturcon: 350-400Kg</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpk-ZW-qtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-879"/>
+            <point key="canvasLocation" x="2125" y="-885"/>
         </scene>
         <!--Licence Form4 View Controller-->
         <scene sceneID="8IX-4e-7fH">
@@ -1400,11 +1501,13 @@ Asturcon: 350-400Kg</string>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su carné" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djS-9T-iUW">
                                 <rect key="frame" x="53" y="10" width="215" height="29"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-n3-3ox">
                                 <rect key="frame" x="70" y="307" width="180" height="42"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="gZh-Ri-iah"/>
@@ -1417,6 +1520,7 @@ Asturcon: 350-400Kg</string>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-j3-JZw">
                                 <rect key="frame" x="35" y="49" width="250" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="3Hl-4D-KVT"/>
                                 </constraints>
@@ -1428,6 +1532,7 @@ Asturcon: 350-400Kg</string>
                             </segmentedControl>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-uq-qt4">
                                 <rect key="frame" x="133" y="369" width="55" height="37"/>
+                                <animations/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -1436,12 +1541,14 @@ Asturcon: 350-400Kg</string>
                                 <subviews>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="406-JS-NXa" customClass="EQLlicenceHelpView">
                                         <rect key="frame" x="0.0" y="33" width="300" height="186"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="406-JS-NXa" secondAttribute="height" multiplier="29:18" id="7Tl-81-4ns"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="406-JS-NXa" secondAttribute="trailing" id="SsF-vj-h4L"/>
                                     <constraint firstAttribute="centerY" secondItem="406-JS-NXa" secondAttribute="centerY" id="li4-j8-yb1"/>
@@ -1449,6 +1556,7 @@ Asturcon: 350-400Kg</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hyp-FF-3T6" secondAttribute="trailing" constant="10" id="0jB-lo-Oxs"/>
@@ -1471,6 +1579,7 @@ Asturcon: 350-400Kg</string>
                         <view key="titleView" contentMode="scaleToFill" id="yf4-Tw-Tzm" customClass="EQLlicenceIconView">
                             <rect key="frame" x="136" y="8" width="48" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="05S-PA-YAi">
@@ -1485,7 +1594,7 @@ Asturcon: 350-400Kg</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eST-E2-wb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2522" y="-873"/>
+            <point key="canvasLocation" x="2512" y="-885"/>
         </scene>
         <!--Catálogo Cheval Liberté-->
         <scene sceneID="FfW-15-Ah8">
@@ -1494,6 +1603,7 @@ Asturcon: 350-400Kg</string>
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="22" sectionFooterHeight="22" id="aze-wH-NLV">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="catalogCell" rowHeight="134" id="HFt-Xt-PgP" customClass="PFTableViewCell">
@@ -1505,18 +1615,21 @@ Asturcon: 350-400Kg</string>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suspensión" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eI-sfL">
                                             <rect key="frame" x="222" y="52" width="80" height="18"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-kO-NhD" customClass="PFImageView">
                                             <rect key="frame" x="8" y="8" width="158" height="117"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="YHe-kO-NhD" secondAttribute="height" multiplier="144:107" id="7nx-qb-xmL"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShO-m1-gX6">
                                             <rect key="frame" x="165" y="11" width="137" height="21"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="137" id="4P4-cb-gcM"/>
                                             </constraints>
@@ -1526,6 +1639,7 @@ Asturcon: 350-400Kg</string>
                                         </label>
                                         <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SN-zh-EOc" customClass="EQLPriceView">
                                             <rect key="frame" x="212" y="101" width="90" height="22"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="Mks-OV-md7"/>
@@ -1534,12 +1648,14 @@ Asturcon: 350-400Kg</string>
                                         </view>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IVA no incluido" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-BS-Aoi">
                                             <rect key="frame" x="236" y="122" width="66" height="11"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view tag="108" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j78-Jk-uFX" customClass="EQLVistoView">
                                             <rect key="frame" x="201" y="52" width="18" height="18"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="18" id="VSb-1K-or1"/>
@@ -1548,12 +1664,14 @@ Asturcon: 350-400Kg</string>
                                         </view>
                                         <view opaque="NO" tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-e6-rxR" customClass="EQLNumHorsesView">
                                             <rect key="frame" x="260" y="37" width="42" height="18"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="SjW-9F-jUE"/>
                                                 <constraint firstAttribute="width" constant="42" id="UCf-Ga-PCa"/>
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="trailing" secondItem="3SN-zh-EOc" secondAttribute="trailing" id="7FK-YU-PXv"/>
                                         <constraint firstItem="j78-Jk-uFX" firstAttribute="centerY" secondItem="OmN-eI-sfL" secondAttribute="centerY" id="ClN-qz-KPd"/>
@@ -1584,6 +1702,7 @@ Asturcon: 350-400Kg</string>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1596,6 +1715,7 @@ Asturcon: 350-400Kg</string>
                             <button key="customView" opaque="NO" contentMode="topRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4q-pc-U0w" customClass="EQLPoliceIconView">
                                 <rect key="frame" x="260" y="0.0" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1624,6 +1744,7 @@ Asturcon: 350-400Kg</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EaN-56-dRZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1639,9 +1760,9 @@ Asturcon: 350-400Kg</string>
         <image name="Gold_one.jpg" width="626" height="466"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y8U-hj-x1X"/>
-        <segue reference="TrJ-Ad-Ng0"/>
         <segue reference="Wiw-cc-ZWA"/>
+        <segue reference="dXD-Lv-kcF"/>
+        <segue reference="357-NI-xMD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
