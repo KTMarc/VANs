@@ -101,11 +101,11 @@
 		49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */; };
 		49E513341B6D79F8006E63E3 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E513331B6D79F8006E63E3 /* placeholder.png */; };
 		49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */; };
-		49E6072D1BD62E6D00D9DA36 /* EQLpriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072B1BD62E6D00D9DA36 /* EQLpriceView.m */; settings = {ASSET_TAGS = (); }; };
-		49E607301BD62E9500D9DA36 /* EQLnumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072E1BD62E9500D9DA36 /* EQLnumHorsesView.m */; settings = {ASSET_TAGS = (); }; };
-		49E607331BD62EA400D9DA36 /* EQLplancherIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607311BD62EA400D9DA36 /* EQLplancherIcon.m */; settings = {ASSET_TAGS = (); }; };
-		49E607361BD62EB000D9DA36 /* EQLsuspensionIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607341BD62EB000D9DA36 /* EQLsuspensionIcon.m */; settings = {ASSET_TAGS = (); }; };
-		49E607391BD62EC600D9DA36 /* EQLvistoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607371BD62EC600D9DA36 /* EQLvistoView.m */; settings = {ASSET_TAGS = (); }; };
+		49E6072D1BD62E6D00D9DA36 /* EQLpriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072B1BD62E6D00D9DA36 /* EQLpriceView.m */; };
+		49E607301BD62E9500D9DA36 /* EQLnumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072E1BD62E9500D9DA36 /* EQLnumHorsesView.m */; };
+		49E607331BD62EA400D9DA36 /* EQLplancherIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607311BD62EA400D9DA36 /* EQLplancherIcon.m */; };
+		49E607361BD62EB000D9DA36 /* EQLsuspensionIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607341BD62EB000D9DA36 /* EQLsuspensionIcon.m */; };
+		49E607391BD62EC600D9DA36 /* EQLvistoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607371BD62EC600D9DA36 /* EQLvistoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1194,7 +1194,7 @@
 				49A871DC198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		49A871DD198158F6008BB3B3 /* Build configuration list for PBXNativeTarget "VAN Selector" */ = {
 			isa = XCConfigurationList;
@@ -1203,7 +1203,7 @@
 				49A871DF198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		49A871E0198158F6008BB3B3 /* Build configuration list for PBXNativeTarget "VAN SelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -1212,7 +1212,7 @@
 				49A871E2198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

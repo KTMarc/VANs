@@ -63,12 +63,9 @@
     }
     
     if (numResults == 0){ _noResultsLabel.hidden = NO;}
-    
-//    numResults = 4;
-    
+
     return numResults;
 }
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -135,6 +132,7 @@
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
     //NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
     aux=[_resultsArray objectAtIndex:indexPath.section];
+
     PFvan = [aux[indexPath.row] PFVan];
     maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
     //NSLog(@"Peso maximo guardado es: %i",maxWeightClient);
@@ -155,14 +153,10 @@
         }
     }];
 
-
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [PFvan objectForKey:@"Name"];
-    
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
-
     int auxInt = (int)[sharedForm mmrCar];
-    
     priceLabel.text = [NSString stringWithFormat: @"%i", auxInt];
     
 //    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
@@ -181,6 +175,12 @@
     UILabel *explanationLabel = (UILabel*) [cell viewWithTag:104];
     explanationLabel.text = [aux[indexPath.row] calculationText];;
     
+    //In case we could have this trailer in the next licence, we offer it as an option.
+    if ([aux[indexPath.row] needsBetterLicence]){
+        thumbnailImageView.alpha = 0.5;
+        nameLabel.alpha = 0.5;
+        explanationLabel.alpha = 0.5;
+    }
     return cell;
 }
 

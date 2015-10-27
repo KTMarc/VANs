@@ -37,11 +37,6 @@
                BlueprintName = "VAN SelectorTests"
                ReferencedContainer = "container:VAN Selector.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "VANsTests/test_BigCar_StdHorse_LicE">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

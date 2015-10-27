@@ -13,6 +13,10 @@
 @property (strong, nonatomic) PFObject *PFVan;
 @property (strong, nonatomic) NSString *calculationText;
 @property (nonatomic) int maxPtacForClientsCar;
+//@property (nonatomic) int maxPtacForClientsCar1;
+//@property (nonatomic) int maxPtacForClientsCar2;
+@property (nonatomic, strong) NSMutableArray *failReasons;
+@property BOOL needsBetterLicence;
 
 // Constructor (class method)
 +(id) modeloVanWithPFVan: (PFObject *)aPFVan

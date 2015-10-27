@@ -1048,7 +1048,7 @@ Lateral extra en acero inoxidable</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso del coche más ocupantes y equipaje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-Gk-08H">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso de su coche más ocupantes y equipaje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-Gk-08H">
                                 <rect key="frame" x="18" y="50" width="286" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -1223,8 +1223,8 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso que el coche puede arrastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smB-Er-HZP">
-                                <rect key="frame" x="43" y="50" width="236" height="18"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso que su coche puede arrastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smB-Er-HZP">
+                                <rect key="frame" x="41" y="50" width="240" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1760,9 +1760,9 @@ Asturcon: 350-400Kg</string>
         <image name="Gold_one.jpg" width="626" height="466"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wiw-cc-ZWA"/>
-        <segue reference="dXD-Lv-kcF"/>
         <segue reference="357-NI-xMD"/>
+        <segue reference="dXD-Lv-kcF"/>
+        <segue reference="ehW-0q-UCM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>

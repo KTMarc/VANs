@@ -37,11 +37,11 @@
 
        // [_queryVans fromLocalDatastore];
         //NSLog(@"Creamos el modelo Garage");
-//       
-//        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
-//        [_queryVans orderByAscending:@"Priority"];
-//        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
-//        
+       
+        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+        [_queryVans orderByAscending:@"Priority"];
+        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
+        
         if (!self.executionFlag){
             if (_productionFlag){
 #pragma mark - TODO: Clean if really don´t needed anymore
