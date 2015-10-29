@@ -517,9 +517,6 @@ Lateral extra en acero inoxidable</string>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="sendEmail:" destination="2lS-ab-yC8" eventType="touchUpInside" id="wcw-Yy-vcS"/>
-                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Qn-VLK" customClass="EQLcallButton">
                                                 <rect key="frame" x="250" y="678" width="140" height="50"/>
@@ -531,9 +528,6 @@ Lateral extra en acero inoxidable</string>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="callButton:" destination="2lS-ab-yC8" eventType="touchUpInside" id="RZ2-Ow-WtR"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-Nb-obF">
                                                 <rect key="frame" x="174" y="688" width="63" height="30"/>
@@ -928,11 +922,11 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="callButton:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="6OW-7H-kfk"/>
                                     <action selector="touchCancel:" destination="9xF-GQ-1ht" eventType="touchCancel" id="gOB-eb-P4T"/>
                                     <action selector="touchDown:" destination="9xF-GQ-1ht" eventType="touchDown" id="LDo-F7-qxX"/>
                                     <action selector="touchDragOutside:" destination="9xF-GQ-1ht" eventType="touchDragOutside" id="rwG-5T-ey3"/>
                                     <action selector="touchUpInside:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="o7x-FN-iBS"/>
-                                    <segue destination="f9k-xT-bA4" kind="show" id="dXD-Lv-kcF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPk-yI-vvT" customClass="EQLMapsButtonView">
@@ -943,6 +937,7 @@ Lateral extra en acero inoxidable</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="sendEmail:" destination="9xF-GQ-1ht" eventType="touchUpInside" id="ZGl-Ic-S6x"/>
                                     <action selector="touchCancel:" destination="9xF-GQ-1ht" eventType="touchCancel" id="ACj-3y-Wzl"/>
                                     <action selector="touchDown:" destination="9xF-GQ-1ht" eventType="touchDown" id="Ffe-A5-HNP"/>
                                     <action selector="touchDragOutside:" destination="9xF-GQ-1ht" eventType="touchDragOutside" id="1Vu-MA-DIP"/>
@@ -1761,7 +1756,6 @@ Asturcon: 350-400Kg</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="357-NI-xMD"/>
-        <segue reference="dXD-Lv-kcF"/>
         <segue reference="ehW-0q-UCM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>

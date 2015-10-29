@@ -54,6 +54,9 @@
         
         //Creamos nuestro modelo una sola vez
         self.model = [[EQLGarageModel alloc]init];
+        
+        self.sharedForm = [EQLFormData sharedForm];
+        
 //        _sections = [[NSMutableDictionary alloc]init];
 //        _sectionToSportTypeMap = [[NSMutableDictionary alloc]init];
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
@@ -67,10 +70,6 @@
     //PFQueryTableView already downloaded an array with all information and now we need to assign it to our model.
     //This is done to get rid of Parse at some point and use another backend
     
-    [self.model.oneHorseVans removeAllObjects];
-    [self.model.twoHorseVans removeAllObjects];
-    [self.model.threeHorseVans removeAllObjects];
-    [self.model.fourHorseVans removeAllObjects];
     //Para descomentar esto primero tengo que hacer allVans mutable
     //[self.model.allVans removeAllObjects];
     self.model.allVans = self.objects;
@@ -82,13 +81,16 @@
     // This method is called every time objects are loaded from Parse via the PFQuery
     //NSLog(@"Downloaded %lu objects from Parse",  (unsigned long)[self.objects count]);
     
+    self.sharedForm.firstTimeLoad = 1;
     // If we just updated from the server, do nothing, otherwise update from server.
     if (self.shouldUpdateFromServer) {
+        //NSLog(@"We are going to update the local Datastore form the server");
         [self refreshLocalDataStoreFromServer];
-        [self updateGarage];
+        //NSLog(@"After updating the garage we have %i vans in self.Objects", (int)[self.objects count]);
     } else {
         //MH: We leave this as true for the next time we are in this callback. We assume that the next time we will want to update the datastore from data form the network
         self.shouldUpdateFromServer = true;
+
     }
 }
 
@@ -116,8 +118,23 @@
     // [query orderByAscending:@"Priority"];
     // [query whereKey:@"enabled" equalTo:@(YES)];
     // return query;
-    return [[self baseQuery] fromLocalDatastore];
+
+    //This is to fix the side effect to add sections. When the App loads for the first time ever, it doesn´t populate the results from the network connection until we dont pull to refresh.
+/*
+    if (self.sharedForm.firstTimeLoad == 0){ //0-->YES 1-->NO
+        NSLog(@"It´s the first time we run the app");
+        self.sharedForm.firstTimeLoad = 1;
+        NSLog(@"First Time Load value: %i", (int)self.sharedForm.firstTimeLoad);
+        return [self baseQuery];
+    }else{*/
+        //NSLog(@"We already have a dataStore created.");
+        return [[self baseQuery] fromLocalDatastore];
+    //}
+    
+  //  return [self baseQuery];
+
 }
+
 
 
 - (void)refreshLocalDataStoreFromServer
@@ -132,7 +149,10 @@
             return [[PFObject pinAllInBackground:objects withName:@"modeloVan"] continueWithSuccessBlock:^id(BFTask *unused) {
                 [self.refreshControl endRefreshing];
                 [self loadObjects];
+                [self updateGarage];
                 _shouldUpdateFromServer = false;
+                
+//                [self updateGarage];
                 return nil;
             }];
         }];
@@ -168,6 +188,9 @@
     self.navigationController.hidesBarsOnTap = false;
     self.navigationController.hidesBarsWhenVerticallyCompact = false;
     self.navigationController.navigationBarHidden = false;
+
+    //This is to fix the side effect to add sections. When the App loads for the first time ever, it doesn´t populate the results from the network connection until we dont pull to refresh.
+   // [self loadObjects];
 }
 
 - (void)viewDidUnload
@@ -211,7 +234,7 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-
+/*
 - (PFObject *)objectAtIndexPath:(NSIndexPath *)indexPath {
     PFObject *aux = nil;
     switch (indexPath.section) {
@@ -290,6 +313,8 @@
         return sectionName;
 
 }
+ */
+
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the first key in the object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {

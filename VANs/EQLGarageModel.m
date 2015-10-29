@@ -117,6 +117,11 @@
 
 - (void) separateVansByNumberOfHorses {
 
+    [_oneHorseVans removeAllObjects];
+    [_twoHorseVans removeAllObjects];
+    [_threeHorseVans removeAllObjects];
+    [_fourHorseVans removeAllObjects];
+    
     PFObject *parseVan;
     for (id van in _allVans){
         // NSLog(@"Entra al for");

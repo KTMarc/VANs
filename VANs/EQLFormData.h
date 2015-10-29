@@ -16,6 +16,7 @@
 @property (nonatomic, readwrite) NSInteger mmrCar;
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
+@property (nonatomic, readwrite) NSInteger firstTimeLoad;
 
 //Those variables are here for convinience and to have them somewhere globally.
 @property (nonatomic, readwrite) NSInteger trailerWeight;

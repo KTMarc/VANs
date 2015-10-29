@@ -43,6 +43,8 @@
     BOOL debugMode= true;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // comprobamos si no hay nada porque es la primera vez que abrimos la app.
+    sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
+    //NSLog(@"First Time Load vale: %i", (int)sharedForm.firstTimeLoad );
     if (![defaults objectForKey:@"mmaCar"]) {
         //EN PRODUCCION HAY QUE CONTEMPLAR TODOS LOS CASOS
         //NSLog(@"NSUserdefaults esta vacio");
@@ -102,6 +104,8 @@
     [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
     [defaults setInteger: sharedForm.licence forKey:@"licence"];
     [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
+   // NSLog(@"First Time Load value: %i", (int)sharedForm.firstTimeLoad);
+    [defaults setInteger: sharedForm.firstTimeLoad forKey:@"firstTimeLoad"]; //0-->YES 1-->NO
     [defaults synchronize];
 }
 @end

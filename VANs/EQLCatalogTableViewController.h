@@ -22,9 +22,11 @@
 //Objects are being saved in PFQueryTableViewController -> _mutableObjects
 @property (strong, nonatomic) PFObject *parseVanOrigen;
 @property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
-@property (nonatomic) BOOL executionFlag;
+@property (nonatomic) BOOL firstTime;
 @property (nonatomic) BOOL shouldUpdateFromServer;
 @property (nonatomic) BOOL productionFlag;
+@property (nonatomic, strong) EQLFormData *sharedForm;
+
 //@property (nonatomic, retain) NSMutableDictionary *sections;
 //@property (nonatomic, retain) NSMutableDictionary *sectionToSportTypeMap;
 

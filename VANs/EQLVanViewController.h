@@ -23,8 +23,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *ptacsLabel;
 @property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
 
+/*
 - (IBAction)callButton:(id)sender;
 - (IBAction)sendEmail:(id)sender;
-
+*/
 
 @end

@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *vansArray;
+@property (nonatomic, strong) PFObject *parseVan;
 
 - (IBAction)touchUpInside:(id)sender;
 - (IBAction)touchDown:(id)sender;

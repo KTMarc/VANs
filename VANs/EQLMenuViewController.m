@@ -121,6 +121,61 @@
    }
  */
 
+#pragma mark Contact Buttons
+
+- (IBAction)callButton:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"telprompt://931123940"]];
+}
+
+- (IBAction)sendEmail:(id)sender {
+    // Email Subject
+    NSString *emailTitle = [NSString stringWithFormat:@"Consulta sobre VAN:%@", _parseVan[@"Name"]];
+    
+    // Email Content
+    NSString *messageBody = [NSString stringWithFormat:@"Mis datos son:<br /><br />Nombre:<br />Provincia:<br />Teléfono:<br /><hr>Tengo una consulta sobre el VAN<b>%@</b>...<br /> ",_parseVan[@"Name"]]; // Change the message body to HTML
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"info@equus-life.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:YES];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    if ([MFMailComposeViewController canSendMail]){
+        [self presentViewController:mc animated:YES completion:NULL];
+    } else {
+        UIAlertView *noMail = [[UIAlertView alloc] initWithTitle:@"No tienes correo" message:@"No tienes configurada ninguna cuenta de correo, configura una y vuelve. Sino, siempre puedes llamarnos!" delegate:self cancelButtonTitle:@"Vale" otherButtonTitles: nil];
+        [noMail show];
+    }
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    bool logs=false;
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            if (logs) NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            if (logs)  NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            if (logs) NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            if (logs) NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

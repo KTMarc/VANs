@@ -127,7 +127,6 @@
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
 		49249C7019C885A700AE4BC5 /* EQLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapViewController.m; sourceTree = "<group>"; };
 		49249C7219C8A20600AE4BC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		492E16B41BB2CB83000A6C94 /* VAN Selector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VAN Selector.entitlements"; sourceTree = "<group>"; };
 		4939BA4219F8144900D11BC9 /* EQLCalculationsCondition2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsCondition2.h; sourceTree = "<group>"; };
 		4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsCondition2.m; sourceTree = "<group>"; };
 		4946205019EE93F300B43F41 /* EQLCalculationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsViewController.h; sourceTree = "<group>"; };
@@ -211,6 +210,7 @@
 		49907CC5198CD024005CF560 /* Gold_XL_Western.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gold_XL_Western.jpg; sourceTree = "<group>"; };
 		49907CC9198CD91E005CF560 /* gt1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gt1.jpg; sourceTree = "<group>"; };
 		49907CCB198CDA1B005CF560 /* minimax.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minimax.jpg; sourceTree = "<group>"; };
+		49A30C7F1BE114AA00F62600 /* deleteLocalDataStore.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = deleteLocalDataStore.sh; path = VANs/deleteLocalDataStore.sh; sourceTree = "<group>"; };
 		49A428F01987EBD500C02F53 /* EQLBigSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLBigSheetViewController.h; sourceTree = "<group>"; };
 		49A428F11987EBD500C02F53 /* EQLBigSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLBigSheetViewController.m; sourceTree = "<group>"; };
 		49A428F31987ED7700C02F53 /* ejemploFichaA4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA4.jpg; sourceTree = "<group>"; };
@@ -520,7 +520,7 @@
 		49A8719F198158F5008BB3B3 = {
 			isa = PBXGroup;
 			children = (
-				492E16B41BB2CB83000A6C94 /* VAN Selector.entitlements */,
+				49A30C7F1BE114AA00F62600 /* deleteLocalDataStore.sh */,
 				49A871B1198158F6008BB3B3 /* VANs */,
 				49A871D3198158F6008BB3B3 /* VANsTests */,
 				49A871AA198158F6008BB3B3 /* Frameworks */,

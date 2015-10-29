@@ -85,7 +85,7 @@
 
 }
 
-
+/*
 #pragma mark Contact Buttons
 
 - (IBAction)callButton:(id)sender {
@@ -140,7 +140,7 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
+*/
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
