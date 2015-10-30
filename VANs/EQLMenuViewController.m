@@ -26,13 +26,6 @@
     //Fondo de la vista principal
     self.view.backgroundColor = [UIColor grayColor];
     
-    /*Apariencia del navigation controller */
-    //Queria sacar estas lineas de aqui y ponerlas en el EQLNavigationController, pero alli no funcionan.
-
-    self.navigationController.hidesBarsOnSwipe = false;
-    self.navigationController.hidesBarsOnTap = false;
-    self.navigationController.hidesBarsWhenVerticallyCompact = false;
-    self.navigationController.navigationBarHidden = false;
     
 #pragma mark - TODO: Aqui dentro hay un init que pone todo a 0 y se carga la persistencia
 //    
@@ -59,7 +52,15 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    /*Apariencia del navigation controller */
+    //Queria sacar estas lineas de aqui y ponerlas en el EQLNavigationController, pero alli no funcionan.
+    
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
     self.navigationController.navigationBarHidden = false;
+
+//    self.navigationController.navigationBarHidden = false;
 
     //Do de same animation so the user knows from which option did he came from
     EQLFormData *sharedForm = [EQLFormData sharedForm];
@@ -89,6 +90,9 @@
     //To be able to repeat the animation when we come back to the menu and the user knows from where he comes from.
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     sharedForm.lastButtonPressed = sender;
+    if ([sender isKindOfClass:[EQLcatalogButtonView class]]){
+        [self fadeWith:sender andDuration: 1.0 Delay:0.0 finalAlpha:1.0];        
+    }
   }
 
 - (IBAction)touchDown:(id)sender {
@@ -124,15 +128,18 @@
 #pragma mark Contact Buttons
 
 - (IBAction)callButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"telprompt://931123940"]];
+    if (![[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"telprompt://931123940"]]){
+    }
+
+
 }
 
 - (IBAction)sendEmail:(id)sender {
     // Email Subject
-    NSString *emailTitle = [NSString stringWithFormat:@"Consulta sobre VAN:%@", _parseVan[@"Name"]];
+    NSString *emailTitle = [NSString stringWithFormat:@"Consulta sobre VAN: %@", _parseVan[@"Name"]];
     
     // Email Content
-    NSString *messageBody = [NSString stringWithFormat:@"Mis datos son:<br /><br />Nombre:<br />Provincia:<br />Teléfono:<br /><hr>Tengo una consulta sobre el VAN<b>%@</b>...<br /> ",_parseVan[@"Name"]]; // Change the message body to HTML
+    NSString *messageBody = [NSString stringWithFormat:@"Mis datos son:<br /><br />Nombre:<br />Provincia:<br />Teléfono:<br /><hr>Tengo una consulta sobre el VAN <b>%@</b>...<br /> ",_parseVan[@"Name"]]; // Change the message body to HTML
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"info@equus-life.com"];
     
@@ -141,7 +148,7 @@
     [mc setSubject:emailTitle];
     [mc setMessageBody:messageBody isHTML:YES];
     [mc setToRecipients:toRecipents];
-    
+
     // Present mail view controller on screen
     if ([MFMailComposeViewController canSendMail]){
         [self presentViewController:mc animated:YES completion:NULL];

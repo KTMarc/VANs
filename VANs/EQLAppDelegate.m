@@ -52,8 +52,7 @@
         //NSLog(@"NSUserdefaults esta LLENO");
         //Copiamos lo que tenemos guardado en nuestro singleton.
         #pragma mark TODO: Canviar esto para release
-        if (!debugMode){
-            NSLog(@"Cargamos los NSUserDefaults");
+        if (debugMode){
             sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
             sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
             sharedForm.licence = [defaults integerForKey:@"licence"];

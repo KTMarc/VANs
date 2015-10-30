@@ -14,7 +14,7 @@
 #import "EQLPriceView.h"
 #import "EQLNumHorsesView.h"
 #import "EQLPictureViewController.h"
-
+#import "EQLMenuViewController.h"
 
 
 @interface EQLVanViewController ()
@@ -147,6 +147,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.destinationViewController isKindOfClass:[EQLPictureViewController class]]){
+        EQLPictureViewController *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan =  _parseVan;
+    }
+    
+    if ([segue.destinationViewController isKindOfClass:[EQLMenuViewController class]]){
         EQLPictureViewController *nextViewController = segue.destinationViewController;
         nextViewController.parseVan =  _parseVan;
     }

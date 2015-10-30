@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		04705A1206024A408ED26ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6F93922AF54A898E0D6690 /* libPods.a */; };
 		490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */; };
+		491576211BE23DF60083AA0C /* EQLMaxCarTowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */; };
+		491576271BE24A4E0083AA0C /* EQLHorseWeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 491576261BE24A4E0083AA0C /* EQLHorseWeight.m */; };
 		491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801C11B4509490043CA49 /* QuartzCore.framework */; };
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
@@ -122,6 +124,10 @@
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPoliceIconView.h; sourceTree = "<group>"; };
 		490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPoliceIconView.m; sourceTree = "<group>"; };
+		4915761F1BE23DF60083AA0C /* EQLMaxCarTowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMaxCarTowView.h; sourceTree = "<group>"; };
+		491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMaxCarTowView.m; sourceTree = "<group>"; };
+		491576251BE24A4E0083AA0C /* EQLHorseWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLHorseWeight.h; sourceTree = "<group>"; };
+		491576261BE24A4E0083AA0C /* EQLHorseWeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLHorseWeight.m; sourceTree = "<group>"; };
 		491801C11B4509490043CA49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4923A5AC19CDD2B500585202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
@@ -354,6 +360,10 @@
 				49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */,
 				494BA3BE1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.h */,
 				494BA3BF1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m */,
+				4915761F1BE23DF60083AA0C /* EQLMaxCarTowView.h */,
+				491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */,
+				491576251BE24A4E0083AA0C /* EQLHorseWeight.h */,
+				491576261BE24A4E0083AA0C /* EQLHorseWeight.m */,
 			);
 			name = "UI Long Form";
 			sourceTree = "<group>";
@@ -926,6 +936,7 @@
 				4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */,
 				495C6F641A125B7800C14F0D /* EQLPictureViewController.m in Sources */,
 				494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */,
+				491576271BE24A4E0083AA0C /* EQLHorseWeight.m in Sources */,
 				49E6072D1BD62E6D00D9DA36 /* EQLpriceView.m in Sources */,
 				496B3A2F1B2E99BE002D1B1F /* EQLGaugeViewController.m in Sources */,
 				494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */,
@@ -939,6 +950,7 @@
 				49E607301BD62E9500D9DA36 /* EQLnumHorsesView.m in Sources */,
 				497C58F11AC9099500D1AD57 /* EQLlicenceIconView.m in Sources */,
 				496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */,
+				491576211BE23DF60083AA0C /* EQLMaxCarTowView.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
 				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
