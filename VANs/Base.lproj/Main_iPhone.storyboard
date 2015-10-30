@@ -159,8 +159,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AUJ-af-9Ge"/>
-                                    <segue destination="8Fj-oa-p5U" kind="show" identifier="toResultados" id="oh1-t8-hmF"/>
+                                    <action selector="calculateWeight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Msl-2h-cqQ"/>
+                                    <segue destination="8Fj-oa-p5U" kind="show" id="fUY-eA-UJ4"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="450" borderStyle="roundedRect" placeholder="450" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-wi-1XU">

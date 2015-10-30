@@ -55,8 +55,6 @@
         //Creamos nuestro modelo una sola vez
         self.model = [[EQLGarageModel alloc]init];
         
-        self.sharedForm = [EQLFormData sharedForm];
-        
 //        _sections = [[NSMutableDictionary alloc]init];
 //        _sectionToSportTypeMap = [[NSMutableDictionary alloc]init];
         //Bajamos los vans de la red si no los tenemos en el localDataStore.
@@ -81,7 +79,7 @@
     // This method is called every time objects are loaded from Parse via the PFQuery
     //NSLog(@"Downloaded %lu objects from Parse",  (unsigned long)[self.objects count]);
     
-    self.sharedForm.firstTimeLoad = 1;
+    // self.sharedForm.firstTimeLoad = 1;
     // If we just updated from the server, do nothing, otherwise update from server.
     if (self.shouldUpdateFromServer) {
         //NSLog(@"We are going to update the local Datastore form the server");
@@ -189,6 +187,7 @@
     self.navigationController.hidesBarsWhenVerticallyCompact = false;
     self.navigationController.navigationBarHidden = false;
 
+    self.sharedForm = [EQLFormData sharedForm];
     //This is to fix the side effect to add sections. When the App loads for the first time ever, it doesn´t populate the results from the network connection until we dont pull to refresh.
    // [self loadObjects];
 }
@@ -470,10 +469,9 @@
     
     if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm1ViewController class]]){
         EQLLicenceForm1ViewController *nextViewController = segue.destinationViewController;
-        NSLog(@"Entramos en el preparforsegue del formulario PASO A PASO");
+
         //We pass the fulfiled array with all the vans inside.
         nextViewController.model = self.model;
-        NSLog(@"Tenemos este modelo cuando vamos a pasar al formulario:%@", self.model);
         
     }
 }

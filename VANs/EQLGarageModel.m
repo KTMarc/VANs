@@ -23,6 +23,8 @@
 -(id)init{
     
     if (self = [super init]) {
+        
+        
         self.executionFlag = false; //En realidad tendriamos que hacer un singleton
         
 #pragma mark - TODO: productionFlag change for Production

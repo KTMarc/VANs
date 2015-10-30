@@ -53,6 +53,7 @@
 #pragma mark - Navigation
 
 - (IBAction)toCarResultsButton:(id)sender {
+#pragma mark FIX: We should have this in willSegue or similar
     UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
     // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
     if ([_easyFormLicenceSegmentedControl selectedSegmentIndex] == -1){
@@ -63,7 +64,6 @@
         sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
       //  NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
 
-        
         //Aqui pasamos nil porque el formulario lo pillamos dentro de la funcion que llamaremos ahora. PQ es un singleton
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
         

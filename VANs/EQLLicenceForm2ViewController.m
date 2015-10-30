@@ -45,6 +45,7 @@
         }
     }
     [self saveDataToSingleton];
+    
 }
 
 - (void)didReceiveMemoryWarning {

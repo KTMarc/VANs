@@ -23,6 +23,33 @@
     
     
 }
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+  
+    //Instanciate singleton to save all data from NSUserdefaults
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    
+    // We load everything from userDefaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
+    
+    sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
+    sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
+    sharedForm.licence = [defaults integerForKey:@"licence"];
+    sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+    
+#pragma mark TODO: Canviar esto para release
+    BOOL debugMode= true;
+    if (![defaults objectForKey:@"mmaCar"] && debugMode){
+        //We start with some default data just to avoid entering it manually.
+        sharedForm.mmaCar = 2350;
+        sharedForm.mmrCar = 1900;
+        sharedForm.licence = 0;
+        sharedForm.pesoCaballo = 450;
+    }
+    
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -37,31 +64,7 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    //Instanciamos el singleton para poder guardar alli lo que tengamos en NSUserdefaults
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    BOOL debugMode= true;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    // comprobamos si no hay nada porque es la primera vez que abrimos la app.
-    sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
-    //NSLog(@"First Time Load vale: %i", (int)sharedForm.firstTimeLoad );
-    if (![defaults objectForKey:@"mmaCar"]) {
-        //EN PRODUCCION HAY QUE CONTEMPLAR TODOS LOS CASOS
-        //NSLog(@"NSUserdefaults esta vacio");
-    } else {
-        //NSLog(@"NSUserdefaults esta LLENO");
-        //Copiamos lo que tenemos guardado en nuestro singleton.
-        #pragma mark TODO: Canviar esto para release
-        if (debugMode){
-            sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
-            sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
-            sharedForm.licence = [defaults integerForKey:@"licence"];
-            sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
-        }
-    }
-    // A partir de aquí siempre que se acceda a la clave
-    // dirección, sabremos que al menos hay el valor por
-    // defecto
     return YES;
 }
 							

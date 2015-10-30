@@ -99,30 +99,18 @@
 }
 
 
-- (IBAction)calculateWeight:(UIBarButtonItem *)sender {
+- (IBAction)calculateWeight:(id)sender {
 
-   // NSLog(@"Tenemos este modelo cuando llegamos a CalculateWeight :%@", _model);
-
-        // of the field is not empty
-        //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
-        EQLFormData *sharedForm = [EQLFormData sharedForm];
-        /* -------------------------------------------------------*/
-        
-        sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
-        sharedForm.mmrCar =_mmrCarTextField.text.intValue;
-        sharedForm.pesoCaballo = _horseWeight.text.intValue;
-        sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
+    //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
     
-    /*
-        NSLog(@"Antes de entrar a calculateThings");
-        NSLog(@"mmaCar: %ld", (long)sharedForm.mmaCar);
-        NSLog(@"mmrCar: %ld", (long)sharedForm.mmrCar);
-        NSLog(@"licence: %ld", (long)sharedForm.licence);
-        NSLog(@"pesoCaballo: %ld", (long)sharedForm.pesoCaballo);
-    */
-        self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
-
-       // NSLog(@"En CalculateWeight llama a calculateThingsWithModel y not sale que hay estos resultados despues de calcular todo: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
+    sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
+    sharedForm.mmrCar =_mmrCarTextField.text.intValue;
+    sharedForm.pesoCaballo = _horseWeight.text.intValue;
+    sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
+    
+    self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
@@ -159,7 +147,7 @@
             [missingDataAlert show];
         }
     } else{
-        //Estamos en los segues del tabView y podemos hacer la transición.
+        //We are now sure we can segue
         weDoSegue = true;
     }
     return weDoSegue;
