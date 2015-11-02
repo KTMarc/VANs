@@ -37,16 +37,31 @@
     /* END GESTURE RECOGNIZERS */
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    //http://stackoverflow.com/questions/1214965/setting-action-for-back-button-in-navigation-controller
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+    }
+    [self saveDataToSingleton];
+    [super viewWillDisappear:animated];
+}
+
+- (void)saveDataToSingleton{
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
+    sharedForm.licence = _easyFormLicenceSegmentedControl.   selectedSegmentIndex;
+}
+
 #pragma mark - Gestures
 
 - (void)swipetoLeftDetection{
+  //  [self saveDataToSingleton];
     [self toCarResultsButton:nil];
 }
 
 - (void)swipetoRightDetection{
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    /* -------------------------------------------------------*/
- sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
+  //  [self saveDataToSingleton];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -66,7 +81,6 @@
 
         //Aqui pasamos nil porque el formulario lo pillamos dentro de la funcion que llamaremos ahora. PQ es un singleton
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
-        
         
         /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
         EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];

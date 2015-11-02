@@ -22,15 +22,13 @@
 
 @implementation EQLLicenceFormViewController 
 
+#pragma mark VIEW LIFECYCLE
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
-    //NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
-
     
-    //Esto es para que desaparezca el teclado numerico cada vez que piquemos fuera de él
+    //Remove the numeric keyboard when tapping outside
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
@@ -47,7 +45,7 @@
 //    
     // _result.hidden = false;
     
-    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    /* WE LOAD EVERYTHING FROM THE SINGLETON */
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     if ([sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
         //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
@@ -57,7 +55,7 @@
         _licenceSegmentedControl.selectedSegmentIndex = [sharedForm licence];
     
     }
-    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    /* END OF PERSISTENCY LOADING ----------------------------------------------------------*/
     
     
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
@@ -75,6 +73,24 @@
 
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    //http://stackoverflow.com/questions/1214965/setting-action-for-back-button-in-navigation-controller
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+    }
+    [self saveDataToSingleton];
+    [super viewWillDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark FORM MANAGEMENT
+
 - (void)doneClicked:(id)sender
 {
     [self.ptacCarTextField endEditing:YES];
@@ -87,21 +103,15 @@
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 - (IBAction)technicalSheetButton:(UIButton *)sender {
 
 }
 
 
-- (IBAction)calculateWeight:(id)sender {
-
-    //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
+- (void) saveDataToSingleton{
+    
+    //We instantiate the singleton, which we can use from everywhere
+    //(http://www.galloway.me.uk/tutorials/singleton-classes/)
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
     
@@ -109,9 +119,16 @@
     sharedForm.mmrCar =_mmrCarTextField.text.intValue;
     sharedForm.pesoCaballo = _horseWeight.text.intValue;
     sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
-    
+}
+
+- (IBAction)calculateWeight:(id)sender {
+
+   // [self saveDataToSingleton];
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
     self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
 }
+
+#pragma  mark  NAVIGATION
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {

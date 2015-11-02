@@ -30,6 +30,16 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    //http://stackoverflow.com/questions/1214965/setting-action-for-back-button-in-navigation-controller
+       //Save before moving backwards.
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+    }
+    [self saveDataToSingleton];
+    [super viewWillDisappear:animated];
+}
 
 - (void) initialSetup:(UILabel *) wrongValueWarningLabel andTextField:(UITextField *) textField andSegueId:(NSString *) segueId andDataMissing: (NSString *)dataMissingMessage andMaxTextFieldSize:(NSNumber *)maxTextFieldSize{
     
@@ -99,8 +109,8 @@
 
 - (void)swipetoLeftDetection
 {
-    if (_logs) {  NSLog(@"SwipeToLeft, antes de guardar en el singleton, tenemos esto en el textfield: %@", _textFieldPadre.text);}
-    [self saveDataToSingleton];
+    
+  //  [self saveDataToSingleton];
     if ([self shouldPerformSegueWithIdentifier:_segueIdPadre sender:self]) {
         [self performSegueWithIdentifier: _segueIdPadre sender: self];
     }else{
@@ -111,7 +121,7 @@
 
 - (void)swipetoRightDetection
 {
-    [self saveDataToSingleton];
+    //[self saveDataToSingleton];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -139,6 +149,9 @@
 - (void)doneClicked
 {
     [_textFieldPadre endEditing:YES];
+    //To go directly to the next screen after entering the value
+    [self swipetoLeftDetection];
+    
 }
 
 
@@ -197,7 +210,8 @@
         //Estamos en los segues del tabView y podemos hacer la transición.
         weDoSegue = true;
     }
-    [self saveDataToSingleton];
+    //Save before moving forward.
+    //[self saveDataToSingleton];
     return weDoSegue;
 }
 

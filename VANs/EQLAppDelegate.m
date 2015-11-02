@@ -25,29 +25,7 @@
 }
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
   
-    //Instanciate singleton to save all data from NSUserdefaults
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    
-    // We load everything from userDefaults
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    //sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
-    
-    sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
-    sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
-    sharedForm.licence = [defaults integerForKey:@"licence"];
-    sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
-    
-#pragma mark TODO: Canviar esto para release
-    BOOL debugMode= true;
-    if (![defaults objectForKey:@"mmaCar"] && debugMode){
-        //We start with some default data just to avoid entering it manually.
-        sharedForm.mmaCar = 2350;
-        sharedForm.mmrCar = 1900;
-        sharedForm.licence = 0;
-        sharedForm.pesoCaballo = 450;
-    }
-    
+
     return YES;
 }
 
@@ -64,6 +42,28 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    //Instanciate singleton to save all data from NSUserdefaults
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    
+    // We load everything from userDefaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
+    
+    sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
+    sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
+    sharedForm.licence = [defaults integerForKey:@"licence"];
+    sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+    
+#pragma mark TODO: Canviar esto para release
+    BOOL debugMode= true;
+    if (/*![defaults objectForKey:@"mmaCar"] && */debugMode){
+        //We start with some default data just to avoid entering it manually.
+        sharedForm.mmaCar = 2350;
+        sharedForm.mmrCar = 1900;
+        sharedForm.licence = 1;
+        sharedForm.pesoCaballo = 450;
+    }
     
     return YES;
 }

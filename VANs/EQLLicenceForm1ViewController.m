@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA porque Viene de NSUserDefaults*/
     super.sharedForm = [EQLFormData sharedForm];
     if ([super.sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
         _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];}
@@ -33,6 +32,15 @@
 
 }
 
+-(void)doneClicked{
+    [super doneClicked];
+    
+//    EQLLicenceForm2ViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"toMaxPtacSegue"];
+//    
+//    [self.navigationController pushViewController:nextViewController animated:YES];
+    
+}
+
 #pragma mark - Navigation
 - (IBAction)unwind:(UIStoryboardSegue *)segue{
     //To be able to come back from the advanced mode viewController (EQLLicenceFormViewController)
@@ -41,27 +49,26 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //NSLog(@"Entramos al prepareforSegue de Form1");
-    if ([sender isKindOfClass:[UIBarButtonItem class]]){
+    
+    //Better to avoid introspection to check who sent the event to segue. That way we don´t care if it was a gesture or a UIButton or a UIBarButtonItem
+
+   // if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
 
         }
-    }
+    //}
 
-    
-#pragma mark - CUIDADO con la clase que decimos que venimos! no es lo mismo un UIBarButtonItem que un UIButton normal.
-    
-    if ([sender isKindOfClass:[UIButton class]]){
+  //  if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceFormViewController class]]){
             EQLLicenceFormViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.model;
             //NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
         }
-    }
+  //  }
     
-    [self saveDataToSingleton];
+    //[self saveDataToSingleton];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -37,13 +37,13 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIBarButtonItem class]]){
+//    if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm4ViewController class]]){
             EQLLicenceForm4ViewController *nextViewController = segue.destinationViewController;
             nextViewController.model = self.model;
         }
-    }
-    [self saveDataToSingleton];
+  //  }
+  //  [self saveDataToSingleton];
 }
 
 - (void)didReceiveMemoryWarning {

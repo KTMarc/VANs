@@ -66,7 +66,7 @@
     int pesoTotalCaballos = 0;
     int pesoDisponible= 0;
     int licenceWeight = -1;
-    BOOL logs = true;
+    BOOL logs = false;
     BOOL canHavePtacBetweenBoundaries = true;
     int currentPTAC = 0;
     //BOOL notBrochureWeights = NO;
