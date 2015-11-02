@@ -95,18 +95,15 @@
 {
     [self.ptacCarTextField endEditing:YES];
 }
-    /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {
     [self.view endEditing:YES];
 }
 
-
 - (IBAction)technicalSheetButton:(UIButton *)sender {
 
 }
-
 
 - (void) saveDataToSingleton{
     
@@ -171,20 +168,17 @@
 }
 
 
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([sender isKindOfClass:[UIButton class]]){
+    //if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
             //NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
 
         }
-    }
+    //}
 }
-
-
 
 @end

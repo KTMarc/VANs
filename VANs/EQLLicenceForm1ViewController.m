@@ -29,7 +29,12 @@
             andSegueId:@"toMaxPtacSegue"
         andDataMissing:@"MMA coche\n"
       andMaxTextFieldSize:@4];
+}
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    super.sharedForm = [EQLFormData sharedForm];
+    _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];
 }
 
 -(void)doneClicked{
@@ -49,14 +54,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     //Better to avoid introspection to check who sent the event to segue. That way we don´t care if it was a gesture or a UIButton or a UIBarButtonItem
-
    // if ([sender isKindOfClass:[UIBarButtonItem class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLLicenceForm2ViewController class]]){
             EQLLicenceForm2ViewController *nextViewController = segue.destinationViewController;
            nextViewController.model = self.model;
-
         }
     //}
 
@@ -67,7 +69,6 @@
             //NSLog(@"Entramos al prepareforSegue del Form1 hacia el Form AVANZADO. Tenemos este modelo:%@", _model);
         }
   //  }
-    
     //[self saveDataToSingleton];
 }
 

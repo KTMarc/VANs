@@ -50,14 +50,22 @@
 - (void)saveDataToSingleton{
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     /* -------------------------------------------------------*/
-    sharedForm.licence = _easyFormLicenceSegmentedControl.   selectedSegmentIndex;
+    sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Gestures
 
 - (void)swipetoLeftDetection{
   //  [self saveDataToSingleton];
-    [self toCarResultsButton:nil];
+  //  [self toCarResultsButton:@"toLicenceSegue"];
+    if ([self shouldPerformSegueWithIdentifier:@"toCarResults" sender:self]) {
+        [self performSegueWithIdentifier:@"toCarResults" sender: self];
+    }
 }
 
 - (void)swipetoRightDetection{
@@ -68,52 +76,60 @@
 #pragma mark - Navigation
 
 - (IBAction)toCarResultsButton:(id)sender {
-#pragma mark FIX: We should have this in willSegue or similar
-    UIAlertView *alerta = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
-    // NSLog(@"Tu puta madre %i", [_easyFormLicenceSegmentedControl selectedSegmentIndex]);
+    
+//        EQLFormData *sharedForm = [EQLFormData sharedForm];
+//        /* -------------------------------------------------------*/
+//        sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
+//      //  NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
+//
+//        //Aqui pasamos nil porque el formulario lo pillamos dentro de la funcion que llamaremos ahora. PQ es un singleton
+//        self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
+//        
+//        /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
+//        EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
+//        nextViewController.resultsArray = self.resultsArray;
+//    
+//        //NSLog(@"Después de ejectuar un calculatethings with model dentro de toCarResultsButton: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
+//     
+//
+//        [self.navigationController pushViewController:nextViewController animated:YES];
+//        //[self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
+}
+
+- (void) presentAlert{
+    UIAlertView *alertLicence = [[UIAlertView alloc]initWithTitle:@"Cuidado" message:@"Tienes que seleccionar un carné" delegate:self cancelButtonTitle:@"Vale"  otherButtonTitles: nil];
+    [alertLicence show];
+}
+
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool weDoSegue=true;
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    
     if ([_easyFormLicenceSegmentedControl selectedSegmentIndex] == -1){
-        [alerta show];
-    } else {
-        EQLFormData *sharedForm = [EQLFormData sharedForm];
-        /* -------------------------------------------------------*/
+        weDoSegue = false;
+        [self presentAlert];
+    } else{
         sharedForm.licence = _easyFormLicenceSegmentedControl.selectedSegmentIndex;
-      //  NSLog(@"Segmented control index: %i", _easyFormLicenceSegmentedControl.selectedSegmentIndex);
-
-        //Aqui pasamos nil porque el formulario lo pillamos dentro de la funcion que llamaremos ahora. PQ es un singleton
         self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
-        
-        /* Tengo que hacer el Segue por codigo porque se me ejecutaba antes el prepareforSegue que el codigo de dentro del boton que lo llamaba */
-        EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
-        nextViewController.resultsArray = self.resultsArray;
-        //NSLog(@"Después de ejectuar un calculatethings with model dentro de toCarResultsButton: %i %i %i %i", [self.resultsArray[0] count],[self.resultsArray[1] count],[self.resultsArray[2] count],[self.resultsArray[3] count]);
-     
-
-        [self.navigationController pushViewController:nextViewController animated:YES];
-        //[self shouldPerformSegueWithIdentifier: @"toLicenceSegue" sender: self];
+        weDoSegue = true;
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return weDoSegue;
 }
 
 
-/*
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([sender isKindOfClass:[UIButton class]]){
+    //if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
         }
-    }
+    //}
     
 }
-*/
+
 
 @end

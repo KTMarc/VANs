@@ -109,14 +109,12 @@
 
 - (void)swipetoLeftDetection
 {
-    
   //  [self saveDataToSingleton];
     if ([self shouldPerformSegueWithIdentifier:_segueIdPadre sender:self]) {
         [self performSegueWithIdentifier: _segueIdPadre sender: self];
     }else{
         //We show a pop up (it´s in the other function below shouldPerfom....)
     }
-    
 }
 
 - (void)swipetoRightDetection
@@ -129,19 +127,19 @@
 
 - (void)saveDataToSingleton{
     
-        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mma"]){
-            _sharedForm.mmaCar = _textFieldPadre.text.integerValue;
-            if (_logs) {NSLog(@"El nombre que tiene el textField en storyboards es: %@", [_textFieldPadre restorationIdentifier]);}
-            if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON MMA CAR: %ld", (long)_sharedForm.mmaCar);}
-        }
-        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mmr"]){
+    if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mma"]){
+        _sharedForm.mmaCar = _textFieldPadre.text.integerValue;
+        if (_logs) {NSLog(@"El nombre que tiene el textField en storyboards es: %@", [_textFieldPadre restorationIdentifier]);}
+        if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON MMA CAR: %ld", (long)_sharedForm.mmaCar);}
+    }
+    if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"mmr"]){
         _sharedForm.mmrCar = _textFieldPadre.text.integerValue;
         if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON MMR CAR: %ld", (long)_sharedForm.mmrCar);}
-        }
-        if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"horseWeight"]){
-            _sharedForm.pesoCaballo = _textFieldPadre.text.integerValue;
+    }
+    if ([[_textFieldPadre restorationIdentifier] isEqualToString:@"horseWeight"]){
+        _sharedForm.pesoCaballo = _textFieldPadre.text.integerValue;
         if (_logs) {NSLog(@"SUPER: Guardamos en el SINGLETON PESO CABALLOS: %ld", (long)_sharedForm.pesoCaballo);}
-        }
+    }
 }
 
 #pragma mark - TextField interaction
@@ -151,7 +149,6 @@
     [_textFieldPadre endEditing:YES];
     //To go directly to the next screen after entering the value
     [self swipetoLeftDetection];
-    
 }
 
 

@@ -61,7 +61,7 @@
         //We start with some default data just to avoid entering it manually.
         sharedForm.mmaCar = 2350;
         sharedForm.mmrCar = 1900;
-        sharedForm.licence = 1;
+        sharedForm.licence = -1;
         sharedForm.pesoCaballo = 450;
     }
     
