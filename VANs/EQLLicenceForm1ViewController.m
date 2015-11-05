@@ -21,8 +21,10 @@
     [super viewDidLoad];
     
     super.sharedForm = [EQLFormData sharedForm];
-    if ([super.sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
-        _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];}
+
+    if ([super.sharedForm mmaCar]){ //If has some value (different than nil) load what exists in the singleton
+        _easyFormMmaTextField.text = [NSString stringWithFormat: @"%i",(int)[super.sharedForm mmaCar]];
+    }
     
     [self initialSetup:_wrongValueWarningLabel
           andTextField:_easyFormMmaTextField
@@ -33,8 +35,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    super.sharedForm = [EQLFormData sharedForm];
-    _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];
+//    super.sharedForm = [EQLFormData sharedForm];
+//    _easyFormMmaTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm mmaCar]];
 }
 
 -(void)doneClicked{

@@ -20,8 +20,8 @@
     
     /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA porque Viene de NSUserDefaults*/
     super.sharedForm = [EQLFormData sharedForm];
-    if ([super.sharedForm pesoCaballo] != 0){ //En caso contrario no queremos cargar un 0
-        _easyFormHorseWeightTextField.text = [NSString stringWithFormat: @"%li",(long)[super.sharedForm pesoCaballo]];}
+    if ([super.sharedForm pesoCaballo]){ //En caso contrario no queremos cargar un 0
+        _easyFormHorseWeightTextField.text = [NSString stringWithFormat: @"%i",(int)[super.sharedForm pesoCaballo]];}
     
     [self initialSetup:_wrongValueWarningLabel
           andTextField:_easyFormHorseWeightTextField

@@ -47,7 +47,6 @@
     
     // We load everything from userDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
     //sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
     
     sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
@@ -55,16 +54,27 @@
     sharedForm.licence = [defaults integerForKey:@"licence"];
     sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
     
+    
+    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
+    if (environment[@"mma"]) {
+        sharedForm.mmaCar = [environment[@"mma"] integerValue];
+        sharedForm.mmrCar = [environment[@"mmr"]integerValue];
+        sharedForm.licence = [environment[@"licence"]integerValue];
+        sharedForm.pesoCaballo = [environment[@"horse"]integerValue];
+
+    } else {
+        // Set the default one
+    }
+    
 #pragma mark TODO: Canviar esto para release
-    BOOL debugMode= true;
+    BOOL debugMode= false;
     if (/*![defaults objectForKey:@"mmaCar"] && */debugMode){
         //We start with some default data just to avoid entering it manually.
         sharedForm.mmaCar = 2350;
         sharedForm.mmrCar = 1900;
-        sharedForm.licence = -1;
+        sharedForm.licence = 1;
         sharedForm.pesoCaballo = 450;
     }
-    
     return YES;
 }
 							
