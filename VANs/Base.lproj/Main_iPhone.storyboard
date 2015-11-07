@@ -248,7 +248,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="iDl-u5-7X5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="-184"/>
+            <point key="canvasLocation" x="1175" y="-173"/>
         </scene>
         <!--Ficha A5 (Viejas)-->
         <scene sceneID="mbo-Dc-0j4">
@@ -311,7 +311,7 @@
             </objects>
             <point key="canvasLocation" x="1865" y="-158"/>
         </scene>
-        <!--Resultados-->
+        <!--Puedes conducir..-->
         <scene sceneID="oum-ae-qeG">
             <objects>
                 <tableViewController storyboardIdentifier="carResults" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Fj-oa-p5U" customClass="EQLCarResultsTableViewController" sceneMemberID="viewController">
@@ -320,14 +320,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO SENTIMOS! No puede llevar ningún remolque con este coche/carné. Intente cambiar de carné." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SkV-DK-AWu">
-                            <rect key="frame" x="0.0" y="162" width="320" height="89"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="140" id="hbe-gV-odd">
                                 <rect key="frame" x="0.0" y="22" width="320" height="140"/>
@@ -389,11 +381,8 @@
                             <outlet property="delegate" destination="8Fj-oa-p5U" id="2z9-eA-fCq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Resultados" id="ojH-S9-a9L"/>
+                    <navigationItem key="navigationItem" title="Puedes conducir.." id="ojH-S9-a9L"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="noResultsLabel" destination="SkV-DK-AWu" id="wHh-Xy-2xR"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09f-Se-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -906,7 +895,7 @@ Lateral extra en acero inoxidable</string>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2039" y="467"/>
+            <point key="canvasLocation" x="2335" y="481"/>
         </scene>
         <!--MENU - Van Selector-->
         <scene sceneID="T71-0g-oik">

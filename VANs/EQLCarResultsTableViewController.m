@@ -32,13 +32,19 @@
 {
     [super viewDidLoad];
     
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    //DZNEmptyDataSource --------------------------
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    // A little trick for removing the cell separators
+    self.tableView.tableFooterView = [UIView new];
+    //---------------------------------------------
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _noResultsLabel.hidden = YES;
-    
     self.navigationController.hidesBarsOnSwipe = false;
     self.navigationController.hidesBarsOnTap = false;
     self.navigationController.hidesBarsWhenVerticallyCompact = false;
@@ -62,7 +68,7 @@
         if ([index count]>0){ numResults++;}
     }
     
-    if (numResults == 0){ _noResultsLabel.hidden = NO;}
+    if (numResults == 0){ /*_noResultsLabel.hidden = NO;*/}
 
     return numResults;
 }
@@ -183,6 +189,113 @@
     }
     return cell;
 }
+
+#pragma mark DZNEmptyDataSource
+
+//The image for the empty state:
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"empty_tableView_placeholder.jpg"];
+}
+
+//The image view animation
+- (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"transform"];
+    
+    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0)];
+    
+    animation.duration = 0.25;
+    animation.cumulative = YES;
+    animation.repeatCount = MAXFLOAT;
+    
+    return animation;
+}
+
+//The attributed string for the title of the empty state:
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"Sin resultados para la combinación de pesos introducida";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+//The attributed string for the description of the empty state:
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"Intente cambiar de carné por uno superior o introducir los datos de otro coche";
+    
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0f],
+                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName: paragraph};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+    //The background color for the empty state:
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIColor whiteColor];
+}
+
+//Additionally, you can also adjust the vertical alignment of the content view (ie: useful when there is tableHeaderView visible):
+- (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return -self.tableView.tableHeaderView.frame.size.height/2.0f;
+}
+
+//Finally, you can separate components from each other (default separation is 11 pts):
+- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return 20.0f;
+}
+
+#pragma mark - DZNEmptyDataSetDelegate Methods
+
+//Asks to know if the empty state should be rendered and displayed (Default is YES) :
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for interaction permission (Default is YES) :
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for scrolling permission (Default is NO) :
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for image view animation permission (Default is NO) :
+- (BOOL) emptyDataSetShouldAllowImageViewAnimate:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Notifies when the dataset view was tapped:
+- (void)emptyDataSetDidTapView:(UIScrollView *)scrollView
+{
+    // Do something
+}
+
+//Notifies when the data set call to action button was tapped:
+- (void)emptyDataSetDidTapButton:(UIScrollView *)scrollView
+{
+    // Do something
+}
+
 
 
 /*
