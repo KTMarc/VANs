@@ -23,13 +23,14 @@
 
 #pragma mark Singleton Methods
 
+//As seen in "Effective Objective C (Matt Galloway) - item 45 (making the singleton thread safe)
 +(id) sharedForm{
-    static EQLFormData *sharedFormData = nil;
+    static EQLFormData *sharedForm = nil;
     @synchronized(self) {
-        if (sharedFormData == nil)
-            sharedFormData = [[self alloc] init];
+        if (!sharedForm)
+            sharedForm = [[self alloc] init];
     }
-    return sharedFormData;
+    return sharedForm;
 }
 
 - (id)init {
