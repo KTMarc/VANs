@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EQLGarageModel.h"
 
 @class EQLGarageModel;
 @interface EQLFormData : NSObject
@@ -17,6 +16,9 @@
 @property (nonatomic, readwrite) NSInteger mmrCar;
 @property (nonatomic, readwrite) NSInteger pesoCaballo;
 @property (nonatomic, readwrite) NSInteger licence;
+@property (nonatomic, readwrite) NSInteger firstTimeLoad;
+
+//Those variables are here for convinience and to have them somewhere globally.
 @property (nonatomic, readwrite) NSInteger trailerWeight;
 @property (nonatomic, readwrite) NSInteger numHorses;
 @property (nonatomic, readwrite) NSInteger mmaVan;
@@ -26,10 +28,13 @@
 @property (nonatomic, strong) NSString* licenceString;
 @property (nonatomic, strong) NSString* numHorsesString;
 
+//Navigation track: Para saber desde que boton nos han hecho click y hacer una pequeña animación para que el usuario sepa de donde viene.
+@property (strong, nonatomic) UIView* lastButtonPressed;
+
 
 + (id) sharedForm;
 
-- (NSArray *) calculateThingsWithModel: (EQLGarageModel *) model;
+- (NSArray *) calculateThingsWithModel: (EQLGarageModel *) model andForm: (EQLFormData *)form;
 
 
 @end

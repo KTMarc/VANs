@@ -10,6 +10,12 @@
 //                   _van.PFVan (en EQLCalculationsViewController.m)
 
 #import "EQLVanViewController.h"
+#import "EQLmodeloVan.h"
+#import "EQLPriceView.h"
+#import "EQLNumHorsesView.h"
+#import "EQLPictureViewController.h"
+#import "EQLMenuViewController.h"
+
 
 @interface EQLVanViewController ()
 
@@ -33,17 +39,19 @@
    // self.navigationController.navigationBar.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
    // self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     //self.navigationController.navigationBar.translucent = YES;
-
+    
+    //If we are coming from another view we may want to make the navigationBar fix again
     
     //_parseVan = _van.PFVan;
     UILabel *nameLabel = (UILabel*) [self.view viewWithTag:101];
     nameLabel.text = _parseVan[@"Name"];
-    self.navigationController.title= nameLabel.text;
+//    self.navigationController.title= nameLabel.text;
+    self.navigationItem.title = nameLabel.text;
 //    NSLog(@"Nombre del VaN:%@",_parseVan[@"Name"]);
     
     PFFile *thumbnail = _parseVan[@"photo"];
     PFImageView *thumbnailImageView = (PFImageView*)[self.view viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     //cell.imageView.image = thumbnailImageView.image;
@@ -59,6 +67,7 @@
     EQLNumHorsesView *numhorsesView = (EQLNumHorsesView *) [self.view viewWithTag:105];
     numhorsesView.numHorses = [_parseVan[@"horsesNum"] stringValue];
  
+    self.navigationController.title = _parseVan[@"Name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,8 +76,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
 
+}
 
+/*
 #pragma mark Contact Buttons
 
 - (IBAction)callButton:(id)sender {
@@ -123,7 +140,7 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
+*/
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -133,6 +150,16 @@
         EQLPictureViewController *nextViewController = segue.destinationViewController;
         nextViewController.parseVan =  _parseVan;
     }
+    
+    if ([segue.destinationViewController isKindOfClass:[EQLMenuViewController class]]){
+        EQLPictureViewController *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan =  _parseVan;
+    }
+    /*
+    if ([segue.destinationViewController isKindOfClass:[EQLPhotosCollectionVC class]]){
+        EQLPhotosCollectionVC *nextViewController = segue.destinationViewController;
+        nextViewController.parseVan =  _parseVan;
+    }*/
 }
 
 

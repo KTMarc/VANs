@@ -7,6 +7,9 @@
 //
 
 #import "EQLNavigationController.h"
+#import "EQLMenuViewController.h"
+
+
 
 @interface EQLNavigationController ()
 
@@ -23,20 +26,56 @@
     return self;
 }
 
+- (BOOL)shouldAutorotate
+{
+    id currentViewController = self.topViewController;
+    
+    //We don´t want the Main menu to rotate.
+    if ([currentViewController isKindOfClass:[EQLMenuViewController class]])
+        return NO;
+    
+    return YES;
+}
+
+
+# pragma mark - Unwind from Advanced Form back to MMA form with custom flip transition.
+-(UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier{
+    
+    return [UIStoryboardSegue segueWithIdentifier:identifier source:fromViewController destination:toViewController performHandler:^{
+        UIViewController *src = fromViewController;
+        UIViewController *dst = toViewController;
+        [UIView transitionWithView:src.navigationController.view duration:0.3
+                           options:UIViewAnimationOptionTransitionFlipFromRight
+                        animations:^{
+                            
+                            [src.navigationController popToViewController:dst animated:NO];
+                        }
+                        completion:NULL];
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
     self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:0.1];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:255./255.0 green:102.0/255.0 blue:102/255.0 alpha:0.1];
 
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.0 alpha:0.5]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+            NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:20],
+ /*           NSForegroundColorAttributeName : [UIColor whiteColor],*/
+                                                           }];
+    //This is going to affect all instances in the whole App. That means that we may want to specifiy different values in some places.
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+            NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:18],
+            NSForegroundColorAttributeName : [UIColor whiteColor],}
+            forState:UIControlStateNormal];
+   
+    //if we want to specify a special case, we must do some introspection to see where we are.
+    //Here we specify the color of the font when we are inside the toolbar above the keyboard in the textFields
+    [[UIBarButtonItem appearanceWhenContainedIn:[UIToolbar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [VanStyleKit vermellEquus]} forState:UIControlStateNormal];
 
-    
-    // [VanStyleKit vermellEquus]
 }
 
 

@@ -7,18 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLLicenceForm2ViewController.h"
+#import "EQLFormTemplateViewController.h"
+
+
 //#import "EQLFormData.h"
 
-@interface EQLLicenceForm1ViewController : UIViewController <UIGestureRecognizerDelegate>
-
+@interface EQLLicenceForm1ViewController : EQLFormTemplateViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *easyFormMmaTextField;
-@property (nonatomic, strong) EQLGarageModel *model;
-
-
-- (IBAction)toForm2Button:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIButton *toHelp;
-
+@property (strong, nonatomic) IBOutlet UILabel *wrongValueWarningLabel;
 
 @end

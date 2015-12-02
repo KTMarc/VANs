@@ -1,19 +1,27 @@
 PODS:
-  - Bolts (1.1.4)
-  - Facebook-iOS-SDK (3.23.2):
-    - Bolts (~> 1.0)
-  - FontasticIcons (0.5.0)
-  - Parse (1.3.0):
-    - Facebook-iOS-SDK (~> 3.17)
+  - Bolts (1.3.0):
+    - Bolts/AppLinks (= 1.3.0)
+    - Bolts/Tasks (= 1.3.0)
+  - Bolts/AppLinks (1.3.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.3.0)
+  - DZNEmptyDataSet (1.7.2)
+  - Parse (1.9.0):
+    - Bolts/Tasks (>= 1.3.0)
+  - ParseUI (1.1.6):
+    - Bolts/Tasks (~> 1.2)
+    - Parse (~> 1.8)
 
 DEPENDENCIES:
-  - FontasticIcons
+  - Bolts
+  - DZNEmptyDataSet
   - Parse
+  - ParseUI
 
 SPEC CHECKSUMS:
-  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
-  Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
-  FontasticIcons: f20740bf8f1d3565c312f1c3b9806339212b58aa
-  Parse: 3dd197c46d9452c5cb6a0371a15daff5178ee867
+  Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
+  DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
+  Parse: 712efbc476d4f47b0f96b70db7e53101575753aa
+  ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.39.0

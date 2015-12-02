@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		04705A1206024A408ED26ED2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6F93922AF54A898E0D6690 /* libPods.a */; };
+		490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */; };
+		491576211BE23DF60083AA0C /* EQLMaxCarTowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */; };
+		491576271BE24A4E0083AA0C /* EQLHorseWeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 491576261BE24A4E0083AA0C /* EQLHorseWeight.m */; };
+		491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491801C11B4509490043CA49 /* QuartzCore.framework */; };
 		4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923A5AC19CDD2B500585202 /* CoreLocation.framework */; };
 		49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49249C7019C885A700AE4BC5 /* EQLMapViewController.m */; };
 		49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49249C7219C8A20600AE4BC5 /* MapKit.framework */; };
-		492DF03E1A116BD000483101 /* EQLVistoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492DF03D1A116BD000483101 /* EQLVistoView.m */; };
 		4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */; };
 		4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205119EE93F300B43F41 /* EQLCalculationsViewController.m */; };
 		4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946205419EE9A9600B43F41 /* EQLLicenceButtonView.m */; };
 		494B685919F280A600F453AC /* EQLcarIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685819F280A600F453AC /* EQLcarIconView.m */; };
 		494B685D19F2898F00F453AC /* EQLtrailerMaxPtacView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685C19F2898F00F453AC /* EQLtrailerMaxPtacView.m */; };
 		494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B685F19F28A1900F453AC /* EQLequusHorseNavBarView.m */; };
+		494BA3C01B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BA3BF1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m */; };
 		494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */; };
 		494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */; };
 		4956E3F019EC814E00966A8E /* EQLMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E3EF19EC814E00966A8E /* EQLMenuViewController.m */; };
@@ -28,6 +32,16 @@
 		495B599C1A054E3A00D87869 /* EQLcallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599B1A054E3A00D87869 /* EQLcallButton.m */; };
 		495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495B599E1A05519F00D87869 /* EQLmailButton.m */; };
 		495C6F641A125B7800C14F0D /* EQLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C6F631A125B7800C14F0D /* EQLPictureViewController.m */; };
+		496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */; };
+		496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A101B2BD688002D1B1F /* Play-Bold.ttf */; };
+		496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496B3A111B2BD688002D1B1F /* Play-Regular.ttf */; };
+		496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */; };
+		496B3A261B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */; };
+		496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */; };
+		496B3A2F1B2E99BE002D1B1F /* EQLGaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */; };
+		496B3A321B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */; };
+		496B3A461B386D42002D1B1F /* EQLGauge1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */; };
+		496B3A491B386E5F002D1B1F /* EQLGauge1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B3A481B386E5F002D1B1F /* EQLGauge1View.m */; };
 		496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */ = {isa = PBXBuildFile; fileRef = 496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */; };
 		496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */; };
 		4972AA5719C20434004896A1 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4972AA5619C20434004896A1 /* placeholder.jpg */; };
@@ -62,7 +76,6 @@
 		49A871B8198158F6008BB3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871B7198158F6008BB3B3 /* main.m */; };
 		49A871BC198158F6008BB3B3 /* EQLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */; };
 		49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */; };
-		49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */; };
 		49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */; };
 		49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A871C6198158F6008BB3B3 /* Images.xcassets */; };
 		49A871CE198158F6008BB3B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A871CD198158F6008BB3B3 /* XCTest.framework */; };
@@ -83,13 +96,18 @@
 		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
+		49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */; };
+		49C3256D1B49DBF5007DC224 /* EQLCarLargeIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
 		49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505461A04090500CBAE64 /* EQLmyButton.m */; };
-		49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D68C241A0945F900C54307 /* EQLNumHorsesView.m */; };
 		49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */; };
-		49EB51801A083CCF00B441B8 /* EQLPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB517F1A083CCF00B441B8 /* EQLPriceView.m */; };
-		49F2281E1A0976CE00E5889E /* EQLPlancherIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2281D1A0976CE00E5889E /* EQLPlancherIcon.m */; };
-		49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F228201A09800600E5889E /* EQLSuspensionIcon.m */; };
+		49E513341B6D79F8006E63E3 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E513331B6D79F8006E63E3 /* placeholder.png */; };
+		49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */; };
+		49E6072D1BD62E6D00D9DA36 /* EQLpriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072B1BD62E6D00D9DA36 /* EQLpriceView.m */; };
+		49E607301BD62E9500D9DA36 /* EQLnumHorsesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E6072E1BD62E9500D9DA36 /* EQLnumHorsesView.m */; };
+		49E607331BD62EA400D9DA36 /* EQLplancherIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607311BD62EA400D9DA36 /* EQLplancherIcon.m */; };
+		49E607361BD62EB000D9DA36 /* EQLsuspensionIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607341BD62EB000D9DA36 /* EQLsuspensionIcon.m */; };
+		49E607391BD62EC600D9DA36 /* EQLvistoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E607371BD62EC600D9DA36 /* EQLvistoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,12 +122,17 @@
 
 /* Begin PBXFileReference section */
 		2E6F93922AF54A898E0D6690 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPoliceIconView.h; sourceTree = "<group>"; };
+		490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPoliceIconView.m; sourceTree = "<group>"; };
+		4915761F1BE23DF60083AA0C /* EQLMaxCarTowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMaxCarTowView.h; sourceTree = "<group>"; };
+		491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMaxCarTowView.m; sourceTree = "<group>"; };
+		491576251BE24A4E0083AA0C /* EQLHorseWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLHorseWeight.h; sourceTree = "<group>"; };
+		491576261BE24A4E0083AA0C /* EQLHorseWeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLHorseWeight.m; sourceTree = "<group>"; };
+		491801C11B4509490043CA49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4923A5AC19CDD2B500585202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapViewController.h; sourceTree = "<group>"; };
 		49249C7019C885A700AE4BC5 /* EQLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapViewController.m; sourceTree = "<group>"; };
 		49249C7219C8A20600AE4BC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		492DF03C1A116BD000483101 /* EQLVistoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLVistoView.h; sourceTree = "<group>"; };
-		492DF03D1A116BD000483101 /* EQLVistoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLVistoView.m; sourceTree = "<group>"; };
 		4939BA4219F8144900D11BC9 /* EQLCalculationsCondition2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsCondition2.h; sourceTree = "<group>"; };
 		4939BA4319F8144900D11BC9 /* EQLCalculationsCondition2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCalculationsCondition2.m; sourceTree = "<group>"; };
 		4946205019EE93F300B43F41 /* EQLCalculationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCalculationsViewController.h; sourceTree = "<group>"; };
@@ -124,6 +147,8 @@
 		494B685F19F28A1900F453AC /* EQLequusHorseNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLequusHorseNavBarView.m; sourceTree = "<group>"; };
 		494B686119F28A9200F453AC /* EQLlicenceIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLlicenceIconView.h; sourceTree = "<group>"; };
 		494B686219F28A9200F453AC /* EQLmodeloVan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLmodeloVan.h; path = VANs/EQLmodeloVan.h; sourceTree = "<group>"; };
+		494BA3BE1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCarPeopleLuggageView.h; sourceTree = "<group>"; };
+		494BA3BF1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCarPeopleLuggageView.m; sourceTree = "<group>"; };
 		494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm3ViewController.h; sourceTree = "<group>"; };
 		494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceForm3ViewController.m; sourceTree = "<group>"; };
 		494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLLicenceForm4ViewController.h; sourceTree = "<group>"; };
@@ -143,6 +168,23 @@
 		495B599E1A05519F00D87869 /* EQLmailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmailButton.m; sourceTree = "<group>"; };
 		495C6F621A125B7800C14F0D /* EQLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPictureViewController.h; sourceTree = "<group>"; };
 		495C6F631A125B7800C14F0D /* EQLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPictureViewController.m; sourceTree = "<group>"; };
+		496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		496B3A101B2BD688002D1B1F /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Bold.ttf"; path = "fonts/Play/Play-Bold.ttf"; sourceTree = "<group>"; };
+		496B3A111B2BD688002D1B1F /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Play-Regular.ttf"; path = "fonts/Play/Play-Regular.ttf"; sourceTree = "<group>"; };
+		496B3A211B2BFB33002D1B1F /* UILabel+EQLCustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+EQLCustomFont.h"; sourceTree = "<group>"; };
+		496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+EQLCustomFont.m"; sourceTree = "<group>"; };
+		496B3A241B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+EQLCustomTextField.h"; sourceTree = "<group>"; };
+		496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+EQLCustomTextField.m"; sourceTree = "<group>"; };
+		496B3A271B2BFC40002D1B1F /* UIButton+EQLCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EQLCustomButton.h"; sourceTree = "<group>"; };
+		496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EQLCustomButton.m"; sourceTree = "<group>"; };
+		496B3A2D1B2E99BE002D1B1F /* EQLGaugeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGaugeViewController.h; sourceTree = "<group>"; };
+		496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGaugeViewController.m; sourceTree = "<group>"; };
+		496B3A301B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGaugeCarAndVanView.h; sourceTree = "<group>"; };
+		496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGaugeCarAndVanView.m; sourceTree = "<group>"; };
+		496B3A441B386D42002D1B1F /* EQLGauge1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGauge1Layer.h; sourceTree = "<group>"; };
+		496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGauge1Layer.m; sourceTree = "<group>"; };
+		496B3A471B386E5F002D1B1F /* EQLGauge1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLGauge1View.h; sourceTree = "<group>"; };
+		496B3A481B386E5F002D1B1F /* EQLGauge1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLGauge1View.m; sourceTree = "<group>"; };
 		496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-Nancy-Cheval-Liberte.png"; sourceTree = "<group>"; };
 		4972AA5619C20434004896A1 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		497C58F01AC9099500D1AD57 /* EQLlicenceIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLlicenceIconView.m; sourceTree = "<group>"; };
@@ -161,7 +203,6 @@
 		49884FBC1A06B06B00E38F31 /* EQLmoreInfoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmoreInfoButton.m; sourceTree = "<group>"; };
 		49904A29198FA5CE00A4A79E /* TabBar_A4Icon-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-02.png"; sourceTree = "<group>"; };
 		49904A2A198FA5CE00A4A79E /* TabBar_A4Icon-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_A4Icon-01.png"; sourceTree = "<group>"; };
-		49904A2D198FAAAB00A4A79E /* EQLMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMenuTableViewController.h; sourceTree = "<group>"; };
 		49904A30198FE63800A4A79E /* EQLCatalogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCatalogTableViewController.h; sourceTree = "<group>"; };
 		49904A31198FE63800A4A79E /* EQLCatalogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCatalogTableViewController.m; sourceTree = "<group>"; };
 		49907CB2198BA6D9005CF560 /* EQLGarageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQLGarageModel.h; path = VANs/EQLGarageModel.h; sourceTree = "<group>"; };
@@ -175,6 +216,7 @@
 		49907CC5198CD024005CF560 /* Gold_XL_Western.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gold_XL_Western.jpg; sourceTree = "<group>"; };
 		49907CC9198CD91E005CF560 /* gt1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gt1.jpg; sourceTree = "<group>"; };
 		49907CCB198CDA1B005CF560 /* minimax.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minimax.jpg; sourceTree = "<group>"; };
+		49A30C7F1BE114AA00F62600 /* deleteLocalDataStore.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = deleteLocalDataStore.sh; path = VANs/deleteLocalDataStore.sh; sourceTree = "<group>"; };
 		49A428F01987EBD500C02F53 /* EQLBigSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLBigSheetViewController.h; sourceTree = "<group>"; };
 		49A428F11987EBD500C02F53 /* EQLBigSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLBigSheetViewController.m; sourceTree = "<group>"; };
 		49A428F31987ED7700C02F53 /* ejemploFichaA4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ejemploFichaA4.jpg; sourceTree = "<group>"; };
@@ -195,7 +237,6 @@
 		49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQLAppDelegate.h; sourceTree = "<group>"; };
 		49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQLAppDelegate.m; sourceTree = "<group>"; };
 		49A871BE198158F6008BB3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		49A871C1198158F6008BB3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQLLicenceFormViewController.h; sourceTree = "<group>"; };
 		49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQLLicenceFormViewController.m; sourceTree = "<group>"; };
 		49A871C6198158F6008BB3B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -231,20 +272,29 @@
 		49B1FC1019825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		49C325681B48DD4F007DC224 /* EQLFormTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFormTemplateViewController.h; sourceTree = "<group>"; };
+		49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormTemplateViewController.m; sourceTree = "<group>"; };
+		49C3256B1B49DBF5007DC224 /* EQLCarLargeIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCarLargeIconView.h; sourceTree = "<group>"; };
+		49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLCarLargeIconView.m; sourceTree = "<group>"; };
 		49D505421A04057500CBAE64 /* EQLhelpIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLhelpIconView.h; sourceTree = "<group>"; };
 		49D505431A04057500CBAE64 /* EQLhelpIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLhelpIconView.m; sourceTree = "<group>"; };
 		49D505451A04090500CBAE64 /* EQLmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmyButton.h; sourceTree = "<group>"; };
 		49D505461A04090500CBAE64 /* EQLmyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmyButton.m; sourceTree = "<group>"; };
-		49D68C231A0945F900C54307 /* EQLNumHorsesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLNumHorsesView.h; sourceTree = "<group>"; };
-		49D68C241A0945F900C54307 /* EQLNumHorsesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLNumHorsesView.m; sourceTree = "<group>"; };
 		49E4E14419EEB255009EC47D /* EQLMapsButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapsButtonView.h; sourceTree = "<group>"; };
 		49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapsButtonView.m; sourceTree = "<group>"; };
-		49EB517E1A083CCF00B441B8 /* EQLPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPriceView.h; sourceTree = "<group>"; };
-		49EB517F1A083CCF00B441B8 /* EQLPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPriceView.m; sourceTree = "<group>"; };
-		49F2281C1A0976CE00E5889E /* EQLPlancherIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLPlancherIcon.h; sourceTree = "<group>"; };
-		49F2281D1A0976CE00E5889E /* EQLPlancherIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLPlancherIcon.m; sourceTree = "<group>"; };
-		49F2281F1A09800600E5889E /* EQLSuspensionIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLSuspensionIcon.h; sourceTree = "<group>"; };
-		49F228201A09800600E5889E /* EQLSuspensionIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLSuspensionIcon.m; sourceTree = "<group>"; };
+		49E513331B6D79F8006E63E3 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		49E513351B6D8CAD006E63E3 /* EQLFlipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFlipSegue.h; sourceTree = "<group>"; };
+		49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFlipSegue.m; sourceTree = "<group>"; };
+		49E6072B1BD62E6D00D9DA36 /* EQLpriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLpriceView.m; sourceTree = "<group>"; };
+		49E6072C1BD62E6D00D9DA36 /* EQLpriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLpriceView.h; sourceTree = "<group>"; };
+		49E6072E1BD62E9500D9DA36 /* EQLnumHorsesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLnumHorsesView.m; sourceTree = "<group>"; };
+		49E6072F1BD62E9500D9DA36 /* EQLnumHorsesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLnumHorsesView.h; sourceTree = "<group>"; };
+		49E607311BD62EA400D9DA36 /* EQLplancherIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLplancherIcon.m; sourceTree = "<group>"; };
+		49E607321BD62EA400D9DA36 /* EQLplancherIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLplancherIcon.h; sourceTree = "<group>"; };
+		49E607341BD62EB000D9DA36 /* EQLsuspensionIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLsuspensionIcon.m; sourceTree = "<group>"; };
+		49E607351BD62EB000D9DA36 /* EQLsuspensionIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLsuspensionIcon.h; sourceTree = "<group>"; };
+		49E607371BD62EC600D9DA36 /* EQLvistoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLvistoView.m; sourceTree = "<group>"; };
+		49E607381BD62EC600D9DA36 /* EQLvistoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLvistoView.h; sourceTree = "<group>"; };
 		ADC7446A5ED2F7F3D96E5C4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D37A08889C2854D312B24C30 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +304,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491801C21B4509490043CA49 /* QuartzCore.framework in Frameworks */,
+				496B3A0C1B28DDE2002D1B1F /* libsqlite3.dylib in Frameworks */,
 				495B59981A053EBA00D87869 /* MessageUI.framework in Frameworks */,
 				4923A5AD19CDD2B500585202 /* CoreLocation.framework in Frameworks */,
 				49249C7319C8A20600AE4BC5 /* MapKit.framework in Frameworks */,
@@ -304,6 +356,14 @@
 				49D505461A04090500CBAE64 /* EQLmyButton.m */,
 				495B59941A0516FE00D87869 /* EQLlicenceHelpView.h */,
 				495B59951A0516FE00D87869 /* EQLlicenceHelpView.m */,
+				49C3256B1B49DBF5007DC224 /* EQLCarLargeIconView.h */,
+				49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */,
+				494BA3BE1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.h */,
+				494BA3BF1B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m */,
+				4915761F1BE23DF60083AA0C /* EQLMaxCarTowView.h */,
+				491576201BE23DF60083AA0C /* EQLMaxCarTowView.m */,
+				491576251BE24A4E0083AA0C /* EQLHorseWeight.h */,
+				491576261BE24A4E0083AA0C /* EQLHorseWeight.m */,
 			);
 			name = "UI Long Form";
 			sourceTree = "<group>";
@@ -332,17 +392,52 @@
 			name = "UI Detail View";
 			sourceTree = "<group>";
 		};
+		496B3A0F1B2BD66B002D1B1F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				496B3A101B2BD688002D1B1F /* Play-Bold.ttf */,
+				496B3A111B2BD688002D1B1F /* Play-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		496B3A141B2BDD72002D1B1F /* UI - Categories for UIKit Standard Controls  */ = {
+			isa = PBXGroup;
+			children = (
+				496B3A211B2BFB33002D1B1F /* UILabel+EQLCustomFont.h */,
+				496B3A221B2BFB33002D1B1F /* UILabel+EQLCustomFont.m */,
+				496B3A241B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.h */,
+				496B3A251B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m */,
+				496B3A271B2BFC40002D1B1F /* UIButton+EQLCustomButton.h */,
+				496B3A281B2BFC40002D1B1F /* UIButton+EQLCustomButton.m */,
+			);
+			name = "UI - Categories for UIKit Standard Controls ";
+			sourceTree = "<group>";
+		};
+		496B3A331B2E9C21002D1B1F /* UI Gauges */ = {
+			isa = PBXGroup;
+			children = (
+				496B3A301B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.h */,
+				496B3A311B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m */,
+				496B3A441B386D42002D1B1F /* EQLGauge1Layer.h */,
+				496B3A451B386D42002D1B1F /* EQLGauge1Layer.m */,
+				496B3A471B386E5F002D1B1F /* EQLGauge1View.h */,
+				496B3A481B386E5F002D1B1F /* EQLGauge1View.m */,
+				496B3A2D1B2E99BE002D1B1F /* EQLGaugeViewController.h */,
+				496B3A2E1B2E99BE002D1B1F /* EQLGaugeViewController.m */,
+			);
+			name = "UI Gauges";
+			sourceTree = "<group>";
+		};
 		497F444919DFF3640065BD07 /* Formulario paso a paso */ = {
 			isa = PBXGroup;
 			children = (
-				497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */,
-				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
-				497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */,
-				497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */,
-				494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */,
-				494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */,
-				494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */,
-				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
+				49C325681B48DD4F007DC224 /* EQLFormTemplateViewController.h */,
+				49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */,
+				49A3402C1B3E403A006FF2F5 /* Form 1 MMA Car */,
+				49A3402D1B3E4051006FF2F5 /* Form 2 MMR Car */,
+				49A3402E1B3E405E006FF2F5 /* Form 3 Horses */,
+				49A3402F1B3E406C006FF2F5 /* Form 4 Licence */,
 			);
 			name = "Formulario paso a paso";
 			sourceTree = "<group>";
@@ -363,6 +458,7 @@
 		498212371987BBDF00022486 /* Fotos */ = {
 			isa = PBXGroup;
 			children = (
+				49E513331B6D79F8006E63E3 /* placeholder.png */,
 				496C94B719D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png */,
 				4972AA5619C20434004896A1 /* placeholder.jpg */,
 				49907CBB198CCF96005CF560 /* Gold_Grand_Confort.jpg */,
@@ -376,6 +472,46 @@
 				498212381987BD0500022486 /* ejemploFichaA5.jpg */,
 			);
 			name = Fotos;
+			sourceTree = "<group>";
+		};
+		49A3402C1B3E403A006FF2F5 /* Form 1 MMA Car */ = {
+			isa = PBXGroup;
+			children = (
+				497F444319DFD4B80065BD07 /* EQLLicenceForm1ViewController.h */,
+				497F444419DFD4B80065BD07 /* EQLLicenceForm1ViewController.m */,
+				49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */,
+				49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */,
+				49E513351B6D8CAD006E63E3 /* EQLFlipSegue.h */,
+				49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */,
+			);
+			name = "Form 1 MMA Car";
+			sourceTree = "<group>";
+		};
+		49A3402D1B3E4051006FF2F5 /* Form 2 MMR Car */ = {
+			isa = PBXGroup;
+			children = (
+				497F444619DFE6AC0065BD07 /* EQLLicenceForm2ViewController.h */,
+				497F444719DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m */,
+			);
+			name = "Form 2 MMR Car";
+			sourceTree = "<group>";
+		};
+		49A3402E1B3E405E006FF2F5 /* Form 3 Horses */ = {
+			isa = PBXGroup;
+			children = (
+				494BD5CB19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.h */,
+				494BD5CC19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m */,
+			);
+			name = "Form 3 Horses";
+			sourceTree = "<group>";
+		};
+		49A3402F1B3E406C006FF2F5 /* Form 4 Licence */ = {
+			isa = PBXGroup;
+			children = (
+				494BD5CE19E0001A00E9B289 /* EQLLicenceForm4ViewController.h */,
+				494BD5CF19E0001A00E9B289 /* EQLLicenceForm4ViewController.m */,
+			);
+			name = "Form 4 Licence";
 			sourceTree = "<group>";
 		};
 		49A428FB1987FB8600C02F53 /* Fichas tecnicas */ = {
@@ -394,6 +530,7 @@
 		49A8719F198158F5008BB3B3 = {
 			isa = PBXGroup;
 			children = (
+				49A30C7F1BE114AA00F62600 /* deleteLocalDataStore.sh */,
 				49A871B1198158F6008BB3B3 /* VANs */,
 				49A871D3198158F6008BB3B3 /* VANsTests */,
 				49A871AA198158F6008BB3B3 /* Frameworks */,
@@ -414,6 +551,8 @@
 		49A871AA198158F6008BB3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491801C11B4509490043CA49 /* QuartzCore.framework */,
+				496B3A0B1B28DDE2002D1B1F /* libsqlite3.dylib */,
 				495B59971A053EBA00D87869 /* MessageUI.framework */,
 				4923A5AC19CDD2B500585202 /* CoreLocation.framework */,
 				49249C7219C8A20600AE4BC5 /* MapKit.framework */,
@@ -429,20 +568,21 @@
 		49A871B1198158F6008BB3B3 /* VANs */ = {
 			isa = PBXGroup;
 			children = (
+				496B3A141B2BDD72002D1B1F /* UI - Categories for UIKit Standard Controls  */,
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
+				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
+				496B3A331B2E9C21002D1B1F /* UI Gauges */,
 				49EB517D1A083CAF00B441B8 /* UI Catalog */,
 				495B59991A054E1600D87869 /* UI Detail View */,
 				4956E3F419EC844A00966A8E /* UI Menu */,
 				494B685A19F280B000F453AC /* UI Long Form */,
 				4980023819F02103003F68AF /* UI Calculations */,
 				492E297819DF1C4100EF2198 /* Singleton */,
-				49A871E719815922008BB3B3 /* Controladores */,
 				49A871E619815918008BB3B3 /* Modelo */,
+				49A871E719815922008BB3B3 /* Controladores */,
 				49A871BA198158F6008BB3B3 /* EQLAppDelegate.h */,
 				49A871BB198158F6008BB3B3 /* EQLAppDelegate.m */,
-				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
-				49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */,
 				49A871C6198158F6008BB3B3 /* Images.xcassets */,
 				49A871B2198158F6008BB3B3 /* Supporting Files */,
 			);
@@ -452,6 +592,7 @@
 		49A871B2198158F6008BB3B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				496B3A0F1B2BD66B002D1B1F /* Fonts */,
 				498212371987BBDF00022486 /* Fotos */,
 				49B1FBEA19825EBE008E0ABD /* icon */,
 				49A871B3198158F6008BB3B3 /* VAN Selector-Info.plist */,
@@ -497,13 +638,8 @@
 			children = (
 				49A428F81987F97C00C02F53 /* EQLNavigationController.h */,
 				49A428F91987F97C00C02F53 /* EQLNavigationController.m */,
-				49904A2D198FAAAB00A4A79E /* EQLMenuTableViewController.h */,
-				4956E3EE19EC814E00966A8E /* EQLMenuViewController.h */,
-				4956E3EF19EC814E00966A8E /* EQLMenuViewController.m */,
 				49904A30198FE63800A4A79E /* EQLCatalogTableViewController.h */,
 				49904A31198FE63800A4A79E /* EQLCatalogTableViewController.m */,
-				49A871C3198158F6008BB3B3 /* EQLLicenceFormViewController.h */,
-				49A871C4198158F6008BB3B3 /* EQLLicenceFormViewController.m */,
 				497F444919DFF3640065BD07 /* Formulario paso a paso */,
 				49A428FC1987FF3500C02F53 /* EQLCarResultsTableViewController.h */,
 				49A428FD1987FF3500C02F53 /* EQLCarResultsTableViewController.m */,
@@ -513,6 +649,8 @@
 				49907CB9198CC736005CF560 /* EQLVanViewController.m */,
 				495C6F621A125B7800C14F0D /* EQLPictureViewController.h */,
 				495C6F631A125B7800C14F0D /* EQLPictureViewController.m */,
+				4956E3EE19EC814E00966A8E /* EQLMenuViewController.h */,
+				4956E3EF19EC814E00966A8E /* EQLMenuViewController.m */,
 				49249C6F19C885A700AE4BC5 /* EQLMapViewController.h */,
 				49249C7019C885A700AE4BC5 /* EQLMapViewController.m */,
 				49A428FB1987FB8600C02F53 /* Fichas tecnicas */,
@@ -574,16 +712,18 @@
 		49EB517D1A083CAF00B441B8 /* UI Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				49EB517E1A083CCF00B441B8 /* EQLPriceView.h */,
-				49EB517F1A083CCF00B441B8 /* EQLPriceView.m */,
-				49D68C231A0945F900C54307 /* EQLNumHorsesView.h */,
-				49D68C241A0945F900C54307 /* EQLNumHorsesView.m */,
-				49F2281C1A0976CE00E5889E /* EQLPlancherIcon.h */,
-				49F2281D1A0976CE00E5889E /* EQLPlancherIcon.m */,
-				49F2281F1A09800600E5889E /* EQLSuspensionIcon.h */,
-				49F228201A09800600E5889E /* EQLSuspensionIcon.m */,
-				492DF03C1A116BD000483101 /* EQLVistoView.h */,
-				492DF03D1A116BD000483101 /* EQLVistoView.m */,
+				490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */,
+				490D9F4C1B733F7E0033C79C /* EQLPoliceIconView.m */,
+				49E6072B1BD62E6D00D9DA36 /* EQLpriceView.m */,
+				49E6072C1BD62E6D00D9DA36 /* EQLpriceView.h */,
+				49E6072E1BD62E9500D9DA36 /* EQLnumHorsesView.m */,
+				49E6072F1BD62E9500D9DA36 /* EQLnumHorsesView.h */,
+				49E607311BD62EA400D9DA36 /* EQLplancherIcon.m */,
+				49E607321BD62EA400D9DA36 /* EQLplancherIcon.h */,
+				49E607341BD62EB000D9DA36 /* EQLsuspensionIcon.m */,
+				49E607351BD62EB000D9DA36 /* EQLsuspensionIcon.h */,
+				49E607371BD62EC600D9DA36 /* EQLvistoView.m */,
+				49E607381BD62EC600D9DA36 /* EQLvistoView.h */,
 			);
 			name = "UI Catalog";
 			sourceTree = "<group>";
@@ -609,6 +749,7 @@
 				49A871A5198158F5008BB3B3 /* Frameworks */,
 				49A871A6198158F5008BB3B3 /* Resources */,
 				362FA713467C461E8BCC8A68 /* Copy Pods Resources */,
+				6F92211372B0F203242956B3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -644,11 +785,16 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EQL;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "EQUUS-LIFE";
 				TargetAttributes = {
 					49A871A7198158F5008BB3B3 = {
 						DevelopmentTeam = GM2F4EG66J;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 					49A871CB198158F6008BB3B3 = {
 						TestTargetID = 49A871A7198158F5008BB3B3;
@@ -679,10 +825,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A871C2198158F6008BB3B3 /* Main_iPad.storyboard in Resources */,
+				496B3A121B2BD688002D1B1F /* Play-Bold.ttf in Resources */,
 				49907CC4198CCF96005CF560 /* Optimax_Pont_avant.jpg in Resources */,
 				49907CC6198CD024005CF560 /* Gold_XL_Western.jpg in Resources */,
 				49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */,
+				496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */,
 				49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */,
 				49A428F41987ED7700C02F53 /* ejemploFichaA4.jpg in Resources */,
 				49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */,
@@ -704,6 +851,7 @@
 				49B1FC2319825EBE008E0ABD /* Icon-40.png in Resources */,
 				49B1FC1E19825EBE008E0ABD /* Icon-Small@2x.png in Resources */,
 				496C94B819D38381002A8A47 /* Logo-Nancy-Cheval-Liberte.png in Resources */,
+				49E513341B6D79F8006E63E3 /* placeholder.png in Resources */,
 				49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */,
 				4972AA5719C20434004896A1 /* placeholder.jpg in Resources */,
 				49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */,
@@ -752,6 +900,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		6F92211372B0F203242956B3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -762,39 +925,53 @@
 				494B685D19F2898F00F453AC /* EQLtrailerMaxPtacView.m in Sources */,
 				496E6376198FFF0F00C30033 /* EQLCarResultsTableViewController.m in Sources */,
 				49904A32198FE63800A4A79E /* EQLCatalogTableViewController.m in Sources */,
+				49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */,
 				4956E3F019EC814E00966A8E /* EQLMenuViewController.m in Sources */,
-				49D68C251A0945F900C54307 /* EQLNumHorsesView.m in Sources */,
 				49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */,
 				49A428F21987EBD500C02F53 /* EQLBigSheetViewController.m in Sources */,
 				495B59961A0516FE00D87869 /* EQLlicenceHelpView.m in Sources */,
 				495B599F1A05519F00D87869 /* EQLmailButton.m in Sources */,
+				496B3A321B2E9BC7002D1B1F /* EQLGaugeCarAndVanView.m in Sources */,
+				49E607361BD62EB000D9DA36 /* EQLsuspensionIcon.m in Sources */,
 				4946205219EE93F300B43F41 /* EQLCalculationsViewController.m in Sources */,
 				495C6F641A125B7800C14F0D /* EQLPictureViewController.m in Sources */,
-				49F2281E1A0976CE00E5889E /* EQLPlancherIcon.m in Sources */,
 				494BD5CD19DFFFFF00E9B289 /* EQLLicenceForm3ViewController.m in Sources */,
+				491576271BE24A4E0083AA0C /* EQLHorseWeight.m in Sources */,
+				49E6072D1BD62E6D00D9DA36 /* EQLpriceView.m in Sources */,
+				496B3A2F1B2E99BE002D1B1F /* EQLGaugeViewController.m in Sources */,
 				494BD5D019E0001A00E9B289 /* EQLLicenceForm4ViewController.m in Sources */,
-				49EB51801A083CCF00B441B8 /* EQLPriceView.m in Sources */,
+				49C3256D1B49DBF5007DC224 /* EQLCarLargeIconView.m in Sources */,
 				497F444519DFD4B80065BD07 /* EQLLicenceForm1ViewController.m in Sources */,
 				49A428F71987EE2800C02F53 /* EQLSmallSheetViewController.m in Sources */,
 				495B599C1A054E3A00D87869 /* EQLcallButton.m in Sources */,
 				4956E3F319EC842900966A8E /* EQLcatalogButtonView.m in Sources */,
 				49A428FA1987F97C00C02F53 /* EQLNavigationController.m in Sources */,
+				49E607331BD62EA400D9DA36 /* EQLplancherIcon.m in Sources */,
+				49E607301BD62E9500D9DA36 /* EQLnumHorsesView.m in Sources */,
 				497C58F11AC9099500D1AD57 /* EQLlicenceIconView.m in Sources */,
+				496B3A291B2BFC40002D1B1F /* UIButton+EQLCustomButton.m in Sources */,
+				491576211BE23DF60083AA0C /* EQLMaxCarTowView.m in Sources */,
 				497F444819DFE6AC0065BD07 /* EQLLicenceForm2ViewController.m in Sources */,
 				49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */,
 				4939BA4419F8144900D11BC9 /* EQLCalculationsCondition2.m in Sources */,
 				4980023B19F0356C003F68AF /* EQLCalculationsCondition1.m in Sources */,
+				496B3A461B386D42002D1B1F /* EQLGauge1Layer.m in Sources */,
 				4946205519EE9A9600B43F41 /* EQLLicenceButtonView.m in Sources */,
 				49249C7119C885A700AE4BC5 /* EQLMapViewController.m in Sources */,
 				49A871E519815912008BB3B3 /* EQLmodeloVan.m in Sources */,
+				496B3A491B386E5F002D1B1F /* EQLGauge1View.m in Sources */,
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
+				490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */,
+				494BA3C01B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
-				492DF03E1A116BD000483101 /* EQLVistoView.m in Sources */,
+				496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */,
 				494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */,
 				49907CBA198CC736005CF560 /* EQLVanViewController.m in Sources */,
-				49F228211A09800600E5889E /* EQLSuspensionIcon.m in Sources */,
+				496B3A261B2BFBF6002D1B1F /* UITextField+EQLCustomTextField.m in Sources */,
 				4987ADF519DE8F740065173D /* EQLFormData.m in Sources */,
+				49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */,
 				494B685919F280A600F453AC /* EQLcarIconView.m in Sources */,
+				49E607391BD62EC600D9DA36 /* EQLvistoView.m in Sources */,
 				49884FBD1A06B06B00E38F31 /* EQLmoreInfoButton.m in Sources */,
 				49907CB4198BA6D9005CF560 /* EQLGarageModel.m in Sources */,
 				49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */,
@@ -839,14 +1016,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		49A871C0198158F6008BB3B3 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49A871C1198158F6008BB3B3 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		49A871D6198158F6008BB3B3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -876,6 +1045,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -890,8 +1060,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -923,7 +1094,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -938,10 +1110,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eql.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -957,10 +1134,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANs/VAN Selector-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eql.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "VAN Selector";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -970,40 +1152,46 @@
 		};
 		49A871E1198158F6008BB3B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADC7446A5ED2F7F3D96E5C4F /* Pods.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VANs.app/VANs";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VANs/VANs-Prefix.pch";
+				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "VANsTests/VAN SelectorTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eql.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "VAN SelectorTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAN Selector.app/VAN Selector";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		49A871E2198158F6008BB3B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D37A08889C2854D312B24C30 /* Pods.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VANs.app/VANs";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VANs/VANs-Prefix.pch";
+				GCC_PREFIX_HEADER = "VANs/VAN Selector-Prefix.pch";
 				INFOPLIST_FILE = "VANsTests/VAN SelectorTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eql.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "VAN SelectorTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAN Selector.app/VAN Selector";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -1018,7 +1206,7 @@
 				49A871DC198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		49A871DD198158F6008BB3B3 /* Build configuration list for PBXNativeTarget "VAN Selector" */ = {
 			isa = XCConfigurationList;
@@ -1027,7 +1215,7 @@
 				49A871DF198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		49A871E0198158F6008BB3B3 /* Build configuration list for PBXNativeTarget "VAN SelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -1036,7 +1224,7 @@
 				49A871E2198158F6008BB3B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

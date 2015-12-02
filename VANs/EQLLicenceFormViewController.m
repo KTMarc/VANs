@@ -7,6 +7,9 @@
 //
 
 #import "EQLLicenceFormViewController.h"
+#import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
+#import "EQLCarResultsTableViewController.h"
 
 
 @interface EQLLicenceFormViewController ()
@@ -19,10 +22,13 @@
 
 @implementation EQLLicenceFormViewController 
 
+#pragma mark VIEW LIFECYCLE
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Esto es para que desaparezca el teclado numerico cada vez que piquemos fuera de él
+    
+    //Remove the numeric keyboard when tapping outside
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
@@ -30,9 +36,16 @@
     [self.view endEditing:YES];
     
     self.navigationController.navigationBarHidden = false;
+
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{
+//        NSFontAttributeName: [UIFont fontWithName:sameFontEverywhere size:20],
+//        NSForegroundColorAttributeName : [UIColor whiteColor],
+//                                                                                 }];
+//    
+//    
     // _result.hidden = false;
     
-    /* CARGAMOS LO QUE TENGAMOS EN EL SINGLETON SIEMPRE PORQUE TIENE LA ULTIMA VERSION BUENA*/
+    /* WE LOAD EVERYTHING FROM THE SINGLETON */
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     if ([sharedForm mmaCar] != 0){ //En caso contrario no queremos cargar un 0
         //Cargamos lo que tenga el singleton, que a la vez viene de NSUserDefaults
@@ -42,7 +55,7 @@
         _licenceSegmentedControl.selectedSegmentIndex = [sharedForm licence];
     
     }
-    /* FIN CARGA DE PERSISTENCIA ----------------------------------------------------------*/
+    /* END OF PERSISTENCY LOADING ----------------------------------------------------------*/
     
     
     /*-----"DONE" BUTTON IN NUMERIC PAD ---*/
@@ -60,17 +73,15 @@
 
 }
 
-- (void)doneClicked:(id)sender
-{
-    [self.ptacCarTextField endEditing:YES];
+-(void) viewWillDisappear:(BOOL)animated {
+    //http://stackoverflow.com/questions/1214965/setting-action-for-back-button-in-navigation-controller
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+    }
+    [self saveDataToSingleton];
+    [super viewWillDisappear:animated];
 }
-    /*-----ENF OF "DONE" BUTTON IN NUMERIC PAD ---*/
-
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
-{
-    [self.view endEditing:YES];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -78,28 +89,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark FORM MANAGEMENT
+
+- (void)doneClicked:(id)sender
+{
+    [self.ptacCarTextField endEditing:YES];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
+{
+    [self.view endEditing:YES];
+}
 
 - (IBAction)technicalSheetButton:(UIButton *)sender {
 
 }
 
-
-- (IBAction)calculateWeight:(UIButton *)sender {
-
-
-        // of the field is not empty
-        //We instantiate the singleton, which we can use from everywhere (http://www.galloway.me.uk/tutorials/singleton-classes/)
-        EQLFormData *sharedForm = [EQLFormData sharedForm];
-        /* -------------------------------------------------------*/
-        
-        sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
-        sharedForm.mmrCar =_mmrCarTextField.text.intValue;
-        sharedForm.pesoCaballo = _horseWeight.text.intValue;
-        sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
-        
-        self.resultsArray = [sharedForm calculateThingsWithModel:_model];
-
+- (void) saveDataToSingleton{
+    
+    //We instantiate the singleton, which we can use from everywhere
+    //(http://www.galloway.me.uk/tutorials/singleton-classes/)
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    /* -------------------------------------------------------*/
+    
+    sharedForm.mmaCar = _ptacCarTextField.text.integerValue;
+    sharedForm.mmrCar =_mmrCarTextField.text.intValue;
+    sharedForm.pesoCaballo = _horseWeight.text.intValue;
+    sharedForm.licence = _licenceSegmentedControl.selectedSegmentIndex;
 }
+
+- (IBAction)calculateWeight:(id)sender {
+
+   // [self saveDataToSingleton];
+    EQLFormData *sharedForm = [EQLFormData sharedForm];
+    self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
+}
+
+#pragma  mark  NAVIGATION
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
@@ -134,32 +160,25 @@
             UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
             [missingDataAlert show];
         }
-
-    
     } else{
-        //Estamos en los segues del tabView y podemos hacer la transición.
+        //We are now sure we can segue
         weDoSegue = true;
     }
-
     return weDoSegue;
-    
 }
 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-
-        if ([sender isKindOfClass:[UIButton class]]){
+    //if ([sender isKindOfClass:[UIButton class]]){
         if ([segue.destinationViewController isKindOfClass:[EQLCarResultsTableViewController class]]){
             EQLCarResultsTableViewController *nextViewController = segue.destinationViewController;
             nextViewController.resultsArray = self.resultsArray;
+            //NSLog(@"Tenemos este modelo cuando llegamos a Form AVANZADO:%@", self.model);
+
         }
-        }
-    
+    //}
 }
-
-
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
+#import "EQLFormData.h"
 
 @interface EQLGarageModel()
 
@@ -15,6 +17,45 @@
 @end
 
 @implementation EQLGarageModel
+
+
+#pragma mark - Init
+-(id)init{
+    
+    if (self = [super init]) {
+        
+        
+        self.executionFlag = false; //En realidad tendriamos que hacer un singleton
+        
+#pragma mark - TODO: productionFlag change for Production
+        self.productionFlag = false;
+        
+        _oneHorseVans = [[NSMutableArray alloc]init];
+        _twoHorseVans = [[NSMutableArray alloc]init];
+        _threeHorseVans = [[NSMutableArray alloc]init];
+        _fourHorseVans = [[NSMutableArray alloc]init];
+        //_sectionMap = [[NSMutableDictionary alloc]init];
+         //_form = [[EQLFormData alloc]init];
+
+       // [_queryVans fromLocalDatastore];
+        //NSLog(@"Creamos el modelo Garage");
+       
+        _queryVans = [PFQuery queryWithClassName:@"modeloVan"];
+        [_queryVans orderByAscending:@"Priority"];
+        [_queryVans whereKey:@"enabled" equalTo:@(YES)];
+        
+        if (!self.executionFlag){
+            if (_productionFlag){
+#pragma mark - TODO: Clean if really don´t needed anymore
+                // _queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
+                
+            }else{
+                //_queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
+            }
+        }
+    }
+    return self;
+}
 
 #pragma mark - Properties
 
@@ -47,85 +88,83 @@
     
 }*/
 
+#pragma mark - TODO: Clean if it´s not really used anymore because we are not using initial menu.
 
-#pragma mark - Init
--(id)init{
-    
-    if (self = [super init]) {
-      
-        self.executionFlag = false; //En realidad tendriamos que hacer un singleton
-        self.productionFlag = false;
-        _oneHorseVans = [[NSMutableArray alloc]init];
-        _twoHorseVans = [[NSMutableArray alloc]init];
-        _threeHorseVans = [[NSMutableArray alloc]init];
-        _fourHorseVans = [[NSMutableArray alloc]init];
-       // _form = [[EQLFormData alloc]init];
-        
-        
-        PFQuery *queryVans = [PFQuery queryWithClassName:@"modeloVan"];
-        [queryVans orderByAscending:@"Priority"];
-        [queryVans whereKey:@"enabled" equalTo:@(YES)];
-        
-        if (!self.executionFlag){
-
-            if (_productionFlag){
-                queryVans.cachePolicy = kPFCachePolicyNetworkElseCache;
-                
-            }else{
-                queryVans.cachePolicy = kPFCachePolicyCacheThenNetwork;
-            }
-       
-            
-            [queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (!error){
-                   // NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
-                    self.allVans = [objects mutableCopy];
-                    for (id van in _allVans){
-                        // NSLog(@"Entra al for");
-                        PFObject *parseVan = van;
-                        int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
-
-                        //  switch ([van horsesNum]) {
-                        switch (numHorsesInPFObject) {
-                        case 1:
-                            [_oneHorseVans addObject:van];
-                            break;
-                        case 2:
-                            [_twoHorseVans addObject:van];
-                            break;
-                        case 3:
-                            [_threeHorseVans addObject:van];
-                            break;
-                        case 4:
-                            [_fourHorseVans addObject:van];
-                            break;
-                        default:
-                            self.executionFlag = YES;
-                            break;
-                    }
-                }
-               
-                    /*
-                NSLog(@"%lu", (unsigned long)_oneHorseVans.count);
-                NSLog(@"%lu", (unsigned long)_twoHorseVans.count);
-                NSLog(@"%lu", (unsigned long)_threeHorseVans.count);
-                NSLog(@"%lu", (unsigned long)_fourHorseVans.count);
-                */
+- (void)doAsyncQueryToParse: (BOOL) testing{
+        [_queryVans findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error){ NSLog(@"Error: %@ %@", error, [error userInfo]);
             } else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
+                NSLog(@"Successfully retrieved %lu vans.", (unsigned long)objects.count);
+                if (testing) {
+                    _testBlock(objects);
+                    
+                }
+                self.allVans = [objects mutableCopy];
+                
+                [self separateVansByNumberOfHorses];
+                
+                // Pin PFQuery results
+                
+                [PFObject pinAllInBackground:self.allVans];
+                /*
+                 NSLog(@"%lu", (unsigned long)_oneHorseVans.count);
+                 NSLog(@"%lu", (unsigned long)_twoHorseVans.count);
+                 NSLog(@"%lu", (unsigned long)_threeHorseVans.count);
+                 NSLog(@"%lu", (unsigned long)_fourHorseVans.count);
+                 */
+                //NSLog(@"Numero de objetos en %lu", (unsigned long)[_allVans count]);
             }
         }];
-        }
+}
+
+- (void) separateVansByNumberOfHorses {
+
+    [_oneHorseVans removeAllObjects];
+    [_twoHorseVans removeAllObjects];
+    [_threeHorseVans removeAllObjects];
+    [_fourHorseVans removeAllObjects];
+    
+    PFObject *parseVan;
+    for (id van in _allVans){
+        // NSLog(@"Entra al for");
+        parseVan = van;
+        int numHorsesInPFObject = [[parseVan objectForKey:@"horsesNum"] intValue];
         
-        //NSLog(@"Numero de objetos en %u", [_allVans count]);
+        //  switch ([van horsesNum]) {
         //Put each object where it belongs by horses number
-       
+        switch (numHorsesInPFObject) {
+            case 1:
+                [_oneHorseVans addObject:van];
+                break;
+            case 2:
+                [_twoHorseVans addObject:van];
+                break;
+            case 3:
+                [_threeHorseVans addObject:van];
+                break;
+            case 4:
+                [_fourHorseVans addObject:van];
+                break;
+            default:
+                break;
+        }
+     
+        
+//        NSLog(@"%@",[NSNumber numberWithUnsignedInteger:[_allVans indexOfObject:van]]);
+//        NSNumber *indexToSave =[NSNumber numberWithUnsignedInteger:[_allVans indexOfObject:van]];
+//        NSString *objectIdString = [NSString stringWithFormat:@"%@",[parseVan objectForKey:@"objectId"]];
+//        
+////        [_sectionMap setObject:indexToSave forKey:objectIdString];
+//        _sectionMap[objectIdString] = indexToSave;
+//    
     }
-    return self;
+//    NSLog(@"We currently have %ld elements in the dictionary", [_sectionMap count]);
+    self.executionFlag = YES;
+    
 }
 
 //+ (NSArray *) allVans{
-//   
+//
 //    //Nos construye el array con todos los modelos
 //    NSMutableArray *allVans = [@[] mutableCopy];
 //    return allVans;

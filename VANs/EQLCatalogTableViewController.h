@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLGarageModel.h"
-#import "EQLPriceView.h"
-#import "EQLNumHorsesView.h"
-#import "EQLSuspensionIcon.h"
-#import "EQLPlancherIcon.h"
-#import "EQLVistoView.h"
+@class EQLGarageModel;
 
 #define ONE_HORSE_SECTION       0
 #define TWO_HORSE_SECTION       1
@@ -21,11 +16,19 @@
 
 @interface EQLCatalogTableViewController : PFQueryTableViewController
 
+//Esta variable no se esta usando porque se descargan todos los vans cuando entramos en la tableview.
 @property (strong, nonatomic) EQLGarageModel *model;
+
+//Objects are being saved in PFQueryTableViewController -> _mutableObjects
 @property (strong, nonatomic) PFObject *parseVanOrigen;
 @property (nonatomic) int oneHorseCount,twoHorseCount,threeHorseCount,fourHorseCount;
-@property (nonatomic) BOOL executionFlag;
+@property (nonatomic) BOOL firstTime;
+@property (nonatomic) BOOL shouldUpdateFromServer;
 @property (nonatomic) BOOL productionFlag;
+@property (nonatomic, strong) EQLFormData *sharedForm;
+
+//@property (nonatomic, retain) NSMutableDictionary *sections;
+//@property (nonatomic, retain) NSMutableDictionary *sectionToSportTypeMap;
 
 //@property (nonatomic, strong) NSArray *vansArray;
 //@property (nonatomic, strong) NSMutableArray *vansArray;

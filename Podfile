@@ -1,3 +1,5 @@
 platform :ios, '8.0'
 pod 'Parse'
-pod 'FontasticIcons'
+pod 'ParseUI'
+pod 'Bolts'
+pod 'DZNEmptyDataSet'

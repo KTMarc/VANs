@@ -14,7 +14,14 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <Parse/Parse.h>
-    #import <FontasticIcons.h>
+    #import <ParseUI/ParseUI.h>
     #import "VanStyleKit.h"
-    # import "EQLFormData.h"
+    #import "EQLFormData.h"
+
+    //Appearance personalization
+    #import "UILabel+EQLCustomFont.h"
+    #import "UITextField+EQLCustomTextField.h"
+    #import "UIButton+EQLCustomButton.h"
+    #define sameFontEverywhere @"Play"
+
 #endif

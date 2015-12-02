@@ -37,17 +37,49 @@
     // Do any additional setup after loading the view.
     
     /* Clase 126 curso 14 apps */
+    
+
     self.imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ejemploFichaA5.jpg"]];
+//    NSLog(@" Frame antes: %", self.imageView.frame);
+    //self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.scrollView.contentSize = self.imageView.frame.size;
     [self.scrollView addSubview:self.imageView];
-    /* ----------------------- */
+//    self.imageView.autoresizingMask = false;
+    
+    
+    self.scrollView.contentMode = UIViewContentModeTop;
     
     /* Clase 128 */
+//    self.scrollView.contentMode = UIViewContentModeTop;
     self.scrollView.delegate = self;
     self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.5;
+    self.scrollView.minimumZoomScale = 0.2;
+    self.scrollView.zoomScale = 0.8;
+  
+    // Center vertically de image inside de scrollview
+
+    /*
+    [self.imageView addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+                                                          attribute:NSLayoutAttributeTopMargin
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.imageView
+                                                          attribute:NSLayoutAttributeTopMargin
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.imageView addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+                                                               attribute:NSLayoutAttributeTrailing
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.imageView
+                                                               attribute:NSLayoutAttributeTopMargin
+                                                              multiplier:1.0
+                                                                constant:0.0]];
+    */
 }
 
+-(UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return self.imageView;
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -66,9 +98,6 @@
 }
 */
 
--(UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    return self.imageView;
-    
-}
+
 
 @end

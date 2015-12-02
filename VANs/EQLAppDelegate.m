@@ -19,6 +19,14 @@
     
     [[UISegmentedControl appearance] setTintColor:colorEquus];
     [[UIButton appearance] setTintColor:colorEquus];
+    [[UILabel appearance] setFontName:sameFontEverywhere];
+    
+    
+}
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+  
+
+    return YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -26,36 +34,47 @@
     // Override point for customization after application launch.
     [self customiseAppeareance];
   //  [GMSServices provideAPIKey:@"AIzaSyDDnCFkUcGIWVRkYmbhLCHMkfa6jTpI0Fw"];
+
+    [Parse enableLocalDatastore];
     
     [Parse setApplicationId:@"BYpZjCJR6Fc65Kp0vDrxL0s0eEJvH6RCITynyp0z"
                   clientKey:@"rrjGk2sy6Tpb4RTa3IYntgWrU3x5nrA6qR1Wav2V"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    //Instanciamos el singleton para poder guardar alli lo que tengamos en NSUserdefaults
-    
+    //Instanciate singleton to save all data from NSUserdefaults
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    BOOL debugMode= true;
+    // We load everything from userDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    // comprobamos si no hay nada porque es la primera vez que abrimos la app.
-    if (![defaults objectForKey:@"mmaCar"]) {
-        //EN PRODUCCION HAY QUE CONTEMPLAR TODOS LOS CASOS
-        //NSLog(@"NSUserdefaults esta vacio");
+    //sharedForm.firstTimeLoad = [defaults integerForKey:@"firstTimeLoad"]; //0-->YES 1-->NO
+    
+    sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
+    sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
+    sharedForm.licence = [defaults integerForKey:@"licence"];
+    sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
+    
+    
+    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
+    if (environment[@"mma"]) {
+        sharedForm.mmaCar = [environment[@"mma"] integerValue];
+        sharedForm.mmrCar = [environment[@"mmr"]integerValue];
+        sharedForm.licence = [environment[@"licence"]integerValue];
+        sharedForm.pesoCaballo = [environment[@"horse"]integerValue];
+
     } else {
-        //NSLog(@"NSUserdefaults esta LLENO");
-        //Copiamos lo que tenemos guardado en nuestro singleton.
-        if (!debugMode){
-            NSLog(@"Cargamos los NSUserDefaults");
-            sharedForm.mmaCar = [defaults integerForKey:@"mmaCar"];
-            sharedForm.mmrCar = [defaults integerForKey:@"mmrCar"];
-            sharedForm.licence = [defaults integerForKey:@"licence"];
-            sharedForm.pesoCaballo = [defaults integerForKey:@"pesoCaballo"];
-        }
+        // Set the default one
     }
-    // A partir de aquí siempre que se acceda a la clave
-    // dirección, sabremos que al menos hay el valor por
-    // defecto
+    
+#pragma mark TODO: Canviar esto para release
+    BOOL debugMode= false;
+    if (/*![defaults objectForKey:@"mmaCar"] && */debugMode){
+        //We start with some default data just to avoid entering it manually.
+        sharedForm.mmaCar = 2350;
+        sharedForm.mmrCar = 1900;
+        sharedForm.licence = 1;
+        sharedForm.pesoCaballo = 450;
+    }
     return YES;
 }
 							
@@ -69,15 +88,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-
-    //Guardar en NSUserdefaults antes de salir
-    EQLFormData *sharedForm = [EQLFormData sharedForm];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
-    [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
-    [defaults setInteger: sharedForm.licence forKey:@"licence"];
-    [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
-    [defaults synchronize];
+    [self saveBeforeQuit];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -94,14 +105,19 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     //Guardar en NSUserdefaults antes de salir
+    [self saveBeforeQuit];
+}
+
+- (void) saveBeforeQuit{
+    //Guardar en NSUserdefaults antes de salir
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger: sharedForm.mmaCar forKey:@"mmaCar"];
     [defaults setInteger: sharedForm.mmrCar forKey:@"mmrCar"];
     [defaults setInteger: sharedForm.licence forKey:@"licence"];
     [defaults setInteger: sharedForm.pesoCaballo forKey:@"pesoCaballo"];
+   // NSLog(@"First Time Load value: %i", (int)sharedForm.firstTimeLoad);
+    [defaults setInteger: sharedForm.firstTimeLoad forKey:@"firstTimeLoad"]; //0-->YES 1-->NO
     [defaults synchronize];
-
 }
-
 @end

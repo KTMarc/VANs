@@ -7,7 +7,10 @@
 //
 
 #import "EQLCarResultsTableViewController.h"
-
+#import "EQLGarageModel.h"
+#import "EQLmodeloVan.h"
+#import "EQLVanViewController.h"
+#import "EQLCalculationsViewController.h"
 
 @interface EQLCarResultsTableViewController ()
 
@@ -29,15 +32,23 @@
 {
     [super viewDidLoad];
     
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    //DZNEmptyDataSource --------------------------
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    // A little trick for removing the cell separators
+    self.tableView.tableFooterView = [UIView new];
+    //---------------------------------------------
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _noResultsLabel.hidden = YES;
-    
-    
-    
+    self.navigationController.hidesBarsOnSwipe = false;
+    self.navigationController.hidesBarsOnTap = false;
+    self.navigationController.hidesBarsWhenVerticallyCompact = false;
+    self.navigationController.navigationBarHidden = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,13 +68,10 @@
         if ([index count]>0){ numResults++;}
     }
     
-    if (numResults == 0){ _noResultsLabel.hidden = NO;}
-    
-//    numResults = 4;
-    
+    if (numResults == 0){ /*_noResultsLabel.hidden = NO;*/}
+
     return numResults;
 }
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -117,6 +125,8 @@
     static NSString *cellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier forIndexPath:indexPath];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     
     // Configure the cell...
     NSArray *aux; //Guardamos el array con el numero de caballos en el que vamos a trabajar.
@@ -124,32 +134,36 @@
 
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    
     PFObject *PFvan;
     //aux apuntara a la seccion (array) donde estemos: 1,2,3,4 caballos.
     //NSLog(@"Indexpath vale: %ld", (long)indexPath.section);
     aux=[_resultsArray objectAtIndex:indexPath.section];
+
     PFvan = [aux[indexPath.row] PFVan];
     maxWeightClient = [aux[indexPath.row] maxPtacForClientsCar];
     //NSLog(@"Peso maximo guardado es: %i",maxWeightClient);
     
     PFFile *thumbnail = PFvan[@"photo"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    //cell.imageView.image = thumbnailImageView.image;
+//    PFFile *userImageFile = anotherPhoto[@"imageFile"];
+    
+//    UIImageView *thumbnailImageView = (UIImageView*)[cell viewWithTag:100];
+//    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
+//    thumbnailImageView.file = thumbnail;
+//    [thumbnailImageView loadInBackground];
+
+    UIImageView *thumbnailImageView = (UIImageView*)[cell viewWithTag:100];
+    [thumbnail getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:imageData];
+            thumbnailImageView.image = image;
+        }
+    }];
 
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [PFvan objectForKey:@"Name"];
-    
     UILabel *priceLabel = (UILabel*) [cell viewWithTag:102];
-//  priceLabel.text = [PFvan objectForKey:@"price"];
-
     int auxInt = (int)[sharedForm mmrCar];
-    
     priceLabel.text = [NSString stringWithFormat: @"%i", auxInt];
-    
     
 //    maxWeightClient = [PFvan[@"maxPtacForClientsCar"] intValue];
 //    NSString *cadena = @"MMA:";
@@ -167,7 +181,119 @@
     UILabel *explanationLabel = (UILabel*) [cell viewWithTag:104];
     explanationLabel.text = [aux[indexPath.row] calculationText];;
     
+    //In case we could have this trailer in the next licence, we offer it as an option.
+    if ([aux[indexPath.row] needsBetterLicence]){
+        thumbnailImageView.alpha = 0.5;
+        nameLabel.alpha = 0.5;
+        explanationLabel.alpha = 0.5;
+    }
     return cell;
+}
+
+#pragma mark DZNEmptyDataSource
+
+//The image for the empty state:
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"empty_tableView_placeholder.jpg"];
+}
+
+//The image view animation
+- (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"transform"];
+    
+    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0)];
+    
+    animation.duration = 0.25;
+    animation.cumulative = YES;
+    animation.repeatCount = MAXFLOAT;
+    
+    return animation;
+}
+
+//The attributed string for the title of the empty state:
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"Sin resultados para la combinación de pesos introducida";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+//The attributed string for the description of the empty state:
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"Intente cambiar de carné por uno superior o introducir los datos de otro coche";
+    
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0f],
+                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName: paragraph};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+    //The background color for the empty state:
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIColor whiteColor];
+}
+
+//Additionally, you can also adjust the vertical alignment of the content view (ie: useful when there is tableHeaderView visible):
+- (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return -self.tableView.tableHeaderView.frame.size.height/2.0f;
+}
+
+//Finally, you can separate components from each other (default separation is 11 pts):
+- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return 20.0f;
+}
+
+#pragma mark - DZNEmptyDataSetDelegate Methods
+
+//Asks to know if the empty state should be rendered and displayed (Default is YES) :
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for interaction permission (Default is YES) :
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for scrolling permission (Default is NO) :
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Asks for image view animation permission (Default is NO) :
+- (BOOL) emptyDataSetShouldAllowImageViewAnimate:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//Notifies when the dataset view was tapped:
+- (void)emptyDataSetDidTapView:(UIScrollView *)scrollView
+{
+    // Do something
+}
+
+//Notifies when the data set call to action button was tapped:
+- (void)emptyDataSetDidTapButton:(UIScrollView *)scrollView
+{
+    // Do something
 }
 
 

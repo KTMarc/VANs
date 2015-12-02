@@ -8,6 +8,8 @@
 
 #import "EQLCalculationsCondition1.h"
 
+IB_DESIGNABLE
+
 @implementation EQLCalculationsCondition1
 
 
@@ -17,7 +19,8 @@
     // Drawing code
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     
-    [VanStyleKit  drawCalculationResults1WithMmaVan: [sharedForm mmaVanString]
+    [VanStyleKit  drawCalculationResults1WithFrame: self.bounds
+                                            mmaVan: [sharedForm mmaVanString]
                                              mmaCar: [NSString stringWithFormat: @"%liKg.",(long)[sharedForm mmaCar]]
                                           numHorses:[sharedForm numHorsesString]
                                             licence:[sharedForm licenceString]

@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLmodeloVan.h"
-#import "EQLGarageModel.h"
-#import "EQLCarResultsTableViewController.h"
-
+@class EQLGarageModel;
 
 @interface EQLLicenceFormViewController : UIViewController <UIGestureRecognizerDelegate>
 
@@ -30,6 +27,7 @@
 
 - (IBAction)technicalSheetButton:(UIButton *)sender;
 - (IBAction)calculateWeight:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *buttonToLongForm;
 
 
 @end

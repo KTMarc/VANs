@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLGarageModel.h"
-#import "EQLmodeloVan.h"
-#import "EQLVanViewController.h"
-#import "EQLCalculationsViewController.h"
+#import "UIScrollView+EmptyDataSet.h"
 
 #define ONE_HORSE_SECTION       0
 #define TWO_HORSE_SECTION       1
@@ -19,16 +16,14 @@
 
 #define SECTION_KEY @"section"
 #define ROW_KEY @"row"
+@class EQLGarageModel;
 
-
-@interface EQLCarResultsTableViewController : UITableViewController
+@interface EQLCarResultsTableViewController : UITableViewController <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 //@property (strong, nonatomic) EQLGarageModel *model;
 @property (nonatomic, strong) NSArray *resultsArray;
 //@property (nonatomic, strong) EQLmodeloVan *van;
 @property (strong, nonatomic) PFObject *parseVanOrigen;
-
-@property (strong, nonatomic) IBOutlet UILabel *noResultsLabel;
 
 
 @end

@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EQLCatalogTableViewController.h"
-#import "EQLLicenceFormViewController.h"
-#import "EQLLicenceForm1ViewController.h"
-#import "EQLcatalogButtonView.h"
+#import <MessageUI/MessageUI.h>
 
-@interface EQLMenuViewController : UIViewController
+@class EQLGarageModel;
+
+@interface EQLMenuViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) EQLGarageModel *garage;
 @property (nonatomic, strong) NSArray *vansArray;
+@property (nonatomic, strong) PFObject *parseVan;
 
-- (IBAction)botonApretado:(id)sender;
+- (IBAction)touchUpInside:(id)sender;
+- (IBAction)touchDown:(id)sender;
+- (IBAction)touchCancel:(id)sender;
+- (IBAction)touchDragOutside:(id)sender;
+
 
 @end
