@@ -2,11 +2,10 @@
 
 iOS App: VAN Selector
 
-Designing and developing the complete app: code + design
+All designed and developed by me.
 
 Target: Owners of Horses and potential buyers of Horse Trailers
-Kind of App: FREE
-Status: In the final steps before the release to the App store.
+Price: FREE
 
 Features:
 
