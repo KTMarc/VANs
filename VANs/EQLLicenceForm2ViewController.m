@@ -33,6 +33,9 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -196,15 +196,17 @@
 
 // http://stackoverflow.com/questions/2834523/drawing-a-route-in-mapkit-in-iphone-sdk
 /* MKMapViewDelegate Meth0d -- for viewForOverlay*/
-- (MKOverlayView*)mapView:(MKMapView*)theMapView viewForOverlay:(id <MKOverlay>)overlay
-{
-    MKPolylineView *view = [[MKPolylineView alloc] initWithPolyline:self.objPolyline];
-    view.fillColor = [UIColor blackColor];
-    view.strokeColor = [UIColor blackColor];
-    view.lineWidth = 4;
-    //[self.overlays addObject:view];
-    return view;
-}
+//- (MKOverlayView*)mapView:(MKMapView*)theMapView viewForOverlay:(id <MKOverlay>)overlay
+//{
+//   // MKPolyline *polyline = [[MKPolyline alloc] init
+// //   MKPolylineRenderer *polylineRenderer = [MKPolylineRenderer alloc]initWithPolyline:<#(nonnull MKPolyline *)#>]
+//    MKPolylineView *view = [[MKPolylineView alloc] initWithPolyline:self.objPolyline];
+//    view.fillColor = [UIColor blackColor];
+//    view.strokeColor = [UIColor blackColor];
+//    view.lineWidth = 4;
+//    //[self.overlays addObject:view];
+//    return view;
+//}
 
 
 @end

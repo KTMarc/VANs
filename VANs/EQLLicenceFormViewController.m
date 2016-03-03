@@ -73,6 +73,10 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
 -(void) viewWillDisappear:(BOOL)animated {
     //http://stackoverflow.com/questions/1214965/setting-action-for-back-button-in-navigation-controller
     if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
@@ -123,6 +127,11 @@
    // [self saveDataToSingleton];
     EQLFormData *sharedForm = [EQLFormData sharedForm];
     self.resultsArray = [sharedForm calculateThingsWithModel:_model andForm:nil];
+    EQLCarResultsTableViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carResults"];
+    nextViewController.resultsArray = self.resultsArray;
+    
+    [self.navigationController pushViewController:nextViewController animated:YES];
+
 }
 
 #pragma  mark  NAVIGATION
@@ -166,7 +175,6 @@
     }
     return weDoSegue;
 }
-
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

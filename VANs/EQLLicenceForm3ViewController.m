@@ -30,7 +30,9 @@
    andMaxTextFieldSize:@3];
 }
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

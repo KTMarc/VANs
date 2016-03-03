@@ -24,10 +24,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *ptacCarTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mmrCarTextField;
 @property (weak, nonatomic) IBOutlet UITextField *horseWeight;
+@property (strong, nonatomic) IBOutlet UIButton *buttonToLongForm;
 
 - (IBAction)technicalSheetButton:(UIButton *)sender;
 - (IBAction)calculateWeight:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UIButton *buttonToLongForm;
+//- (IBAction)OKButton:(UIButton *)sender;
+
 
 
 @end
