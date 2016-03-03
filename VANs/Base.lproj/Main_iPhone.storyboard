@@ -239,11 +239,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4wx-nn-BaY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dle-wz-XV6">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-Cj-Ufg">
-                                <rect key="frame" x="0.0" y="-65" width="600" height="552"/>
+                                <rect key="frame" x="0.0" y="-65" width="320" height="432"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -806,11 +806,11 @@ Lateral extra en acero inoxidable</string>
                         <viewControllerLayoutGuide type="bottom" id="k0R-HC-DTN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L0f-Gb-azg">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-Xz-yxP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -953,15 +953,15 @@ Lateral extra en acero inoxidable</string>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mma" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ej. 2.500" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-CJ-Bd4">
-                                <rect key="frame" x="120" y="81" width="80" height="30"/>
+                                <rect key="frame" x="95" y="81" width="130" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="wng-x9-7zs"/>
+                                    <constraint firstAttribute="width" constant="130" id="wng-x9-7zs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o56-l9-a5y">
-                                <rect key="frame" x="208" y="81" width="53" height="30"/>
+                                <rect key="frame" x="233" y="81" width="53" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="vZq-0Y-xYH"/>
                                 </constraints>
@@ -1007,7 +1007,7 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 cifras!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-fk-zld">
-                                <rect key="frame" x="62" y="87" width="53" height="17"/>
+                                <rect key="frame" x="37" y="87" width="53" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1112,15 +1112,15 @@ Audi A4 Avant 2.0TDI: 2.215Kg </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="mmr" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ej. 2.000" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-92-cDO">
-                                <rect key="frame" x="120" y="78" width="80" height="30"/>
+                                <rect key="frame" x="95" y="78" width="130" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="9XJ-EZ-bme"/>
+                                    <constraint firstAttribute="width" constant="130" id="9XJ-EZ-bme"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-GI-4Qc">
-                                <rect key="frame" x="208" y="78" width="37" height="30"/>
+                                <rect key="frame" x="233" y="78" width="37" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1147,7 +1147,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-YS-SPa" customClass="EQLhelpIconView">
-                                <rect key="frame" x="115" y="113" width="120" height="22"/>
+                                <rect key="frame" x="90" y="113" width="120" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="7qA-6x-8b6"/>
                                     <constraint firstAttribute="width" constant="120" id="Jcx-br-WIZ"/>
@@ -1157,7 +1157,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 cifras!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-Rk-GTf">
-                                <rect key="frame" x="62" y="84" width="53" height="22"/>
+                                <rect key="frame" x="37" y="84" width="53" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1258,9 +1258,9 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="horseWeight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ej 400" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-gd-JK8">
-                                <rect key="frame" x="125" y="77" width="70" height="30"/>
+                                <rect key="frame" x="110" y="77" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="8i0-ub-20b"/>
+                                    <constraint firstAttribute="width" constant="100" id="8i0-ub-20b"/>
                                     <constraint firstAttribute="height" priority="750" constant="30" id="IXS-4C-Py0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1272,7 +1272,7 @@ Audi A4 Avant 2.0TDI: 1.700Kg </string>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-wD-4Jq">
-                                <rect key="frame" x="203" y="77" width="37" height="30"/>
+                                <rect key="frame" x="218" y="77" width="37" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1310,7 +1310,7 @@ Asturcon: 350-400Kg</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mínimo 4 cifras!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-0d-sY4">
-                                <rect key="frame" x="16" y="88" width="104" height="17"/>
+                                <rect key="frame" x="1" y="88" width="104" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89155375869999998" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1660,7 +1660,7 @@ Asturcon: 350-400Kg</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="357-NI-xMD"/>
-        <segue reference="qEQ-MI-DAb"/>
+        <segue reference="ehW-0q-UCM"/>
         <segue reference="f0Z-Cz-v0S"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
