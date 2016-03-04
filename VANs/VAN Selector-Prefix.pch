@@ -25,3 +25,8 @@
     #define sameFontEverywhere @"Play"
 
 #endif
+
+
+#ifndef DEBUG
+    #define NSLog(...) /* suppress NSLog when in release mode */
+#endif

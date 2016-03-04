@@ -12,6 +12,11 @@
 
 //#import <GoogleMaps/GoogleMaps.h>
 
+#if DEBUG
+    #define MODE  "Debug"
+#else
+    #define MODE  "Production"
+#endif
 
 @implementation EQLAppDelegate
 
@@ -78,7 +83,16 @@
         sharedForm.licence = 1;
         sharedForm.pesoCaballo = 450;
     }
+
+    
+    #ifdef DEBUG
+        NSLog(@"\n\Running in %s", MODE);
+    #else
+        NSLog(@"\n\nRunning in: %s", MODE);
+    #endif
+    
     [Fabric with:@[[Crashlytics class]]];
+   // [[Fabric sharedSDK] setDebug: YES];
 
     return YES;
 }
