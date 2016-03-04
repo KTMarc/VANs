@@ -1526,8 +1526,8 @@ Asturcon: 350-400Kg</string>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oj-nc-yO4" userLabel="Subcontainer" customClass="EQLcontainerView">
                                             <rect key="frame" x="5" y="10" width="370" height="114"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-kO-NhD" customClass="PFImageView">
-                                                    <rect key="frame" x="5" y="0.0" width="186" height="114"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-kO-NhD" customClass="PFImageView">
+                                                    <rect key="frame" x="5" y="0.0" width="185" height="114"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-gf-Lf9" userLabel="Low mask">
                                                     <rect key="frame" x="203" y="0.0" width="167" height="114"/>
@@ -1552,21 +1552,14 @@ Asturcon: 350-400Kg</string>
                                                                 <constraint firstAttribute="height" constant="14" id="xoB-NT-0MG"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suspensión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eI-sfL">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suspensión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eI-sfL">
                                                             <rect key="frame" x="29" y="35" width="95" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view opaque="NO" tag="104" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-e6-rxR" customClass="EQLNumHorsesView">
-                                                            <rect key="frame" x="114" y="11" width="42" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="9Yx-il-dXP"/>
-                                                                <constraint firstAttribute="width" constant="42" id="zEE-II-fl6"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="sin IVA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-BS-Aoi">
-                                                            <rect key="frame" x="91" y="93" width="66" height="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sin IVA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-BS-Aoi">
+                                                            <rect key="frame" x="127" y="93" width="30" height="11"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1577,7 +1570,6 @@ Asturcon: 350-400Kg</string>
                                                         <constraint firstAttribute="bottom" secondItem="Hab-BS-Aoi" secondAttribute="bottom" constant="10" id="1fD-ZJ-HBy"/>
                                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="top" secondItem="4Fh-gf-Lf9" secondAttribute="top" constant="10" id="4gt-D1-CVc"/>
                                                         <constraint firstItem="OmN-eI-sfL" firstAttribute="leading" secondItem="j78-Jk-uFX" secondAttribute="trailing" constant="5" id="9tc-ys-Z2X"/>
-                                                        <constraint firstItem="1ek-e6-rxR" firstAttribute="centerY" secondItem="ShO-m1-gX6" secondAttribute="centerY" id="CRQ-VG-9b8"/>
                                                         <constraint firstAttribute="bottom" secondItem="3SN-zh-EOc" secondAttribute="bottom" constant="8" id="Cyg-go-OEw"/>
                                                         <constraint firstItem="j78-Jk-uFX" firstAttribute="leading" secondItem="4Fh-gf-Lf9" secondAttribute="leading" constant="10" id="I4u-Qr-f9n"/>
                                                         <constraint firstItem="3SN-zh-EOc" firstAttribute="leading" secondItem="4Fh-gf-Lf9" secondAttribute="leading" constant="10" id="K1A-bQ-Tv7"/>
@@ -1586,18 +1578,26 @@ Asturcon: 350-400Kg</string>
                                                         <constraint firstItem="j78-Jk-uFX" firstAttribute="top" secondItem="ShO-m1-gX6" secondAttribute="bottom" constant="5" id="ZJk-YH-tD1"/>
                                                         <constraint firstItem="OmN-eI-sfL" firstAttribute="centerY" secondItem="j78-Jk-uFX" secondAttribute="centerY" id="fQ0-1V-1pS"/>
                                                         <constraint firstItem="ShO-m1-gX6" firstAttribute="leading" secondItem="4Fh-gf-Lf9" secondAttribute="leading" constant="10" id="mje-eS-J1Z"/>
-                                                        <constraint firstAttribute="trailing" secondItem="1ek-e6-rxR" secondAttribute="trailing" constant="10" id="pYJ-TI-xwg"/>
                                                         <constraint firstItem="j78-Jk-uFX" firstAttribute="top" secondItem="OmN-eI-sfL" secondAttribute="top" id="vwn-qk-CjY"/>
+                                                    </constraints>
+                                                </view>
+                                                <view opaque="NO" tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-e6-rxR" customClass="EQLNumHorsesView">
+                                                    <rect key="frame" x="138" y="8" width="42" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="f4v-By-o8z"/>
+                                                        <constraint firstAttribute="width" constant="42" id="jnI-2k-DLp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="YHe-kO-NhD" firstAttribute="top" secondItem="1ek-e6-rxR" secondAttribute="bottom" constant="-26" id="1sh-dg-bdW"/>
                                                 <constraint firstItem="YHe-kO-NhD" firstAttribute="top" secondItem="7oj-nc-yO4" secondAttribute="top" id="6GB-dz-Liv"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Fh-gf-Lf9" secondAttribute="trailing" id="7K3-GM-RU8"/>
                                                 <constraint firstItem="4Fh-gf-Lf9" firstAttribute="width" secondItem="7oj-nc-yO4" secondAttribute="width" multiplier="0.45" id="9lK-CR-QbR"/>
                                                 <constraint firstAttribute="bottom" secondItem="YHe-kO-NhD" secondAttribute="bottom" id="AIQ-QP-MY7"/>
                                                 <constraint firstItem="YHe-kO-NhD" firstAttribute="leading" secondItem="7oj-nc-yO4" secondAttribute="leading" constant="5" id="c9I-Hy-QDh"/>
+                                                <constraint firstItem="1ek-e6-rxR" firstAttribute="leading" secondItem="YHe-kO-NhD" secondAttribute="trailing" constant="-52" id="mU7-Yz-KQA"/>
                                                 <constraint firstItem="4Fh-gf-Lf9" firstAttribute="height" secondItem="7oj-nc-yO4" secondAttribute="height" id="miX-1o-idF"/>
                                                 <constraint firstItem="YHe-kO-NhD" firstAttribute="width" secondItem="7oj-nc-yO4" secondAttribute="width" multiplier="0.5" id="qiI-IO-q9h"/>
                                                 <constraint firstItem="4Fh-gf-Lf9" firstAttribute="centerY" secondItem="7oj-nc-yO4" secondAttribute="centerY" id="xpJ-3r-4Cz"/>
@@ -1667,8 +1667,8 @@ Asturcon: 350-400Kg</string>
         <image name="Gold_one.jpg" width="626" height="466"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Wiw-cc-ZWA"/>
         <segue reference="TrJ-Ad-Ng0"/>
-        <segue reference="ehW-0q-UCM"/>
         <segue reference="f0Z-Cz-v0S"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>

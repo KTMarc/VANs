@@ -209,6 +209,9 @@
     }
     //Save before moving forward.
     //[self saveDataToSingleton];
+    
+    //To remove keyboard if the user didn't tap on 'done'
+    [_textFieldPadre endEditing:YES];
     return weDoSegue;
 }
 

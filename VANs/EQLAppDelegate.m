@@ -9,6 +9,7 @@
 #import "EQLAppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+//#import <Answers/Answers.h>
 
 //#import <GoogleMaps/GoogleMaps.h>
 
@@ -86,9 +87,9 @@
 
     
     #ifdef DEBUG
-        NSLog(@"\n\Running in %s", MODE);
+        NSLog(@"\n\n Running in %s", MODE);
     #else
-        NSLog(@"\n\nRunning in: %s", MODE);
+        NSLog(@"\n\n Running in: %s", MODE);
     #endif
     
     [Fabric with:@[[Crashlytics class]]];
