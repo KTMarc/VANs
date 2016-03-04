@@ -97,6 +97,7 @@
 		49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0C19825EBE008E0ABD /* Icon-Small-50@2x.png */; };
 		49B1FC2F19825EBE008E0ABD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC0F19825EBE008E0ABD /* Icon.png */; };
 		49B1FC3219825EBE008E0ABD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */; };
+		49B4DE931C89B530006746BC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B4DE921C89B530006746BC /* Launch Screen.storyboard */; };
 		49C3256A1B48DD4F007DC224 /* EQLFormTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */; };
 		49C3256D1B49DBF5007DC224 /* EQLCarLargeIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
@@ -276,6 +277,7 @@
 		49B1FC1019825EBE008E0ABD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		49B1FC1119825EBE008E0ABD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		49B1FC1219825EBE008E0ABD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		49B4DE921C89B530006746BC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		49C325681B48DD4F007DC224 /* EQLFormTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLFormTemplateViewController.h; sourceTree = "<group>"; };
 		49C325691B48DD4F007DC224 /* EQLFormTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLFormTemplateViewController.m; sourceTree = "<group>"; };
 		49C3256B1B49DBF5007DC224 /* EQLCarLargeIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLCarLargeIconView.h; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 				4956E3F819EC865B00966A8E /* VanStyleKit.h */,
 				4956E3F919EC865B00966A8E /* VanStyleKit.m */,
 				49A871BD198158F6008BB3B3 /* Main_iPhone.storyboard */,
+				49B4DE921C89B530006746BC /* Launch Screen.storyboard */,
 				496B3A331B2E9C21002D1B1F /* UI Gauges */,
 				49EB517D1A083CAF00B441B8 /* UI Catalog */,
 				495B59991A054E1600D87869 /* UI Detail View */,
@@ -842,6 +845,7 @@
 				49A871C7198158F6008BB3B3 /* Images.xcassets in Resources */,
 				496B3A131B2BD688002D1B1F /* Play-Regular.ttf in Resources */,
 				49B1FC2C19825EBE008E0ABD /* Icon-Small-50@2x.png in Resources */,
+				49B4DE931C89B530006746BC /* Launch Screen.storyboard in Resources */,
 				49A428F41987ED7700C02F53 /* ejemploFichaA4.jpg in Resources */,
 				49A871BF198158F6008BB3B3 /* Main_iPhone.storyboard in Resources */,
 				49904A2B198FA5CE00A4A79E /* TabBar_A4Icon-02.png in Resources */,
@@ -1133,7 +1137,6 @@
 			baseConfigurationReference = ADC7446A5ED2F7F3D96E5C4F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1157,7 +1160,6 @@
 			baseConfigurationReference = D37A08889C2854D312B24C30 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
