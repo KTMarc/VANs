@@ -138,7 +138,7 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    bool weDoSegue;
+    bool weDoSegue = false;
     bool flagSomethingIsMissing = false;
 
     if ([identifier isEqualToString: @"toResultados"]){
@@ -165,7 +165,6 @@
         }
         
         if (flagSomethingIsMissing){
-            weDoSegue = false;
             UIAlertView *missingDataAlert = [[UIAlertView alloc] initWithTitle:@"Atención" message:missingEntry delegate:self cancelButtonTitle:@"OK, voy!" otherButtonTitles: nil];
             [missingDataAlert show];
         }

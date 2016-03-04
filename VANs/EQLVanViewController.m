@@ -78,6 +78,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     self.navigationController.hidesBarsOnSwipe = false;
     self.navigationController.hidesBarsOnTap = false;
     self.navigationController.hidesBarsWhenVerticallyCompact = false;
