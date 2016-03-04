@@ -101,6 +101,7 @@
 		49C3256D1B49DBF5007DC224 /* EQLCarLargeIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C3256C1B49DBF5007DC224 /* EQLCarLargeIconView.m */; };
 		49D505441A04057500CBAE64 /* EQLhelpIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505431A04057500CBAE64 /* EQLhelpIconView.m */; };
 		49D505471A04090500CBAE64 /* EQLmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D505461A04090500CBAE64 /* EQLmyButton.m */; };
+		49D8AAB81C88C9BE00C8ECE9 /* JBParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D8AAB71C88C9BE00C8ECE9 /* JBParallaxCell.m */; };
 		49E4E14619EEB255009EC47D /* EQLMapsButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */; };
 		49E513341B6D79F8006E63E3 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E513331B6D79F8006E63E3 /* placeholder.png */; };
 		49E513371B6D8CAD006E63E3 /* EQLFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E513361B6D8CAD006E63E3 /* EQLFlipSegue.m */; };
@@ -283,6 +284,8 @@
 		49D505431A04057500CBAE64 /* EQLhelpIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLhelpIconView.m; sourceTree = "<group>"; };
 		49D505451A04090500CBAE64 /* EQLmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLmyButton.h; sourceTree = "<group>"; };
 		49D505461A04090500CBAE64 /* EQLmyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLmyButton.m; sourceTree = "<group>"; };
+		49D8AAB61C88C9BE00C8ECE9 /* JBParallaxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBParallaxCell.h; sourceTree = "<group>"; };
+		49D8AAB71C88C9BE00C8ECE9 /* JBParallaxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBParallaxCell.m; sourceTree = "<group>"; };
 		49E4E14419EEB255009EC47D /* EQLMapsButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQLMapsButtonView.h; sourceTree = "<group>"; };
 		49E4E14519EEB255009EC47D /* EQLMapsButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQLMapsButtonView.m; sourceTree = "<group>"; };
 		49E513331B6D79F8006E63E3 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -715,6 +718,8 @@
 		49EB517D1A083CAF00B441B8 /* UI Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				49D8AAB61C88C9BE00C8ECE9 /* JBParallaxCell.h */,
+				49D8AAB71C88C9BE00C8ECE9 /* JBParallaxCell.m */,
 				495F64FE1C88BC10008F5C41 /* EQLcontainerView.h */,
 				495F64FF1C88BC10008F5C41 /* EQLcontainerView.m */,
 				490D9F4B1B733F7E0033C79C /* EQLPoliceIconView.h */,
@@ -755,6 +760,7 @@
 				49A871A6198158F5008BB3B3 /* Resources */,
 				362FA713467C461E8BCC8A68 /* Copy Pods Resources */,
 				6F92211372B0F203242956B3 /* Embed Pods Frameworks */,
+				491193FD1C89875D00BEE204 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -905,6 +911,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		491193FD1C89875D00BEE204 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5189c9130ce84980e308e9fed762b697692115d3 2da504e0bd174ce73edbce9ebac1bfec623c4b5a18a41d8a46af3c2360bd6e26";
+		};
 		6F92211372B0F203242956B3 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -969,6 +988,7 @@
 				49A871C5198158F6008BB3B3 /* EQLLicenceFormViewController.m in Sources */,
 				490D9F4D1B733F7E0033C79C /* EQLPoliceIconView.m in Sources */,
 				494BA3C01B5C9CB3001416C7 /* EQLCarPeopleLuggageView.m in Sources */,
+				49D8AAB81C88C9BE00C8ECE9 /* JBParallaxCell.m in Sources */,
 				49A871B8198158F6008BB3B3 /* main.m in Sources */,
 				496B3A231B2BFB33002D1B1F /* UILabel+EQLCustomFont.m in Sources */,
 				494B686019F28A1900F453AC /* EQLequusHorseNavBarView.m in Sources */,

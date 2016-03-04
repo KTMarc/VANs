@@ -7,6 +7,9 @@
 //
 
 #import "EQLAppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 //#import <GoogleMaps/GoogleMaps.h>
 
 
@@ -75,6 +78,8 @@
         sharedForm.licence = 1;
         sharedForm.pesoCaballo = 450;
     }
+    [Fabric with:@[[Crashlytics class]]];
+
     return YES;
 }
 							
